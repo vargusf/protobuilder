@@ -62,10 +62,7 @@ $default-background-color: grey-lighter;
 // Fonts Text & Icons
 //--------------------
 
-// import font awesome
 @import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
-
-// import material icons, opens sans, roboto
 @import url('https://fonts.googleapis.com/css?family=Material+Icons|Open+Sans:300,400,600,700|Roboto:100,300,400,500,700,900');
 
 $fonts: (

@@ -1,0 +1,119 @@
+// Buttons
+
+.Button {
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  @include border-radius(all, 3px);
+  @include transition(all .5s);
+  @include border(all, none);
+}
+
+// Size
+
+.Button--size-sm {
+  @include padding(ends, 8px);
+  @include padding(sides, 10px);
+  @include font-size-in-rem(1.3);
+}
+
+.Button--size-md {
+  @include padding(ends, 10px);
+  @include padding(sides, 20px);
+  @include font-size-in-rem(1.4);
+}
+
+.Button--size-lg {
+  @include padding(ends, 12px);
+  @include padding(sides, 30px);
+  @include font-size-in-rem(1.5);
+}
+
+.Button--size-full {
+  @include padding(ends, sm);
+  @include padding(sides, xlg);
+  @include font-size-in-rem(1.5);
+}
+
+// Type & Color
+
+
+
+.Button--color-primary {
+  @include color(primary);
+}
+
+.Button--color-secondary {
+  @include color(secondary);
+}
+
+.Button--color-grey {
+  @include color(grey-dark);
+}
+
+.Button-type-text {
+  @include background-color(transparent);
+  &:hover {
+    @include background-color(grey);
+  }
+}
+
+.Button-type-outline {
+  @include background-color(transparent);
+  &:hover {
+    @include background-color(grey);
+  }
+  &.Button--color-primary {
+    @include border(all, one, solid, primary);
+  }
+  &.Button--color-secondary {
+    @include border(all, one, solid, secondary);
+  }
+  &.Button--color-grey {
+    @include border(all, one, solid, grey-dark);
+  }
+  
+}
+
+.Button-type-fill {
+  @include color(white);
+  &.Button--color-primary {
+    @include background-color(primary);
+    &:hover {
+      @include background-color(primary-dark);
+    }
+  }
+  &.Button--color-secondary {
+    @include background-color(secondary);
+    &:hover {
+      @include background-color(secondary-dark);
+    }
+  }
+  &.Button--color-grey {
+    @include background-color(grey-dark);
+  }
+}
+
+// .Button--color-blue {
+//   @include background-color(blue);
+//   @include color(white);
+//   &:hover {
+//     @include background-color(darken(map-get($colors, blue), 12%));
+//   }
+// }
+
+// .Button--color-grey {
+//   @include background-color(grey-dark);
+//   @include color(white);
+//   &:hover {
+//     @include background-color(darken(map-get($colors, grey-dark), 12%));
+//   }
+// }
+
+// .Button--color-danger {
+//   @include background-color(danger);
+//   @include color(white);
+//   &:hover {
+//     @include background-color(darken(map-get($colors, danger), 12%));
+//   }
+// }

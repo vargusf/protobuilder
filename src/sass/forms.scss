@@ -1,0 +1,52 @@
+.Form {
+
+}
+
+.Form--input-text-floating-label {
+  position: relative;
+  @include border-radius(all, tiny);
+  @include border(all, one, solid, grey-light);
+  label {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    @include color(grey);
+    @include font-size-in-rem(1.8);
+    @include transition(all .2s);
+    &.active {
+      top: 10px;
+      left: 30px;
+      @include font-size-in-rem(1.2);
+    }
+  }
+  input {
+    position: relative;
+    z-index: 1;
+    padding: 30px 30px 10px 30px;
+    background: none;
+    border: none;
+    width: 100%;
+    @include font-size-in-rem(1.8);
+  }
+  .error {
+    position: relative;
+    left: -1px; // to cover the parent border
+    bottom: -1px; // to cover the parent border
+    width: calc(100% + 2px); // to cover the parent border
+    @include border-radius(bottom, tiny);
+    padding: 5px 30px 5px 30px;
+    @include background-color(danger);
+    @include font-size(xsm);
+    @include color(white);
+  }
+}
+
+.Form--input-checkbox {
+  cursor: pointer;
+  @include color(grey-darker);
+  @include font-size(sm);
+  input {
+    position: relative;
+    top: -2px;
+  }
+}

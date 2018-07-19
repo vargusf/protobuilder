@@ -1,11 +1,12 @@
 // Fixed width for container
 
-
-.Layout--fixed-width { 
+@mixin fixed-width {
   max-width: $default-fixed-width;
   @include margin(sides, auto);
   @include padding(sides, $default-fixed-width-side-padding);
- }
+}
+
+.Layout--fixed-width { @include fixed-width(); }
 
  // Positioning
 
@@ -22,12 +23,6 @@
     @include align-items(center);
   }
 };
-
-// @mixin flex-centered() {
-//   @include display-flex();
-//   @include justify-content(center);
-//   @include align-items(center);
-// }
 
 .Layout--centered         { @include flex-centered(); }
 .Layout--centered-align   { @include flex-centered(align); }

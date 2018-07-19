@@ -2,35 +2,6 @@
 // Helpers
 //--------------------
 
-// Fixed width for container
-
-// @mixin fixed-width {
-//   max-width: $default-fixed-width;
-//   @include margin(sides, auto);
-//   @include padding(sides, $default-fixed-width-side-padding);
-// }
-
-// .Helpers--fixed-width { @include fixed-width(); }
-
-// Display flex and center children
-
-// @mixin flex-centered() {
-//   @include display-flex();
-//   @include justify-content(center);
-//   @include align-items(center);
-// }
-
-// .Helpers--flex-centered { @include flex-centered(); }
-
-// Stretch to all edges
-
-// @mixin stretch-edges() {
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-// }
-
 // Space out horizontal lists
 
 @mixin list-spacing($val) {
