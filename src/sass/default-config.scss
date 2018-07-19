@@ -1,0 +1,109 @@
+//--------------------
+//  General Sizing
+//--------------------
+
+$sizes: (
+  none:   0px,
+  one:    1px,
+  two:    2px,
+  tiny:   3px,
+  xxsm:   5px,
+  xsm:    10px,
+  sm:     15px,
+  md:     20px,
+  lg:     30px,
+  xlg:    45px,
+  xxlg:   60px,
+  jumbo:  120px
+);
+
+//--------------------
+// Breakpoints
+//--------------------
+
+$breakpoints: (
+  xsm:  480,
+  sm:   768,
+  md:   1024,
+  lg:   1200,
+  xlg:  1400
+);
+
+//--------------------
+// Colors
+//--------------------
+
+$colors: (
+  white:           #fff,
+  black:           #111,
+  grey-lightest:   #F8F8F9,
+  grey-lighter:    #E9EAEC,
+  grey-light:      #DDDEE1,
+  grey:            #BBBEC4,
+  grey-dark:       #80848F,
+  grey-darker:     #495060,
+  grey-darkest:    #1C2438,
+  primary:         blue,
+  primary-light:   lightblue,
+  primary-dark:    darkblue,
+  secondary:       green,
+  secondary-light: lightgreen,
+  secondary-dark:  darkgreen,
+  info:            #00B9E1,
+  success:         #2FB688,
+  warning:         #FFB756,
+  error:           #FF0949
+);
+
+$default-color: black;
+$default-background-color: grey-lighter;
+
+//--------------------
+// Fonts Text & Icons
+//--------------------
+
+// import font awesome
+@import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
+
+// import material icons, opens sans, roboto
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Open+Sans:300,400,600,700|Roboto:100,300,400,500,700,900');
+
+$fonts: (
+  primary:   'roboto',
+  secondary: 'Open Sans'
+);
+
+$default-font-family: primary;
+
+$font-size: (
+  tiny:   1.1,
+  xxsm:   1.2,
+  xsm:    1.4,
+  sm:     1.6,
+  md:     1.8,
+  lg:     2,
+  xlg:    3,
+  xxlg:   4,
+  jumbo:  6
+);
+
+$default-font-size: md;
+
+$line-height: (
+  tiny:   1.2,
+  xxsm:   1.3,
+  xsm:    1.6,
+  sm:     2,
+  md:     2.2,
+  lg:     2.4,
+  xlg:    3.2,
+  xxlg:   4.2,
+  jumbo:  6.2
+);
+
+//--------------------
+// Layout
+//--------------------
+
+$default-fixed-width: 1180px;
+$default-fixed-width-side-padding: sm;

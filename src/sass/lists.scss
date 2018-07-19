@@ -1,0 +1,35 @@
+// Fixed width for container
+
+.List {
+  @include border(all, one, solid, grey-light);
+  @include background-color(white);
+}
+
+.List__item {
+  @include border(bottom, one, solid, grey-light);
+  &:after {
+    @include border(bottom, 0);
+  }
+}
+
+.List__content {
+  @include flex-grow(1);
+  @include padding(ends, md);
+  @include padding(sides, md);
+  @include font-size(sm);
+}
+
+.List__title {
+  @include font-size(sm);
+}
+
+.List__sub-title {
+  @include font-size(xsm);
+  @include color(grey-dark);
+  @include margin(top, one);
+}
+
+.List__text {
+  @include font-size(xsm);
+  @include margin(top, xsm);
+}

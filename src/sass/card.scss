@@ -1,0 +1,95 @@
+// Card
+
+.Card {
+  @include background-color(white);
+  @include border(all, one, solid, grey);
+  @include border-radius(all, tiny);
+}
+
+.Card__header{
+  @include margin(ends, sm);
+  @include padding(sides, md);
+}
+
+.Card__content{
+  @include margin(ends, sm);
+  @include padding(sides, md);
+}
+
+.Card__footer{
+  @include margin(ends, sm);
+  @include padding(sides, md);
+}
+
+.Card__title {
+  @include font-size(xlg);
+}
+
+.Card__sub-title {
+  @include font-size(md);
+  @include color(grey-dark);
+  @include margin(top, tiny);
+}
+
+.Card__text {
+  @include font-size(sm);
+}
+
+.Card__actions {
+  @include display-flex();
+  @include justify-content(flex-end);
+}
+
+// bg colors
+
+.Card--background-color-white           { @include background-color(white); }
+
+.Card--background-color-black           { @include background-color(black); }
+.Card--background-color-grey-lightest   { @include background-color(grey-lightest); }
+.Card--background-color-grey-lighter    { @include background-color(grey-lighter); }
+.Card--background-color-grey-light      { @include background-color(grey-light); }
+.Card--background-color-grey            { @include background-color(grey); }
+.Card--background-color-grey-dark       { @include background-color(grey-dark); }
+.Card--background-color-grey-darker     { @include background-color(grey-darker); }
+.Card--background-color-grey-darkest    { @include background-color(grey-darkest); }
+.Card--background-color-primary         { @include background-color(primary); }
+.Card--background-color-primary-light   { @include background-color(primary-light); }
+.Card--background-color-primary-dark    { @include background-color(primary-dark); }
+.Card--background-color-secondary       { @include background-color(secondary); }
+.Card--background-color-secondary-light { @include background-color(secondary-light); }
+.Card--background-color-secondary-dark  { @include background-color(secondary-dark); }
+
+.Card--background-color-info            {
+  @include background-color(info);
+  .Card__title,
+  .Card__sub-title,
+  .Card__text {
+    @include color(white);
+  }
+}
+
+.Card--background-color-success         {
+  @include background-color(success);
+  .Card__title,
+  .Card__sub-title,
+  .Card__text {
+    @include color(white);
+  }
+}
+.Card--background-color-warning         {
+  @include background-color(warning);
+  .Card__title,
+  .Card__sub-title,
+  .Card__text {
+    @include color(white);
+  }
+}
+
+.Card--background-color-error           { 
+  @include background-color(error);
+  .Card__title,
+  .Card__sub-title,
+  .Card__text {
+    @include color(white);
+  }
+}

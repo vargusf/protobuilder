@@ -1,0 +1,823 @@
+// Layout
+// Margins
+// Paddings
+// Height & Width
+// Flex
+// Display
+// Positioning
+// Background Colors
+// Gradients
+// Opacity
+// Transitions
+// Borders
+// Border Radius
+// Blur
+// Float
+// Transforms
+
+// Margins
+// ---------
+
+@mixin margin($loc, $sizeAsString, $autoMobile: false) {
+
+  $size: map-get($sizes, $sizeAsString);
+
+  @if not map-has-key($sizes, $sizeAsString) {
+    $size: $sizeAsString;
+  }
+
+  $size-md: $size;
+  $size-sm: $size;
+
+  @if ($autoMobile == true) {
+    @if ($sizeAsString == xsm) or ($sizeAsString == sm) or ($sizeAsString == lg) or ($sizeAsString == xlg) or ($sizeAsString == xxlg) or ($sizeAsString == jumbo) {
+      $size-md: $size/2;
+      @if (strip-units($size-md) <= 5 ) {
+        $size-md: 5px;
+      }
+      $size-sm: $size/3;
+      @if (strip-units($size-sm) <= 5 ) {
+        $size-md: 5px;
+      }
+    }
+  }
+
+  @if $loc == top {
+    margin-top: $size;
+    @include bp(md) { margin-top: $size-md; }
+    @include bp(sm) { margin-top: $size-sm; }
+  } @else if $loc == right {
+    margin-right: $size;
+    @include bp(md) { margin-right: $size-md; }
+    @include bp(sm) { margin-right: $size-sm; }
+  } @else if $loc == bottom {
+    margin-bottom: $size;
+    @include bp(md) { margin-bottom: $size-md; }
+    @include bp(sm) { margin-bottom: $size-sm; }
+  } @else if $loc == left {
+    margin-left: $size;
+    @include bp(md) { margin-left: $size-md; }
+    @include bp(sm) { margin-left: $size-sm; }
+  } @else if $loc == sides {
+    margin-left: $size; margin-right: $size;
+    @include bp(md) { margin-left: $size-md; margin-right: $size-md; }
+    @include bp(sm) { margin-left: $size-sm; margin-right: $size-sm; }
+  } @else if $loc == ends {
+    margin-top: $size; margin-bottom: $size;
+    @include bp(md) { margin-top: $size-md; margin-bottom: $size-md; }
+    @include bp(sm) { margin-top: $size-sm; margin-bottom: $size-sm; }
+  } @else {
+    margin: $size;
+    @include bp(md) { margin: $size-md; }
+    @include bp(sm) { margin: $size-sm; }
+  }
+}
+
+.Utils--margin-none          { @include margin(all, 0); }
+.Utils--margin-tiny          { @include margin(all, tiny); }
+.Utils--margin-xxsm          { @include margin(all, xxsm); }
+.Utils--margin-xsm           { @include margin(all, xsm); }
+.Utils--margin-sm            { @include margin(all, sm); }
+.Utils--margin-md            { @include margin(all, md); }
+.Utils--margin-lg            { @include margin(all, lg); }
+.Utils--margin-xlg           { @include margin(all, xlg); }
+.Utils--margin-xxlg          { @include margin(all, xxlg); }
+.Utils--margin-jumbo         { @include margin(all, jumbo); }
+.Utils--margin-top-none      { @include margin(top, 0); }
+.Utils--margin-top-tiny      { @include margin(top, tiny); }
+.Utils--margin-top-xxsm      { @include margin(top, xxsm); }
+.Utils--margin-top-xsm       { @include margin(top, xsm); }
+.Utils--margin-top-sm        { @include margin(top, sm); }
+.Utils--margin-top-md        { @include margin(top, md); }
+.Utils--margin-top-lg        { @include margin(top, lg); }
+.Utils--margin-top-xlg       { @include margin(top, xlg); }
+.Utils--margin-top-xxlg      { @include margin(top, xxlg); }
+.Utils--margin-top-jumbo     { @include margin(top, jumbo); }
+.Utils--margin-right-none    { @include margin(right, 0); }
+.Utils--margin-right-tiny    { @include margin(right, tiny); }
+.Utils--margin-right-xxsm    { @include margin(right, xxsm); }
+.Utils--margin-right-xsm     { @include margin(right, xsm); }
+.Utils--margin-right-sm      { @include margin(right, sm); }
+.Utils--margin-right-md      { @include margin(right, md); }
+.Utils--margin-right-lg      { @include margin(right, lg); }
+.Utils--margin-right-xlg     { @include margin(right, xlg); }
+.Utils--margin-right-xxlg    { @include margin(right, xxlg); }
+.Utils--margin-right-jumbo   { @include margin(right, jumbo); }
+.Utils--margin-bottom-none   { @include margin(bottom, 0); }
+.Utils--margin-bottom-tiny   { @include margin(bottom, tiny); }
+.Utils--margin-bottom-xxsm   { @include margin(bottom, xxsm); }
+.Utils--margin-bottom-xsm    { @include margin(bottom, xsm); }
+.Utils--margin-bottom-sm     { @include margin(bottom, sm); }
+.Utils--margin-bottom-md     { @include margin(bottom, md); }
+.Utils--margin-bottom-lg     { @include margin(bottom, lg); }
+.Utils--margin-bottom-xlg    { @include margin(bottom, xlg); }
+.Utils--margin-bottom-xxlg   { @include margin(bottom, xxlg); }
+.Utils--margin-bottom-jumbo  { @include margin(bottom, jumbo); }
+.Utils--margin-left-none     { @include margin(left, 0); }
+.Utils--margin-left-tiny     { @include margin(left, tiny); }
+.Utils--margin-left-xxsm     { @include margin(left, xxsm); }
+.Utils--margin-left-xsm      { @include margin(left, xsm); }
+.Utils--margin-left-sm       { @include margin(left, sm); }
+.Utils--margin-left-md       { @include margin(left, md); }
+.Utils--margin-left-lg       { @include margin(left, lg); }
+.Utils--margin-left-xlg      { @include margin(left, xlg); }
+.Utils--margin-left-xxlg     { @include margin(left, xxlg); }
+.Utils--margin-left-jumbo    { @include margin(left, jumbo); }
+.Utils--margin-sides-auto    { @include margin(sides, auto); }
+.Utils--margin-sides-none    { @include margin(sides, 0); }
+.Utils--margin-sides-tiny    { @include margin(sides, tiny); }
+.Utils--margin-sides-xxsm    { @include margin(sides, xxsm); }
+.Utils--margin-sides-xsm     { @include margin(sides, xsm); }
+.Utils--margin-sides-sm      { @include margin(sides, sm); }
+.Utils--margin-sides-md      { @include margin(sides, md); }
+.Utils--margin-sides-lg      { @include margin(sides, lg); }
+.Utils--margin-sides-xlg     { @include margin(sides, xlg); }
+.Utils--margin-sides-xxlg    { @include margin(sides, xxlg); }
+.Utils--margin-sides-jumbo   { @include margin(sides, jumbo); }
+.Utils--margin-ends-none     { @include margin(ends, 0); }
+.Utils--margin-ends-tiny     { @include margin(ends, tiny); }
+.Utils--margin-ends-xxsm     { @include margin(ends, xxsm); }
+.Utils--margin-ends-xsm      { @include margin(ends, xsm); }
+.Utils--margin-ends-sm       { @include margin(ends, sm); }
+.Utils--margin-ends-md       { @include margin(ends, md); }
+.Utils--margin-ends-lg       { @include margin(ends, lg); }
+.Utils--margin-ends-xlg      { @include margin(ends, xlg); }
+.Utils--margin-ends-xxlg     { @include margin(ends, xxlg); }
+.Utils--margin-ends-jumbo    { @include margin(ends, jumbo); }
+
+// Paddings
+// ---------
+
+@mixin padding($loc, $sizeAsString, $autoMobile: false) {
+
+  $size: map-get($sizes, $sizeAsString);
+
+  @if not map-has-key($sizes, $sizeAsString) {
+    $size: $sizeAsString;
+  }
+
+  $size-md: $size;
+  $size-sm: $size;
+
+  @if ($autoMobile == true) {
+    @if ($sizeAsString == xsm) or ($sizeAsString == sm) or ($sizeAsString == lg) or ($sizeAsString == xlg) or ($sizeAsString == xxlg) or ($sizeAsString == jumbo) {
+      $size-md: $size/2;
+      @if (strip-units($size-md) <= 5 ) {
+        $size-md: 5px;
+      }
+      $size-sm: $size/3;
+      @if (strip-units($size-sm) <= 5 ) {
+        $size-md: 5px;
+      }
+    }
+  }
+
+  @if $loc == top {
+    padding-top: $size;
+    @include bp(md) { padding-top: $size-md; }
+    @include bp(sm) { padding-top: $size-sm; }
+  } @else if $loc == right {
+    padding-right: $size;
+    @include bp(md) { padding-right: $size-md; }
+    @include bp(sm) { padding-right: $size-sm; }
+  } @else if $loc == bottom {
+    padding-bottom: $size;
+    @include bp(md) { padding-bottom: $size-md; }
+    @include bp(sm) { padding-bottom: $size-sm; }
+  } @else if $loc == left {
+    padding-left: $size;
+    @include bp(md) { padding-left: $size-md; }
+    @include bp(sm) { padding-left: $size-sm; }
+  } @else if $loc == sides {
+    padding-left: $size; padding-right: $size;
+    @include bp(md) { padding-left: $size-md; padding-right: $size-md; }
+    @include bp(sm) { padding-left: $size-sm; padding-right: $size-sm; }
+  } @else if $loc == ends {
+    padding-top: $size; padding-bottom: $size;
+    @include bp(md) { padding-top: $size-md; padding-bottom: $size-md; }
+    @include bp(sm) { padding-top: $size-sm; padding-bottom: $size-sm; }
+  } @else {
+    padding: $size;
+    @include bp(md) { padding: $size-md; }
+    @include bp(sm) { padding: $size-sm; }
+  }
+}
+
+.Utils--padding-none          { @include padding(all, 0); }
+.Utils--padding-tiny          { @include padding(all, tiny); }
+.Utils--padding-xxsm          { @include padding(all, xxsm); }
+.Utils--padding-xsm           { @include padding(all, xsm); }
+.Utils--padding-sm            { @include padding(all, sm); }
+.Utils--padding-md            { @include padding(all, md); }
+.Utils--padding-lg            { @include padding(all, lg); }
+.Utils--padding-xlg           { @include padding(all, xlg); }
+.Utils--padding-xxlg          { @include padding(all, xxlg); }
+.Utils--padding-jumbo         { @include padding(all, jumbo); }
+.Utils--padding-top-none      { @include padding(top, 0); }
+.Utils--padding-top-tiny      { @include padding(top, tiny); }
+.Utils--padding-top-xxsm      { @include padding(top, xxsm); }
+.Utils--padding-top-xsm       { @include padding(top, xsm); }
+.Utils--padding-top-sm        { @include padding(top, sm); }
+.Utils--padding-top-md        { @include padding(top, md); }
+.Utils--padding-top-lg        { @include padding(top, lg); }
+.Utils--padding-top-xlg       { @include padding(top, xlg); }
+.Utils--padding-top-xxlg      { @include padding(top, xxlg); }
+.Utils--padding-top-jumbo     { @include padding(top, jumbo); }
+.Utils--padding-right-none    { @include padding(right, 0); }
+.Utils--padding-right-tiny    { @include padding(right, tiny); }
+.Utils--padding-right-xxsm    { @include padding(right, xxsm); }
+.Utils--padding-right-xsm     { @include padding(right, xsm); }
+.Utils--padding-right-sm      { @include padding(right, sm); }
+.Utils--padding-right-md      { @include padding(right, md); }
+.Utils--padding-right-lg      { @include padding(right, lg); }
+.Utils--padding-right-xlg     { @include padding(right, xlg); }
+.Utils--padding-right-xxlg    { @include padding(right, xxlg); }
+.Utils--padding-right-jumbo   { @include padding(right, jumbo); }
+.Utils--padding-bottom-none   { @include padding(bottom, 0); }
+.Utils--padding-bottom-tiny   { @include padding(bottom, tiny); }
+.Utils--padding-bottom-xxsm   { @include padding(bottom, xxsm); }
+.Utils--padding-bottom-xsm    { @include padding(bottom, xsm); }
+.Utils--padding-bottom-sm     { @include padding(bottom, sm); }
+.Utils--padding-bottom-md     { @include padding(bottom, md); }
+.Utils--padding-bottom-lg     { @include padding(bottom, lg); }
+.Utils--padding-bottom-xlg    { @include padding(bottom, xlg); }
+.Utils--padding-bottom-xxlg   { @include padding(bottom, xxlg); }
+.Utils--padding-bottom-jumbo  { @include padding(bottom, jumbo); }
+.Utils--padding-left-none     { @include padding(left, 0); }
+.Utils--padding-left-tiny     { @include padding(left, tiny); }
+.Utils--padding-left-xxsm     { @include padding(left, xxsm); }
+.Utils--padding-left-xsm      { @include padding(left, xsm); }
+.Utils--padding-left-sm       { @include padding(left, sm); }
+.Utils--padding-left-md       { @include padding(left, md); }
+.Utils--padding-left-lg       { @include padding(left, lg); }
+.Utils--padding-left-xlg      { @include padding(left, xlg); }
+.Utils--padding-left-xxlg     { @include padding(left, xxlg); }
+.Utils--padding-left-jumbo    { @include padding(left, jumbo); }
+.Utils--padding-sides-none    { @include padding(sides, 0); }
+.Utils--padding-sides-tiny    { @include padding(sides, tiny); }
+.Utils--padding-sides-xxsm    { @include padding(sides, xxsm); }
+.Utils--padding-sides-xsm     { @include padding(sides, xsm); }
+.Utils--padding-sides-sm      { @include padding(sides, sm); }
+.Utils--padding-sides-md      { @include padding(sides, md); }
+.Utils--padding-sides-lg      { @include padding(sides, lg); }
+.Utils--padding-sides-xlg     { @include padding(sides, xlg); }
+.Utils--padding-sides-xxlg    { @include padding(sides, xxlg); }
+.Utils--padding-sides-jumbo   { @include padding(sides, jumbo); }
+.Utils--padding-ends-none     { @include padding(ends, 0); }
+.Utils--padding-ends-tiny     { @include padding(ends, tiny); }
+.Utils--padding-ends-xxsm     { @include padding(ends, xxsm); }
+.Utils--padding-ends-xsm      { @include padding(ends, xsm); }
+.Utils--padding-ends-sm       { @include padding(ends, sm); }
+.Utils--padding-ends-md       { @include padding(ends, md); }
+.Utils--padding-ends-lg       { @include padding(ends, lg); }
+.Utils--padding-ends-xlg      { @include padding(ends, xlg); }
+.Utils--padding-ends-xxlg     { @include padding(ends, xxlg); }
+.Utils--padding-ends-jumbo    { @include padding(ends, jumbo); }
+
+// Height & Width
+// ---------
+
+.Utils--width-100per { width: 100%; }
+.Utils--width-90per  { width: 90%; }
+.Utils--width-80per  { width: 80%; }
+.Utils--width-75per  { width: 75%; }
+.Utils--width-70per  { width: 70%; }
+.Utils--width-66per  { width: 66%; }
+.Utils--width-60per  { width: 60%; }
+.Utils--width-50per  { width: 50%; }
+.Utils--width-40per  { width: 40%; }
+.Utils--width-33per  { width: 33%; }
+.Utils--width-30per  { width: 30%; }
+.Utils--width-25per  { width: 25%; }
+.Utils--width-20per  { width: 20%; }
+.Utils--width-10per  { width: 10%; }
+.Utils--width-5per   { width: 5%; }
+.Utils--width-0per   { width: 0%; }
+
+.Utils--height-100per { height: 100%; }
+.Utils--min-height-100per { min-height: 100%; }
+
+.Utils--height-100vh  { height: 100vh; }
+.Utils--min-height-100vh  { min-height: 100vh; }
+
+// Flex
+// ---------
+
+@mixin display-flex() {
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin justify-content($val) {
+  -webkit-justify-content: $val;
+  justify-content: $val;
+}
+
+@mixin align-items($val) {
+  -webkit-align-items: $val;
+  align-items: $val;
+}
+
+@mixin align-self($val) {
+  -webkit-align-self: $val;
+  align-self: $val;
+}
+
+@mixin flex-direction($val) {
+  -webkit-flex-direction: $val;
+  flex-direction: $val;
+}
+
+@mixin flex-basis($val) {
+  -webkit-flex-basis: $val;
+  flex-basis: $val;
+}
+
+@mixin flex-grow($val) {
+  -webkit-flex-grow: $val;
+  flex-grow: $val;
+}
+
+@mixin flex-shrink($val) {
+  -webkit-flex-shrink: $val;
+  flex-shrink: $val;
+}
+
+@mixin flex-wrap($val) {
+  -webkit-flex-wrap: $val;
+  flex-wrap: $val;
+}
+
+@mixin flex-order($val) {
+	-webkit-order: $val;
+	order: $val;
+}
+
+.Utils--justify-content-center        { @include justify-content(center); }
+.Utils--justify-content-flex-start    { @include justify-content(flex-start); }
+.Utils--justify-content-flex-end      { @include justify-content(flex-end); }
+.Utils--justify-content-space-between { @include justify-content(space-between); }
+.Utils--justify-content-space-around  { @include justify-content(space-around); }
+
+.Utils--align-items-center            { @include align-items(center); }
+.Utils--align-items-stretch           { @include align-items(stretch); }
+.Utils--align-items-flex-start        { @include align-items(flex-start); }
+.Utils--align-items-flex-end          { @include align-items(flex-end); }
+.Utils--align-items-baseline          { @include align-items(baseline); }
+
+.Utils--flex-direction-row            { @include flex-direction(row); }
+.Utils--flex-direction-column         { @include flex-direction(column); }
+
+.Utils--flex-grow-1                   { @include flex-grow(1); }
+.Utils--flex-grow-2                   { @include flex-grow(2); }
+
+.Utils--flex-shrink-1                 { @include flex-shrink(1); }
+.Utils--flex-shrink-2                 { @include flex-shrink(2); }
+
+.Utils--flex-wrap-wrap                { @include flex-wrap(wrap); }
+.Utils--flex-wrap-nowrap              { @include flex-wrap(nowrap); }
+.Utils--flex-wrap-wrap-reverse        { @include flex-wrap(wrap-reverse); }
+
+.Utils--flex-basis-100per             { @include flex-basis(100%); min-width: 100% }
+.Utils--flex-basis-90per              { @include flex-basis(90%); min-width: 90% }
+.Utils--flex-basis-80per              { @include flex-basis(80%); min-width: 80% }
+.Utils--flex-basis-75per              { @include flex-basis(75%); min-width: 75% }
+.Utils--flex-basis-70per              { @include flex-basis(70%); min-width: 70% }
+.Utils--flex-basis-66per              { @include flex-basis(66.666%); min-width: 66.666% }
+.Utils--flex-basis-60per              { @include flex-basis(60%); min-width: 60% }
+.Utils--flex-basis-50per              { @include flex-basis(50%); min-width: 50% }
+.Utils--flex-basis-40per              { @include flex-basis(40%); min-width: 40% }
+.Utils--flex-basis-33per              { @include flex-basis(33.333%); min-width: 33.333% }
+.Utils--flex-basis-30per              { @include flex-basis(30%); min-width: 30% }
+.Utils--flex-basis-25per              { @include flex-basis(25%); min-width: 25% }
+.Utils--flex-basis-20per              { @include flex-basis(20%); min-width: 20% }
+.Utils--flex-basis-10per              { @include flex-basis(10%); min-width: 10% }
+.Utils--flex-basis-5per               { @include flex-basis(5%); min-width: 5% }
+.Utils--flex-basis-0per               { @include flex-basis(0%); min-width: 0% }
+
+.Utils--flex-basis-100per-bpxlg       { @include bp(xlg) { @include flex-basis(100%); min-width: 100%; } }
+.Utils--flex-basis-90per-bpxlg        { @include bp(xlg) { @include flex-basis(90%); min-width: 90%; } }
+.Utils--flex-basis-80per-bpxlg        { @include bp(xlg) { @include flex-basis(80%); min-width: 80%; } }
+.Utils--flex-basis-75per-bpxlg        { @include bp(xlg) { @include flex-basis(75%); min-width: 75%; } }
+.Utils--flex-basis-70per-bpxlg        { @include bp(xlg) { @include flex-basis(70%); min-width: 70%; } }
+.Utils--flex-basis-66per-bpxlg        { @include bp(xlg) { @include flex-basis(66.666%); min-width: 66.666%; } }
+.Utils--flex-basis-60per-bpxlg        { @include bp(xlg) { @include flex-basis(60%); min-width: 60%; } }
+.Utils--flex-basis-50per-bpxlg        { @include bp(xlg) { @include flex-basis(50%); min-width: 50%; } }
+.Utils--flex-basis-40per-bpxlg        { @include bp(xlg) { @include flex-basis(40%); min-width: 40%; } }
+.Utils--flex-basis-33per-bpxlg        { @include bp(xlg) { @include flex-basis(33.333%); min-width: 33.333%; } }
+.Utils--flex-basis-30per-bpxlg        { @include bp(xlg) { @include flex-basis(30%); min-width: 30%; } }
+.Utils--flex-basis-25per-bpxlg        { @include bp(xlg) { @include flex-basis(25%); min-width: 25%; } }
+.Utils--flex-basis-20per-bpxlg        { @include bp(xlg) { @include flex-basis(20%); min-width: 20%; } }
+.Utils--flex-basis-10per-bpxlg        { @include bp(xlg) { @include flex-basis(10%); min-width: 10%; } }
+.Utils--flex-basis-5per-bpxlg         { @include bp(xlg) { @include flex-basis(5%); min-width: 5%; } }
+.Utils--flex-basis-0per-bpxlg         { @include bp(xlg) { @include flex-basis(0%); min-width: 0%; } }
+
+.Utils--flex-basis-100per-bplg        { @include bp(lg) { @include flex-basis(100%); min-width: 100%; } }
+.Utils--flex-basis-90per-bplg         { @include bp(lg) { @include flex-basis(90%); min-width: 90%; } }
+.Utils--flex-basis-80per-bplg         { @include bp(lg) { @include flex-basis(80%); min-width: 80%; } }
+.Utils--flex-basis-75per-bplg         { @include bp(lg) { @include flex-basis(75%); min-width: 75%; } }
+.Utils--flex-basis-70per-bplg         { @include bp(lg) { @include flex-basis(70%); min-width: 70%; } }
+.Utils--flex-basis-66per-bplg         { @include bp(lg) { @include flex-basis(66.666%); min-width: 66.666%; } }
+.Utils--flex-basis-60per-bplg         { @include bp(lg) { @include flex-basis(60%); min-width: 60%; } }
+.Utils--flex-basis-50per-bplg         { @include bp(lg) { @include flex-basis(50%); min-width: 50%; } }
+.Utils--flex-basis-40per-bplg         { @include bp(lg) { @include flex-basis(40%); min-width: 40%; } }
+.Utils--flex-basis-33per-bplg         { @include bp(lg) { @include flex-basis(33.333%); min-width: 33.333%; } }
+.Utils--flex-basis-30per-bplg         { @include bp(lg) { @include flex-basis(30%); min-width: 30%; } }
+.Utils--flex-basis-25per-bplg         { @include bp(lg) { @include flex-basis(25%); min-width: 25%; } }
+.Utils--flex-basis-20per-bplg         { @include bp(lg) { @include flex-basis(20%); min-width: 20%; } }
+.Utils--flex-basis-10per-bplg         { @include bp(lg) { @include flex-basis(10%); min-width: 10%; } }
+.Utils--flex-basis-5per-bplg          { @include bp(lg) { @include flex-basis(5%); min-width: 5%; } }
+.Utils--flex-basis-0per-bplg          { @include bp(lg) { @include flex-basis(0%); min-width: 0%; } }
+
+.Utils--flex-basis-100per-bpmd        { @include bp(md) { @include flex-basis(100%); min-width: 100%; } }
+.Utils--flex-basis-90per-bpmd         { @include bp(md) { @include flex-basis(90%); min-width: 90%; } }
+.Utils--flex-basis-80per-bpmd         { @include bp(md) { @include flex-basis(80%); min-width: 80%; } }
+.Utils--flex-basis-75per-bpmd         { @include bp(md) { @include flex-basis(75%); min-width: 75%; } }
+.Utils--flex-basis-70per-bpmd         { @include bp(md) { @include flex-basis(70%); min-width: 70%; } }
+.Utils--flex-basis-66per-bpmd         { @include bp(md) { @include flex-basis(66.666%); min-width: 66.666%; } }
+.Utils--flex-basis-60per-bpmd         { @include bp(md) { @include flex-basis(60%); min-width: 60%; } }
+.Utils--flex-basis-50per-bpmd         { @include bp(md) { @include flex-basis(50%); min-width: 50%; } }
+.Utils--flex-basis-40per-bpmd         { @include bp(md) { @include flex-basis(40%); min-width: 40%; } }
+.Utils--flex-basis-33per-bpmd         { @include bp(md) { @include flex-basis(33.333%); min-width: 33.333%; } }
+.Utils--flex-basis-30per-bpmd         { @include bp(md) { @include flex-basis(30%); min-width: 30%; } }
+.Utils--flex-basis-25per-bpmd         { @include bp(md) { @include flex-basis(25%); min-width: 25%; } }
+.Utils--flex-basis-20per-bpmd         { @include bp(md) { @include flex-basis(20%); min-width: 20%; } }
+.Utils--flex-basis-10per-bpmd         { @include bp(md) { @include flex-basis(10%); min-width: 10%; } }
+.Utils--flex-basis-5per-bpmd          { @include bp(md) { @include flex-basis(5%); min-width: 5%; } }
+.Utils--flex-basis-0per-bpmd          { @include bp(md) { @include flex-basis(0%); min-width: 0%; } }
+ 
+.Utils--flex-basis-100per-bpsm        { @include bp(sm) { @include flex-basis(100%); min-width: 100%; } }
+.Utils--flex-basis-90per-bpsm         { @include bp(sm) { @include flex-basis(90%); min-width: 90%; } }
+.Utils--flex-basis-80per-bpsm         { @include bp(sm) { @include flex-basis(80%); min-width: 80%; } }
+.Utils--flex-basis-75per-bpsm         { @include bp(sm) { @include flex-basis(75%); min-width: 75%; } }
+.Utils--flex-basis-70per-bpsm         { @include bp(sm) { @include flex-basis(70%); min-width: 70%; } }
+.Utils--flex-basis-66per-bpsm         { @include bp(sm) { @include flex-basis(66.666%); min-width: 66.666%; } }
+.Utils--flex-basis-60per-bpsm         { @include bp(sm) { @include flex-basis(60%); min-width: 60%; } }
+.Utils--flex-basis-50per-bpsm         { @include bp(sm) { @include flex-basis(50%); min-width: 50%; } }
+.Utils--flex-basis-40per-bpsm         { @include bp(sm) { @include flex-basis(40%); min-width: 40%; } }
+.Utils--flex-basis-33per-bpsm         { @include bp(sm) { @include flex-basis(33.333%); min-width: 33.333%; } }
+.Utils--flex-basis-30per-bpsm         { @include bp(sm) { @include flex-basis(30%); min-width: 30%; } }
+.Utils--flex-basis-25per-bpsm         { @include bp(sm) { @include flex-basis(25%); min-width: 25%; } }
+.Utils--flex-basis-20per-bpsm         { @include bp(sm) { @include flex-basis(20%); min-width: 20%; } }
+.Utils--flex-basis-10per-bpsm         { @include bp(sm) { @include flex-basis(10%); min-width: 10%; } }
+.Utils--flex-basis-5per-bpsm          { @include bp(sm) { @include flex-basis(5%); min-width: 5%; } }
+.Utils--flex-basis-0per-bpsm          { @include bp(sm) { @include flex-basis(0%); min-width: 0%; } }
+
+.Utils--flex-basis-100per-bpxsm       { @include bp(xsm) { @include flex-basis(100%); min-width: 100%; } }
+.Utils--flex-basis-90per-bpxsm        { @include bp(xsm) { @include flex-basis(90%); min-width: 90%; } }
+.Utils--flex-basis-80per-bpxsm        { @include bp(xsm) { @include flex-basis(80%); min-width: 80%; } }
+.Utils--flex-basis-75per-bpxsm        { @include bp(xsm) { @include flex-basis(75%); min-width: 75%; } }
+.Utils--flex-basis-70per-bpxsm        { @include bp(xsm) { @include flex-basis(70%); min-width: 70%; } }
+.Utils--flex-basis-66per-bpxsm        { @include bp(xsm) { @include flex-basis(66.666%); min-width: 66.666%; } }
+.Utils--flex-basis-60per-bpxsm        { @include bp(xsm) { @include flex-basis(60%); min-width: 60%; } }
+.Utils--flex-basis-50per-bpxsm        { @include bp(xsm) { @include flex-basis(50%); min-width: 50%; } }
+.Utils--flex-basis-40per-bpxsm        { @include bp(xsm) { @include flex-basis(40%); min-width: 40%; } }
+.Utils--flex-basis-33per-bpxsm        { @include bp(xsm) { @include flex-basis(33.333%); min-width: 33.333%; } }
+.Utils--flex-basis-30per-bpxsm        { @include bp(xsm) { @include flex-basis(30%); min-width: 30%; } }
+.Utils--flex-basis-25per-bpxsm        { @include bp(xsm) { @include flex-basis(25%); min-width: 25%; } }
+.Utils--flex-basis-20per-bpxsm        { @include bp(xsm) { @include flex-basis(20%); min-width: 20%; } }
+.Utils--flex-basis-10per-bpxsm        { @include bp(xsm) { @include flex-basis(10%); min-width: 10%; } }
+.Utils--flex-basis-5per-bpxsm         { @include bp(xsm) { @include flex-basis(5%); min-width: 5%; } }
+.Utils--flex-basis-0per-bpxsm         { @include bp(xsm) { @include flex-basis(0%); min-width: 0%; } }
+
+// Display
+// ---------
+
+.Utils--display-none                  { display: none; }
+.Utils--display-inline                { display: inline; }
+.Utils--display-inline-block          { display: inline-block; }
+.Utils--display-block                 { display: block; }
+.Utils--display-flex                  { @include display-flex(); }
+
+.Utils--display-inline-bpxlg          { @include bp(xlg) { display: inline; } }
+.Utils--display-inline-block-bpxlg    { @include bp(xlg) { display: inline-block; } }
+.Utils--display-block-bpxlg           { @include bp(xlg) { display: block; } }
+.Utils--display-flex-bpxlg            { @include bp(xlg) { @include display-flex(); } }
+
+.Utils--display-inline-bplg           { @include bp(lg) { display: inline; } }
+.Utils--display-inline-block-bplg     { @include bp(lg) { display: inline-block; } }
+.Utils--display-block-bplg            { @include bp(lg) { display: block; } }
+.Utils--display-flex-bplg             { @include bp(lg) { @include display-flex(); } }
+
+.Utils--display-none-bpmd             { @include bp(md) { display: none; } }
+.Utils--display-inline-bpmd           { @include bp(md) { display: inline; } }
+.Utils--display-inline-block-bpmd     { @include bp(md) { display: inline-block; } }
+.Utils--display-block-bpmd            { @include bp(md) { display: block; } }
+.Utils--display-flex-bpmd             { @include bp(md) { @include display-flex(); } }
+
+.Utils--display-none-bpsm             { @include bp(sm) { display: none } }
+.Utils--display-inline-bpsm           { @include bp(sm) { display: inline; } }
+.Utils--display-inline-block-bpsm     { @include bp(sm) { display: inline-block; } }
+.Utils--display-block-bpsm            { @include bp(sm) { display: block; } }
+.Utils--display-flex-bpsm             { @include bp(sm) { @include display-flex(); } }
+
+.Utils--display-none-bpxsm            { @include bp(xsm) { display: none; } }
+.Utils--display-inline-bpxsm          { @include bp(xsm) { display: inline; } }
+.Utils--display-inline-block-bpxsm    { @include bp(xsm) { display: inline-block; } }
+.Utils--display-block-bpxsm           { @include bp(xsm) { display: block; } }
+.Utils--display-flex-bpxsm            { @include bp(xsm) { @include display-flex(); } }
+.Utils--display-none-bplg             { @include bp(lg) { display: none; } }
+.Utils--display-none-bpxlg            { @include bp(xlg) { display: none; } }
+
+// Position
+// ---------
+
+.Utils--position-static   { position: static; }
+.Utils--position-relative { position: relative; }
+.Utils--position-absolute { position: absolute; }
+.Utils--position-fixed    { position: fixed; }
+
+// Background Colors
+// ---------
+
+@mixin background-color($colorAsString) {
+  $color: map-get($colors, $colorAsString);
+  @if not map-has-key($colors, $colorAsString) {
+    $color: $colorAsString;
+  }
+
+  background-color: $color;
+};
+
+.Utils--background-color-white           { @include background-color(white); }
+.Utils--background-color-black           { @include background-color(black); }
+.Utils--background-color-grey-lightest   { @include background-color(grey-lightest); }
+.Utils--background-color-grey-lighter    { @include background-color(grey-lighter); }
+.Utils--background-color-grey-light      { @include background-color(grey-light); }
+.Utils--background-color-grey            { @include background-color(grey); }
+.Utils--background-color-grey-dark       { @include background-color(grey-dark); }
+.Utils--background-color-grey-darker     { @include background-color(grey-darker); }
+.Utils--background-color-grey-darkest    { @include background-color(grey-darkest); }
+.Utils--background-color-primary         { @include background-color(primary); }
+.Utils--background-color-primary-light   { @include background-color(primary-light); }
+.Utils--background-color-primary-dark    { @include background-color(primary-dark); }
+.Utils--background-color-secondary       { @include background-color(secondary); }
+.Utils--background-color-secondary-light { @include background-color(secondary-light); }
+.Utils--background-color-secondary-dark  { @include background-color(secondary-dark); }
+.Utils--background-color-info            { @include background-color(info); }
+.Utils--background-color-success         { @include background-color(success); }
+.Utils--background-color-warning         { @include background-color(warning); }
+.Utils--background-color-error           { @include background-color(error); }
+
+// Gradients
+// ---------
+
+@mixin bg-gradient-radial($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
+  background: rgba($col1, $alp1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($loc1, rgba($col1, $alp1)), color-stop($loc2, rgba($col2, $alp2)));
+  background: -webkit-radial-gradient(center, ellipse cover, rrgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -o-radial-gradient(center, ellipse cover, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -ms-radial-gradient(center, ellipse cover, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: radial-gradient(ellipse at center, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+}
+
+@mixin bg-gradient-top-left-btm-right($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
+  background: rgba($col1, $alp1);
+  background: -moz-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -webkit-gradient(left top, right bottom, color-stop($loc1, rgba($col1, $alp1)), color-stop($loc2, rgba($col2, $alp2)));
+  background: -webkit-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -o-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -ms-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: linear-gradient(135deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+}
+
+@mixin bg-gradient-top-right-btm-left($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
+  background: rgba($col1, $alp1);
+  background: -moz-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -webkit-gradient(left bottom, right top, color-stop($loc1, rgba($col1, $alp1)), color-stop($loc2, rgba($col2, $alp2)));
+  background: -webkit-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -o-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -ms-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+}
+
+@mixin bg-gradient-top-btm($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
+  background: rgba($col1, $alp1);
+  background: -moz-linear-gradient(top, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -webkit-linear-gradient(top, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: linear-gradient(to bottom, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+}
+
+@mixin bg-gradient-left-right($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
+  background: rgba($col1, $alp1);
+  background: -moz-linear-gradient(left, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: -webkit-linear-gradient(left, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+  background: linear-gradient(to right, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
+}
+
+// Opacity
+// ---------
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+.Utils--opacity-0   { @include opacity(0); }
+.Utils--opacity-5   { @include opacity(5); }
+.Utils--opacity-10  { @include opacity(10); }
+.Utils--opacity-20  { @include opacity(20); }
+.Utils--opacity-30  { @include opacity(30); }
+.Utils--opacity-40  { @include opacity(40); }
+.Utils--opacity-50  { @include opacity(50); }
+.Utils--opacity-60  { @include opacity(60); }
+.Utils--opacity-70  { @include opacity(70); }
+.Utils--opacity-80  { @include opacity(80); }
+.Utils--opacity-90  { @include opacity(90); }
+.Utils--opacity-100 { @include opacity(100); }
+
+// Transitions
+// ---------
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  transition: $args;
+}
+
+// Borders
+// ---------
+
+@mixin border($loc: all, $sizeAsString: one, $type: solid, $colorAsString: grey-light) {
+  $size: map-get($sizes, $sizeAsString);
+  @if not map-has-key($sizes, $sizeAsString) {
+    $size: $sizeAsString;
+  }
+
+  $color: map-get($colors, $colorAsString);
+  @if not map-has-key($colors, $colorAsString) {
+    $color: $colorAsString;
+  }
+
+  @if $loc == all {
+    border: $size $type $color;
+  } @else if $loc == top {
+    border-top: $size $type $color;
+  } @else if $loc == right {
+    border-right: $size $type $color;
+  } @else if $loc == bottom {
+    border-bottom: $size $type $color;
+  } @else if $loc == left {
+    border-left: $size $type $color;
+  } @else if $loc == sides {
+    border-left: $size $type $color;
+    border-right: $size $type $color;
+  } @else if $loc == ends {
+    border-top: $size $type $color;
+    border-bottom: $size $type $color;
+  }
+}
+
+.Utils--border-all-one-solid-grey { @include border(all, one, solid, grey); }
+.Utils--border-left-one-solid-grey { @include border(left, one, solid, grey); }
+.Utils--border-right-one-solid-grey { @include border(right, one, solid, grey); }
+.Utils--border-top-one-solid-grey { @include border(top, one, solid, grey); }
+.Utils--border-bottom-one-solid-grey { @include border(bottom, one, solid, grey); }
+
+.Utils--border-all-one-solid-grey-lightest { @include border(all, one, solid, grey-lightest); }
+.Utils--border-left-one-solid-grey-lightest { @include border(left, one, solid, grey-lightest); }
+.Utils--border-right-one-solid-grey-lightest { @include border(right, one, solid, grey-lightest); }
+.Utils--border-top-one-solid-grey-lightest { @include border(top, one, solid, grey-lightest); }
+.Utils--border-bottom-one-solid-grey-lightest { @include border(bottom, one, solid, grey-lightest); }
+
+// Border Radius
+// ---------
+
+@mixin border-radius($loc, $sizeAsString) {
+
+  $size: map-get($sizes, $sizeAsString);
+
+  @if not map-has-key($sizes, $sizeAsString) {
+    $size: $sizeAsString;
+  }
+
+  @if $loc == all {
+    border-top-left-radius:$size;
+    border-top-right-radius:$size;
+    border-bottom-left-radius:$size;
+    border-bottom-right-radius:$size;
+  } @else if $loc == top {
+    border-top-left-radius:$size;
+    border-top-right-radius:$size;
+  } @else if $loc == right {
+    border-top-right-radius:$size;
+    border-bottom-right-radius:$size;
+  } @else if $loc == bottom {
+    border-bottom-left-radius:$size;
+    border-bottom-right-radius:$size;
+  } @else if $loc == left {
+    border-top-left-radius:$size;
+    border-bottom-left-radius:$size;
+  } @else if $loc == top-right {
+    border-top-right-radius:$size;
+  } @else if $loc == bottom-right {
+    border-bottom-right-radius:$size;
+  } @else if $loc == bottom-left {
+    border-bottom-left-radius:$size;
+  } @else if $loc == top-left {
+    border-top-left-radius:$size;
+  }
+}
+
+.Utils--border-radius-none          { @include border-radius(all, 0); }
+.Utils--border-radius-tiny          { @include border-radius(all, tiny); }
+.Utils--border-radius-xxsm          { @include border-radius(all, xxsm); }
+.Utils--border-radius-xsm           { @include border-radius(all, xsm); }
+.Utils--border-radius-sm            { @include border-radius(all, sm); }
+.Utils--border-radius-md            { @include border-radius(all, md); }
+.Utils--border-radius-lg            { @include border-radius(all, lg); }
+.Utils--border-radius-xlg           { @include border-radius(all, xlg); }
+.Utils--border-radius-xxlg          { @include border-radius(all, xxlg); }
+.Utils--border-radius-jumbo         { @include border-radius(all, jumbo); }
+.Utils--border-radius-full          { @include border-radius(all, 100%); }
+.Utils--border-radius-top-none      { @include border-radius(top, 0); }
+.Utils--border-radius-top-tiny      { @include border-radius(top, tiny); }
+.Utils--border-radius-top-xxsm      { @include border-radius(top, xxsm); }
+.Utils--border-radius-top-xsm       { @include border-radius(top, xsm); }
+.Utils--border-radius-top-sm        { @include border-radius(top, sm); }
+.Utils--border-radius-top-md        { @include border-radius(top, md); }
+.Utils--border-radius-top-lg        { @include border-radius(top, lg); }
+.Utils--border-radius-top-xlg       { @include border-radius(top, xlg); }
+.Utils--border-radius-top-xxlg      { @include border-radius(top, xxlg); }
+.Utils--border-radius-top-jumbo     { @include border-radius(top, jumbo); }
+.Utils--border-radius-right-none    { @include border-radius(right, 0); }
+.Utils--border-radius-right-tiny    { @include border-radius(right, tiny); }
+.Utils--border-radius-right-xxsm    { @include border-radius(right, xxsm); }
+.Utils--border-radius-right-xsm     { @include border-radius(right, xsm); }
+.Utils--border-radius-right-sm      { @include border-radius(right, sm); }
+.Utils--border-radius-right-md      { @include border-radius(right, md); }
+.Utils--border-radius-right-lg      { @include border-radius(right, lg); }
+.Utils--border-radius-right-xlg     { @include border-radius(right, xlg); }
+.Utils--border-radius-right-xxlg    { @include border-radius(right, xxlg); }
+.Utils--border-radius-right-jumbo   { @include border-radius(right, jumbo); }
+.Utils--border-radius-bottom-none   { @include border-radius(bottom, 0); }
+.Utils--border-radius-bottom-tiny   { @include border-radius(bottom, tiny); }
+.Utils--border-radius-bottom-xxsm   { @include border-radius(bottom, xxsm); }
+.Utils--border-radius-bottom-xsm    { @include border-radius(bottom, xsm); }
+.Utils--border-radius-bottom-sm     { @include border-radius(bottom, sm); }
+.Utils--border-radius-bottom-md     { @include border-radius(bottom, md); }
+.Utils--border-radius-bottom-lg     { @include border-radius(bottom, lg); }
+.Utils--border-radius-bottom-xlg    { @include border-radius(bottom, xlg); }
+.Utils--border-radius-bottom-xxlg   { @include border-radius(bottom, xxlg); }
+.Utils--border-radius-bottom-jumbo  { @include border-radius(bottom, jumbo); }
+.Utils--border-radius-left-none     { @include border-radius(left, 0); }
+.Utils--border-radius-left-tiny     { @include border-radius(left, tiny); }
+.Utils--border-radius-left-xxsm     { @include border-radius(left, xxsm); }
+.Utils--border-radius-left-xsm      { @include border-radius(left, xsm); }
+.Utils--border-radius-left-sm       { @include border-radius(left, sm); }
+.Utils--border-radius-left-md       { @include border-radius(left, md); }
+.Utils--border-radius-left-lg       { @include border-radius(left, lg); }
+.Utils--border-radius-left-xlg      { @include border-radius(left, xlg); }
+.Utils--border-radius-left-xxlg     { @include border-radius(left, xxlg); }
+.Utils--border-radius-left-jumbo    { @include border-radius(left, jumbo); }
+.Utils--border-radius-sides-auto    { @include border-radius(sides, auto); }
+.Utils--border-radius-sides-none    { @include border-radius(sides, 0); }
+.Utils--border-radius-sides-tiny    { @include border-radius(sides, tiny); }
+.Utils--border-radius-sides-xxsm    { @include border-radius(sides, xxsm); }
+.Utils--border-radius-sides-xsm     { @include border-radius(sides, xsm); }
+.Utils--border-radius-sides-sm      { @include border-radius(sides, sm); }
+.Utils--border-radius-sides-md      { @include border-radius(sides, md); }
+.Utils--border-radius-sides-lg      { @include border-radius(sides, lg); }
+.Utils--border-radius-sides-xlg     { @include border-radius(sides, xlg); }
+.Utils--border-radius-sides-xxlg    { @include border-radius(sides, xxlg); }
+.Utils--border-radius-sides-jumbo   { @include border-radius(sides, jumbo); }
+.Utils--border-radius-ends-none     { @include border-radius(ends, 0); }
+.Utils--border-radius-ends-tiny     { @include border-radius(ends, tiny); }
+.Utils--border-radius-ends-xxsm     { @include border-radius(ends, xxsm); }
+.Utils--border-radius-ends-xsm      { @include border-radius(ends, xsm); }
+.Utils--border-radius-ends-sm       { @include border-radius(ends, sm); }
+.Utils--border-radius-ends-md       { @include border-radius(ends, md); }
+.Utils--border-radius-ends-lg       { @include border-radius(ends, lg); }
+.Utils--border-radius-ends-xlg      { @include border-radius(ends, xlg); }
+.Utils--border-radius-ends-xxlg     { @include border-radius(ends, xxlg); }
+.Utils--border-radius-ends-jumbo    { @include border-radius(ends, jumbo); }
+
+// Blur
+// ---------
+
+@mixin blur($val) {
+  -webkit-filter: blur($val);
+  -moz-filter: blur($val);
+  -ms-filter: blur($val);
+  filter: blur($val);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+// Float
+// ---------
+
+.Utils--float-left  { float: left; }
+.Utils--float-right { float: right; }
+
+// Transforms
+// ---------
+
+@mixin rotate($val) {
+  -ms-transform: rotate($val);
+  -webkit-transform: rotate($val);
+  transform: rotate($val);
+}

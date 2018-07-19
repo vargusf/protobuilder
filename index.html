@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>protobuilder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="dist/main.js"></script>
+
+  <style>
+    h1, h2, h3, h4 {
+      margin: 20px 0 10px;
+    }
+
+    .col-item { 
+      background-color: lightgrey;
+      padding: 10px;
+      border: 1px solid black
+    }
+  </style>
+</head>
+<body>
+    <i class="fab fa-accessible-icon"></i>
+    <h1>Style Guide</h1>
+    <h2>Config</h2>
+
+    <h2>Layout</h2>
+
+    <h3>Fixed Width</h3>
+    fixed width stuff
+
+    <h3>Positioning</h3>
+
+    <div class="Layout--row-3 Layout--row-gutter-md">
+      <div class="Layout--col">
+        <div class="Utils--background-color-grey Layout--centered" style="height: 200px; width: 200px">
+          item
+        </div>
+      </div>
+      <div class="Layout--col">
+        <div class="Utils--background-color-grey Layout--centered-justify" style="height: 200px; width: 200px">
+          item
+        </div>
+      </div>
+      <div class="Layout--col">
+        <div class="Utils--background-color-grey Layout--centered-align" style="height: 200px; width: 200px">
+          item
+        </div>
+      </div>
+    </div>
+
+    <h3>Colums</h3>
+
+    <h4>General</h4>
+
+    <div class="Layout--row-2">
+      <div class="Layout--col-1">
+        <div class="col-item">Column 1</div>
+      </div>
+      <div class="Layout--col-1">
+        <div class="col-item">Column 2</div>
+      </div>
+    </div>
+    <h4>Colums with gutter</h4>
+    <div class="Layout--row-5 Layout--row-gutter-lg Utils--margin-ends-sm">
+      <div class="Layout--col-1">
+        <div class="col-item">Column 1</div>
+      </div>
+      <div class="Layout--col-1">
+        <div class="col-item">Column 2</div>
+      </div>
+      <div class="Layout--col-3">
+        <div class="col-item">Column 3</div>
+      </div>
+    </div>
+    <p></p>
+    <h2>Cards</h2>
+    <h3>Simple Card</h3>
+
+    <div class="Card">
+      <div class="Card__header">
+        <div class="Card__title">Title</div>
+        <div class="Card__sub-title">Sub Title</div>
+      </div>
+      <div class="Card__content">
+        <div class="Card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, explicabo!</div>
+      </div>
+    </div>
+
+    <h3>Card with Layout</h3>
+
+    <div class="Card">
+      <div class="Layout--row-2">
+        <div class="Layout--col-1">
+          <div class="Card__header">
+            <div class="Card__title">Title</div>
+            <div class="Card__sub-title">Sub Title</div>
+          </div>
+          <div class="Card__content">
+            <div class="Card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, explicabo!</div>
+          </div>
+        </div>
+        <div class="Layout--col-1 Layout--centered">
+          <div class="">col 2</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Card with icon</h3>
+
+    <div class="Card">
+      <div class="Layout--row-2">
+        <div class="Layout--col-grow-1">
+          <div class="Card__header">
+            <div class="Card__title">Title</div>
+            <div class="Card__sub-title">Sub Title</div>
+          </div>
+        </div>
+        <div class="Layout--col Layout--centered">
+          <div class="Utils--padding-lg">col 2</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Card with color</h3>
+
+    <div class="Card Card--background-color-info">
+      <div class="Layout--row-1">
+        <div class="Layout--col-1">
+          <div class="Card__header">
+            <div class="Card__title">Title</div>
+            <div class="Card__sub-title">Sub Title</div>
+          </div>
+          <div class="Card__content">
+            <div class="Card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, explicabo!</div>
+            <div class="Card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, explicabo!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="Card Card--background-color-success Utils--margin-top-lg">
+      <div class="Layout--row-1">
+        <div class="Layout--col-1">
+          <div class="Card__header">
+            <div class="Card__title">Title</div>
+            <div class="Card__sub-title">Sub Title</div>
+          </div>
+          <div class="Card__content">
+            <div class="Card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, explicabo!</div>
+            <div class="Card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, explicabo!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Text</h2>
+    <h2>Icons</h2>
+
+    <h3>Sizes</h3>
+     Icon--size-x2 2-12 (also reverse to x-4)
+
+    <i class="material-icons ">face</i>
+    <i class="material-icons Icon--size-x2">face</i>
+    <i class="material-icons Icon--size-x3">face</i>
+    <i class="material-icons Icon--size-x4">face</i>
+    <i class="material-icons Icon--size-x5">face</i>
+    <i class="material-icons Icon--size-x6">face</i>
+
+    <h2>Colors</h2>
+
+    <h2>Alerts</h2>
+
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+// Text
+
+// Font Family
+
+@mixin font-family($val) {
+  font-family: map-get($fonts, $val) !important;
+}
+
+.Text--font-family-primary    { @include font-family(primary); }
+.Text--font-family-secondary  { @include font-family(secondary); }
+.Text--font-family-tertiary   { @include font-family(tertiary); }
+
+// Font Sizes & Heights
+
+@mixin font-size-in-rem($val: 1.6) {
+    font-size: ($val * 10) + px !important;
+    font-size: $val + rem !important;
+}
+
+@mixin line-height-in-rem($val: 1.6) {
+  line-height: ($val * 10) + px !important;
+  line-height: $val + rem !important;
+}
+
+@mixin font-size($val) {
+  @include font-size-in-rem ( map-get($font-size, $val) );
+  @include line-height-in-rem ( map-get($line-height, $val) );
+}
+
+.Text--font-size-tiny   { @include font-size(tiny); }
+.Text--font-size-xxsm   { @include font-size(xxsm); }
+.Text--font-size-xsm    { @include font-size(xsm); }
+.Text--font-size-sm     { @include font-size(sm); }
+.Text--font-size-md     { @include font-size(md); }
+.Text--font-size-lg     { @include font-size(lg); }
+.Text--font-size-xlg    { @include font-size(xlg); }
+.Text--font-size-xxlg   { @include font-size(xxlg); }
+.Text--font-size-jumbo  { @include font-size(jumbo); }
+
+// Font Weights
+
+.Text--font-weight-thin,
+.Text--font-weight-100          { font-weight: 100; }
+.Text--font-weight-extra-light,
+.Text--font-weight-200          { font-weight: 200; }
+.Text--font-weight-light,
+.Text--font-weight-300          { font-weight: 300; }
+.Text--font-weight-regular,
+.Text--font-weight-400          { font-weight: 400; }
+.Text--font-weight-medium,
+.Text--font-weight-500          { font-weight: 500; }
+.Text--font-weight-semi-bold,
+.Text--font-weight-600          { font-weight: 600; }
+.Text--font-weight-bold,
+.Text--font-weight-700          { font-weight: 700; }
+.Text--font-weight-extra-bold,
+.Text--font-weight-800          { font-weight: 800; }
+.Text--font-weight-black,
+.Text--font-weight-900          { font-weight: 900; }
+
+// Text Colors
+
+@mixin color($colorAsString) {
+  $color: map-get($colors, $colorAsString);
+  @if not map-has-key($colors, $colorAsString) {
+    $color: $colorAsString;
+  }
+
+  color: $color !important;
+}
+
+.Text--color-white           { @include color(white); }
+.Text--color-black           { @include color(black); }
+.Text--color-grey-lightest   { @include color(grey-lightest); }
+.Text--color-grey-lighter    { @include color(grey-lighter); }
+.Text--color-grey-light      { @include color(grey-light); }
+.Text--color-grey            { @include color(grey); }
+.Text--color-grey-dark       { @include color(grey-dark); }
+.Text--color-grey-darker     { @include color(grey-darker); }
+.Text--color-grey-darkest    { @include color(grey-darkest); }
+.Text--color-primary         { @include color(primary); }
+.Text--color-primary-light   { @include color(primary-light); }
+.Text--color-primary-dark    { @include color(primary-dark); }
+.Text--color-secondary       { @include color(secondary); }
+.Text--color-secondary-light { @include color(secondary-light); }
+.Text--color-secondary-dark  { @include color(secondary-dark); }
+.Text--color-info            { @include color(info); }
+.Text--color-success         { @include color(success); }
+.Text--color-warning         { @include color(warning); }
+.Text--color-error           { @include color(error); }
+
+// Text Alignment
+
+.Text--align-left     { text-align: left; }
+.Text--align-right    { text-align: right; }
+.Text--align-center   { text-align: center; }
+.Text--align-justify  { text-align: justify; }
+
+// Text Reset
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-family(primary);
+  @include font-size($default-font-size);
+  font-weight: 400;
+  @include color($default-color);
+}
+
+div, span, p, a, li {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+}

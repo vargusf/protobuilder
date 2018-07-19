@@ -1,0 +1,142 @@
+// Fixed width for container
+
+
+.Layout--fixed-width { 
+  max-width: $default-fixed-width;
+  @include margin(sides, auto);
+  @include padding(sides, $default-fixed-width-side-padding);
+ }
+
+ // Positioning
+
+ @mixin flex-centered($position: both) {
+
+  @include display-flex();
+
+  @if ($position == align) {
+    @include align-items(center);
+  } @else if ($position == justify) {
+    @include justify-content(center);
+  } @else {
+    @include justify-content(center);
+    @include align-items(center);
+  }
+};
+
+// @mixin flex-centered() {
+//   @include display-flex();
+//   @include justify-content(center);
+//   @include align-items(center);
+// }
+
+.Layout--centered         { @include flex-centered(); }
+.Layout--centered-align   { @include flex-centered(align); }
+.Layout--centered-justify { @include flex-centered(justify); }
+
+// Stretch Edges
+
+@mixin stretch-edges() {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Layout--stretch-edges { @include stretch-edges(); }
+.Layout--stretch-edges-fixed { @include stretch-edges(); position: fixed; }
+
+// Grid
+
+.Layout--row-2,
+.Layout--row-3,
+.Layout--row-4,
+.Layout--row-5,
+.Layout--row-6,
+.Layout--row-7,
+.Layout--row-8, {
+  @include display-flex();
+}
+
+// Gutters
+
+.Layout--row-gutter-one   { &> * { @include padding(sides, one); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-two   { &> * { @include padding(sides, two); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-tiny  { &> * { @include padding(sides, tiny); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xxsm  { &> * { @include padding(sides, xxsm); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xsm   { &> * { @include padding(sides, xsm); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-sm    { &> * { @include padding(sides, sm); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-md    { &> * { @include padding(sides, md); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-lg    { &> * { @include padding(sides, lg); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xlg   { &> * { @include padding(sides, xlg); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xxlg  { &> * { @include padding(sides, xxlg); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-jumbo { &> * { @include padding(sides, jumbo); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+
+// Columns
+
+.Layout--col { /* just chillin semantically */ } 
+
+.Layout--col-grow-1 { @include flex-grow(1); }
+.Layout--col-grow-2 { @include flex-grow(2); }
+.Layout--col-grow-3 { @include flex-grow(3); }
+.Layout--col-grow-4 { @include flex-grow(4); }
+
+.Layout--col-shrink-1 { @include flex-shrink(1); }
+.Layout--col-shrink-2 { @include flex-shrink(2); }
+.Layout--col-shrink-3 { @include flex-shrink(3); }
+.Layout--col-shrink-4 { @include flex-shrink(4); }
+
+.Layout--row-2 {
+  .Layout--col-1 { @include flex-basis(50%); min-width: 50% }
+  .Layout--col-2 { @include flex-basis(100%); min-width: 100% }
+}
+
+.Layout--row-3 {
+  .Layout--col-1 { @include flex-basis(33.333%); min-width: 33.333% }
+  .Layout--col-2 { @include flex-basis(66.666%); min-width: 66.666% }
+  .Layout--col-3 { @include flex-basis(100%); min-width: 100% }
+}
+
+.Layout--row-4 {
+  .Layout--col-1 { @include flex-basis(25%); min-width: 25% }
+  .Layout--col-2 { @include flex-basis(50%); min-width: 50% }
+  .Layout--col-3 { @include flex-basis(75%); min-width: 75% }
+  .Layout--col-4 { @include flex-basis(100%); min-width: 100% }
+}
+
+.Layout--row-5 {
+  .Layout--col-1 { @include flex-basis(20%); min-width: 20% }
+  .Layout--col-2 { @include flex-basis(40%); min-width: 40% }
+  .Layout--col-3 { @include flex-basis(60%); min-width: 60% }
+  .Layout--col-4 { @include flex-basis(80%); min-width: 80% }
+  .Layout--col-5 { @include flex-basis(100%); min-width: 100% }
+}
+
+.Layout--row-6 {
+  .Layout--col-1 { @include flex-basis(16.666%); min-width: 16.666% }
+  .Layout--col-2 { @include flex-basis(33.333%); min-width: 33.333% }
+  .Layout--col-3 { @include flex-basis(50%); min-width: 50% }
+  .Layout--col-4 { @include flex-basis(66.666%); min-width: 66.666% }
+  .Layout--col-5 { @include flex-basis(83.333%); min-width: 83.333% }
+  .Layout--col-6 { @include flex-basis(100%); min-width: 100% }
+}
+
+.Layout--row-7 {
+  .Layout--col-1 { @include flex-basis(14.285%); min-width: 14.285% }
+  .Layout--col-2 { @include flex-basis(28.571%); min-width: 28.571% }
+  .Layout--col-3 { @include flex-basis(42.857%); min-width: 42.857% }
+  .Layout--col-4 { @include flex-basis(57.142%); min-width: 57.142% }
+  .Layout--col-5 { @include flex-basis(71.428%); min-width: 71.428% }
+  .Layout--col-6 { @include flex-basis(85.714%); min-width: 85.714% }
+  .Layout--col-7 { @include flex-basis(100%); min-width: 100% }
+}
+
+.Layout--row-8 {
+  .Layout--col-1 { @include flex-basis(12.5%); min-width: 12.5% }
+  .Layout--col-2 { @include flex-basis(25%); min-width: 25% }
+  .Layout--col-3 { @include flex-basis(37.5%); min-width: 37.5% }
+  .Layout--col-4 { @include flex-basis(50%); min-width: 50% }
+  .Layout--col-5 { @include flex-basis(62.5%); min-width: 62.5% }
+  .Layout--col-6 { @include flex-basis(75%); min-width: 75% }
+  .Layout--col-7 { @include flex-basis(87.5%); min-width: 87.5% }
+  .Layout--col-8 { @include flex-basis(100%); min-width: 100% }
+}

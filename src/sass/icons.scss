@@ -1,0 +1,38 @@
+// Icon
+
+// size
+.Icon--size-x-4 { @include font-size-in-rem(0.7); }
+.Icon--size-x-3 { @include font-size-in-rem(1.1); }
+.Icon--size-x-2 { @include font-size-in-rem(1.6); }
+.Icon--size-x2  { @include font-size-in-rem(3.2); }
+.Icon--size-x3  { @include font-size-in-rem(4.2); }
+.Icon--size-x4  { @include font-size-in-rem(5.7); }
+.Icon--size-x5  { @include font-size-in-rem(7.6); }
+.Icon--size-x6  { @include font-size-in-rem(10.1); }
+.Icon--size-x7  { @include font-size-in-rem(13.5); }
+.Icon--size-x8  { @include font-size-in-rem(18.0); }
+.Icon--size-x9  { @include font-size-in-rem(24.0); }
+.Icon--size-x10 { @include font-size-in-rem(32.0); }
+.Icon--size-x11 { @include font-size-in-rem(42.5); }
+.Icon--size-x12 { @include font-size-in-rem(56.7); }
+
+// color
+.Icon--white           { @include color(white); }
+.Icon--black           { @include color(black); }
+.Icon--grey-lightest   { @include color(grey-lightest); }
+.Icon--grey-lighter    { @include color(grey-lighter); }
+.Icon--grey-light      { @include color(grey-light); }
+.Icon--grey            { @include color(grey); }
+.Icon--grey-dark       { @include color(grey-dark); }
+.Icon--grey-darker     { @include color(grey-darker); }
+.Icon--grey-darkest    { @include color(grey-darkest); }
+.Icon--primary         { @include color(primary); }
+.Icon--primary-light   { @include color(primary-light); }
+.Icon--primary-dark    { @include color(primary-dark); }
+.Icon--secondary       { @include color(secondary); }
+.Icon--secondary-light { @include color(secondary-light); }
+.Icon--secondary-dark  { @include color(secondary-dark); }
+.Icon--info            { @include color(info); }
+.Icon--success         { @include color(success); }
+.Icon--warning         { @include color(warning); }
+.Icon--error           { @include color(error); }

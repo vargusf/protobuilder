@@ -1,0 +1,28 @@
+// Breakpoints
+
+@mixin bp($breakpointString, $breakpointType: down) {
+
+  $breakpointNumber: map-get($breakpoints, $breakpointString);
+
+  @if not map-has-key($breakpoints, $breakpointString) {
+    $breakpointNumber: $breakpointString;
+  }
+
+  @if $breakpointType == down {
+    @media (max-width: '#{$breakpointNumber}px')  { @content; }
+  } @else if $breakpointType == up {
+    @media (min-width: '#{$breakpointNumber}px')  { @content; }
+  } @else if $breakpointType == only {
+    @if $breakpointString == xsm {
+      @media (min-width: '0px') and (max-width: '#{map-get($breakpoints, xsm)}px') { @content; }
+    } @else if $breakpointString == sm {
+      @media (min-width: '#{map-get($breakpoints, xsm)}px') and (max-width: '#{map-get($breakpoints, sm)}px') { @content; }
+    } @else if $breakpointString == md {
+      @media (min-width: '#{map-get($breakpoints, sm)}px') and (max-width: '#{map-get($breakpoints, md)}px') { @content; }
+    } @else if $breakpointString == lg {
+      @media (min-width: '#{map-get($breakpoints, md)}px') and (max-width: '#{map-get($breakpoints, lg)}px') { @content; }
+    } @else if $breakpointString == xlg {
+      @media (min-width: '#{map-get($breakpoints, lg)}px') and (max-width: '#{map-get($breakpoints, xlg)}px') { @content; }
+    }
+  }
+}
