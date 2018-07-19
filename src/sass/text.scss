@@ -103,7 +103,7 @@ html {
 }
 
 body {
-  @include font-family(primary);
+  @include font-family($default-font-family);
   @include font-size($default-font-size);
   font-weight: 400;
   @include color($default-color);

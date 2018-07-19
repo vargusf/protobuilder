@@ -1,3 +1,7 @@
+// Import Resets
+@import "~normalize.css/normalize.css";
+@import "reset";
+
 // Import Core
 @import "functions";
 @import "breakpoints";
@@ -10,4 +14,3 @@
 @import "lists";
 @import "forms";
 @import "buttons";
-@import "reset";
