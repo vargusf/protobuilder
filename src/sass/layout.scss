@@ -59,17 +59,17 @@ body {
 
 // Gutters
 
-.Layout--row-gutter-one   { &> * { @include padding(sides, one); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-two   { &> * { @include padding(sides, two); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-tiny  { &> * { @include padding(sides, tiny); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-xxsm  { &> * { @include padding(sides, xxsm); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-xsm   { &> * { @include padding(sides, xsm); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-sm    { &> * { @include padding(sides, sm); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-md    { &> * { @include padding(sides, md); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-lg    { &> * { @include padding(sides, lg); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-xlg   { &> * { @include padding(sides, xlg); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-xxlg  { &> * { @include padding(sides, xxlg); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
-.Layout--row-gutter-jumbo { &> * { @include padding(sides, jumbo); } :first-child { @include padding(left, 0); } :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-one   { &> * { @include padding(sides, one); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-two   { &> * { @include padding(sides, two); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-tiny  { &> * { @include padding(sides, tiny); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xxsm  { &> * { @include padding(sides, xxsm); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xsm   { &> * { @include padding(sides, xsm); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-sm    { &> * { @include padding(sides, sm); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-md    { &> * { @include padding(sides, md); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-lg    { &> * { @include padding(sides, lg); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xlg   { &> * { @include padding(sides, xlg); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-xxlg  { &> * { @include padding(sides, xxlg); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
+.Layout--row-gutter-jumbo { &> * { @include padding(sides, jumbo); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
 
 // Columns
 

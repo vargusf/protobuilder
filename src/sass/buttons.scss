@@ -51,14 +51,14 @@
   @include color(grey-dark);
 }
 
-.Button-type-text {
+.Button--type-text {
   @include background-color(transparent);
   &:hover {
     @include background-color(grey);
   }
 }
 
-.Button-type-outline {
+.Button--type-outline {
   @include background-color(transparent);
   &:hover {
     @include background-color(grey);
@@ -75,7 +75,7 @@
   
 }
 
-.Button-type-fill {
+.Button--type-fill {
   @include color(white);
   &.Button--color-primary {
     @include background-color(primary);

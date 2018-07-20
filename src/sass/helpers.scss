@@ -15,11 +15,30 @@
 // Font Awesome for pseudo elements
 
 @mixin pseudo-fa($val) {
-  display: inline-block;
   content: $val;
+  display: inline-block;
   font: normal normal normal 12px/1 FontAwesome;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+// Material icons for pseudo elements
+
+@mixin pseudo-mi($val) {
+  content: $val;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 
 // Triangle

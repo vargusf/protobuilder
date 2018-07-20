@@ -1,13 +1,10 @@
-// Import Resets
-@import "~normalize.css/normalize.css";
-@import "reset";
-
 // Import Core
+@import "reset";
 @import "functions";
+@import "helpers";
 @import "breakpoints";
 @import "utilities";
 @import "layout";
-@import "helpers";
 @import "text";
 @import "icons";
 @import "card";
