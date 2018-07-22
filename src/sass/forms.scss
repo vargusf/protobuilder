@@ -84,14 +84,66 @@
   }
 }
 
-.Form__item--success {
-  
+.Form__item--error {
+  @include border(bottom, two, solid, error);
+  @include background-color(lighten(map-get($colors, error), 43%));
+  label {
+    @include padding(left, tiny);
+    @include color(error);
+    font-weight: 500;
+  }
+  &:hover {
+    @include border(bottom, two, solid, error);
+  }
+  span {
+    @include color(error);
+  }
 }
 
-.Form__item--error {
-  @include border(bottom, one, solid, error);
-  @include background-color(red);
+.Form__item--warning {
+  @include border(bottom, two, solid, warning);
+  @include background-color(lighten(map-get($colors, warning), 30%));
+  label {
+    @include padding(left, tiny);
+    @include color(warning);
+    font-weight: 500;
+  }
+  &:hover {
+    @include border(bottom, two, solid, warning);
+  }
   span {
-    @include color(red);
+    @include color(warning);
+  }
+}
+
+.Form__item--success {
+  @include border(bottom, two, solid, success);
+  @include background-color(lighten(map-get($colors, success), 47%));
+  label {
+    @include padding(left, tiny);
+    @include color(success);
+    font-weight: 500;
+  }
+  &:hover {
+    @include border(bottom, two, solid, success);
+  }
+  span {
+    @include color(success);
+  }
+}
+
+.Form__item--info {
+  @include border(bottom, two, solid, info);
+  @include background-color(lighten(map-get($colors, info), 48%));
+  label {
+    @include padding(left, tiny);
+    @include color(info);
+    font-weight: 500;
+  }
+  &:hover {
+    @include border(bottom, two, solid, info);
+  }
+  span {
+    @include color(info);
   }
 }
