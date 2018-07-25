@@ -29,6 +29,12 @@
   @include font-size-in-rem(1.5);
 }
 
+.Button--size-xlg {
+  @include padding(ends, 16px);
+  @include padding(sides, 40px);
+  @include font-size-in-rem(1.8);
+}
+
 .Button--size-full {
   @include padding(ends, sm);
   @include padding(sides, xlg);
@@ -36,7 +42,6 @@
 }
 
 // Type & Color
-
 
 
 .Button--color-primary {
@@ -49,6 +54,9 @@
 
 .Button--color-grey {
   @include color(grey-dark);
+}
+.Button--color-white {
+  @include color(white);
 }
 
 .Button--type-text {
@@ -72,6 +80,9 @@
   &.Button--color-grey {
     @include border(all, one, solid, grey-dark);
   }
+  &.Button--color-white {
+    @include border(all, one, solid, white);
+  }
   
 }
 
@@ -91,6 +102,10 @@
   }
   &.Button--color-grey {
     @include background-color(grey-dark);
+  }
+  &.Button--color-white {
+    @include background-color(white);
+    @include color(primary);
   }
 }
 

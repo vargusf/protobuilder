@@ -3,6 +3,18 @@ body {
   @include background-color($default-background-color);
 }
 
+// Stretch Edges
+
+@mixin stretch-edges() {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Layout--stretch-edges { @include stretch-edges(); }
+.Layout--stretch-edges-fixed { @include stretch-edges(); position: fixed; }
+
 // Fixed width for container
 
 @mixin fixed-width {
@@ -15,35 +27,31 @@ body {
 
  // Positioning
 
- @mixin flex-centered($position: both) {
-
-  @include display-flex();
-
-  @if ($position == align) {
-    @include align-items(center);
-  } @else if ($position == justify) {
-    @include justify-content(center);
-  } @else {
-    @include justify-content(center);
-    @include align-items(center);
-  }
+ @mixin flex-centered() {
+   @include display-flex();
+   @include align-items(center);
 };
 
 .Layout--centered         { @include flex-centered(); }
-.Layout--centered-align   { @include flex-centered(align); }
-.Layout--centered-justify { @include flex-centered(justify); }
 
-// Stretch Edges
+.Layout--justify-center   { @include display-flex(); @include justify-content(center); }
+.Layout--justify-start    { @include display-flex(); @include justify-content(flex-start); }
+.Layout--justify-end      { @include display-flex(); @include justify-content(flex-end); }
+.Layout--justify-between  { @include display-flex(); @include justify-content(space-between); }
+.Layout--justify-around   { @include display-flex(); @include justify-content(space-around); }
 
-@mixin stretch-edges() {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
+.Layout--align-center     { @include display-flex(); @include align-items(center); }
+.Layout--align-stretch    { @include display-flex(); @include align-items(stretch); }
+.Layout--align-start      { @include display-flex(); @include align-items(flex-start); }
+.Layout--align-end        { @include display-flex(); @include align-items(flex-end); }
+.Layout--align-baseline   { @include display-flex(); @include align-items(baseline); }
 
-.Layout--stretch-edges { @include stretch-edges(); }
-.Layout--stretch-edges-fixed { @include stretch-edges(); position: fixed; }
+.Layout--row              { @include display-flex(); @include flex-direction(row); }
+.Layout--col              { @include display-flex(); @include flex-direction(column); }
+
+.Layout--wrap             { @include flex-wrap(wrap); }
+.Layout--nowrap           { @include flex-wrap(nowrap); }
+.Layout--wrap-reverse     { @include flex-wrap(wrap-reverse); }
 
 // Grid
 

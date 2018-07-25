@@ -181,19 +181,20 @@
       <h2>Forms</h2>
 
       <div class="Card Utils--padding-ends-md Utils--padding-sides-md">
+        <h3>text & textarea</h3>
         <div class="Layout--row-4 Layout--row-gutter-md">
           <div class="Layout--col-1">
-            <div class="Form__item Form__item--input">
+            <div class="Form__item--input">
               <label>Label</label>
               <input type="text" />
-              <span></span>
+              <span class="feedback"></span>
             </div>
           </div>
           <div class="Layout--col-1">
             <div class="Form__item Form__item--input">
               <label>Label</label>
               <input type="date" />
-              <span></span>
+              <span class="feedback"></span>
             </div>
           </div>
           <div class="Layout--col-1">
@@ -209,6 +210,41 @@
           </div>
           <div class="Layout--col-1">
             <div class="Form__item Form__item--textarea">
+              <label>Label</label>
+              <textarea></textarea>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <h3>feedback</h3>
+        <div class="Layout--row-4 Layout--row-gutter-md">
+          <div class="Layout--col-1">
+            <div class="Form__item Form__item--error Form__item--input">
+              <label>Label</label>
+              <input type="text" />
+              <span></span>
+            </div>
+          </div>
+          <div class="Layout--col-1">
+            <div class="Form__item Form__item--warning Form__item--input">
+              <label>Label</label>
+              <input type="date" />
+              <span></span>
+            </div>
+          </div>
+          <div class="Layout--col-1">
+            <div class="Form__item Form__item--success Form__item--select">
+              <select>
+                <option>option 1</option>
+                <option>option 2</option>
+                <option>option 3</option>
+                <option>option 4</option>
+              </select>
+              <span></span>
+            </div>
+          </div>
+          <div class="Layout--col-1">
+            <div class="Form__item Form__item--info Form__item--textarea">
               <label>Label</label>
               <textarea></textarea>
               <span></span>
@@ -245,6 +281,30 @@
             </div>
           </div>
         </div>
+        <h3>checkboxes and radio</h3>
+        <div class="Layout--row-4 Layout--row-gutter-md">
+          <div class="Layout--col-1">
+            <div class="Form__item--checkbox">
+              <label>
+                <input type="checkbox" />
+                <span class="icon"></span>
+                <div class="label">Label</div>
+              </label>
+              <span class="feedback">heres some feedback</span>
+            </div>
+          </div>
+          <div class="Layout--col-1">
+            <div class="Form__item--checkbox Form__item--error">
+              <label>
+                <input type="checkbox" />
+                <span class="icon"></span>
+                <div class="label">Label</div>
+              </label>
+              <span class="feedback">heres some feedback</span>
+            </div>
+          </div>
+        </div>
+        <h3>formgroup</h3>
       </div>
 
 
