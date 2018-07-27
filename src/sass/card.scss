@@ -2,21 +2,23 @@
 
 .Card {
   @include background-color(white);
-  @include border(all, one, solid, grey);
+  @include border(all, one, solid, grey-light);
   @include border-radius(all, tiny);
 }
 
 .Card__header{
-  @include margin(ends, sm);
+  @include padding(ends, md);
+  @include margin(bottom, md);
+  @include margin(sides, md);
+  @include border(bottom, one, solid, grey-light);
+}
+
+.Card__content {
+  @include margin(ends, md);
   @include padding(sides, md);
 }
 
-.Card__content{
-  @include margin(ends, sm);
-  @include padding(sides, md);
-}
-
-.Card__footer{
+.Card__footer {
   @include margin(ends, sm);
   @include padding(sides, md);
 }

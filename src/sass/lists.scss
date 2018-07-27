@@ -7,14 +7,34 @@
 
 .List__item {
   @include border(bottom, one, solid, grey-light);
-  &:after {
+  @include display-flex();
+  &:last-child {
     @include border(bottom, 0);
+  }
+}
+
+
+.List__button {
+  @include display-flex();
+  @include flex-grow(1);
+  @include border(all, 0);
+  cursor: pointer;
+  text-align: inherit;
+  &:hover {
+    @include background-color(grey-lightest);
+  }
+  &:focus {
+    @include background-color(grey-lighter);
+  }
+  &.List__button--active {
+    @include background-color(secondary-light);
+    @include color(white);
   }
 }
 
 .List__content {
   @include flex-grow(1);
-  @include padding(ends, md);
+  @include padding(ends, sm);
   @include padding(sides, md);
   @include font-size(sm);
 }

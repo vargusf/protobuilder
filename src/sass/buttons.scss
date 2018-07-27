@@ -41,7 +41,7 @@
   @include font-size-in-rem(1.5);
 }
 
-// Type & Color
+// Color
 
 
 .Button--color-primary {
@@ -65,6 +65,8 @@
     @include background-color(grey);
   }
 }
+
+// Type
 
 .Button--type-outline {
   @include background-color(transparent);
