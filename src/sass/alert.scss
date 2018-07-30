@@ -1,0 +1,45 @@
+// Alert
+
+.Alert {
+  @include padding(ends, sm);
+  @include padding(sides, sm);
+}
+
+.Alert__title {
+  @include font-size(md);
+  @include color(grey-darkest);
+  font-weight: 600;
+  @include margin(bottom, xxsm);
+}
+
+.Alert__text {
+  @include font-size(sm);
+  @include color(grey-darkest);
+}
+
+// .Alert__actions {
+//   @include display-flex();
+//   @include justify-content(flex-end);
+// }
+
+// bg colors
+
+.Alert--info {
+  @include background-color(rgba(map-get($colors, info), .2));
+  @include border(left, xxsm, solid, info);
+}
+
+.Alert--success {
+  @include background-color(rgba(map-get($colors, success), .2));
+  @include border(left, xxsm, solid, success);
+}
+
+.Alert--warning {
+  @include background-color(rgba(map-get($colors, warning), .2));
+  @include border(left, xxsm, solid, warning);
+}
+
+.Alert--error {
+  @include background-color(rgba(map-get($colors, error), .15));
+  @include border(left, xxsm, solid, error);
+}
