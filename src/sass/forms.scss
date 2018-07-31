@@ -42,6 +42,10 @@
     width: 100%;
     @include font-size-in-rem(1.8);
     @include color(grey-darkest);
+    &::placeholder {
+      @include color(grey);
+      opacity: 1;
+    }
   }
 }
 
@@ -68,6 +72,10 @@
     border: none;
     @include color(grey-darkest);
     @include font-size-in-rem(1.8);
+    &::placeholder {
+      @include color(grey);
+      opacity: 1;
+    }
   }
 }
 
@@ -135,7 +143,7 @@
       @include font-size-in-rem(1.4);
     }
   }
-  .feedback {
+  .response {
     display: block;
     position: absolute;
     left: 0;

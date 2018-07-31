@@ -8,7 +8,7 @@
 
 .Card__header{
   @include padding(ends, md);
-  @include margin(bottom, md);
+  @include margin(bottom, xlg);
   @include margin(sides, md);
   @include border(bottom, one, solid, grey-light);
 }
