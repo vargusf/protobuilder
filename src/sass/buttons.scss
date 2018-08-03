@@ -35,12 +35,6 @@
   @include font-size-in-rem(1.8);
 }
 
-.Button--size-full {
-  @include padding(ends, sm);
-  @include padding(sides, xlg);
-  @include font-size-in-rem(1.5);
-}
-
 // Color
 
 

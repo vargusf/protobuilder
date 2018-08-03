@@ -28,9 +28,9 @@
 }
 
 .Card__sub-title {
-  @include font-size(md);
+  @include font-size(xsm);
   @include color(grey-dark);
-  @include margin(top, tiny);
+  @include margin(top, xxsm);
 }
 
 .Card__text {

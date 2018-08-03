@@ -40,7 +40,7 @@
     background: none;
     border: none;
     width: 100%;
-    @include font-size-in-rem(1.8);
+    @include font-size-in-rem(1.6);
     @include color(grey-darkest);
     &::placeholder {
       @include color(grey);
@@ -65,13 +65,13 @@
     bottom: 4px;
     left: 0;
     right: 0;
-    height: 70px;
+    height: 60px;
     width: 100%;
-    line-height: 120%;
+    line-height: 130%;
     background: none;
     border: none;
     @include color(grey-darkest);
-    @include font-size-in-rem(1.8);
+    @include font-size-in-rem(1.6);
     &::placeholder {
       @include color(grey);
       opacity: 1;

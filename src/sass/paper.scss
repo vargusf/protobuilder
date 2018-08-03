@@ -1,0 +1,97 @@
+// Paper
+
+.Paper {
+  @include background-color(white);
+  @include border(all, one, solid, grey-light);
+  @include border-radius(all, tiny);
+}
+
+.Paper__header{
+  @include padding(ends, md);
+  @include margin(bottom, xlg);
+  @include margin(sides, md);
+  @include border(bottom, one, solid, grey-light);
+}
+
+.Paper__content {
+  @include margin(ends, md);
+  @include padding(sides, md);
+}
+
+.Paper__footer {
+  @include margin(ends, sm);
+  @include padding(sides, md);
+}
+
+.Paper__title {
+  @include font-size(xlg);
+}
+
+.Paper__sub-title {
+  @include font-size(xsm);
+  @include color(grey-dark);
+  @include margin(top, xxsm);
+}
+
+.Paper__text {
+  @include font-size(sm);
+}
+
+.Paper__actions {
+  @include display-flex();
+  @include justify-content(flex-end);
+}
+
+// bg colors
+
+.Paper--background-color-white           { @include background-color(white); }
+
+.Paper--background-color-black           { @include background-color(black); }
+.Paper--background-color-grey-lightest   { @include background-color(grey-lightest); }
+.Paper--background-color-grey-lighter    { @include background-color(grey-lighter); }
+.Paper--background-color-grey-light      { @include background-color(grey-light); }
+.Paper--background-color-grey            { @include background-color(grey); }
+.Paper--background-color-grey-dark       { @include background-color(grey-dark); }
+.Paper--background-color-grey-darker     { @include background-color(grey-darker); }
+.Paper--background-color-grey-darkest    { @include background-color(grey-darkest); }
+.Paper--background-color-primary         { @include background-color(primary); }
+.Paper--background-color-primary-light   { @include background-color(primary-light); }
+.Paper--background-color-primary-dark    { @include background-color(primary-dark); }
+.Paper--background-color-secondary       { @include background-color(secondary); }
+.Paper--background-color-secondary-light { @include background-color(secondary-light); }
+.Paper--background-color-secondary-dark  { @include background-color(secondary-dark); }
+
+.Paper--background-color-info            {
+  @include background-color(info);
+  .Paper__title,
+  .Paper__sub-title,
+  .Paper__text {
+    @include color(white);
+  }
+}
+
+.Paper--background-color-success         {
+  @include background-color(success);
+  .Paper__title,
+  .Paper__sub-title,
+  .Paper__text {
+    @include color(white);
+  }
+}
+.Paper--background-color-warning         {
+  @include background-color(warning);
+  .Paper__title,
+  .Paper__sub-title,
+  .Paper__text {
+    @include color(white);
+  }
+}
+
+.Paper--background-color-error           { 
+  @include background-color(error);
+  .Paper__title,
+  .Paper__sub-title,
+  .Paper__text {
+    @include color(white);
+  }
+}
