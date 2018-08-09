@@ -23,23 +23,73 @@
   @include padding(sides, md);
 }
 
-.Paper__title {
+// Text & Headings
+
+.Paper__heading-1 {
   @include font-size(xlg);
+  font-weight: 400;
+  &.Paper__heading--subtle {
+    @include color(grey-dark);
+    font-weight: 400;
+  }
 }
 
-.Paper__sub-title {
-  @include font-size(xsm);
-  @include color(grey-dark);
-  @include margin(top, xxsm);
+.Paper__heading-2 {
+  @include font-size(lg);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey-dark);
+    font-weight: 400;
+  }
 }
+
+.Paper__heading-3 {
+  @include font-size(md);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey-dark);
+    font-weight: 400;
+  }
+}
+
+.Paper__heading-4 {
+  @include font-size(sm);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey-dark);
+    font-weight: 400;
+  }
+}
+
+.Paper__heading-5 {
+  @include font-size(xsm);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey-dark);
+    font-weight: 400;
+  }
+}
+
+// .Paper__heading-1--subtle {
+//   @include color(grey-dark);
+// }
+
+// .Paper__heading-3 {
+//   @include font-size(xsm);
+//   @include color(grey-dark);
+// }
+
+// .Paper__heading-4 {
+//   @include font-size(xsm);
+//   font-weight: 500;
+// }
 
 .Paper__text {
   @include font-size(sm);
 }
 
-.Paper__actions {
-  @include display-flex();
-  @include justify-content(flex-end);
+.Paper__text-small {
+  @include font-size(xsm);
 }
 
 // bg colors
