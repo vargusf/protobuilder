@@ -1,6 +1,6 @@
 {
   "name": "protobuilder",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Foundational styles for rapid development - core",
   "main": "index.js",
   "scripts": {
