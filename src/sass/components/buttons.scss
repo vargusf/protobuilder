@@ -69,7 +69,7 @@
 .Button--type-outline {
   @include background-color(transparent);
   &:hover {
-    @include background-color(grey);
+    @include background-color(grey-lighter);
   }
   &.Button--color-primary {
     @include border(all, one, solid, primary);
@@ -109,27 +109,3 @@
     font-weight: 500;
   }
 }
-
-// .Button--color-blue {
-//   @include background-color(blue);
-//   @include color(white);
-//   &:hover {
-//     @include background-color(darken(map-get($colors, blue), 12%));
-//   }
-// }
-
-// .Button--color-grey {
-//   @include background-color(grey-dark);
-//   @include color(white);
-//   &:hover {
-//     @include background-color(darken(map-get($colors, grey-dark), 12%));
-//   }
-// }
-
-// .Button--color-danger {
-//   @include background-color(danger);
-//   @include color(white);
-//   &:hover {
-//     @include background-color(darken(map-get($colors, danger), 12%));
-//   }
-// }

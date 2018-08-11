@@ -73,14 +73,22 @@ label {
   @include transition(all .2s);
 }
 
-.Form__item--active {
+.Form__item--dirty {
   label {
     top: 1px;
     @include font-size-in-rem(1.3);
   }
 }
 
-
+.Form__item--active {
+  @include border(bottom, two, solid, info);
+  &:hover {
+    @include border(bottom, two, solid, info);
+  }
+  label {
+    @include color(info);
+  }
+}
 
 .Form__item--select {
   height: 48px;

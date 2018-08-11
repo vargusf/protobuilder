@@ -541,6 +541,15 @@
 
 .Utils--background-color-white           { @include background-color(white); }
 .Utils--background-color-black           { @include background-color(black); }
+.Utils--background-color-100             { @include background-color(100); }
+.Utils--background-color-200             { @include background-color(200); }
+.Utils--background-color-300             { @include background-color(300); }
+.Utils--background-color-400             { @include background-color(400); }
+.Utils--background-color-500             { @include background-color(500); }
+.Utils--background-color-600             { @include background-color(600); }
+.Utils--background-color-700             { @include background-color(700); }
+.Utils--background-color-800             { @include background-color(800); }
+.Utils--background-color-900             { @include background-color(900); }
 .Utils--background-color-grey-lightest   { @include background-color(grey-lightest); }
 .Utils--background-color-grey-lighter    { @include background-color(grey-lighter); }
 .Utils--background-color-grey-light      { @include background-color(grey-light); }
@@ -641,7 +650,7 @@
 // Borders
 // ---------
 
-@mixin border($loc: all, $sizeAsString: one, $type: solid, $colorAsString: grey-light) {
+@mixin border($loc: all, $sizeAsString: one, $type: solid, $colorAsString: grey-300) {
   $size: map-get($sizes, $sizeAsString);
   @if not map-has-key($sizes, $sizeAsString) {
     $size: $sizeAsString;
@@ -670,18 +679,6 @@
     border-bottom: $size $type $color;
   }
 }
-
-.Utils--border-all-one-solid-grey { @include border(all, one, solid, grey); }
-.Utils--border-left-one-solid-grey { @include border(left, one, solid, grey); }
-.Utils--border-right-one-solid-grey { @include border(right, one, solid, grey); }
-.Utils--border-top-one-solid-grey { @include border(top, one, solid, grey); }
-.Utils--border-bottom-one-solid-grey { @include border(bottom, one, solid, grey); }
-
-.Utils--border-all-one-solid-grey-lightest { @include border(all, one, solid, grey-lightest); }
-.Utils--border-left-one-solid-grey-lightest { @include border(left, one, solid, grey-lightest); }
-.Utils--border-right-one-solid-grey-lightest { @include border(right, one, solid, grey-lightest); }
-.Utils--border-top-one-solid-grey-lightest { @include border(top, one, solid, grey-lightest); }
-.Utils--border-bottom-one-solid-grey-lightest { @include border(bottom, one, solid, grey-lightest); }
 
 // Border Radius
 // ---------

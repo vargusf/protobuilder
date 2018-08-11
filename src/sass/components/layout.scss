@@ -30,6 +30,7 @@ body {
  @mixin flex-centered() {
    @include display-flex();
    @include align-items(center);
+   @include justify-content(center);
 };
 
 .Layout--centered         { @include flex-centered(); }

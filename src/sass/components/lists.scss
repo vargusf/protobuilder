@@ -27,7 +27,7 @@
     @include background-color(grey-lighter);
   }
   &.List__button--active {
-    @include background-color(secondary-light);
+    @include background-color(secondary);
     @include color(white);
   }
 }

@@ -71,6 +71,15 @@
 
 .Text--color-white           { @include color(white); }
 .Text--color-black           { @include color(black); }
+.Text--color-grey-100        { @include color(grey-100); }
+.Text--color-grey-200        { @include color(grey-200); }
+.Text--color-grey-300        { @include color(grey-300); }
+.Text--color-grey-400        { @include color(grey-400); }
+.Text--color-grey-500        { @include color(grey-500); }
+.Text--color-grey-600        { @include color(grey-600); }
+.Text--color-grey-700        { @include color(grey-700); }
+.Text--color-grey-800        { @include color(grey-800); }
+.Text--color-grey-900        { @include color(grey-900); }
 .Text--color-grey-lightest   { @include color(grey-lightest); }
 .Text--color-grey-lighter    { @include color(grey-lighter); }
 .Text--color-grey-light      { @include color(grey-light); }

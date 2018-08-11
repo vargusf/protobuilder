@@ -6,21 +6,15 @@
   @include border-radius(all, tiny);
 }
 
-.Paper__header{
-  @include padding(ends, md);
-  @include margin(bottom, xlg);
-  @include margin(sides, md);
-  @include border(bottom, one, solid, grey-light);
-}
-
 .Paper__content {
   @include margin(ends, md);
   @include padding(sides, md);
 }
 
-.Paper__footer {
-  @include margin(ends, sm);
+.Paper__well{
+  @include padding(ends, md);
   @include padding(sides, md);
+  @include background-color(grey-200);
 }
 
 // Text & Headings
