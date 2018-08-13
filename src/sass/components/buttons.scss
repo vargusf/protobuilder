@@ -68,17 +68,26 @@
 
 .Button--type-outline {
   @include background-color(transparent);
-  &:hover {
-    @include background-color(grey-lighter);
-  }
   &.Button--color-primary {
     @include border(all, one, solid, primary);
+    &:hover {
+      @include background-color(primary);
+      @include color(white);
+    }
   }
   &.Button--color-secondary {
     @include border(all, one, solid, secondary);
+    &:hover {
+      @include background-color(secondary);
+      @include color(white);
+    }
   }
   &.Button--color-grey {
-    @include border(all, one, solid, grey-dark);
+    @include border(all, one, solid, grey-700);
+    &:hover {
+      @include background-color(grey-700);
+      @include color(white);
+    }
   }
   &.Button--color-white {
     @include border(all, one, solid, white);
