@@ -7,14 +7,14 @@
 
 .Alert__title {
   @include font-size(md);
-  @include color(grey-darkest);
+  @include color(grey900);
   font-weight: 600;
   @include margin(bottom, xxsm);
 }
 
 .Alert__text {
   @include font-size(sm);
-  @include color(grey-darkest);
+  @include color(grey900);
 }
 
 // .Alert__actions {

@@ -51,7 +51,7 @@
 }
 
 .Button--color-grey {
-  @include color(grey-dark);
+  @include color(grey700);
 }
 .Button--color-white {
   @include color(white);
@@ -83,9 +83,10 @@
     }
   }
   &.Button--color-grey {
-    @include border(all, one, solid, grey-700);
+    @include border(all, one, solid, grey700);
+    @include border(all, one, solid, grey700);
     &:hover {
-      @include background-color(grey-700);
+      @include background-color(grey700);
       @include color(white);
     }
   }
@@ -100,17 +101,17 @@
   &.Button--color-primary {
     @include background-color(primary);
     &:hover {
-      @include background-color(primary-dark);
+      @include background-color(primaryDark);
     }
   }
   &.Button--color-secondary {
     @include background-color(secondary);
     &:hover {
-      @include background-color(secondary-dark);
+      @include background-color(secondaryDark);
     }
   }
   &.Button--color-grey {
-    @include background-color(grey-dark);
+    @include background-color(grey700);
   }
   &.Button--color-white {
     @include background-color(white);

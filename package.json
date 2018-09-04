@@ -4,9 +4,9 @@
   "description": "Foundational styles for rapid development - core",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode=development --open",
-    "dev": "webpack --mode=development",
-    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --open --config ./config/config.dev.js",
+    "dev": "webpack --config ./config/config.dev.js",
+    "build": "webpack --config ./config/config.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,14 +21,25 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "css-loader": "^1.0.0",
-    "file-loader": "^1.1.11",
-    "node-sass": "^4.9.2",
-    "normalize.css": "^8.0.0",
-    "sass-loader": "^7.0.3",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "1.0.0",
+    "file-loader": "1.1.11",
+    "node-sass": "4.9.2",
+    "normalize.css": "8.0.0",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
+    "react-router-dom": "^4.3.1",
+    "sass-loader": "7.0.3",
+    "style-loader": "0.21.0",
+    "webpack": "4.16.1",
+    "webpack-cli": "3.0.8",
+    "webpack-dev-server": "3.1.4",
+    "webpack-merge": "4.1.3"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
   }
 }

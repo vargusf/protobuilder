@@ -37,6 +37,15 @@
 .Text--font-size-xxlg   { @include font-size(xxlg); }
 .Text--font-size-jumbo  { @include font-size(jumbo); }
 
+// Font Displays and Headings
+
+.Text--display-1 { @include font-size-in-rem(11.2); }
+.Text--display-2 { @include font-size-in-rem(5.6); }
+.Text--display-3 { @include font-size-in-rem(2.6); }
+.Text--display-4 { @include font-size-in-rem(2.0); }
+.Text--display-5 { @include font-size-in-rem(1.6); }
+
+
 // Font Weights
 
 .Text--font-weight-thin,
@@ -70,33 +79,32 @@
 }
 
 .Text--color-white           { @include color(white); }
+.Text--color-offwhite        { @include color(offwhite); }
 .Text--color-black           { @include color(black); }
-.Text--color-grey-100        { @include color(grey-100); }
-.Text--color-grey-200        { @include color(grey-200); }
-.Text--color-grey-300        { @include color(grey-300); }
-.Text--color-grey-400        { @include color(grey-400); }
-.Text--color-grey-500        { @include color(grey-500); }
-.Text--color-grey-600        { @include color(grey-600); }
-.Text--color-grey-700        { @include color(grey-700); }
-.Text--color-grey-800        { @include color(grey-800); }
-.Text--color-grey-900        { @include color(grey-900); }
-.Text--color-grey-lightest   { @include color(grey-lightest); }
-.Text--color-grey-lighter    { @include color(grey-lighter); }
-.Text--color-grey-light      { @include color(grey-light); }
-.Text--color-grey            { @include color(grey); }
-.Text--color-grey-dark       { @include color(grey-dark); }
-.Text--color-grey-darker     { @include color(grey-darker); }
-.Text--color-grey-darkest    { @include color(grey-darkest); }
+.Text--color-blackNight      { @include color(blackNight); }
+.Text--color-grey100         { @include color(grey100); }
+.Text--color-grey200         { @include color(grey200); }
+.Text--color-grey300         { @include color(grey300); }
+.Text--color-grey400         { @include color(grey400); }
+.Text--color-grey500         { @include color(grey500); }
+.Text--color-grey600         { @include color(grey600); }
+.Text--color-grey700         { @include color(grey700); }
+.Text--color-grey800         { @include color(grey800); }
+.Text--color-grey900         { @include color(grey900); }
 .Text--color-primary         { @include color(primary); }
-.Text--color-primary-light   { @include color(primary-light); }
-.Text--color-primary-dark    { @include color(primary-dark); }
+.Text--color-primaryLight    { @include color(primaryLight); }
+.Text--color-primaryDark     { @include color(primaryDark); }
 .Text--color-secondary       { @include color(secondary); }
-.Text--color-secondary-light { @include color(secondary-light); }
-.Text--color-secondary-dark  { @include color(secondary-dark); }
+.Text--color-secondaryLight  { @include color(secondaryLight); }
+.Text--color-secondaryDark   { @include color(secondaryDark); }
 .Text--color-info            { @include color(info); }
+.Text--color-infoLight       { @include color(infoLight); }
 .Text--color-success         { @include color(success); }
+.Text--color-successLight    { @include color(successLight); }
 .Text--color-warning         { @include color(warning); }
+.Text--color-warningLight    { @include color(warningLight); }
 .Text--color-error           { @include color(error); }
+.Text--color-errorLight      { @include color(errorLight); }
 
 // Text Alignment
 
@@ -113,7 +121,7 @@ html {
 
 body {
   @include font-family($default-font-family);
-  @include font-size($default-font-size);
+  // @include font-size($default-font-size);
   font-weight: 400;
   @include color($default-color);
 }

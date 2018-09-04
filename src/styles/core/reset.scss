@@ -351,8 +351,10 @@ template {
 }
 
 html,
-body {
-  min-height: 100%;
+body,
+.AppContainer,
+.App {
+  min-height: 100vh;
 }
 
 html {

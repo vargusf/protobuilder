@@ -7,7 +7,7 @@
   margin-bottom: 18px;
   @include border(bottom, one, solid, grey);
   &:hover {
-    @include border(bottom, one, solid, grey-darker);
+    @include border(bottom, one, solid, grey700);
   }
   .response {
     display: block;
@@ -33,7 +33,7 @@
     border: none;
     width: 100%;
     @include font-size-in-rem(1.6);
-    @include color(grey-darkest);
+    @include color(grey900);
     &::placeholder {
       @include color(grey);
       opacity: 1;
@@ -55,7 +55,7 @@
     line-height: 130%;
     background: none;
     border: none;
-    @include color(grey-darkest);
+    @include color(grey900);
     @include font-size-in-rem(1.6);
     &::placeholder {
       @include color(grey);
@@ -68,7 +68,7 @@ label {
   position: absolute;
   top: 22px;
   left: 3px;
-  @include color(grey-dark);
+  @include color(grey500);
   @include font-size-in-rem(1.6);
   @include transition(all .2s);
 }
@@ -94,13 +94,13 @@ label {
   height: 48px;
   &:after {
     @include pseudo-mi("arrow_drop_down");
-    @include color(grey-darkest);
+    @include color(grey900);
     position: absolute;
     bottom: 4px;
     right: 0;
   }
   select {
-    @include color(grey-darkest);
+    @include color(grey900);
     @include font-size-in-rem(1.8);
     position: absolute;
     bottom: 4px;
@@ -140,7 +140,7 @@ label {
       position: absolute;
       top: 0;
       left: 0;
-      @include color(grey-darker);
+      @include color(grey700);
     }
     input:checked ~ .icon:before {
       content: "check_box";
@@ -151,7 +151,7 @@ label {
       height: 40px;
       @include display-flex();
       @include align-items(center);
-      @include color(grey-darker);
+      @include color(grey700);
       @include font-size-in-rem(1.4);
     }
   }

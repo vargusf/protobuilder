@@ -1,0 +1,28 @@
+// Navbar
+
+.Navbar {
+  @include display-flex();
+  @include justify-content(space-between);
+  @include align-items(center);
+}
+
+.Navbar__menu {
+  @include display-flex();
+  @include align-items(center);
+  &.Navbar__menu-gutter-none  {  @include margin(sides, none); li { @include margin(sides, none); } }
+  &.Navbar__menu-gutter-one   {  @include margin(sides, -#{map-get($sizes, one)}); li { @include margin(sides, one); } }
+  &.Navbar__menu-gutter-two   {  @include margin(sides, -#{map-get($sizes, two)}); li { @include margin(sides, two); } }
+  &.Navbar__menu-gutter-tiny  {  @include margin(sides, -#{map-get($sizes, tiny)}); li { @include margin(sides, tiny); } }
+  &.Navbar__menu-gutter-xxsm  {  @include margin(sides, -#{map-get($sizes, xxsm)}); li { @include margin(sides, xxsm); } }
+  &.Navbar__menu-gutter-xsm   {  @include margin(sides, -#{map-get($sizes, xsm)}); li { @include margin(sides, xsm); } }
+  &.Navbar__menu-gutter-sm    {  @include margin(sides, -#{map-get($sizes, sm)}); li { @include margin(sides, sm); } }
+  &.Navbar__menu-gutter-md    {  @include margin(sides, -#{map-get($sizes, md)}); li { @include margin(sides, md); } }
+  &.Navbar__menu-gutter-lg    {  @include margin(sides, -#{map-get($sizes, lg)}); li { @include margin(sides, lg); } }
+  &.Navbar__menu-gutter-xlg   {  @include margin(sides, -#{map-get($sizes, xlg)}); li { @include margin(sides, xlg); } }
+  &.Navbar__menu-gutter-xxlg  {  @include margin(sides, -#{map-get($sizes, xxlg)}); li { @include margin(sides, xxlg); } }
+  &.Navbar__menu-gutter-jumbo {  @include margin(sides, -#{map-get($sizes, jumbo)}); li { @include margin(sides, jumbo); } }
+}
+
+.Navbar__logo {
+  display: block;
+}

@@ -37,32 +37,30 @@ $colors: (
   white:           #fff,
   offwhite:        #f9f9f9,
   black:           #111,
-  black-midnight:  #000,
-  grey-100:        #f6f9fc,
-  grey-200:        #e9ecef,
-  grey-300:        #dee2e6,
-  grey-400:        #ced4da,
-  grey-500:        #adb5bd,
-  grey-600:        #8898aa,
-  grey-700:        #525f7f,
-  grey-800:        #32325d,
-  grey-900:        #212529,
-  grey-lighter:    #E9EAEC,
-  grey-light:      #DDDEE1,
-  grey:            #BBBEC4,
-  grey-dark:       #80848F,
-  grey-darker:     #495060,
-  grey-darkest:    #1C2438,
-  primary:         blue,
-  primary-light:   lightblue,
-  primary-dark:    darkblue,
-  secondary:       green,
-  secondary-light: lightgreen,
-  secondary-dark:  darkgreen,
+  blackNight:      #000,
+  grey100:         #f6f9fc,
+  grey200:         #e9ecef,
+  grey300:         #dee2e6,
+  grey400:         #ced4da,
+  grey500:         #adb5bd,
+  grey600:         #8898aa,
+  grey700:         #525f7f,
+  grey800:         #32325d,
+  grey900:         #212529,
+  primary:         #2196f3,
+  primaryLight:    #4dabf5,
+  primaryDark:     #1769aa,
+  secondary:       #ff1744,
+  secondaryLight:  #ff4569,
+  secondaryDark:   #b2102f,
   info:            #00B9E1,
+  infoLight:       #00B9E1,
   success:         #2FB688,
+  successLight:    #2FB688,
   warning:         #FFB756,
-  error:           #FF0949
+  warningLight:    #FFB756,
+  error:           #FF0949,
+  errorLight:      #FF0949
 );
 
 $default-color: black;
@@ -73,11 +71,11 @@ $default-background-color: white;
 //--------------------
 
 @import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
-@import url('https://fonts.googleapis.com/css?family=Material+Icons|Open+Sans:300,400,500,600,700|Roboto:100,300,400,500,600,700,900');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Khula:300,400,600|Roboto:300,500,600');
 
 $fonts: (
-  primary:   'roboto',
-  secondary: 'Open Sans'
+  primary:   'Khula',
+  secondary: 'Roboto'
 );
 
 $default-font-family: primary;
@@ -86,8 +84,8 @@ $font-size: (
   tiny:   1.1,
   xxsm:   1.2,
   xsm:    1.4,
-  sm:     1.6,
-  md:     1.8,
+  sm:     1.5,
+  md:     1.6,
   lg:     2,
   xlg:    3,
   xxlg:   4,

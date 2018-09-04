@@ -1,0 +1,108 @@
+// Card
+
+.Card {
+  @include background-color(white);
+  @include border(all, one, solid, grey200);
+  @include border-radius(all, tiny);
+}
+
+.Card__header{
+  @include padding(ends, md);
+  @include margin(bottom, xlg);
+  @include margin(sides, md);
+  @include border(bottom, one, solid, grey200);
+}
+
+.Card__content {
+  @include margin(ends, md);
+  @include padding(sides, md);
+}
+
+.Card__footer {
+  @include margin(ends, sm);
+  @include padding(sides, md);
+}
+
+.Card__title {
+  @include font-size(xlg);
+}
+
+.Card__sub-title {
+  @include font-size(xsm);
+  @include color(grey700);
+  @include margin(top, xxsm);
+}
+
+.Card__text {
+  @include font-size(sm);
+}
+
+.Card__actions {
+  @include display-flex();
+  @include justify-content(flex-end);
+}
+
+// bg colors
+
+.Card--background-color-white           { @include background-color(white); }
+.Card--background-color-offwhite        { @include background-color(offwhite); }
+.Card--background-color-black           { @include background-color(black); }
+.Card--background-color-blackNight      { @include background-color(blackNight); }
+.Card--background-color-grey100         { @include background-color(grey100); }
+.Card--background-color-grey200         { @include background-color(grey200); }
+.Card--background-color-grey300         { @include background-color(grey300); }
+.Card--background-color-grey400         { @include background-color(grey400); }
+.Card--background-color-grey500         { @include background-color(grey500); }
+.Card--background-color-grey600         { @include background-color(grey600); }
+.Card--background-color-grey700         { @include background-color(grey700); }
+.Card--background-color-grey800         { @include background-color(grey800); }
+.Card--background-color-grey900         { @include background-color(grey900); }
+.Card--background-color-primary         { @include background-color(primary); }
+.Card--background-color-primaryLight    { @include background-color(primaryLight); }
+.Card--background-color-primaryDark     { @include background-color(primaryDark); }
+.Card--background-color-secondary       { @include background-color(secondary); }
+.Card--background-color-secondaryLight  { @include background-color(secondaryLight); }
+.Card--background-color-secondaryDark   { @include background-color(secondaryDark); }
+.Card--background-color-info            { @include background-color(info); }
+.Card--background-color-infoLight       { @include background-color(infoLight); }
+.Card--background-color-success         { @include background-color(success); }
+.Card--background-color-successLight    { @include background-color(successLight); }
+.Card--background-color-warning         { @include background-color(warning); }
+.Card--background-color-warningLight    { @include background-color(warningLight); }
+.Card--background-color-error           { @include background-color(error); }
+.Card--background-color-errorLight      { @include background-color(errorLight); }
+
+// .Card--background-color-info            {
+//   @include background-color(info);
+//   .Card__title,
+//   .Card__sub-title,
+//   .Card__text {
+//     @include color(white);
+//   }
+// }
+
+// .Card--background-color-success         {
+//   @include background-color(success);
+//   .Card__title,
+//   .Card__sub-title,
+//   .Card__text {
+//     @include color(white);
+//   }
+// }
+// .Card--background-color-warning         {
+//   @include background-color(warning);
+//   .Card__title,
+//   .Card__sub-title,
+//   .Card__text {
+//     @include color(white);
+//   }
+// }
+
+// .Card--background-color-error           { 
+//   @include background-color(error);
+//   .Card__title,
+//   .Card__sub-title,
+//   .Card__text {
+//     @include color(white);
+//   }
+// }

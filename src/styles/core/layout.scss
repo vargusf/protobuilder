@@ -54,6 +54,18 @@ body {
 .Layout--nowrap           { @include flex-wrap(nowrap); }
 .Layout--wrap-reverse     { @include flex-wrap(wrap-reverse); }
 
+.Layout--grow-1           { @include flex-grow(1); }
+.Layout--grow-2           { @include flex-grow(2); }
+.Layout--grow-3           { @include flex-grow(3); }
+.Layout--grow-4           { @include flex-grow(4); }
+
+.Layout--shrink-1         { @include flex-shrink(1); }
+.Layout--shrink-2         { @include flex-shrink(2); }
+.Layout--shrink-3         { @include flex-shrink(3); }
+.Layout--shrink-4         { @include flex-shrink(4); }
+
+.Layout--min-height-100vh { min-height: 100vh; }
+
 // Grid
 
 .Layout--row-2,
@@ -81,18 +93,6 @@ body {
 .Layout--row-gutter-jumbo { &> * { @include padding(sides, jumbo); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
 
 // Columns
-
-.Layout--col { /* just chillin semantically */ } 
-
-.Layout--col-grow-1 { @include flex-grow(1); }
-.Layout--col-grow-2 { @include flex-grow(2); }
-.Layout--col-grow-3 { @include flex-grow(3); }
-.Layout--col-grow-4 { @include flex-grow(4); }
-
-.Layout--col-shrink-1 { @include flex-shrink(1); }
-.Layout--col-shrink-2 { @include flex-shrink(2); }
-.Layout--col-shrink-3 { @include flex-shrink(3); }
-.Layout--col-shrink-4 { @include flex-shrink(4); }
 
 .Layout--row-2 {
   &> .Layout--col-1 { @include flex-basis(50%); min-width: 50% }

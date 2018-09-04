@@ -1,0 +1,26 @@
+// NavBar
+
+.Sidebar {
+  @include background-color(grey100);
+  @include border(sides, one, solid, grey300);
+  @include padding(ends, sm);
+  min-width: 200px;
+  max-width: 250px;
+  &.Sidebar--is-fixed-width {
+    @include border(sides, one, solid, grey300);
+  }
+}
+
+.Sidebar__Menu {
+  @include margin(sides, sm);
+  @include margin(bottom, sm);
+  @include font-size-in-rem(1.5);
+}
+
+.Sidebar__item {
+  @include padding(top, xxsm);
+}
+
+.Sidebar__item--title {
+  font-weight: 600;
+}
