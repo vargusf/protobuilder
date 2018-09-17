@@ -38,7 +38,7 @@ class Checkout extends Component {
               </div>
             </div>
             <div className="Checkout__box Checkout__box--payment">
-              <div className="Text--heading-4">Payment Information</div>
+              <div className="Text--heading-4">Payment Information (test)</div>
               <div className="Text--heading-6">$105 (+tax) will be charged monthly on your credit card</div>
               <div className="Text--heading-6">Billing Address: 114 Cambie, Vancouver, BC, V3J3A3 <a className="Link">edit</a></div>
               <div className="Utils--margin-top-sm">Name on Card</div>
