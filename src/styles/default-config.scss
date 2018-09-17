@@ -33,40 +33,6 @@ $breakpoints: (
 // Colors
 //--------------------
 
-// $colors: ();
-// $color-white: (white: #fff);
-// $colors: map-merge($colors, $color-white);
-
-// $colors: (
-//   white:           #fff,
-//   offwhite:        #f9f9f9,
-//   black:           #111,
-//   blackNight:      #000,
-//   grey100:         #F5F7F9, // #f6f9fc
-//   grey200:         #e9ecef,
-//   grey300:         #dee2e6,
-//   grey400:         #ced4da,
-//   grey500:         #adb5bd,
-//   grey600:         #8898aa,
-//   grey700:         #525f7f,
-//   grey800:         #32325d,
-//   grey900:         #212529,
-//   primary:         #2196f3,
-//   primaryLight:    #4dabf5,
-//   primaryDark:     #1769aa,
-//   secondary:       #ff1744,
-//   secondaryLight:  #ff4569,
-//   secondaryDark:   #b2102f,
-//   info:            #00B9E1,
-//   infoLight:       #00B9E1,
-//   success:         #2FB688,
-//   successLight:    #2FB688,
-//   warning:         #FFB756,
-//   warningLight:    #FFB756,
-//   error:           #FF0949,
-//   errorLight:      #FF0949
-// );
-
 $colors: ();
 
 $colors: map-merge($colors, (white:           #fff));
