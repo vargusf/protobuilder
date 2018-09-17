@@ -4,8 +4,8 @@ import ViewStandard from './ViewStandard';
 class Home extends Component {
   render() {
     return (
-      <ViewStandard>
-        Home
+      <ViewStandard title="Home">
+
       </ViewStandard>
     );
   }

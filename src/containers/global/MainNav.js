@@ -23,6 +23,7 @@ class Header extends Component {
           <SidebarItem><Link className="Link" to="/">Grid</Link></SidebarItem>
           <SidebarItem><Link className="Link" to="/">Paper</Link></SidebarItem>
           <SidebarItem><Link className="Link" to="/">Card</Link></SidebarItem>
+          <SidebarItem><Link className="Link" to="/">Well</Link></SidebarItem>
         </SidebarMenu>
         <SidebarMenu>
           <SidebarItem isTitle='true'>Components</SidebarItem>
@@ -30,42 +31,13 @@ class Header extends Component {
           <SidebarItem><Link className="Link" to="/">Sidebar</Link></SidebarItem>
           <SidebarItem><Link className="Link" to="buttons">Buttons</Link></SidebarItem>
         </SidebarMenu>
+        <SidebarMenu>
+          <SidebarItem isTitle='true'>TEMP PAGE(S)</SidebarItem>
+          <SidebarItem><Link className="Link" to="checkout">Checkout</Link></SidebarItem>
+        </SidebarMenu>
       </Sidebar>
     );
   }
 }
 
 export default Header;
-
-
-
-// const Sidebar = () => {
-//   return (
-//     <div className="Sidebar">
-//       <ul className="Sidebar__Menu">
-//         <li className="Sidebar__item Sidebar__item--title">Core</li>
-//         <li className="Sidebar__item"><a className="Link">Reset</a></li>
-//         <li className="Sidebar__item"><a className="Link">Mobile</a></li>
-//         <li className="Sidebar__item"><a className="Link">Functions</a></li>
-//       </ul>
-//       <ul className="Sidebar__Menu">
-//         <li className="Sidebar__item Sidebar__item--title">Style</li>
-//         <li className="Sidebar__item"><a className="Link">Colors</a></li>
-//         <li className="Sidebar__item"><Link className="Link" to="typography">Typography</Link></li>
-//         <li className="Sidebar__item"><a className="Link">Icons</a></li>
-//       </ul>
-//       <ul className="Sidebar__Menu">
-//         <li className="Sidebar__item Sidebar__item--title">Layout</li>
-//         <li className="Sidebar__item"><a className="Link">Grid</a></li>
-//         <li className="Sidebar__item"><a className="Link">Paper</a></li>
-//         <li className="Sidebar__item"><a className="Link">Card</a></li>
-//       </ul>
-//       <ul className="Sidebar__Menu">
-//         <li className="Sidebar__item Sidebar__item--title">Components</li>
-//         <li className="Sidebar__item"><a className="Link">Navbar</a></li>
-//         <li className="Sidebar__item"><a className="Link">Sidebar</a></li>
-//         <li className="Sidebar__item"><Link className="Link" to="buttons">Buttons</Link></li>
-//       </ul>
-//     </div>
-//   );
-// }

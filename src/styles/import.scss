@@ -11,6 +11,8 @@
 @import "components/icons";
 @import "components/paper";
 @import "components/card";
+@import "components/well";
+@import "components/code";
 @import "components/alert";
 @import "components/lists";
 @import "components/forms";
@@ -20,3 +22,7 @@
 @import "components/sideBar";
 
 // Import Plugins
+
+
+// Import Pages
+@import "pages/checkout";

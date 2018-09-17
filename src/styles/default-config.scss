@@ -33,37 +33,73 @@ $breakpoints: (
 // Colors
 //--------------------
 
-$colors: (
-  white:           #fff,
-  offwhite:        #f9f9f9,
-  black:           #111,
-  blackNight:      #000,
-  grey100:         #f6f9fc,
-  grey200:         #e9ecef,
-  grey300:         #dee2e6,
-  grey400:         #ced4da,
-  grey500:         #adb5bd,
-  grey600:         #8898aa,
-  grey700:         #525f7f,
-  grey800:         #32325d,
-  grey900:         #212529,
-  primary:         #2196f3,
-  primaryLight:    #4dabf5,
-  primaryDark:     #1769aa,
-  secondary:       #ff1744,
-  secondaryLight:  #ff4569,
-  secondaryDark:   #b2102f,
-  info:            #00B9E1,
-  infoLight:       #00B9E1,
-  success:         #2FB688,
-  successLight:    #2FB688,
-  warning:         #FFB756,
-  warningLight:    #FFB756,
-  error:           #FF0949,
-  errorLight:      #FF0949
-);
+// $colors: ();
+// $color-white: (white: #fff);
+// $colors: map-merge($colors, $color-white);
 
-$default-color: black;
+// $colors: (
+//   white:           #fff,
+//   offwhite:        #f9f9f9,
+//   black:           #111,
+//   blackNight:      #000,
+//   grey100:         #F5F7F9, // #f6f9fc
+//   grey200:         #e9ecef,
+//   grey300:         #dee2e6,
+//   grey400:         #ced4da,
+//   grey500:         #adb5bd,
+//   grey600:         #8898aa,
+//   grey700:         #525f7f,
+//   grey800:         #32325d,
+//   grey900:         #212529,
+//   primary:         #2196f3,
+//   primaryLight:    #4dabf5,
+//   primaryDark:     #1769aa,
+//   secondary:       #ff1744,
+//   secondaryLight:  #ff4569,
+//   secondaryDark:   #b2102f,
+//   info:            #00B9E1,
+//   infoLight:       #00B9E1,
+//   success:         #2FB688,
+//   successLight:    #2FB688,
+//   warning:         #FFB756,
+//   warningLight:    #FFB756,
+//   error:           #FF0949,
+//   errorLight:      #FF0949
+// );
+
+$colors: ();
+
+$colors: map-merge($colors, (white:           #fff));
+$colors: map-merge($colors, (offwhite:        #f9f9f9));
+$colors: map-merge($colors, (black:           #111));
+$colors: map-merge($colors, (blackNight:      #000));
+$colors: map-merge($colors, (grey100:         #F5F7F9));
+$colors: map-merge($colors, (grey200:         #e9ecef));
+$colors: map-merge($colors, (grey300:         #dee2e6));
+$colors: map-merge($colors, (grey400:         #ced4da));
+$colors: map-merge($colors, (grey500:         #adb5bd));
+$colors: map-merge($colors, (grey600:         #8898aa));
+$colors: map-merge($colors, (grey700:         #525f7f));
+$colors: map-merge($colors, (grey800:         #32325d));
+$colors: map-merge($colors, (grey900:         #212529));
+$colors: map-merge($colors, (primary:         #2196f3));
+$colors: map-merge($colors, (primaryLight:    #4dabf5));
+$colors: map-merge($colors, (primaryDark:     #1769aa));
+$colors: map-merge($colors, (secondary:       #ff1744));
+$colors: map-merge($colors, (secondaryLight:  #ff4569));
+$colors: map-merge($colors, (secondaryDark:   #b2102f));
+$colors: map-merge($colors, (info:            #00B9E1));
+$colors: map-merge($colors, (infoLight:       #00B9E1));
+$colors: map-merge($colors, (success:         #2FB688));
+$colors: map-merge($colors, (successLight:    #2FB688));
+$colors: map-merge($colors, (warning:         #FFB756));
+$colors: map-merge($colors, (warningLight:    #FFB756));
+$colors: map-merge($colors, (error:           #FF0949));
+$colors: map-merge($colors, (errorLight:      #FF0949));
+
+@warn $colors;
+
+$default-color: grey900;
 $default-background-color: white;
 
 //--------------------
@@ -73,10 +109,9 @@ $default-background-color: white;
 @import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
 @import url('https://fonts.googleapis.com/css?family=Material+Icons|Khula:300,400,600|Roboto:300,500,600');
 
-$fonts: (
-  primary:   'Khula',
-  secondary: 'Roboto'
-);
+$fonts: ();
+$fonts: map-merge($fonts, (primary:   'Khula'));
+$fonts: map-merge($fonts, (secondary: 'Roboto'));
 
 $default-font-family: primary;
 

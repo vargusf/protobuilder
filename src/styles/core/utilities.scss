@@ -678,7 +678,8 @@
   }
 }
 
-.Utils--border-top-one-solid-grey300 { @include border(top, one, solid, grey300); }
+.Utils--border-top-one-solid-grey300    { @include border(top, one, solid, grey300); }
+.Utils--border-bottom-one-solid-grey300 { @include border(bottom, one, solid, grey300); }
 
 // Border Radius
 // ---------

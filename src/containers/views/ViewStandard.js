@@ -10,8 +10,9 @@ class ViewStandard extends Component {
         <Header />
         <div className="Layout--row Layout--row-gutter-sm Layout--grow-1">
           <MainNav />
-          <div className="Layout--col-grow-1">
+          <div className="Layout--grow-1">
             <div className="Utils--padding-ends-sm Utils--padding-right-md">
+              <div className="Text--display-3 Utils--margin-bottom-lg Utils--padding-ends-sm Utils--border-bottom-one-solid-grey300">{this.props.title}</div>
               {this.props.children}
             </div>
           </div>

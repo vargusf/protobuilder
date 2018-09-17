@@ -4,8 +4,8 @@ import ViewStandard from './ViewStandard';
 class Buttons extends Component {
   render() {
     return (
-      <ViewStandard>
-        Buttons
+      <ViewStandard title="Buttons">
+
       </ViewStandard>
     );
   }

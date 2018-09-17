@@ -8,7 +8,6 @@
 
 .Text--font-family-primary    { @include font-family(primary); }
 .Text--font-family-secondary  { @include font-family(secondary); }
-.Text--font-family-tertiary   { @include font-family(tertiary); }
 
 // Font Sizes & Heights
 
@@ -37,13 +36,6 @@
 .Text--font-size-xxlg   { @include font-size(xxlg); }
 .Text--font-size-jumbo  { @include font-size(jumbo); }
 
-// Font Displays and Headings
-
-.Text--display-1 { @include font-size-in-rem(11.2); }
-.Text--display-2 { @include font-size-in-rem(5.6); }
-.Text--display-3 { @include font-size-in-rem(2.6); }
-.Text--display-4 { @include font-size-in-rem(2.0); }
-.Text--display-5 { @include font-size-in-rem(1.6); }
 
 
 // Font Weights
@@ -106,6 +98,27 @@
 .Text--color-error           { @include color(error); }
 .Text--color-errorLight      { @include color(errorLight); }
 
+// Font Displays and Headings
+
+.Text--display-1 { @include font-size-in-rem(11.2); font-weight: 300; }
+.Text--display-2 { @include font-size-in-rem(5.8); font-weight: 300; }
+.Text--display-3 { @include font-size-in-rem(3.6); font-weight: 300; }
+.Text--display-4 { @include font-size-in-rem(2.4); font-weight: 300; }
+
+.Text--heading-1 { @include font-size-in-rem(4.0); line-height: 1.15 }
+.Text--heading-2 { @include font-size-in-rem(3.2); line-height: 1.15 }
+.Text--heading-3 { @include font-size-in-rem(2.8); line-height: 1.15 }
+.Text--heading-4 { @include font-size-in-rem(2.4); line-height: 1.15 }
+.Text--heading-5 { @include font-size-in-rem(2.0); line-height: 1.15 }
+.Text--heading-6 { @include font-size-in-rem(1.6); line-height: 1.15 }
+
+.Text--copy { @include font-size-in-rem(1.6); line-height: 1.7; font-weight: 300; }
+.Text--p    { @include font-size-in-rem(1.6); line-height: 1.7; font-weight: 300; }
+.Text--lead { @include font-size-in-rem(2.0); line-height: 1.7; font-weight: 300; }
+
+.Text--muted { @include color(grey500); }
+// make margin option?
+
 // Text Alignment
 
 .Text--align-left     { text-align: left; }
@@ -121,14 +134,15 @@ html {
 
 body {
   @include font-family($default-font-family);
-  // @include font-size($default-font-size);
-  font-weight: 400;
   @include color($default-color);
+  @include font-size-in-rem(1.4);
+  line-height: 1.15;
+  font-weight: 400;
 }
 
-div, span, p, a, li {
-  font-size: inherit;
-  font-family: inherit;
-  font-weight: inherit;
-  color: inherit;
-}
+// div, span, p, a, li {
+//   font-size: inherit;
+//   font-family: inherit;
+//   font-weight: inherit;
+//   color: inherit;
+// }

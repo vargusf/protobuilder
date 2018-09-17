@@ -33,36 +33,40 @@ body {
    @include justify-content(center);
 };
 
-.Layout--centered         { @include flex-centered(); }
+.Layout--centered           { @include flex-centered(); }
 
-.Layout--justify-center   { @include display-flex(); @include justify-content(center); }
-.Layout--justify-start    { @include display-flex(); @include justify-content(flex-start); }
-.Layout--justify-end      { @include display-flex(); @include justify-content(flex-end); }
-.Layout--justify-between  { @include display-flex(); @include justify-content(space-between); }
-.Layout--justify-around   { @include display-flex(); @include justify-content(space-around); }
+.Layout--justify-center     { @include display-flex(); @include justify-content(center); }
+.Layout--justify-start      { @include display-flex(); @include justify-content(flex-start); }
+.Layout--justify-end        { @include display-flex(); @include justify-content(flex-end); }
+.Layout--justify-between    { @include display-flex(); @include justify-content(space-between); }
+.Layout--justify-around     { @include display-flex(); @include justify-content(space-around); }
 
-.Layout--align-center     { @include display-flex(); @include align-items(center); }
-.Layout--align-stretch    { @include display-flex(); @include align-items(stretch); }
-.Layout--align-start      { @include display-flex(); @include align-items(flex-start); }
-.Layout--align-end        { @include display-flex(); @include align-items(flex-end); }
-.Layout--align-baseline   { @include display-flex(); @include align-items(baseline); }
+.Layout--align-center       { @include display-flex(); @include align-items(center); }
+.Layout--align-stretch      { @include display-flex(); @include align-items(stretch); }
+.Layout--align-start        { @include display-flex(); @include align-items(flex-start); }
+.Layout--align-end          { @include display-flex(); @include align-items(flex-end); }
+.Layout--align-baseline     { @include display-flex(); @include align-items(baseline); }
 
-.Layout--row              { @include display-flex(); @include flex-direction(row); }
-.Layout--col              { @include display-flex(); @include flex-direction(column); }
+.Layout--align-self-start  { @include align-self(flex-start); }
+.Layout--align-self-end    { @include align-self(flex-end); }
+.Layout--align-self-center { @include align-self(center); }
 
-.Layout--wrap             { @include flex-wrap(wrap); }
-.Layout--nowrap           { @include flex-wrap(nowrap); }
-.Layout--wrap-reverse     { @include flex-wrap(wrap-reverse); }
+.Layout--row                { @include display-flex(); @include flex-direction(row); }
+.Layout--col                { @include display-flex(); @include flex-direction(column); }
 
-.Layout--grow-1           { @include flex-grow(1); }
-.Layout--grow-2           { @include flex-grow(2); }
-.Layout--grow-3           { @include flex-grow(3); }
-.Layout--grow-4           { @include flex-grow(4); }
+.Layout--wrap               { @include flex-wrap(wrap); }
+.Layout--nowrap             { @include flex-wrap(nowrap); }
+.Layout--wrap-reverse       { @include flex-wrap(wrap-reverse); }
 
-.Layout--shrink-1         { @include flex-shrink(1); }
-.Layout--shrink-2         { @include flex-shrink(2); }
-.Layout--shrink-3         { @include flex-shrink(3); }
-.Layout--shrink-4         { @include flex-shrink(4); }
+.Layout--grow-1             { @include flex-grow(1); }
+.Layout--grow-2             { @include flex-grow(2); }
+.Layout--grow-3             { @include flex-grow(3); }
+.Layout--grow-4             { @include flex-grow(4); }
+
+.Layout--shrink-1           { @include flex-shrink(1); }
+.Layout--shrink-2           { @include flex-shrink(2); }
+.Layout--shrink-3           { @include flex-shrink(3); }
+.Layout--shrink-4           { @include flex-shrink(4); }
 
 .Layout--min-height-100vh { min-height: 100vh; }
 

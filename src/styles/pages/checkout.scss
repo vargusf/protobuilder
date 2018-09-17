@@ -1,0 +1,19 @@
+.Checkout {
+  @include display-flex();
+  @include flex-direction(column);
+  @include align-items(center);
+}
+
+.Checkout__box {
+  @include display-flex();
+  @include flex-direction(column);
+  @include align-items(center);
+  width: 400px;
+  @include padding(all, lg);
+  @include border-radius(all, xxsm);
+  @include border(all, one, solid, grey500);
+}
+
+.Checkout__box--payment {
+  width: 600px;
+}
