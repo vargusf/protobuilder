@@ -113,11 +113,12 @@
 .Text--heading-6 { @include font-size-in-rem(1.6); line-height: 1.15 }
 
 .Text--copy { @include font-size-in-rem(1.6); line-height: 1.7; font-weight: 300; }
-.Text--p    { @include font-size-in-rem(1.6); line-height: 1.7; font-weight: 300; }
 .Text--lead { @include font-size-in-rem(2.0); line-height: 1.7; font-weight: 300; }
 
+.Text--small   { @include font-size-in-rem(1.4); line-height: 1.15; font-weight: 300; }
+.Text--smaller { @include font-size-in-rem(1.2); line-height: 1.15; font-weight: 300; }
+
 .Text--muted { @include color(grey500); }
-// make margin option?
 
 // Text Alignment
 

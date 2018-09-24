@@ -36,7 +36,7 @@ const NavbarMenu = ({
 }
 
 const NavbarLogo = ({
-  logo,
+  logo = "http://placehold.it/300x100",
   maxWidth = 100,
   marginRight = "sm",
   to = "/"
