@@ -1,7 +1,7 @@
-import Code from './src/components/Code';
-import Button from './src/components/Button';
-import { Navbar, NavbarMenu, NavbarLogo, NavbarItem } from './src/components/Navbar';
-import Sidebar from './src/components/Sidebar';
+import Code from './dist/components/Code';
+import Button from './dist/components/Button';
+import { Navbar, NavbarMenu, NavbarLogo, NavbarItem } from './dist/components/Navbar';
+import Sidebar from './dist/components/Sidebar';
 
 export {
   Code,
