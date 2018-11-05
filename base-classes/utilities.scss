@@ -1,78 +1,8 @@
-// Layout
-// Margins
-// Paddings
-// Height & Width
-// Flex
-// Display
-// Positioning
-// Background Colors
-// Gradients
-// Opacity
-// Transitions
-// Borders
-// Border Radius
-// Blur
-// Float
-// Transforms
+//--------------------
+// Classes - Utilities
+//--------------------
 
 // Margins
-// ---------
-
-@mixin margin($loc, $sizeAsString, $autoMobile: false) { //-#{map-get($sizes, sm)} for negatives
-
-  $size: map-get($sizes, $sizeAsString);
-
-  @if not map-has-key($sizes, $sizeAsString) {
-    $size: $sizeAsString;
-  }
-
-  $size-md: $size;
-  $size-sm: $size;
-
-  @if ($autoMobile == true) {
-    @if ($sizeAsString == xsm) or ($sizeAsString == sm) or ($sizeAsString == lg) or ($sizeAsString == xlg) or ($sizeAsString == xxlg) or ($sizeAsString == jumbo) {
-      $size-md: $size/2;
-      @if (strip-units($size-md) <= 5 ) {
-        $size-md: 5px;
-      }
-      $size-sm: $size/3;
-      @if (strip-units($size-sm) <= 5 ) {
-        $size-md: 5px;
-      }
-    }
-  }
-
-  @if $loc == top {
-    margin-top: $size;
-    @include bp(md) { margin-top: $size-md; }
-    @include bp(sm) { margin-top: $size-sm; }
-  } @else if $loc == right {
-    margin-right: $size;
-    @include bp(md) { margin-right: $size-md; }
-    @include bp(sm) { margin-right: $size-sm; }
-  } @else if $loc == bottom {
-    margin-bottom: $size;
-    @include bp(md) { margin-bottom: $size-md; }
-    @include bp(sm) { margin-bottom: $size-sm; }
-  } @else if $loc == left {
-    margin-left: $size;
-    @include bp(md) { margin-left: $size-md; }
-    @include bp(sm) { margin-left: $size-sm; }
-  } @else if $loc == sides {
-    margin-left: $size; margin-right: $size;
-    @include bp(md) { margin-left: $size-md; margin-right: $size-md; }
-    @include bp(sm) { margin-left: $size-sm; margin-right: $size-sm; }
-  } @else if $loc == ends {
-    margin-top: $size; margin-bottom: $size;
-    @include bp(md) { margin-top: $size-md; margin-bottom: $size-md; }
-    @include bp(sm) { margin-top: $size-sm; margin-bottom: $size-sm; }
-  } @else {
-    margin: $size;
-    @include bp(md) { margin: $size-md; }
-    @include bp(sm) { margin: $size-sm; }
-  }
-}
-
 .Utils--margin-none          { @include margin(all, 0); }
 .Utils--margin-tiny          { @include margin(all, tiny); }
 .Utils--margin-xxsm          { @include margin(all, xxsm); }
@@ -146,63 +76,6 @@
 .Utils--margin-ends-jumbo    { @include margin(ends, jumbo); }
 
 // Paddings
-// ---------
-
-@mixin padding($loc, $sizeAsString, $autoMobile: false) {
-
-  $size: map-get($sizes, $sizeAsString);
-
-  @if not map-has-key($sizes, $sizeAsString) {
-    $size: $sizeAsString;
-  }
-
-  $size-md: $size;
-  $size-sm: $size;
-
-  @if ($autoMobile == true) {
-    @if ($sizeAsString == xsm) or ($sizeAsString == sm) or ($sizeAsString == lg) or ($sizeAsString == xlg) or ($sizeAsString == xxlg) or ($sizeAsString == jumbo) {
-      $size-md: $size/2;
-      @if (strip-units($size-md) <= 5 ) {
-        $size-md: 5px;
-      }
-      $size-sm: $size/3;
-      @if (strip-units($size-sm) <= 5 ) {
-        $size-md: 5px;
-      }
-    }
-  }
-
-  @if $loc == top {
-    padding-top: $size;
-    @include bp(md) { padding-top: $size-md; }
-    @include bp(sm) { padding-top: $size-sm; }
-  } @else if $loc == right {
-    padding-right: $size;
-    @include bp(md) { padding-right: $size-md; }
-    @include bp(sm) { padding-right: $size-sm; }
-  } @else if $loc == bottom {
-    padding-bottom: $size;
-    @include bp(md) { padding-bottom: $size-md; }
-    @include bp(sm) { padding-bottom: $size-sm; }
-  } @else if $loc == left {
-    padding-left: $size;
-    @include bp(md) { padding-left: $size-md; }
-    @include bp(sm) { padding-left: $size-sm; }
-  } @else if $loc == sides {
-    padding-left: $size; padding-right: $size;
-    @include bp(md) { padding-left: $size-md; padding-right: $size-md; }
-    @include bp(sm) { padding-left: $size-sm; padding-right: $size-sm; }
-  } @else if $loc == ends {
-    padding-top: $size; padding-bottom: $size;
-    @include bp(md) { padding-top: $size-md; padding-bottom: $size-md; }
-    @include bp(sm) { padding-top: $size-sm; padding-bottom: $size-sm; }
-  } @else {
-    padding: $size;
-    @include bp(md) { padding: $size-md; }
-    @include bp(sm) { padding: $size-sm; }
-  }
-}
-
 .Utils--padding-none          { @include padding(all, 0); }
 .Utils--padding-tiny          { @include padding(all, tiny); }
 .Utils--padding-xxsm          { @include padding(all, xxsm); }
@@ -275,8 +148,6 @@
 .Utils--padding-ends-jumbo    { @include padding(ends, jumbo); }
 
 // Height & Width
-// ---------
-
 .Utils--width-100per { width: 100%; }
 .Utils--width-90per  { width: 90%; }
 .Utils--width-80per  { width: 80%; }
@@ -293,90 +164,31 @@
 .Utils--width-10per  { width: 10%; }
 .Utils--width-5per   { width: 5%; }
 .Utils--width-0per   { width: 0%; }
-
 .Utils--height-100per     { height: 100%; }
 .Utils--min-height-100per { min-height: 100%; }
 .Utils--height-100vh      { height: 100vh; }
 .Utils--min-height-100vh  { min-height: 100vh; }
 
 // Flex
-// ---------
-
-@mixin display-flex() {
-  display: -webkit-flex;
-  display: flex;
-}
-
-@mixin justify-content($val) {
-  -webkit-justify-content: $val;
-  justify-content: $val;
-}
-
-@mixin align-items($val) {
-  -webkit-align-items: $val;
-  align-items: $val;
-}
-
-@mixin align-self($val) {
-  -webkit-align-self: $val;
-  align-self: $val;
-}
-
-@mixin flex-direction($val) {
-  -webkit-flex-direction: $val;
-  flex-direction: $val;
-}
-
-@mixin flex-basis($val) {
-  -webkit-flex-basis: $val;
-  flex-basis: $val;
-}
-
-@mixin flex-grow($val) {
-  -webkit-flex-grow: $val;
-  flex-grow: $val;
-}
-
-@mixin flex-shrink($val) {
-  -webkit-flex-shrink: $val;
-  flex-shrink: $val;
-}
-
-@mixin flex-wrap($val) {
-  -webkit-flex-wrap: $val;
-  flex-wrap: $val;
-}
-
-@mixin flex-order($val) {
-	-webkit-order: $val;
-	order: $val;
-}
-
 .Utils--justify-content-center        { @include justify-content(center); }
 .Utils--justify-content-flex-start    { @include justify-content(flex-start); }
 .Utils--justify-content-flex-end      { @include justify-content(flex-end); }
 .Utils--justify-content-space-between { @include justify-content(space-between); }
 .Utils--justify-content-space-around  { @include justify-content(space-around); }
-
 .Utils--align-items-center            { @include align-items(center); }
 .Utils--align-items-stretch           { @include align-items(stretch); }
 .Utils--align-items-flex-start        { @include align-items(flex-start); }
 .Utils--align-items-flex-end          { @include align-items(flex-end); }
 .Utils--align-items-baseline          { @include align-items(baseline); }
-
 .Utils--flex-direction-row            { @include flex-direction(row); }
 .Utils--flex-direction-column         { @include flex-direction(column); }
-
 .Utils--flex-grow-1                   { @include flex-grow(1); }
 .Utils--flex-grow-2                   { @include flex-grow(2); }
-
 .Utils--flex-shrink-1                 { @include flex-shrink(1); }
 .Utils--flex-shrink-2                 { @include flex-shrink(2); }
-
 .Utils--flex-wrap-wrap                { @include flex-wrap(wrap); }
 .Utils--flex-wrap-nowrap              { @include flex-wrap(nowrap); }
 .Utils--flex-wrap-wrap-reverse        { @include flex-wrap(wrap-reverse); }
-
 .Utils--flex-basis-100per             { @include flex-basis(100%); min-width: 100% }
 .Utils--flex-basis-90per              { @include flex-basis(90%); min-width: 90% }
 .Utils--flex-basis-80per              { @include flex-basis(80%); min-width: 80% }
@@ -393,7 +205,6 @@
 .Utils--flex-basis-10per              { @include flex-basis(10%); min-width: 10% }
 .Utils--flex-basis-5per               { @include flex-basis(5%); min-width: 5% }
 .Utils--flex-basis-0per               { @include flex-basis(0%); min-width: 0% }
-
 .Utils--flex-basis-100per-bpxlg       { @include bp(xlg) { @include flex-basis(100%); min-width: 100%; } }
 .Utils--flex-basis-90per-bpxlg        { @include bp(xlg) { @include flex-basis(90%); min-width: 90%; } }
 .Utils--flex-basis-80per-bpxlg        { @include bp(xlg) { @include flex-basis(80%); min-width: 80%; } }
@@ -410,7 +221,6 @@
 .Utils--flex-basis-10per-bpxlg        { @include bp(xlg) { @include flex-basis(10%); min-width: 10%; } }
 .Utils--flex-basis-5per-bpxlg         { @include bp(xlg) { @include flex-basis(5%); min-width: 5%; } }
 .Utils--flex-basis-0per-bpxlg         { @include bp(xlg) { @include flex-basis(0%); min-width: 0%; } }
-
 .Utils--flex-basis-100per-bplg        { @include bp(lg) { @include flex-basis(100%); min-width: 100%; } }
 .Utils--flex-basis-90per-bplg         { @include bp(lg) { @include flex-basis(90%); min-width: 90%; } }
 .Utils--flex-basis-80per-bplg         { @include bp(lg) { @include flex-basis(80%); min-width: 80%; } }
@@ -427,7 +237,6 @@
 .Utils--flex-basis-10per-bplg         { @include bp(lg) { @include flex-basis(10%); min-width: 10%; } }
 .Utils--flex-basis-5per-bplg          { @include bp(lg) { @include flex-basis(5%); min-width: 5%; } }
 .Utils--flex-basis-0per-bplg          { @include bp(lg) { @include flex-basis(0%); min-width: 0%; } }
-
 .Utils--flex-basis-100per-bpmd        { @include bp(md) { @include flex-basis(100%); min-width: 100%; } }
 .Utils--flex-basis-90per-bpmd         { @include bp(md) { @include flex-basis(90%); min-width: 90%; } }
 .Utils--flex-basis-80per-bpmd         { @include bp(md) { @include flex-basis(80%); min-width: 80%; } }
@@ -444,7 +253,6 @@
 .Utils--flex-basis-10per-bpmd         { @include bp(md) { @include flex-basis(10%); min-width: 10%; } }
 .Utils--flex-basis-5per-bpmd          { @include bp(md) { @include flex-basis(5%); min-width: 5%; } }
 .Utils--flex-basis-0per-bpmd          { @include bp(md) { @include flex-basis(0%); min-width: 0%; } }
- 
 .Utils--flex-basis-100per-bpsm        { @include bp(sm) { @include flex-basis(100%); min-width: 100%; } }
 .Utils--flex-basis-90per-bpsm         { @include bp(sm) { @include flex-basis(90%); min-width: 90%; } }
 .Utils--flex-basis-80per-bpsm         { @include bp(sm) { @include flex-basis(80%); min-width: 80%; } }
@@ -461,7 +269,6 @@
 .Utils--flex-basis-10per-bpsm         { @include bp(sm) { @include flex-basis(10%); min-width: 10%; } }
 .Utils--flex-basis-5per-bpsm          { @include bp(sm) { @include flex-basis(5%); min-width: 5%; } }
 .Utils--flex-basis-0per-bpsm          { @include bp(sm) { @include flex-basis(0%); min-width: 0%; } }
-
 .Utils--flex-basis-100per-bpxsm       { @include bp(xsm) { @include flex-basis(100%); min-width: 100%; } }
 .Utils--flex-basis-90per-bpxsm        { @include bp(xsm) { @include flex-basis(90%); min-width: 90%; } }
 .Utils--flex-basis-80per-bpxsm        { @include bp(xsm) { @include flex-basis(80%); min-width: 80%; } }
@@ -480,36 +287,29 @@
 .Utils--flex-basis-0per-bpxsm         { @include bp(xsm) { @include flex-basis(0%); min-width: 0%; } }
 
 // Display
-// ---------
-
 .Utils--display-none                  { display: none; }
 .Utils--display-inline                { display: inline; }
 .Utils--display-inline-block          { display: inline-block; }
 .Utils--display-block                 { display: block; }
 .Utils--display-flex                  { @include display-flex(); }
-
 .Utils--display-inline-bpxlg          { @include bp(xlg) { display: inline; } }
 .Utils--display-inline-block-bpxlg    { @include bp(xlg) { display: inline-block; } }
 .Utils--display-block-bpxlg           { @include bp(xlg) { display: block; } }
 .Utils--display-flex-bpxlg            { @include bp(xlg) { @include display-flex(); } }
-
 .Utils--display-inline-bplg           { @include bp(lg) { display: inline; } }
 .Utils--display-inline-block-bplg     { @include bp(lg) { display: inline-block; } }
 .Utils--display-block-bplg            { @include bp(lg) { display: block; } }
 .Utils--display-flex-bplg             { @include bp(lg) { @include display-flex(); } }
-
 .Utils--display-none-bpmd             { @include bp(md) { display: none; } }
 .Utils--display-inline-bpmd           { @include bp(md) { display: inline; } }
 .Utils--display-inline-block-bpmd     { @include bp(md) { display: inline-block; } }
 .Utils--display-block-bpmd            { @include bp(md) { display: block; } }
 .Utils--display-flex-bpmd             { @include bp(md) { @include display-flex(); } }
-
 .Utils--display-none-bpsm             { @include bp(sm) { display: none } }
 .Utils--display-inline-bpsm           { @include bp(sm) { display: inline; } }
 .Utils--display-inline-block-bpsm     { @include bp(sm) { display: inline-block; } }
 .Utils--display-block-bpsm            { @include bp(sm) { display: block; } }
 .Utils--display-flex-bpsm             { @include bp(sm) { @include display-flex(); } }
-
 .Utils--display-none-bpxsm            { @include bp(xsm) { display: none; } }
 .Utils--display-inline-bpxsm          { @include bp(xsm) { display: inline; } }
 .Utils--display-inline-block-bpxsm    { @include bp(xsm) { display: inline-block; } }
@@ -519,29 +319,16 @@
 .Utils--display-none-bpxlg            { @include bp(xlg) { display: none; } }
 
 // Position
-// ---------
-
 .Utils--position-static   { position: static; }
 .Utils--position-relative { position: relative; }
 .Utils--position-absolute { position: absolute; }
 .Utils--position-fixed    { position: fixed; }
 
 // Background Colors
-// ---------
-
-@mixin background-color($colorAsString) {
-  $color: map-get($colors, $colorAsString);
-  @if not map-has-key($colors, $colorAsString) {
-    $color: $colorAsString;
-  }
-
-  background-color: $color;
-};
-
 .Utils--background-color-white           { @include background-color(white); }
-.Utils--background-color-offwhite        { @include background-color(offwhite); }
 .Utils--background-color-black           { @include background-color(black); }
-.Utils--background-color-blackNight      { @include background-color(blackNight); }
+.Utils--background-color-offwhite        { @include background-color(offwhite); }
+.Utils--background-color-midnight        { @include background-color(midnight); }
 .Utils--background-color-grey100         { @include background-color(grey100); }
 .Utils--background-color-grey200         { @include background-color(grey200); }
 .Utils--background-color-grey300         { @include background-color(grey300); }
@@ -558,168 +345,29 @@
 .Utils--background-color-secondaryLight  { @include background-color(secondaryLight); }
 .Utils--background-color-secondaryDark   { @include background-color(secondaryDark); }
 .Utils--background-color-info            { @include background-color(info); }
-.Utils--background-color-infoLight       { @include background-color(infoLight); }
 .Utils--background-color-success         { @include background-color(success); }
-.Utils--background-color-successLight    { @include background-color(successLight); }
 .Utils--background-color-warning         { @include background-color(warning); }
-.Utils--background-color-warningLight    { @include background-color(warningLight); }
 .Utils--background-color-error           { @include background-color(error); }
-.Utils--background-color-errorLight      { @include background-color(errorLight); }
-
-// Gradients
-// ---------
-
-@mixin bg-gradient-radial($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
-  background: rgba($col1, $alp1);
-  background: -moz-radial-gradient(center, ellipse cover, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($loc1, rgba($col1, $alp1)), color-stop($loc2, rgba($col2, $alp2)));
-  background: -webkit-radial-gradient(center, ellipse cover, rrgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -o-radial-gradient(center, ellipse cover, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -ms-radial-gradient(center, ellipse cover, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: radial-gradient(ellipse at center, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-}
-
-@mixin bg-gradient-top-left-btm-right($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
-  background: rgba($col1, $alp1);
-  background: -moz-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -webkit-gradient(left top, right bottom, color-stop($loc1, rgba($col1, $alp1)), color-stop($loc2, rgba($col2, $alp2)));
-  background: -webkit-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -o-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -ms-linear-gradient(-45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: linear-gradient(135deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-}
-
-@mixin bg-gradient-top-right-btm-left($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
-  background: rgba($col1, $alp1);
-  background: -moz-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -webkit-gradient(left bottom, right top, color-stop($loc1, rgba($col1, $alp1)), color-stop($loc2, rgba($col2, $alp2)));
-  background: -webkit-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -o-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -ms-linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: linear-gradient(45deg, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-}
-
-@mixin bg-gradient-top-btm($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
-  background: rgba($col1, $alp1);
-  background: -moz-linear-gradient(top, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -webkit-linear-gradient(top, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: linear-gradient(to bottom, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-}
-
-@mixin bg-gradient-left-right($col1, $alp1, $loc1, $col2, $alp2, $loc2) {
-  background: rgba($col1, $alp1);
-  background: -moz-linear-gradient(left, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: -webkit-linear-gradient(left, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-  background: linear-gradient(to right, rgba($col1, $alp1) $loc1, rgba($col2, $alp2) $loc2);
-}
 
 // Opacity
-// ---------
-
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie);
-}
-
-.Utils--opacity-0   { @include opacity(0); }
-.Utils--opacity-5   { @include opacity(5); }
-.Utils--opacity-10  { @include opacity(10); }
-.Utils--opacity-20  { @include opacity(20); }
-.Utils--opacity-30  { @include opacity(30); }
-.Utils--opacity-40  { @include opacity(40); }
-.Utils--opacity-50  { @include opacity(50); }
-.Utils--opacity-60  { @include opacity(60); }
-.Utils--opacity-70  { @include opacity(70); }
-.Utils--opacity-80  { @include opacity(80); }
-.Utils--opacity-90  { @include opacity(90); }
-.Utils--opacity-100 { @include opacity(100); }
-
-// Transitions
-// ---------
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  transition: $args;
-}
+.Utils--opacity-0   { opacity: 0; }
+.Utils--opacity-5   { opacity: 5; }
+.Utils--opacity-10  { opacity: 10; }
+.Utils--opacity-20  { opacity: 20; }
+.Utils--opacity-30  { opacity: 30; }
+.Utils--opacity-40  { opacity: 40; }
+.Utils--opacity-50  { opacity: 50; }
+.Utils--opacity-60  { opacity: 60; }
+.Utils--opacity-70  { opacity: 70; }
+.Utils--opacity-80  { opacity: 80; }
+.Utils--opacity-90  { opacity: 90; }
+.Utils--opacity-100 { opacity: 100; }
 
 // Borders
-// ---------
-
-@mixin border($loc: all, $sizeAsString: one, $type: solid, $colorAsString: grey300) {
-  $size: map-get($sizes, $sizeAsString);
-  @if not map-has-key($sizes, $sizeAsString) {
-    $size: $sizeAsString;
-  }
-
-  $color: map-get($colors, $colorAsString);
-  @if not map-has-key($colors, $colorAsString) {
-    $color: $colorAsString;
-  }
-
-  @if $loc == all {
-    border: $size $type $color;
-  } @else if $loc == top {
-    border-top: $size $type $color;
-  } @else if $loc == right {
-    border-right: $size $type $color;
-  } @else if $loc == bottom {
-    border-bottom: $size $type $color;
-  } @else if $loc == left {
-    border-left: $size $type $color;
-  } @else if $loc == sides {
-    border-left: $size $type $color;
-    border-right: $size $type $color;
-  } @else if $loc == ends {
-    border-top: $size $type $color;
-    border-bottom: $size $type $color;
-  }
-}
-
 .Utils--border-top-one-solid-grey300    { @include border(top, one, solid, grey300); }
 .Utils--border-bottom-one-solid-grey300 { @include border(bottom, one, solid, grey300); }
 
 // Border Radius
-// ---------
-
-@mixin border-radius($loc, $sizeAsString) {
-
-  $size: map-get($sizes, $sizeAsString);
-
-  @if not map-has-key($sizes, $sizeAsString) {
-    $size: $sizeAsString;
-  }
-
-  @if $loc == all {
-    border-top-left-radius:$size;
-    border-top-right-radius:$size;
-    border-bottom-left-radius:$size;
-    border-bottom-right-radius:$size;
-  } @else if $loc == top {
-    border-top-left-radius:$size;
-    border-top-right-radius:$size;
-  } @else if $loc == right {
-    border-top-right-radius:$size;
-    border-bottom-right-radius:$size;
-  } @else if $loc == bottom {
-    border-bottom-left-radius:$size;
-    border-bottom-right-radius:$size;
-  } @else if $loc == left {
-    border-top-left-radius:$size;
-    border-bottom-left-radius:$size;
-  } @else if $loc == top-right {
-    border-top-right-radius:$size;
-  } @else if $loc == bottom-right {
-    border-bottom-right-radius:$size;
-  } @else if $loc == bottom-left {
-    border-bottom-left-radius:$size;
-  } @else if $loc == top-left {
-    border-top-left-radius:$size;
-  }
-}
-
 .Utils--border-radius-none          { @include border-radius(all, 0); }
 .Utils--border-radius-tiny          { @include border-radius(all, tiny); }
 .Utils--border-radius-xxsm          { @include border-radius(all, xxsm); }
@@ -793,29 +441,6 @@
 .Utils--border-radius-ends-xxlg     { @include border-radius(ends, xxlg); }
 .Utils--border-radius-ends-jumbo    { @include border-radius(ends, jumbo); }
 
-// Blur
-// ---------
-
-@mixin blur($val) {
-  -webkit-filter: blur($val);
-  -moz-filter: blur($val);
-  -ms-filter: blur($val);
-  filter: blur($val);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-}
-
 // Float
-// ---------
-
 .Utils--float-left  { float: left; }
 .Utils--float-right { float: right; }
-
-// Transforms
-// ---------
-
-@mixin rotate($val) {
-  -ms-transform: rotate($val);
-  -webkit-transform: rotate($val);
-  transform: rotate($val);
-}

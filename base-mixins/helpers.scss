@@ -1,9 +1,8 @@
 //--------------------
-// Helpers
+// Mixins - Helpers
 //--------------------
 
 // Space out horizontal lists
-
 @mixin list-spacing($val) {
   @include margin(right, $val);
 
@@ -13,7 +12,6 @@
 }
 
 // Font Awesome for pseudo elements
-
 @mixin pseudo-fa($val) {
   content: $val;
   display: inline-block;
@@ -23,7 +21,6 @@
 }
 
 // Material icons for pseudo elements
-
 @mixin pseudo-mi($val) {
   content: $val;
   font-family: 'Material Icons';
@@ -42,7 +39,6 @@
 }
 
 // Triangle
-
 @mixin triangle($dir, $sizeAsSting, $colorAsString) {
 
     $color: map-get($colors, $colorAsString);
@@ -73,8 +69,7 @@
     }
 }
 
-// background-base64
-
+// Background base64
 @mixin background-base64($imageAsString) {
 
   $image: map-get($images, $imageAsString);
@@ -84,7 +79,7 @@
   background-repeat: no-repeat;
 }
 
-// clamp text
+// Clamp Text
 @mixin clamp($numOfLines: 1) {
 	@if $numOfLines==1 {
 		white-space: nowrap;
@@ -99,44 +94,4 @@
 		-webkit-box-orient: vertical;
 		text-overflow: inherit;
 	}
-}
-
-.Helpers--clamp-1 {
-	@include clamp(1);
-}
-
-.Helpers--clamp-2 {
-	@include clamp(2);
-}
-
-.Helpers--clamp-3 {
-	@include clamp(3);
-}
-
-.Helpers--clamp-4 {
-	@include clamp(4);
-}
-
-.Helpers--clamp-5 {
-	@include clamp(5);
-}
-
-.Helpers--clamp-6 {
-	@include clamp(6);
-}
-
-.Helpers--clamp-7 {
-	@include clamp(7);
-}
-
-.Helpers--clamp-8 {
-	@include clamp(8);
-}
-
-.Helpers--clamp-9 {
-	@include clamp(9);
-}
-
-.Helpers--clamp-10 {
-	@include clamp(10);
 }

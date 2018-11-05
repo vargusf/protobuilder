@@ -34,7 +34,6 @@ $breakpoints: (
 //--------------------
 
 $colors: ();
-
 $colors: map-merge($colors, (white:           #fff));
 $colors: map-merge($colors, (offwhite:        #f9f9f9));
 $colors: map-merge($colors, (black:           #111));
@@ -62,8 +61,6 @@ $colors: map-merge($colors, (warning:         #FFB756));
 $colors: map-merge($colors, (warningLight:    #FFB756));
 $colors: map-merge($colors, (error:           #FF0949));
 $colors: map-merge($colors, (errorLight:      #FF0949));
-
-@warn $colors;
 
 $default-color: grey900;
 $default-background-color: white;

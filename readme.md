@@ -1,3 +1,3 @@
 # Protobuilder
 
-Rapid prototyping and development
+Rapid Prototyping & Development

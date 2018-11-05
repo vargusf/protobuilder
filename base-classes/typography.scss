@@ -1,31 +1,12 @@
-// Text
+//--------------------
+// Classes - Typography
+//--------------------
 
 // Font Family
-
-@mixin font-family($val) {
-  font-family: map-get($fonts, $val) !important;
-}
-
 .Text--font-family-primary    { @include font-family(primary); }
 .Text--font-family-secondary  { @include font-family(secondary); }
 
-// Font Sizes & Heights
-
-@mixin font-size-in-rem($val: 1.6) {
-    font-size: ($val * 10) + px !important;
-    font-size: $val + rem !important;
-}
-
-@mixin line-height-in-rem($val: 1.6) {
-  line-height: ($val * 10) + px !important;
-  line-height: $val + rem !important;
-}
-
-@mixin font-size($val) {
-  @include font-size-in-rem ( map-get($font-size, $val) );
-  @include line-height-in-rem ( map-get($line-height, $val) );
-}
-
+// these make no sense... shift to the 1-6 model
 .Text--font-size-tiny   { @include font-size(tiny); }
 .Text--font-size-xxsm   { @include font-size(xxsm); }
 .Text--font-size-xsm    { @include font-size(xsm); }
@@ -36,10 +17,7 @@
 .Text--font-size-xxlg   { @include font-size(xxlg); }
 .Text--font-size-jumbo  { @include font-size(jumbo); }
 
-
-
 // Font Weights
-
 .Text--font-weight-thin,
 .Text--font-weight-100          { font-weight: 100; }
 .Text--font-weight-extra-light,
@@ -60,20 +38,10 @@
 .Text--font-weight-900          { font-weight: 900; }
 
 // Text Colors
-
-@mixin color($colorAsString) {
-  $color: map-get($colors, $colorAsString);
-  @if not map-has-key($colors, $colorAsString) {
-    $color: $colorAsString;
-  }
-
-  color: $color !important;
-}
-
 .Text--color-white           { @include color(white); }
-.Text--color-offwhite        { @include color(offwhite); }
 .Text--color-black           { @include color(black); }
-.Text--color-blackNight      { @include color(blackNight); }
+.Text--color-offwhite        { @include color(offwhite); }
+.Text--color-midnight        { @include color(midnight); }
 .Text--color-grey100         { @include color(grey100); }
 .Text--color-grey200         { @include color(grey200); }
 .Text--color-grey300         { @include color(grey300); }
@@ -90,21 +58,17 @@
 .Text--color-secondaryLight  { @include color(secondaryLight); }
 .Text--color-secondaryDark   { @include color(secondaryDark); }
 .Text--color-info            { @include color(info); }
-.Text--color-infoLight       { @include color(infoLight); }
 .Text--color-success         { @include color(success); }
-.Text--color-successLight    { @include color(successLight); }
 .Text--color-warning         { @include color(warning); }
-.Text--color-warningLight    { @include color(warningLight); }
 .Text--color-error           { @include color(error); }
-.Text--color-errorLight      { @include color(errorLight); }
 
-// Font Displays and Headings
-
+// Displays
 .Text--display-1 { @include font-size-in-rem(11.2); font-weight: 300; }
 .Text--display-2 { @include font-size-in-rem(5.8); font-weight: 300; }
 .Text--display-3 { @include font-size-in-rem(3.6); font-weight: 300; }
 .Text--display-4 { @include font-size-in-rem(2.4); font-weight: 300; }
 
+// Headings
 .Text--heading-1 { @include font-size-in-rem(4.0); line-height: 1.15 }
 .Text--heading-2 { @include font-size-in-rem(3.2); line-height: 1.15 }
 .Text--heading-3 { @include font-size-in-rem(2.8); line-height: 1.15 }
@@ -112,27 +76,27 @@
 .Text--heading-5 { @include font-size-in-rem(2.0); line-height: 1.15 }
 .Text--heading-6 { @include font-size-in-rem(1.6); line-height: 1.15 }
 
+// Paragraph
 .Text--copy { @include font-size-in-rem(1.6); line-height: 1.7; font-weight: 300; }
 .Text--lead { @include font-size-in-rem(2.0); line-height: 1.7; font-weight: 300; }
-
 .Text--small   { @include font-size-in-rem(1.4); line-height: 1.15; font-weight: 300; }
 .Text--smaller { @include font-size-in-rem(1.2); line-height: 1.15; font-weight: 300; }
 
-.Text--muted { @include color(grey500); }
-
-// Text Alignment
-
+// Alignment
 .Text--align-left     { text-align: left; }
 .Text--align-right    { text-align: right; }
 .Text--align-center   { text-align: center; }
 .Text--align-justify  { text-align: justify; }
 
-// Text Reset
-
-html {
-  font-size: 62.5%;
+// Text Link
+.Text--link {
+  cursor: pointer;
+  @include color(primary);
+  &:hover { text-decoration: underline; }
 }
 
+// Text Reset
+html { font-size: 62.5%; }
 body {
   @include font-family($default-font-family);
   @include color($default-color);
@@ -140,10 +104,3 @@ body {
   line-height: 1.15;
   font-weight: 400;
 }
-
-// div, span, p, a, li {
-//   font-size: inherit;
-//   font-family: inherit;
-//   font-weight: inherit;
-//   color: inherit;
-// }
