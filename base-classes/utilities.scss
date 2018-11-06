@@ -169,123 +169,6 @@
 .Utils--height-100vh      { height: 100vh; }
 .Utils--min-height-100vh  { min-height: 100vh; }
 
-// Flex
-.Utils--justify-content-center        { @include justify-content(center); }
-.Utils--justify-content-flex-start    { @include justify-content(flex-start); }
-.Utils--justify-content-flex-end      { @include justify-content(flex-end); }
-.Utils--justify-content-space-between { @include justify-content(space-between); }
-.Utils--justify-content-space-around  { @include justify-content(space-around); }
-.Utils--align-items-center            { @include align-items(center); }
-.Utils--align-items-stretch           { @include align-items(stretch); }
-.Utils--align-items-flex-start        { @include align-items(flex-start); }
-.Utils--align-items-flex-end          { @include align-items(flex-end); }
-.Utils--align-items-baseline          { @include align-items(baseline); }
-.Utils--flex-direction-row            { @include flex-direction(row); }
-.Utils--flex-direction-column         { @include flex-direction(column); }
-.Utils--flex-grow-1                   { @include flex-grow(1); }
-.Utils--flex-grow-2                   { @include flex-grow(2); }
-.Utils--flex-shrink-1                 { @include flex-shrink(1); }
-.Utils--flex-shrink-2                 { @include flex-shrink(2); }
-.Utils--flex-wrap-wrap                { @include flex-wrap(wrap); }
-.Utils--flex-wrap-nowrap              { @include flex-wrap(nowrap); }
-.Utils--flex-wrap-wrap-reverse        { @include flex-wrap(wrap-reverse); }
-.Utils--flex-basis-100per             { @include flex-basis(100%); min-width: 100% }
-.Utils--flex-basis-90per              { @include flex-basis(90%); min-width: 90% }
-.Utils--flex-basis-80per              { @include flex-basis(80%); min-width: 80% }
-.Utils--flex-basis-75per              { @include flex-basis(75%); min-width: 75% }
-.Utils--flex-basis-70per              { @include flex-basis(70%); min-width: 70% }
-.Utils--flex-basis-66per              { @include flex-basis(66.666%); min-width: 66.666% }
-.Utils--flex-basis-60per              { @include flex-basis(60%); min-width: 60% }
-.Utils--flex-basis-50per              { @include flex-basis(50%); min-width: 50% }
-.Utils--flex-basis-40per              { @include flex-basis(40%); min-width: 40% }
-.Utils--flex-basis-33per              { @include flex-basis(33.333%); min-width: 33.333% }
-.Utils--flex-basis-30per              { @include flex-basis(30%); min-width: 30% }
-.Utils--flex-basis-25per              { @include flex-basis(25%); min-width: 25% }
-.Utils--flex-basis-20per              { @include flex-basis(20%); min-width: 20% }
-.Utils--flex-basis-10per              { @include flex-basis(10%); min-width: 10% }
-.Utils--flex-basis-5per               { @include flex-basis(5%); min-width: 5% }
-.Utils--flex-basis-0per               { @include flex-basis(0%); min-width: 0% }
-.Utils--flex-basis-100per-bpxlg       { @include bp(xlg) { @include flex-basis(100%); min-width: 100%; } }
-.Utils--flex-basis-90per-bpxlg        { @include bp(xlg) { @include flex-basis(90%); min-width: 90%; } }
-.Utils--flex-basis-80per-bpxlg        { @include bp(xlg) { @include flex-basis(80%); min-width: 80%; } }
-.Utils--flex-basis-75per-bpxlg        { @include bp(xlg) { @include flex-basis(75%); min-width: 75%; } }
-.Utils--flex-basis-70per-bpxlg        { @include bp(xlg) { @include flex-basis(70%); min-width: 70%; } }
-.Utils--flex-basis-66per-bpxlg        { @include bp(xlg) { @include flex-basis(66.666%); min-width: 66.666%; } }
-.Utils--flex-basis-60per-bpxlg        { @include bp(xlg) { @include flex-basis(60%); min-width: 60%; } }
-.Utils--flex-basis-50per-bpxlg        { @include bp(xlg) { @include flex-basis(50%); min-width: 50%; } }
-.Utils--flex-basis-40per-bpxlg        { @include bp(xlg) { @include flex-basis(40%); min-width: 40%; } }
-.Utils--flex-basis-33per-bpxlg        { @include bp(xlg) { @include flex-basis(33.333%); min-width: 33.333%; } }
-.Utils--flex-basis-30per-bpxlg        { @include bp(xlg) { @include flex-basis(30%); min-width: 30%; } }
-.Utils--flex-basis-25per-bpxlg        { @include bp(xlg) { @include flex-basis(25%); min-width: 25%; } }
-.Utils--flex-basis-20per-bpxlg        { @include bp(xlg) { @include flex-basis(20%); min-width: 20%; } }
-.Utils--flex-basis-10per-bpxlg        { @include bp(xlg) { @include flex-basis(10%); min-width: 10%; } }
-.Utils--flex-basis-5per-bpxlg         { @include bp(xlg) { @include flex-basis(5%); min-width: 5%; } }
-.Utils--flex-basis-0per-bpxlg         { @include bp(xlg) { @include flex-basis(0%); min-width: 0%; } }
-.Utils--flex-basis-100per-bplg        { @include bp(lg) { @include flex-basis(100%); min-width: 100%; } }
-.Utils--flex-basis-90per-bplg         { @include bp(lg) { @include flex-basis(90%); min-width: 90%; } }
-.Utils--flex-basis-80per-bplg         { @include bp(lg) { @include flex-basis(80%); min-width: 80%; } }
-.Utils--flex-basis-75per-bplg         { @include bp(lg) { @include flex-basis(75%); min-width: 75%; } }
-.Utils--flex-basis-70per-bplg         { @include bp(lg) { @include flex-basis(70%); min-width: 70%; } }
-.Utils--flex-basis-66per-bplg         { @include bp(lg) { @include flex-basis(66.666%); min-width: 66.666%; } }
-.Utils--flex-basis-60per-bplg         { @include bp(lg) { @include flex-basis(60%); min-width: 60%; } }
-.Utils--flex-basis-50per-bplg         { @include bp(lg) { @include flex-basis(50%); min-width: 50%; } }
-.Utils--flex-basis-40per-bplg         { @include bp(lg) { @include flex-basis(40%); min-width: 40%; } }
-.Utils--flex-basis-33per-bplg         { @include bp(lg) { @include flex-basis(33.333%); min-width: 33.333%; } }
-.Utils--flex-basis-30per-bplg         { @include bp(lg) { @include flex-basis(30%); min-width: 30%; } }
-.Utils--flex-basis-25per-bplg         { @include bp(lg) { @include flex-basis(25%); min-width: 25%; } }
-.Utils--flex-basis-20per-bplg         { @include bp(lg) { @include flex-basis(20%); min-width: 20%; } }
-.Utils--flex-basis-10per-bplg         { @include bp(lg) { @include flex-basis(10%); min-width: 10%; } }
-.Utils--flex-basis-5per-bplg          { @include bp(lg) { @include flex-basis(5%); min-width: 5%; } }
-.Utils--flex-basis-0per-bplg          { @include bp(lg) { @include flex-basis(0%); min-width: 0%; } }
-.Utils--flex-basis-100per-bpmd        { @include bp(md) { @include flex-basis(100%); min-width: 100%; } }
-.Utils--flex-basis-90per-bpmd         { @include bp(md) { @include flex-basis(90%); min-width: 90%; } }
-.Utils--flex-basis-80per-bpmd         { @include bp(md) { @include flex-basis(80%); min-width: 80%; } }
-.Utils--flex-basis-75per-bpmd         { @include bp(md) { @include flex-basis(75%); min-width: 75%; } }
-.Utils--flex-basis-70per-bpmd         { @include bp(md) { @include flex-basis(70%); min-width: 70%; } }
-.Utils--flex-basis-66per-bpmd         { @include bp(md) { @include flex-basis(66.666%); min-width: 66.666%; } }
-.Utils--flex-basis-60per-bpmd         { @include bp(md) { @include flex-basis(60%); min-width: 60%; } }
-.Utils--flex-basis-50per-bpmd         { @include bp(md) { @include flex-basis(50%); min-width: 50%; } }
-.Utils--flex-basis-40per-bpmd         { @include bp(md) { @include flex-basis(40%); min-width: 40%; } }
-.Utils--flex-basis-33per-bpmd         { @include bp(md) { @include flex-basis(33.333%); min-width: 33.333%; } }
-.Utils--flex-basis-30per-bpmd         { @include bp(md) { @include flex-basis(30%); min-width: 30%; } }
-.Utils--flex-basis-25per-bpmd         { @include bp(md) { @include flex-basis(25%); min-width: 25%; } }
-.Utils--flex-basis-20per-bpmd         { @include bp(md) { @include flex-basis(20%); min-width: 20%; } }
-.Utils--flex-basis-10per-bpmd         { @include bp(md) { @include flex-basis(10%); min-width: 10%; } }
-.Utils--flex-basis-5per-bpmd          { @include bp(md) { @include flex-basis(5%); min-width: 5%; } }
-.Utils--flex-basis-0per-bpmd          { @include bp(md) { @include flex-basis(0%); min-width: 0%; } }
-.Utils--flex-basis-100per-bpsm        { @include bp(sm) { @include flex-basis(100%); min-width: 100%; } }
-.Utils--flex-basis-90per-bpsm         { @include bp(sm) { @include flex-basis(90%); min-width: 90%; } }
-.Utils--flex-basis-80per-bpsm         { @include bp(sm) { @include flex-basis(80%); min-width: 80%; } }
-.Utils--flex-basis-75per-bpsm         { @include bp(sm) { @include flex-basis(75%); min-width: 75%; } }
-.Utils--flex-basis-70per-bpsm         { @include bp(sm) { @include flex-basis(70%); min-width: 70%; } }
-.Utils--flex-basis-66per-bpsm         { @include bp(sm) { @include flex-basis(66.666%); min-width: 66.666%; } }
-.Utils--flex-basis-60per-bpsm         { @include bp(sm) { @include flex-basis(60%); min-width: 60%; } }
-.Utils--flex-basis-50per-bpsm         { @include bp(sm) { @include flex-basis(50%); min-width: 50%; } }
-.Utils--flex-basis-40per-bpsm         { @include bp(sm) { @include flex-basis(40%); min-width: 40%; } }
-.Utils--flex-basis-33per-bpsm         { @include bp(sm) { @include flex-basis(33.333%); min-width: 33.333%; } }
-.Utils--flex-basis-30per-bpsm         { @include bp(sm) { @include flex-basis(30%); min-width: 30%; } }
-.Utils--flex-basis-25per-bpsm         { @include bp(sm) { @include flex-basis(25%); min-width: 25%; } }
-.Utils--flex-basis-20per-bpsm         { @include bp(sm) { @include flex-basis(20%); min-width: 20%; } }
-.Utils--flex-basis-10per-bpsm         { @include bp(sm) { @include flex-basis(10%); min-width: 10%; } }
-.Utils--flex-basis-5per-bpsm          { @include bp(sm) { @include flex-basis(5%); min-width: 5%; } }
-.Utils--flex-basis-0per-bpsm          { @include bp(sm) { @include flex-basis(0%); min-width: 0%; } }
-.Utils--flex-basis-100per-bpxsm       { @include bp(xsm) { @include flex-basis(100%); min-width: 100%; } }
-.Utils--flex-basis-90per-bpxsm        { @include bp(xsm) { @include flex-basis(90%); min-width: 90%; } }
-.Utils--flex-basis-80per-bpxsm        { @include bp(xsm) { @include flex-basis(80%); min-width: 80%; } }
-.Utils--flex-basis-75per-bpxsm        { @include bp(xsm) { @include flex-basis(75%); min-width: 75%; } }
-.Utils--flex-basis-70per-bpxsm        { @include bp(xsm) { @include flex-basis(70%); min-width: 70%; } }
-.Utils--flex-basis-66per-bpxsm        { @include bp(xsm) { @include flex-basis(66.666%); min-width: 66.666%; } }
-.Utils--flex-basis-60per-bpxsm        { @include bp(xsm) { @include flex-basis(60%); min-width: 60%; } }
-.Utils--flex-basis-50per-bpxsm        { @include bp(xsm) { @include flex-basis(50%); min-width: 50%; } }
-.Utils--flex-basis-40per-bpxsm        { @include bp(xsm) { @include flex-basis(40%); min-width: 40%; } }
-.Utils--flex-basis-33per-bpxsm        { @include bp(xsm) { @include flex-basis(33.333%); min-width: 33.333%; } }
-.Utils--flex-basis-30per-bpxsm        { @include bp(xsm) { @include flex-basis(30%); min-width: 30%; } }
-.Utils--flex-basis-25per-bpxsm        { @include bp(xsm) { @include flex-basis(25%); min-width: 25%; } }
-.Utils--flex-basis-20per-bpxsm        { @include bp(xsm) { @include flex-basis(20%); min-width: 20%; } }
-.Utils--flex-basis-10per-bpxsm        { @include bp(xsm) { @include flex-basis(10%); min-width: 10%; } }
-.Utils--flex-basis-5per-bpxsm         { @include bp(xsm) { @include flex-basis(5%); min-width: 5%; } }
-.Utils--flex-basis-0per-bpxsm         { @include bp(xsm) { @include flex-basis(0%); min-width: 0%; } }
-
 // Display
 .Utils--display-none                  { display: none; }
 .Utils--display-inline                { display: inline; }
@@ -344,6 +227,21 @@
 .Utils--background-color-secondary       { @include background-color(secondary); }
 .Utils--background-color-secondaryLight  { @include background-color(secondaryLight); }
 .Utils--background-color-secondaryDark   { @include background-color(secondaryDark); }
+.Utils--background-color-tertiary        { @include background-color(tertiary); }
+.Utils--background-color-tertiaryLight   { @include background-color(tertiaryLight); }
+.Utils--background-color-tertiaryDark    { @include background-color(tertiaryDark); }
+.Utils--background-color-red             { @include background-color(red); }
+.Utils--background-color-green           { @include background-color(green); }
+.Utils--background-color-blue            { @include background-color(blue); }
+.Utils--background-color-yellow          { @include background-color(yellow); }
+.Utils--background-color-cyan            { @include background-color(cyan); }
+.Utils--background-color-magenta         { @include background-color(magenta); }
+.Utils--background-color-orange          { @include background-color(orange); }
+.Utils--background-color-pink            { @include background-color(pink); }
+.Utils--background-color-purple          { @include background-color(purple); }
+.Utils--background-color-azure           { @include background-color(azure); }
+.Utils--background-color-teal            { @include background-color(teal); }
+.Utils--background-color-lime            { @include background-color(lime); }
 .Utils--background-color-info            { @include background-color(info); }
 .Utils--background-color-success         { @include background-color(success); }
 .Utils--background-color-warning         { @include background-color(warning); }

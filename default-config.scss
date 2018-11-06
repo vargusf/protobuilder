@@ -34,34 +34,44 @@ $breakpoints: (
 //--------------------
 
 $colors: ();
-$colors: map-merge($colors, (white:           #fff));
+$colors: map-merge($colors, (white:           #ffffff));
+$colors: map-merge($colors, (black:           #000000));
 $colors: map-merge($colors, (offwhite:        #f9f9f9));
-$colors: map-merge($colors, (black:           #111));
-$colors: map-merge($colors, (blackNight:      #000));
-$colors: map-merge($colors, (grey100:         #F5F7F9));
-$colors: map-merge($colors, (grey200:         #e9ecef));
-$colors: map-merge($colors, (grey300:         #dee2e6));
-$colors: map-merge($colors, (grey400:         #ced4da));
-$colors: map-merge($colors, (grey500:         #adb5bd));
-$colors: map-merge($colors, (grey600:         #8898aa));
-$colors: map-merge($colors, (grey700:         #525f7f));
-$colors: map-merge($colors, (grey800:         #32325d));
-$colors: map-merge($colors, (grey900:         #212529));
-$colors: map-merge($colors, (primary:         #2196f3));
-$colors: map-merge($colors, (primaryLight:    #4dabf5));
-$colors: map-merge($colors, (primaryDark:     #1769aa));
-$colors: map-merge($colors, (secondary:       #ff1744));
-$colors: map-merge($colors, (secondaryLight:  #ff4569));
-$colors: map-merge($colors, (secondaryDark:   #b2102f));
-$colors: map-merge($colors, (info:            #00B9E1));
-$colors: map-merge($colors, (infoLight:       #00B9E1));
-$colors: map-merge($colors, (success:         #2FB688));
-$colors: map-merge($colors, (successLight:    #2FB688));
-$colors: map-merge($colors, (warning:         #FFB756));
-$colors: map-merge($colors, (warningLight:    #FFB756));
-$colors: map-merge($colors, (error:           #FF0949));
-$colors: map-merge($colors, (errorLight:      #FF0949));
-
+$colors: map-merge($colors, (midnight:        #111111));
+$colors: map-merge($colors, (grey100:         #E6E6E6));
+$colors: map-merge($colors, (grey200:         #C1C5C4));
+$colors: map-merge($colors, (grey300:         #A8A8A8));
+$colors: map-merge($colors, (grey400:         #909090));
+$colors: map-merge($colors, (grey500:         #737776));
+$colors: map-merge($colors, (grey600:         #5E5E5E));
+$colors: map-merge($colors, (grey700:         #444444));
+$colors: map-merge($colors, (grey800:         #2C2C2C));
+$colors: map-merge($colors, (grey900:         #131716));
+$colors: map-merge($colors, (primary:         #8086d8));
+$colors: map-merge($colors, (primaryLight:    #dadcf4));
+$colors: map-merge($colors, (primaryDark:     #4f59a6));
+$colors: map-merge($colors, (secondary:       #202C41));
+$colors: map-merge($colors, (secondaryLight:  #49556c));
+$colors: map-merge($colors, (secondaryDark:   #1B2436));
+$colors: map-merge($colors, (tertiary:        #FA1E5F));
+$colors: map-merge($colors, (tertiaryLight:   #ff638c));
+$colors: map-merge($colors, (tertiaryDark:    #c00036));
+$colors: map-merge($colors, (red:             #ff0000));
+$colors: map-merge($colors, (green:           #ffff00));
+$colors: map-merge($colors, (blue:            #0000ff));
+$colors: map-merge($colors, (yellow:          #ffff00));
+$colors: map-merge($colors, (cyan:            #00ffff));
+$colors: map-merge($colors, (magenta:         #ff00ff));
+$colors: map-merge($colors, (orange:          #ff7f00)); // Red-Yellow
+$colors: map-merge($colors, (pink:            #ff0080)); // Red-Magenta (Rose)
+$colors: map-merge($colors, (purple:          #7f00ff)); // Blue-Magenta (Violet)
+$colors: map-merge($colors, (azure:           #0080ff)); // Blue-Cyan
+$colors: map-merge($colors, (teal:            #00ff7f)); // Green-Cyan (Spring Green)
+$colors: map-merge($colors, (lime:            #80ff00)); // Green-Yellow (Chartreuse)
+$colors: map-merge($colors, (info:            #007ACA));
+$colors: map-merge($colors, (success:         #3EA157));
+$colors: map-merge($colors, (warning:         #FF9A3D));
+$colors: map-merge($colors, (error:           #DC1232));
 $default-color: grey900;
 $default-background-color: white;
 
