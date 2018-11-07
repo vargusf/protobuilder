@@ -9,8 +9,8 @@
 
 // Font Sizes & Heights
 @mixin font-size-in-rem($val: 1.6) {
-    font-size: ($val * 10) + px;
-    font-size: $val + rem;
+  font-size: ($val * 10) + px;
+  font-size: $val + rem;
 }
 
 @mixin line-height-in-rem($val: 1.6) {

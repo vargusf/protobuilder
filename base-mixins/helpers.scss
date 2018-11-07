@@ -41,32 +41,32 @@
 // Triangle
 @mixin triangle($dir, $sizeAsSting, $colorAsString) {
 
-    $color: map-get($colors, $colorAsString);
-    $size: map-get($sizes, $sizeAsSting);
+  $color: map-get($colors, $colorAsString);
+  $size: map-get($sizes, $sizeAsSting);
 
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 
-    @if $dir == 'up' {
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-        border-bottom: $size solid $color;
-    }
-    @else if $dir == 'down' {
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-        border-top: $size solid $color;
-    }
-    @else if $dir == 'right' {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-        border-left: $size solid $color;
-    }
-    @else if $dir == 'left' {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-        border-right: $size solid $color;
-    }
+  @if $dir == 'up' {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+  @else if $dir == 'down' {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  }
+  @else if $dir == 'right' {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+  @else if $dir == 'left' {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  }
 }
 
 // Background base64
@@ -81,17 +81,17 @@
 
 // Clamp Text
 @mixin clamp($numOfLines: 1) {
-	@if $numOfLines==1 {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	}
-	@else {
-		overflow: auto;
-		white-space: normal;
-		display: -webkit-box;
-		-webkit-line-clamp: $numOfLines;
-		-webkit-box-orient: vertical;
-		text-overflow: inherit;
-	}
+  @if $numOfLines==1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @else {
+    overflow: hidden;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: $numOfLines;
+    -webkit-box-orient: vertical;
+    text-overflow: inherit;
+  }
 }
