@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "transpile": "babel src -d dist --copy-files",
-    "fullpub": "npm run transpile && git add . && git commit -m 'update' && git push && npm version patch && npm publish"
+    "dist": "npm run transpile && git add . && git commit -m 'update' && git push && npm version patch && npm publish"
   },
   "repository": {
     "type": "git",

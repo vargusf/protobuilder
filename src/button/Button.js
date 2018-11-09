@@ -30,12 +30,13 @@
 
 
 
+import './Button.scss';
 
 import React from 'react';
 
 const Button = () => {
   return (
-    <button>a button</button>
+    <button>a button from the comp what what</button>
   );
 }
 
