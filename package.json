@@ -13,7 +13,7 @@
     "git-add": "git add .",
     "git-commit": "git commit -m 'update'",
     "git-push": "git push",
-    "submit": "npm run git-add && npm run git-commit && npm run git-push && npm version patch"
+    "submit": "npm run git-add && npm run git-commit && npm run git-push && npm version patch && git publish"
   },
   "repository": {
     "type": "git",
