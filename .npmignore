@@ -1,5 +1,5 @@
-src
-public
-config
+# src
+# public
+# config
 .babelrc
 .gitignore

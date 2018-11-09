@@ -32,12 +32,11 @@
 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Button = () => {
   return (
     <button>a button</button>
-  )
+  );
 }
 
 export default Button;
