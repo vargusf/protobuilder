@@ -3,22 +3,24 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = undefined;
 
-var _Button = require('./button/Button');
+var _react = require('react');
 
-var _Button2 = _interopRequireDefault(_Button);
+var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.Button = _Button2.default;
+var Button = function Button() {
+  return _react2.default.createElement(
+    'button',
+    null,
+    'a button woo'
+  );
+}; // import Button from './button/Button';
 
-// import React from 'react';
-
-// const Button = () => {
-//   return (
-//     <button>a button woo</button>
-//   );
+// export {
+//   Button
 // }
 
-// export default Button;
+
+exports.default = Button;

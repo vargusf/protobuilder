@@ -28,10 +28,6 @@
 
 // export default Button;
 
-
-
-import './Button.scss';
-
 import React from 'react';
 
 const Button = () => {
