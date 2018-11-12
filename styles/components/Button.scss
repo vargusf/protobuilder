@@ -52,6 +52,10 @@
   @include color(secondary);
 }
 
+.Button--color-teriary {
+  @include color(teriary);
+}
+
 .Button--color-grey {
   @include color(grey700);
 }
@@ -84,6 +88,13 @@
       @include color(white);
     }
   }
+  &.Button--color-tertiary {
+    @include border(all, one, solid, tertiary);
+    &:hover {
+      @include background-color(tertiary);
+      @include color(white);
+    }
+  }
   &.Button--color-grey {
     @include border(all, one, solid, grey700);
     @include border(all, one, solid, grey700);
@@ -110,6 +121,12 @@
     @include background-color(secondary);
     &:hover {
       @include background-color(secondaryDark);
+    }
+  }
+  &.Button--color-tertiary {
+    @include background-color(tertiary);
+    &:hover {
+      @include background-color(tertiaryDark);
     }
   }
   &.Button--color-grey {

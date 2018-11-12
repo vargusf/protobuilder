@@ -1,3 +1,5 @@
-import Comp1_ from './Comp1.jsx';
+console.log('hi.. index here');
 
-export const Comp1 = Comp1_;
+'use strict';
+
+module.exports = require('./dist/index.js');
