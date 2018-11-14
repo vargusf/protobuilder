@@ -76,6 +76,7 @@
   @include background-color(transparent);
   &.Button--color-primary {
     @include border(all, one, solid, primary);
+    @include color(primary);
     &:hover {
       @include background-color(primary);
       @include color(white);
@@ -83,6 +84,7 @@
   }
   &.Button--color-secondary {
     @include border(all, one, solid, secondary);
+    @include color(secondary);
     &:hover {
       @include background-color(secondary);
       @include color(white);
@@ -90,6 +92,7 @@
   }
   &.Button--color-tertiary {
     @include border(all, one, solid, tertiary);
+    @include color(tertiary);
     &:hover {
       @include background-color(tertiary);
       @include color(white);
@@ -97,7 +100,7 @@
   }
   &.Button--color-grey {
     @include border(all, one, solid, grey700);
-    @include border(all, one, solid, grey700);
+    @include color(grey700);
     &:hover {
       @include background-color(grey700);
       @include color(white);
