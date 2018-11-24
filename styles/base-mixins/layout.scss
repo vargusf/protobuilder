@@ -23,3 +23,8 @@
   @include align-items(center);
   @include justify-content(center);
 };
+
+// Layer
+@mixin layer($val) {
+  z-index: map-get($layers, $val);
+}
