@@ -25,6 +25,8 @@ var Button = function Button(_ref) {
       size = _ref$size === undefined ? 'md' : _ref$size,
       _ref$to = _ref.to,
       to = _ref$to === undefined ? null : _ref$to,
+      _ref$target = _ref.target,
+      target = _ref$target === undefined ? '_self' : _ref$target,
       children = _ref.children;
 
   var classes = '\n    Button\n    Button--display-' + display + '\n    Button--fill-' + fill + '\n    Button--color-' + color + '\n    Button--size-' + size + '\n  ';
@@ -33,6 +35,12 @@ var Button = function Button(_ref) {
     return _react2.default.createElement(
       _reactRouterDom.Link,
       { to: to, className: classes },
+      children
+    );
+  } else if (type == "href") {
+    return _react2.default.createElement(
+      'a',
+      { href: to, className: classes, target: target },
       children
     );
   } else {
