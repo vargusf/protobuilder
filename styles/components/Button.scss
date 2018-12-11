@@ -4,12 +4,21 @@
 @import "../base-mixins/index";
 
 .Button {
-  display: inline-block;
   cursor: pointer;
   text-transform: uppercase;
   @include border-radius(all, 3px);
   transition: all .5s;
   @include border(all, none);
+}
+
+// Display - Flex
+
+.Button--display-inline-block {
+  display: inline-block;
+}
+
+.Button--display-flex {
+  @include flex-centered();
 }
 
 // Size
@@ -108,6 +117,10 @@
   }
   &.Button--color-white {
     @include border(all, one, solid, white);
+    &:hover {
+      @include background-color(white);
+      @include color(grey900);
+    }
   }
   
 }

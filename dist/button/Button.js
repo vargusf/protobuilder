@@ -15,6 +15,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Button = function Button(_ref) {
   var _ref$type = _ref.type,
       type = _ref$type === undefined ? 'button' : _ref$type,
+      _ref$display = _ref.display,
+      display = _ref$display === undefined ? 'inline-block' : _ref$display,
       _ref$fill = _ref.fill,
       fill = _ref$fill === undefined ? 'true' : _ref$fill,
       _ref$color = _ref.color,
@@ -25,7 +27,7 @@ var Button = function Button(_ref) {
       to = _ref$to === undefined ? null : _ref$to,
       children = _ref.children;
 
-  var classes = '\n    Button Button--fill-' + fill + '\n    Button--color-' + color + '\n    Button--size-' + size + '\n  ';
+  var classes = '\n    Button\n    Button--display-' + display + '\n    Button--fill-' + fill + '\n    Button--color-' + color + '\n    Button--size-' + size + '\n  ';
 
   if (type == "link") {
     return _react2.default.createElement(

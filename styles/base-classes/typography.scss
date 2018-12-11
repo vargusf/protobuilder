@@ -104,10 +104,17 @@
 .Text--align-justify  { text-align: justify; }
 
 // Text Link
-.Text--link {
+.Text--link,
+.Text--link-underline {
   cursor: pointer;
   @include color(primary);
   &:hover { text-decoration: underline; }
+}
+
+.Text--link-glow {
+  cursor: pointer;
+  @include color(primary);
+  &:hover { @include color(darken(map-get($colors, primary), 20%)); }
 }
 
 // Text Reset

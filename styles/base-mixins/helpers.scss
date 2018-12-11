@@ -95,3 +95,14 @@
     text-overflow: inherit;
   }
 }
+
+// Break long strings (like URLs) especially for user input elements
+@mixin break-strings() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

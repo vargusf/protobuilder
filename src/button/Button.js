@@ -2,15 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Button = ({
-  type = 'button',   // (link|button|submit|reset)
-  fill = 'true',     // (true|false)
-  color = 'primary',  // (primary|secondary|grey|white)
-  size = 'md',       // (sm|md|lg|xlg)
+  type = 'button',           // (link|button|submit|reset)
+  display = 'inline-block',  // (inline|inline-block|flex)
+  fill = 'true',             // (true|false)
+  color = 'primary',         // (primary|secondary|grey|white)
+  size = 'md',               // (sm|md|lg|xlg)
   to = null,
   children
 }) => {
   const classes = `
-    Button Button--fill-${fill}
+    Button
+    Button--display-${display}
+    Button--fill-${fill}
     Button--color-${color}
     Button--size-${size}
   `;

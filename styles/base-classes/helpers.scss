@@ -41,3 +41,7 @@
 .Helpers--clamp-10 {
 	@include clamp(10);
 }
+
+.Helpers--breakStrings {
+	@include break-strings();
+}
