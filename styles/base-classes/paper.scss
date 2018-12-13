@@ -1,0 +1,73 @@
+// Paper
+
+.Paper {
+  @include background-color(white);
+  @include border(all, one, solid, grey200);
+  @include border-radius(all, tiny);
+}
+
+.Paper__content {
+  @include margin(ends, md);
+  @include padding(sides, md);
+}
+
+.Paper__well{
+  @include padding(ends, md);
+  @include padding(sides, md);
+  @include background-color(grey200);
+}
+
+// Text & Headings
+
+.Paper__heading-1 {
+  @include font-size(xlg);
+  font-weight: 400;
+  &.Paper__heading--subtle {
+    @include color(grey500);
+    font-weight: 400;
+  }
+}
+
+.Paper__heading-2 {
+  @include font-size(lg);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey500);
+    font-weight: 400;
+  }
+}
+
+.Paper__heading-3 {
+  @include font-size(md);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey500);
+    font-weight: 400;
+  }
+}
+
+.Paper__heading-4 {
+  @include font-size(sm);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey500);
+    font-weight: 400;
+  }
+}
+
+.Paper__heading-5 {
+  @include font-size(xsm);
+  font-weight: 500;
+  &.Paper__heading--subtle {
+    @include color(grey500);
+    font-weight: 400;
+  }
+}
+
+.Paper__text {
+  @include font-size(sm);
+}
+
+.Paper__text-small {
+  @include font-size(xsm);
+}
