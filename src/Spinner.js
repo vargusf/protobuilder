@@ -8,7 +8,7 @@ const Spinner = ({
   const classes = `
     Spinner
     Spinner--color-${color}
-    Button--size-${size}
+    Spinner--size-${size}
   `;
 
 
