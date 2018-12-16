@@ -1,5 +1,7 @@
-import Button from './button/Button';
+import Button from './Button';
+import Spinner from './Spinner';
 
 export {
-  Button
+  Button,
+  Spinner
 }

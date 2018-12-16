@@ -9,6 +9,7 @@ const Button = ({
   size = 'md',               // (sm|md|lg|xlg)
   to = null,
   target = '_self',
+	onClick = () => {},
   children
 }) => {
   const classes = `
@@ -20,11 +21,11 @@ const Button = ({
   `;
 
   if (type == "link") {
-    return <Link to={to} className={classes}>{children}</Link>
+    return <Link to={to} onClick={onClick} className={classes}>{children}</Link>
   } else if (type == "href") {
-    return <a href={to} className={classes} target={target}>{children}</a>
+    return <a href={to} onClick={onClick} className={classes} target={target}>{children}</a>
   } else {
-    return <button className={classes} type={type}>{children}</button>
+    return <button onClick={onClick} className={classes} type={type}>{children}</button>
   }
 }
 
