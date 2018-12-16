@@ -4,7 +4,6 @@ $offset: 187;
 $duration: 1.4s;
 
 .Spinner {
-
   &--color-primary {
     .Spinner__path {
       stroke: map-get($colors, primary);
@@ -20,10 +19,23 @@ $duration: 1.4s;
     @include stretch-edges();
     @include flex-centered();
   }
-  &--display-inline {
-    position: absolute;
-    @include stretch-edges();
-    @include flex-centered();
+  &--size-md {
+    .Spinner__svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &--size-sm {
+    .Spinner__svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  &--size-xsm {
+    .Spinner__svg {
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
