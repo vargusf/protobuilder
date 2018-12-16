@@ -1,16 +1,17 @@
 import React from 'react';
 
 const Spinner = ({
-  size = 'md',
-  color = 'primary'
+  size = 'md',            // (sm|md)
+  color = 'primary',      // (primary|white)
+  display = 'centered'    // (centered|inline)
 }) => {
 
   const classes = `
     Spinner
     Spinner--color-${color}
     Spinner--size-${size}
+    Spinner--display-${size}
   `;
-
 
   return (
     <div className={classes}>

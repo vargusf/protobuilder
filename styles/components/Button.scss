@@ -5,6 +5,7 @@
 
 .Button {
   cursor: pointer;
+  position: relative;
   text-transform: uppercase;
   @include border-radius(all, 3px);
   transition: all .5s;

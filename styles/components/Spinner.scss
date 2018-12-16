@@ -4,9 +4,7 @@ $offset: 187;
 $duration: 1.4s;
 
 .Spinner {
-  position: absolute;
-  @include stretch-edges();
-  @include flex-centered();
+
   &--color-primary {
     .Spinner__path {
       stroke: map-get($colors, primary);
@@ -16,6 +14,16 @@ $duration: 1.4s;
     .Spinner__path {
       stroke: map-get($colors, white);
     }
+  }
+  &--display-centered {
+    position: absolute;
+    @include stretch-edges();
+    @include flex-centered();
+  }
+  &--display-inline {
+    position: absolute;
+    @include stretch-edges();
+    @include flex-centered();
   }
 }
 
