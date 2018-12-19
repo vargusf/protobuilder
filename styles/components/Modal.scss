@@ -1,0 +1,28 @@
+@import "../base-mixins/index";
+
+.Modal {
+  position: fixed;
+  z-index: 100;
+  @include stretch-edges();
+  @include flex-centered();
+  &--isActive-false {
+    display: none;
+  }
+}
+
+.Modal_bg {
+  position: absolute;
+  z-index: 1;
+  @include stretch-edges(); 
+  @include background-color(black);
+  opacity: .5
+}
+
+.Modal_container {
+  position: relative;
+  z-index: 2;
+}
+
+.Modal_containerDefault {
+  @include background-color(white);
+}

@@ -1,0 +1,42 @@
+@import 'src/proto/mixins.scss';
+
+.ProtoDemo {
+  @include padding(bottom, xlg);
+  li {
+    @include margin(bottom, xxsm);
+  }
+}
+
+.ProtoDemo h1 {
+  @include margin(ends, xlg);
+  @include padding(ends, md);
+  @include padding(sides, sm);
+  font-weight: 300;
+  @include font-size-in-rem(4.4);
+  @include background-color(grey300);
+  text-align: center;
+}
+
+.ProtoDemo h2 {
+  @include padding(ends, md);
+  @include padding(sides, sm);
+  @include margin(ends, md);
+  font-weight: 300;
+  @include font-size-in-rem(2.8);
+  @include background-color(grey200);
+  text-align: center;
+}
+
+.ProtoDemo h3 {
+  @include padding(ends, sm);
+  @include padding(sides, sm);
+  @include margin(ends, sm);
+  font-weight: 300;
+  @include font-size-in-rem(2);
+  @include background-color(grey100);
+}
+
+.ProtoDemo__box {
+  height: 100px;
+  @include padding(all, sm);
+}

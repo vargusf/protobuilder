@@ -1,0 +1,38 @@
+@import "../base-mixins/index";
+
+.Nag {
+  position: relative;
+  height: 30px;
+  @include flex-centered();
+  @include font-size-in-rem(1.2);
+  &--color-primary {
+    @include background-color(primary);
+    @include color(white);
+  }
+  &--color-primaryLight {
+    @include background-color(primaryLight);
+    @include color(white);
+  }
+  &--color-primaryDark {
+    @include background-color(primaryDark);
+    @include color(white);
+  }
+  &--isActive-false {
+    display: none;
+  }
+}
+
+.Nag__closeBtn {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  @include flex-centered();
+  height: 30px;
+  width: 30px;
+  @include color(white);
+  i {
+    @include font-size-in-rem(1.6);
+  }
+}

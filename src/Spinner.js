@@ -3,7 +3,7 @@ import React from 'react';
 const Spinner = ({
   size = 'md',            // (xsm|sm|md)
   color = 'primary',      // (primary|white)
-  display = 'inline'    // (centered|inline)
+  display = 'inline'    // (inline|centered)
 }) => {
 
   const classes = `
