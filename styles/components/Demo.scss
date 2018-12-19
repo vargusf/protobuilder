@@ -1,4 +1,4 @@
-@import 'src/proto/mixins.scss';
+@import "../base-mixins/index";
 
 .ProtoDemo {
   @include padding(bottom, xlg);
