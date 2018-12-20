@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Notification = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Demo = undefined;
+exports.Notification = exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Demo = undefined;
 
 var _Demo = require('./Demo');
 
@@ -23,8 +23,6 @@ var _Nag2 = _interopRequireDefault(_Nag);
 
 var _Modal = require('./Modal');
 
-var _Modal2 = _interopRequireDefault(_Modal);
-
 var _Notification = require('./Notification');
 
 var _Notification2 = _interopRequireDefault(_Notification);
@@ -35,5 +33,8 @@ exports.Demo = _Demo2.default;
 exports.Button = _Button2.default;
 exports.Spinner = _Spinner2.default;
 exports.Nag = _Nag2.default;
-exports.Modal = _Modal2.default;
+exports.Modal = _Modal.Modal;
+exports.ModalHeader = _Modal.ModalHeader;
+exports.ModalBody = _Modal.ModalBody;
+exports.ModalActions = _Modal.ModalActions;
 exports.Notification = _Notification2.default;

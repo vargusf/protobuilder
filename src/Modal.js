@@ -1,34 +1,42 @@
 import React from 'react';
 
 const Modal = ({
-	container = 'default', // (default|custom)
-	onEventClose = () => {},
-	onEventAction1 = () => {},
-	onEventAction2 = () => {},
+	type = 'default', // (default|custom)
+	bgClick = () => {},
+	children
 }) => {
 	const classes = `
 		Modal
+		Modal--type-${type}
 	`;
-
-	const containerDefault = () => (
-		<div className="Modal_containerDefault">
-			<div>header</div>
-			<div>body</div>
-			<div>
-				<a onClick={onEventClose}>cancel</a>
-				<a onClick={onEventAction1}>ok</a>
-			</div>
-		</div>
-	);
 
 	return (
 		<div className={classes}>
-			<div className="Modal_bg" onClick={onEventClose}></div>
+			<div className="Modal_bg" onClick={bgClick}></div>
 			<div className="Modal_container">
-				{container != 'default' ? children : containerDefault()}
+				{children}
 			</div>
 		</div>
 	)
 }
 
-export default Modal;
+const ModalHeader = props => (
+	<div className="Modal_header">{props.children}</div>
+)
+
+const ModalBody = props => (
+	<div className="Modal_body">{props.children}</div>
+)
+
+const ModalActions = props => (
+	<div className="Modal_actions">
+		{props.children}
+	</div>
+)
+
+export {
+	Modal,
+	ModalHeader,
+	ModalBody,
+	ModalActions
+};
