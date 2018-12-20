@@ -52,24 +52,22 @@
 
 // Color
 
-.Button--color-primary {
-  @include color(primary);
-}
-
-.Button--color-secondary {
-  @include color(secondary);
-}
-
-.Button--color-teriary {
-  @include color(teriary);
-}
-
-.Button--color-grey {
-  @include color(grey700);
-}
-.Button--color-white {
-  @include color(white);
-}
+.Button--color-primary        { @include color(primary); }
+.Button--color-primaryLight   { @include color(primaryLight); }
+.Button--color-primaryDark    { @include color(primaryDark); }
+.Button--color-secondary      { @include color(secondary); }
+.Button--color-secondaryLight { @include color(secondaryLight); }
+.Button--color-secondaryDark  { @include color(secondaryDark); }
+.Button--color-teriary        { @include color(teriary); }
+.Button--color-teriaryLight   { @include color(teriaryLight); }
+.Button--color-teriaryDark    { @include color(teriaryDark); }
+.Button--color-white          { @include color(white); }
+.Button--color-black          { @include color(black); }
+.Button--color-grey100        { @include color(grey100); }
+.Button--color-info           { @include color(info); }
+.Button--color-success        { @include color(success); }
+.Button--color-warning        { @include color(warning); }
+.Button--color-error          { @include color(error); }
 
 .Button--type-text {
   @include background-color(transparent);

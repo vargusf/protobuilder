@@ -5,9 +5,6 @@
   z-index: 100;
   @include stretch-edges();
   @include flex-centered();
-  &--isActive-false {
-    display: none;
-  }
 }
 
 .Modal_bg {
