@@ -4,6 +4,7 @@ const Modal = ({
 	container = 'default', // (default|custom)
 	onEventClose = () => {},
 	onEventAction1 = () => {},
+	onEventAction2 = () => {},
 }) => {
 	const classes = `
 		Modal
