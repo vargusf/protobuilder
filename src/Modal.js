@@ -15,8 +15,8 @@ const Modal = ({
 			<div>header</div>
 			<div>body</div>
 			<div>
-				<button onClick={onEventClose}>cancel</button>
-				<button onClick={onEventAction1}>ok</button>
+				<a onClick={onEventClose}>cancel</a>
+				<a onClick={onEventAction1}>ok</a>
 			</div>
 		</div>
 	);
