@@ -3,15 +3,15 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Demo = exports.Alert = undefined;
+exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Docs = exports.Alert = undefined;
 
 var _Alert = require('./Alert');
 
 var _Alert2 = _interopRequireDefault(_Alert);
 
-var _Demo = require('./Demo');
+var _Docs = require('./Docs');
 
-var _Demo2 = _interopRequireDefault(_Demo);
+var _Docs2 = _interopRequireDefault(_Docs);
 
 var _Button = require('./Button');
 
@@ -30,7 +30,7 @@ var _Modal = require('./Modal');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Alert = _Alert2.default;
-exports.Demo = _Demo2.default;
+exports.Docs = _Docs2.default;
 exports.Button = _Button2.default;
 exports.Spinner = _Spinner2.default;
 exports.Nag = _Nag2.default;
