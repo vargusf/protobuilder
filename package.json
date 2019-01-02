@@ -1,6 +1,6 @@
 {
   "name": "protobuilder",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "description": "Rapid Prototyping & Development",
   "main": "dist/index.js",
   "scripts": {
