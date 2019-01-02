@@ -103,6 +103,11 @@
 .Text--align-center   { text-align: center; }
 .Text--align-justify  { text-align: justify; }
 
+// Styles
+.Text--italic    { font-style: italic; }
+.Text--underline { text-decoration: underline; }
+.Text-strike     { text-decoration: line-through; }
+
 // Text Link
 .Text--link,
 .Text--link-underline {

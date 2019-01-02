@@ -36,10 +36,10 @@ $breakpoints: (
 $colors: ();
 $colors: map-merge($colors, (white:           #ffffff));
 $colors: map-merge($colors, (black:           #000000));
-$colors: map-merge($colors, (offwhite:        #f9f9f9));
+$colors: map-merge($colors, (offwhite:        #f6f9fc));
 $colors: map-merge($colors, (midnight:        #111111));
-$colors: map-merge($colors, (grey100:         #E6E6E6));
-$colors: map-merge($colors, (grey200:         #C1C5C4));
+$colors: map-merge($colors, (grey100:         #E9ECEF));
+$colors: map-merge($colors, (grey200:         #DDDEE1));
 $colors: map-merge($colors, (grey300:         #A8A8A8));
 $colors: map-merge($colors, (grey400:         #909090));
 $colors: map-merge($colors, (grey500:         #737776));
@@ -76,15 +76,22 @@ $default-color: grey900;
 $default-background-color: white;
 
 //--------------------
+// Gradients
+//--------------------
+
+$gradients: ();
+// $gradients: map-merge($gradients, (primary:  linear-gradient(20deg, #8b91dd 0%, #10195d 45%)));
+
+//--------------------
 // Fonts Text & Icons
 //--------------------
 
-@import url('https://use.fontawesome.com/releases/v5.1.1/css/all.css');
-@import url('https://fonts.googleapis.com/css?family=Material+Icons|Khula:300,400,600|Roboto:300,500,600');
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Quicksand:300,400,500,700|Raleway:400,500,600,700|Open+Sans:400,600');
 
 $fonts: ();
-$fonts: map-merge($fonts, (primary:   'Khula'));
-$fonts: map-merge($fonts, (secondary: 'Roboto'));
+$fonts: map-merge($fonts, (primary:   'Raleway'));
+$fonts: map-merge($fonts, (secondary: 'Quicksand'));
+$fonts: map-merge($fonts, (tertiary:  'Open Sans'));
 
 $default-font-family: primary;
 
@@ -100,7 +107,7 @@ $font-size: (
   jumbo:  6
 );
 
-$default-font-size: md;
+$default-font-size: map-get($font-size, md);
 
 $line-height: (
   tiny:   1.2,
@@ -118,5 +125,5 @@ $line-height: (
 // Layout
 //--------------------
 
-$default-fixed-width: 1180px;
+$default-fixed-width: 1200px;
 $default-fixed-width-side-padding: sm;

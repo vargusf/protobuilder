@@ -56,6 +56,27 @@ body { @include background-color($default-background-color); }
 .Layout--cols-gutter-jumbo { &> * { @include padding(sides, jumbo); } &> :first-child { @include padding(left, 0); } &> :last-child { @include padding(right, 0); } }
 
 // Columns
+.Layout--width-100 { @include flex-basis(100%); min-width: 100% }
+.Layout--width-90  { @include flex-basis(90%); min-width: 90% }
+.Layout--width-80  { @include flex-basis(80%); min-width: 80% }
+.Layout--width-75  { @include flex-basis(75%); min-width: 75% }
+.Layout--width-70  { @include flex-basis(70%); min-width: 70% }
+.Layout--width-66  { @include flex-basis(66.666%); min-width: 66.666% }
+.Layout--width-60  { @include flex-basis(60%); min-width: 60% }
+.Layout--width-50  { @include flex-basis(50%); min-width: 50% }
+.Layout--width-40  { @include flex-basis(40%); min-width: 40% }
+.Layout--width-33  { @include flex-basis(33.333%); min-width: 33.333% }
+.Layout--width-30  { @include flex-basis(30%); min-width: 30% }
+.Layout--width-25  { @include flex-basis(25%); min-width: 25% }
+.Layout--width-20  { @include flex-basis(20%); min-width: 20% }
+.Layout--width-10  { @include flex-basis(10%); min-width: 10% }
+.Layout--width-5   { @include flex-basis(5%); min-width: 5% }
+.Layout--width-0   { @include flex-basis(0%); min-width: 0% }
+
+
+
+
+
 .Layout--cols-2 {
   &> .Layout--col-1 { @include flex-basis((100%/2)*1); min-width: (100%/2)*1 }
   &> .Layout--col-2 { @include flex-basis((100%/2)*2); min-width: (100%/2)*2 }
@@ -155,6 +176,8 @@ body { @include background-color($default-background-color); }
   &> .Layout--col-11 { @include flex-basis((100%/12)*11); min-width: (100%/12)*11 }
   &> .Layout--col-12 { @include flex-basis((100%/12)*12); min-width: (100%/12)*12 }
 }
+
+
 
 
 

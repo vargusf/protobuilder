@@ -7,6 +7,9 @@ const Button = ({
   fill = 'true',             // (true|false)
   color = 'primary',         // (primary|secondary|grey|white)
   size = 'md',               // (sm|md|lg|xlg)
+  sizeWidth = 'md',               // (sm|md|lg|xlg)
+  sizeWidthFixed = 'md',               // (sm|md|lg|xlg)
+  sizeHeight = 'md',               // (sm|md|lg|xlg)
   to = null,
   target = '_self',
 	onClick = () => {},
@@ -18,6 +21,8 @@ const Button = ({
     Button--fill-${fill}
     Button--color-${color}
     Button--size-${size}
+    Button--size-width-${sizeWidth}
+    Button--size--height-${sizeHeight}
   `;
 
   if (type == "link") {

@@ -4,6 +4,11 @@ class Demo extends Component {
   render() {
     return (
       <div className="ProtoDemo">
+        <div className="Layout--row">
+          <div className="Layout--width-20">stuff</div>
+          <div className="Layout--width-80">more stuff</div>
+        </div>
+
         <h1>Config</h1>
         <h2>Colors</h2>
         <div className="Layout--row Layout--cols-4">
@@ -75,17 +80,26 @@ class Demo extends Component {
         </div>
         <h1>Components</h1>
 
+        <h2>Alert</h2>
+        <div className="Layout--fixed-width">
+          {`<Alert />`}
+          <h3>Options</h3>
+          <ul>
+            <li>color: (info|success|warning|error), default: info</li>
+          </ul>
+        </div>
+
         <h2>Button</h2>
         <div className="Layout--fixed-width">
           {`<Button />`}
           <h3>Options</h3>
           <ul>
-            <li>type: (link|button|submit|reset|href), default: button</li>
+            <li>type: (button|link|submit|reset|href), default: button</li>
             <li>display: (inline|inline-block|flex), default: inline-block</li>
             <li>fill: (true|false), default: true</li>
             <li>color: (primary|secondary|grey|white), default: primary</li>
             <li>size: (sm|md|lg|xlg), default: md</li>
-            <li>to: default: null</li>
+            <li>to: [string] default: null, applicable if type=link</li>
             <li>target: default: _self</li>
             <li>onClick = () => {}</li>
           </ul>
@@ -113,7 +127,13 @@ class Demo extends Component {
         </div>
 
         <h2>Modal</h2>
-        <h2>Notification</h2>
+        <div className="Layout--fixed-width">
+          {`<Modal />`}
+          <h3>Options</h3>
+          <ul>
+            <li>type: (default|custom), default: default</li>
+          </ul>
+        </div>
         
       </div>
     );

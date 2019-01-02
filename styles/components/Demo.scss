@@ -1,5 +1,3 @@
-@import "../base-mixins/index";
-
 .ProtoDemo {
   @include padding(bottom, xlg);
   li {

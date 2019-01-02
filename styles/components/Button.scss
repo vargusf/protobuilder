@@ -1,6 +1,3 @@
-// Import Mixins
-@import "../base-mixins/index";
-
 .Button {
   cursor: pointer;
   position: relative;
@@ -8,16 +5,6 @@
   @include border-radius(all, 3px);
   transition: all .5s;
   @include border(all, none);
-}
-
-// Display - Flex
-
-.Button--display-inline-block {
-  display: inline-block;
-}
-
-.Button--display-flex {
-  @include flex-centered();
 }
 
 // Size
@@ -50,7 +37,37 @@
   line-height: 100%;
 }
 
-// Color
+.Button--size-width-xlg {
+  @include padding(sides, 60px);
+}
+
+// Display - Flex
+
+.Button--display-inline-block {
+  display: inline-block;
+}
+
+.Button--display-block {
+  @include flex-centered();
+  display: block;
+  width: 100%;
+  text-align: center;
+  @include padding(sides, 0);
+}
+
+
+
+.Button--type-text {
+  @include background-color(transparent);
+  &:hover {
+    @include background-color(grey);
+  }
+}
+
+// Fill
+
+
+// Color should be worked into fill
 
 .Button--color-primary        { @include color(primary); }
 .Button--color-primaryLight   { @include color(primaryLight); }
@@ -64,80 +81,82 @@
 .Button--color-white          { @include color(white); }
 .Button--color-black          { @include color(black); }
 .Button--color-grey100        { @include color(grey100); }
+.Button--color-grey200        { @include color(grey200); }
+.Button--color-grey300        { @include color(grey300); }
+// .Button--color-grey400        { @include color(grey400); }
+.Button--color-grey500        { @include color(grey500); }
 .Button--color-info           { @include color(info); }
 .Button--color-success        { @include color(success); }
 .Button--color-warning        { @include color(warning); }
-.Button--color-error          { @include color(error); }
-
-.Button--type-text {
-  @include background-color(transparent);
-  &:hover {
-    @include background-color(grey);
-  }
-}
-
-// Fill
+// .Button--color-error          { @include color(error); }
 
 .Button--fill-false {
   @include background-color(transparent);
-  &.Button--color-primary {
-    @include border(all, one, solid, primary);
-    @include color(primary);
-    &:hover {
-      @include background-color(primary);
-      @include color(white);
-    }
+  &.Button--color-primary { @include border(all, one, solid, primary); @include color(primary);
+    &:hover { @include background-color(primary); @include color(white); }
   }
-  &.Button--color-secondary {
-    @include border(all, one, solid, secondary);
-    @include color(secondary);
-    &:hover {
-      @include background-color(secondary);
-      @include color(white);
-    }
+  &.Button--color-secondary { @include border(all, one, solid, secondary); @include color(secondary);
+    &:hover { @include background-color(secondary); @include color(white); }
   }
-  &.Button--color-tertiary {
-    @include border(all, one, solid, tertiary);
-    @include color(tertiary);
-    &:hover {
-      @include background-color(tertiary);
-      @include color(white);
-    }
+  &.Button--color-tertiary { @include border(all, one, solid, tertiary); @include color(tertiary);
+    &:hover { @include background-color(tertiary); @include color(white); }
   }
-  &.Button--color-grey {
-    @include border(all, one, solid, grey700);
-    @include color(grey700);
-    &:hover {
-      @include background-color(grey700);
-      @include color(white);
-    }
+  &.Button--color-grey100 { @include border(all, one, solid, grey100); @include color(grey900);
+    &:hover { @include background-color(grey100); @include color(white); }
   }
-  &.Button--color-white {
-    @include border(all, one, solid, white);
-    &:hover {
-      @include background-color(white);
-      @include color(grey900);
-    }
+  &.Button--color-grey200 { @include border(all, one, solid, grey200); @include color(grey900);
+    &:hover { @include background-color(grey200); @include color(white); }
   }
-  
+  &.Button--color-grey300 { @include border(all, one, solid, grey300); @include color(grey400);
+    &:hover { @include background-color(grey300); @include color(white); }
+  }
+  &.Button--color-grey400 { @include border(all, one, solid, grey400); @include color(grey900);
+    &:hover { @include background-color(grey400); @include color(white); }
+  }
+  &.Button--color-grey500 { @include border(all, one, solid, grey500); @include color(grey900);
+    &:hover { @include background-color(grey500); @include color(white); }
+  }
+  &.Button--color-grey600 { @include border(all, one, solid, grey600); @include color(grey900);
+    &:hover { @include background-color(grey600); @include color(white); }
+  }
+  &.Button--color-grey700 { @include border(all, one, solid, grey700); @include color(grey900);
+    &:hover { @include background-color(grey700); @include color(white); }
+  }
+  &.Button--color-grey800 { @include border(all, one, solid, grey800); @include color(white);
+    &:hover { @include background-color(grey800); @include color(grey900); }
+  }
+  &.Button--color-grey900 { @include border(all, one, solid, grey900); @include color(white);
+    &:hover { @include background-color(grey900); @include color(grey900); }
+  }
+  &.Button--color-white { @include border(all, one, solid, white); @include color(grey900);
+    &:hover { @include background-color(white); @include color(grey900); }
+  }
+  &.Button--color-error { @include border(all, one, solid, error); @include color(error);
+    &:hover { @include background-color(error); @include color(white); }
+  }
 }
 
 .Button--fill-true {
-  @include color(white);
   &.Button--color-primary {
     @include background-color(primary);
+    @include border(all, one, solid, primary);
+    @include color(white);
     &:hover {
       @include background-color(primaryDark);
     }
   }
   &.Button--color-secondary {
     @include background-color(secondary);
+    @include border(all, one, solid, secondary);
+    @include color(white);
     &:hover {
       @include background-color(secondaryDark);
     }
   }
   &.Button--color-tertiary {
     @include background-color(tertiary);
+    @include border(all, one, solid, tertiary);
+    @include color(white);
     &:hover {
       @include background-color(tertiaryDark);
     }
