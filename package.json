@@ -4,7 +4,8 @@
   "description": "Rapid Prototyping & Development",
   "main": "dist/index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --config ./dev/config.js",
+    "start": "npm run watch",
+    "dev": "webpack-dev-server --open --config ./dev/config.js",
     "watch": "onchange 'src/**/*.js' -- npm run transpile",
     "transpile": "babel src -d dist --copy-files",
     "dist": "npm run transpile && git add . && git commit -m 'update' && git push && npm version patch && npm publish"

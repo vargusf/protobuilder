@@ -1,7 +1,6 @@
 .Button {
   cursor: pointer;
   position: relative;
-  text-transform: uppercase;
   @include border-radius(all, 3px);
   transition: all .5s;
   @include border(all, none);
@@ -21,6 +20,7 @@
   @include padding(sides, 20px);
   @include font-size-in-rem(1.4);
   line-height: 100%;
+  text-transform: uppercase;
 }
 
 .Button--size-lg {
@@ -28,6 +28,7 @@
   @include padding(sides, 30px);
   @include font-size-in-rem(1.5);
   line-height: 100%;
+  text-transform: uppercase;
 }
 
 .Button--size-xlg {
@@ -35,6 +36,7 @@
   @include padding(sides, 60px);
   @include font-size-in-rem(1.8);
   line-height: 100%;
+  text-transform: uppercase;
 }
 
 .Button--size-width-xlg {
@@ -54,8 +56,6 @@
   text-align: center;
   @include padding(sides, 0);
 }
-
-
 
 .Button--type-text {
   @include background-color(transparent);
@@ -93,46 +93,46 @@
 .Button--fill-false {
   @include background-color(transparent);
   &.Button--color-primary { @include border(all, one, solid, primary); @include color(primary);
-    &:hover { @include background-color(primary); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(primary); @include color(white); }
   }
   &.Button--color-secondary { @include border(all, one, solid, secondary); @include color(secondary);
-    &:hover { @include background-color(secondary); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(secondary); @include color(white); }
   }
   &.Button--color-tertiary { @include border(all, one, solid, tertiary); @include color(tertiary);
-    &:hover { @include background-color(tertiary); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(tertiary); @include color(white); }
   }
   &.Button--color-grey100 { @include border(all, one, solid, grey100); @include color(grey900);
-    &:hover { @include background-color(grey100); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(grey100); @include color(white); }
   }
   &.Button--color-grey200 { @include border(all, one, solid, grey200); @include color(grey900);
-    &:hover { @include background-color(grey200); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(grey200); @include color(white); }
   }
   &.Button--color-grey300 { @include border(all, one, solid, grey300); @include color(grey400);
-    &:hover { @include background-color(grey300); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(grey300); @include color(white); }
   }
   &.Button--color-grey400 { @include border(all, one, solid, grey400); @include color(grey900);
-    &:hover { @include background-color(grey400); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(grey400); @include color(white); }
   }
   &.Button--color-grey500 { @include border(all, one, solid, grey500); @include color(grey900);
-    &:hover { @include background-color(grey500); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(grey500); @include color(white); }
   }
   &.Button--color-grey600 { @include border(all, one, solid, grey600); @include color(grey900);
-    &:hover { @include background-color(grey600); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(grey600); @include color(white); }
   }
   &.Button--color-grey700 { @include border(all, one, solid, grey700); @include color(grey900);
-    &:hover { @include background-color(grey700); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(grey700); @include color(white); }
   }
   &.Button--color-grey800 { @include border(all, one, solid, grey800); @include color(white);
-    &:hover { @include background-color(grey800); @include color(grey900); }
+    &:hover.Button--disabled-false { @include background-color(grey800); @include color(grey900); }
   }
   &.Button--color-grey900 { @include border(all, one, solid, grey900); @include color(white);
-    &:hover { @include background-color(grey900); @include color(grey900); }
+    &:hover.Button--disabled-false { @include background-color(grey900); @include color(grey900); }
   }
-  &.Button--color-white { @include border(all, one, solid, white); @include color(grey900);
-    &:hover { @include background-color(white); @include color(grey900); }
+  &.Button--color-white { @include border(all, one, solid, white); @include color(white);
+    &:hover.Button--disabled-false { @include background-color(white); @include color(grey900); }
   }
   &.Button--color-error { @include border(all, one, solid, error); @include color(error);
-    &:hover { @include background-color(error); @include color(white); }
+    &:hover.Button--disabled-false { @include background-color(error); @include color(white); }
   }
 }
 
@@ -141,7 +141,7 @@
     @include background-color(primary);
     @include border(all, one, solid, primary);
     @include color(white);
-    &:hover {
+    &:hover.Button--disabled-false {
       @include background-color(primaryDark);
     }
   }
@@ -149,7 +149,7 @@
     @include background-color(secondary);
     @include border(all, one, solid, secondary);
     @include color(white);
-    &:hover {
+    &:hover.Button--disabled-false {
       @include background-color(secondaryDark);
     }
   }
@@ -157,16 +157,40 @@
     @include background-color(tertiary);
     @include border(all, one, solid, tertiary);
     @include color(white);
-    &:hover {
+    &:hover.Button--disabled-false {
       @include background-color(tertiaryDark);
     }
   }
-  &.Button--color-grey {
-    @include background-color(grey700);
+  &.Button--color-grey200 {
+    @include background-color(grey200);
+    @include border(all, one, solid, grey200);
+    @include color(white);
+    &:hover.Button--disabled-false {
+      @include background-color(grey500);
+      @include border(all, one, solid, grey500);
+    }
+  }
+  &.Button--color-grey300 {
+    @include background-color(grey300);
+    @include border(all, one, solid, grey300);
+    @include color(white);
+    &:hover.Button--disabled-false {
+      @include background-color(grey500);
+      @include border(all, one, solid, grey500);
+    }
   }
   &.Button--color-white {
     @include background-color(white);
     @include color(primary);
     font-weight: 500;
   }
+}
+
+.Button--disabled-true {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.Button--pill-true {
+  @include border-radius(all, lg);
 }

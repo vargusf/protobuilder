@@ -7,11 +7,12 @@ const Button = ({
   fill = 'true',             // (true|false)
   color = 'primary',         // (primary|secondary|grey|white)
   size = 'md',               // (sm|md|lg|xlg)
-  sizeWidth = 'md',               // (sm|md|lg|xlg)
-  sizeWidthFixed = 'md',               // (sm|md|lg|xlg)
-  sizeHeight = 'md',               // (sm|md|lg|xlg)
+  sizeWidth = 'md',          // (sm|md|lg|xlg)
+  sizeHeight = 'md',         // (sm|md|lg|xlg)
+  pill = false,
   to = null,
   target = '_self',
+  disabled = 'false',
 	onClick = () => {},
   children
 }) => {
@@ -23,7 +24,11 @@ const Button = ({
     Button--size-${size}
     Button--size-width-${sizeWidth}
     Button--size--height-${sizeHeight}
+    Button--pill-${pill}
+    Button--disabled-${disabled}
   `;
+
+  if (disabled == "true") onClick = null;
 
   if (type == "link") {
     return <Link to={to} onClick={onClick} className={classes}>{children}</Link>

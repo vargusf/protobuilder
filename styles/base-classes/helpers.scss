@@ -42,6 +42,6 @@
 	@include clamp(10);
 }
 
-.Helpers--breakStrings {
-	@include break-strings();
+.Helpers--break-long-strings {
+	@include break-long-strings();
 }

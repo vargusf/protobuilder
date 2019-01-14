@@ -2,11 +2,13 @@ import React from 'react';
 
 const Modal = ({
 	type = 'default', // (default|custom)
+	bgColor = 'white', // (white|black)
 	bgClick = () => {},
 	children
 }) => {
 	const classes = `
 		Modal
+		Modal--bg-${bgColor}
 		Modal--type-${type}
 	`;
 
