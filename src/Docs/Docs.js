@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+// import Header from '../Modules/Header/Header';
 
-class Demo extends Component {
+class Docs extends Component {
   render() {
     return (
       <div className="ProtoDemo">
+        {/* <Header /> */}
         <div className="Layout--row">
           <div className="Layout--width-20">stuff</div>
           <div className="Layout--width-80">more stuff</div>
@@ -140,4 +142,4 @@ class Demo extends Component {
   }
 }
 
-export default Demo;
+export default Docs;

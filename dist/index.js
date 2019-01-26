@@ -9,7 +9,7 @@ var _Alert = require('./Alert');
 
 var _Alert2 = _interopRequireDefault(_Alert);
 
-var _Docs = require('./Docs');
+var _Docs = require('./Docs/Docs');
 
 var _Docs2 = _interopRequireDefault(_Docs);
 

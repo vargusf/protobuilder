@@ -1,5 +1,5 @@
 import Alert from './Alert';
-import Docs from './Docs';
+import Docs from './Docs/Docs';
 import Button from './Button';
 import Spinner from './Spinner';
 import Nag from './Nag';

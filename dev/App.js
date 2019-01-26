@@ -1,5 +1,5 @@
 import React from 'react';
-import Docs from '../src/Docs';
+import { Docs } from '../src/index';
 import './styles.scss';
 
 const App = () => {

@@ -23,6 +23,17 @@ module.exports = {
 					'style-loader', 'css-loader', 'sass-loader'
 				]
 			},
+			// {
+			// 	test: /\.css$/,
+			// 	use: [
+			// 		{
+			// 			loader: require.resolve('css-loader'),
+			// 			options: {
+			// 				importLoaders: 1,
+			// 			}
+			// 		}
+			// 	]
+			// },
 			{
 				test: /\.css$/,
 				use: ['style-loader', 'css-loader'],
