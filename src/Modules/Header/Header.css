@@ -1,4 +1,4 @@
 .Header { 
-	background: blue;
+	background: var(--color-info);
 	padding: 200px 5px;
 }

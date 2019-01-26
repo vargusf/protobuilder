@@ -1,0 +1,59 @@
+/*--------------------/
+	Sizes
+/--------------------*/
+
+:root { --size-none:  0px; }
+:root { --size-one:   1px; }
+:root { --size-two:   2px; }
+:root { --size-tiny:  3px; }
+:root { --size-xxsm:  4px; }
+:root { --size-xsm:   8px; }
+:root { --size-sm:    12px; }
+:root { --size-md:    16px; }
+:root { --size-lg:    32px; }
+:root { --size-xlg:   48px; }
+:root { --size-xxlg:  64px; }
+:root { --size-jumbo: 128px; }
+
+/*--------------------/
+	Colors
+/--------------------*/
+
+:root { --color-white:           #ffffff; }
+:root { --color-black:           #000000; }
+:root { --color-offwhite:        #f6f9fc; }
+:root { --color-midnight:        #111111; }
+:root { --color-grey100:         #E9ECEF; }
+:root { --color-grey200:         #DDDEE1; }
+:root { --color-grey300:         #A8A8A8; }
+:root { --color-grey400:         #909090; }
+:root { --color-grey500:         #737776; }
+:root { --color-grey600:         #5E5E5E; }
+:root { --color-grey700:         #444444; }
+:root { --color-grey800:         #2C2C2C; }
+:root { --color-grey900:         #131716; }
+:root { --color-primary:         #503CD8; }
+:root { --color-primaryLight:    #8a69ff; }
+:root { --color-primaryDark:     #0010a5; }
+:root { --color-secondary:       #F69D46; }
+:root { --color-secondaryLight:  #ffce75; }
+:root { --color-secondaryDark:   #bf6e14; }
+:root { --color-tertiary:        #111111; }
+:root { --color-tertiaryLight:   #111111; }
+:root { --color-tertiaryDark:    #111111; }
+:root { --color-red:             #ff0000; }
+:root { --color-green:           #ffff00; }
+:root { --color-blue:            #0000ff; }
+:root { --color-yellow:          #ffff00; }
+:root { --color-cyan:            #00ffff; }
+:root { --color-magenta:         #ff00ff; }
+:root { --color-orange:          #ff7f00; } /* Red-Yellow */
+:root { --color-pink:            #ff0080; } /* Red-Magenta (Rose) */
+:root { --color-purple:          #7f00ff; } /* Blue-Magenta (Violet) */
+:root { --color-azure:           #0080ff; } /* Blue-Cyan */
+:root { --color-teal:            #00ff7f; } /* Green-Cyan (Spring Green) */
+:root { --color-lime:            #80ff00; } /* Green-Yellow (Chartreuse) */
+:root { --color-info:            #007ACA; }
+:root { --color-success:         #3EA157; }
+:root { --color-warning:         #FF9A3D; }
+:root { --color-error:           #DC1232; }

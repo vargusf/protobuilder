@@ -18,25 +18,18 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.scss$/,
-				use: [
-					'style-loader', 'css-loader', 'sass-loader'
-				]
-			},
-			// {
-			// 	test: /\.css$/,
-			// 	use: [
-			// 		{
-			// 			loader: require.resolve('css-loader'),
-			// 			options: {
-			// 				importLoaders: 1,
-			// 			}
-			// 		}
-			// 	]
-			// },
-			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader'],
+				use: [
+					require.resolve('style-loader'), 
+					{
+						loader: require.resolve('css-loader'),
+						options: {
+							importLoaders: 1,
+							modules: true,
+							localIdentName: "[name]__[local]___[hash:base64:5]"
+						},
+					}
+				],
 			},
 			{
 				test: /\.(eot|woff|woff2|svg|ttf|gif|jpg|png)([\?]?.*)$/,

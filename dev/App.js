@@ -1,6 +1,6 @@
 import React from 'react';
 import { Docs } from '../src/index';
-import './styles.scss';
+import './styles/config.css';
 
 const App = () => {
 	return (
