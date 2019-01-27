@@ -57,20 +57,16 @@
 :root { --color-error:           #DC1232; }
 
 /*--------------------/
-	Fonts
+	Fonts & Sizes
 /--------------------*/
 :root { --font-primary: 'roboto'; }
 :root { --font-secondary: 'Open Sans'; }
-
-/*--------------------/
-	Text Sizes
-/--------------------*/
-:root { --textsize-1: '4.0'; }
-:root { --textsize-2: '3.2'; }
-:root { --textsize-3: '2.8'; }
-:root { --textsize-4: '2.4'; }
-:root { --textsize-5: '2.0'; }
-:root { --textsize-6: '1.6'; }
+:root { --fontsize-1: '4.0'; }
+:root { --fontsize-2: '3.2'; }
+:root { --fontsize-3: '2.8'; }
+:root { --fontsize-4: '2.4'; }
+:root { --fontsize-5: '2.0'; }
+:root { --fontsize-6: '1.6'; }
 
 /*--------------------/
 	Breakpoints

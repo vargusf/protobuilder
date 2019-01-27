@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
 	mode: 'development',
-	entry: [path.join(__dirname, '../index.js')],
+	entry: [path.resolve(__dirname, '../index.js')],
 	output: {
-		path: path.join(__dirname, "../dist"),
+		path: path.resolve(__dirname, "../dist"),
 		filename: "main.js",
 		publicPath: '/dist/'
 	},
@@ -28,7 +28,14 @@ module.exports = {
 							localIdentName: "[name]__[local]___[hash:base64:5]"
 						}
 					},
-					// { loader: 'postcss-loader' }
+					{ 
+						loader: 'postcss-loader',
+						options: {
+							config: {
+								path: path.resolve(__dirname, './postcss.config.js'),
+							},
+						},
+					}
 				]
 			},
 			{

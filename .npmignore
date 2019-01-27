@@ -1,3 +1,4 @@
 src
 dev
 .gitignore
+node_modules

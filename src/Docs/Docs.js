@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Header from '../Modules/Header/Header';
-import Sidebar from '../Modules/Sidebar/Sidebar';
+// import Sidebar from '../Modules/Sidebar/Sidebar';
 
 class Docs extends Component {
   render() {
     return (
       <div>
         <Header />
-        <Sidebar />
+        {/* <Sidebar /> */}
         {/* <div className="Layout--row">
           <div className="Layout--width-20">stuff</div>
           <div className="Layout--width-80">more stuff</div>
