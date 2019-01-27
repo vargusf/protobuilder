@@ -5,10 +5,10 @@ import Sidebar from '../Modules/Sidebar/Sidebar';
 class Docs extends Component {
   render() {
     return (
-      <div className="ProtoDemo">
+      <div>
         <Header />
         <Sidebar />
-        <div className="Layout--row">
+        {/* <div className="Layout--row">
           <div className="Layout--width-20">stuff</div>
           <div className="Layout--width-80">more stuff</div>
         </div>
@@ -137,7 +137,7 @@ class Docs extends Component {
           <ul>
             <li>type: (default|custom), default: default</li>
           </ul>
-        </div>
+        </div> */}
         
       </div>
     );

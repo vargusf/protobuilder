@@ -1,7 +1,6 @@
 /*--------------------/
 	Sizes
 /--------------------*/
-
 :root { --size-none:  0px; }
 :root { --size-one:   1px; }
 :root { --size-two:   2px; }
@@ -18,7 +17,6 @@
 /*--------------------/
 	Colors
 /--------------------*/
-
 :root { --color-white:           #ffffff; }
 :root { --color-black:           #000000; }
 :root { --color-offwhite:        #f6f9fc; }
@@ -57,3 +55,28 @@
 :root { --color-success:         #3EA157; }
 :root { --color-warning:         #FF9A3D; }
 :root { --color-error:           #DC1232; }
+
+/*--------------------/
+	Fonts
+/--------------------*/
+:root { --font-primary: 'roboto'; }
+:root { --font-secondary: 'Open Sans'; }
+
+/*--------------------/
+	Text Sizes
+/--------------------*/
+:root { --textsize-1: '4.0'; }
+:root { --textsize-2: '3.2'; }
+:root { --textsize-3: '2.8'; }
+:root { --textsize-4: '2.4'; }
+:root { --textsize-5: '2.0'; }
+:root { --textsize-6: '1.6'; }
+
+/*--------------------/
+	Breakpoints
+/--------------------*/
+:root { --breakpoint-xsm: 480; }
+:root { --breakpoint-sm: 768; }
+:root { --breakpoint-md: 1024; }
+:root { --breakpoint-lg: 1200; }
+:root { --breakpoint-xlg: 1400; }
