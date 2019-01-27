@@ -1,0 +1,7 @@
+@define-mixin margin $size {
+  margin-top: $size;
+}
+
+@define-mixin background $color {
+  background: $color;
+}

@@ -1,7 +1,8 @@
 /*--------------------/
 	Sizes
 /--------------------*/
-:root { --size-none:  0px; }
+
+:root { --size-zero:  0px; }
 :root { --size-one:   1px; }
 :root { --size-two:   2px; }
 :root { --size-tiny:  3px; }
@@ -17,28 +18,45 @@
 /*--------------------/
 	Colors
 /--------------------*/
-:root { --color-white:           #ffffff; }
-:root { --color-black:           #000000; }
-:root { --color-offwhite:        #f6f9fc; }
-:root { --color-midnight:        #111111; }
-:root { --color-grey100:         #E9ECEF; }
-:root { --color-grey200:         #DDDEE1; }
-:root { --color-grey300:         #A8A8A8; }
-:root { --color-grey400:         #909090; }
-:root { --color-grey500:         #737776; }
-:root { --color-grey600:         #5E5E5E; }
-:root { --color-grey700:         #444444; }
-:root { --color-grey800:         #2C2C2C; }
-:root { --color-grey900:         #131716; }
-:root { --color-primary:         #503CD8; }
-:root { --color-primaryLight:    #8a69ff; }
-:root { --color-primaryDark:     #0010a5; }
-:root { --color-secondary:       #F69D46; }
-:root { --color-secondaryLight:  #ffce75; }
-:root { --color-secondaryDark:   #bf6e14; }
-:root { --color-tertiary:        #111111; }
-:root { --color-tertiaryLight:   #111111; }
-:root { --color-tertiaryDark:    #111111; }
+
+/* Used for branding and greys */
+:root { --color-primary-hue: 200; }
+:root { --color-primary-saturation: 60%; }
+:root { --color-primary-lightness: 40%; }
+:root { --color-secondary-hue: 170; }
+:root { --color-secondary-saturation: 40%; }
+:root { --color-secondary-lightness: 75%; }
+:root { --color-tertiary-hue: 70; }
+:root { --color-tertiary-saturation: 100%; }
+:root { --color-tertiary-lightness: 85%; }
+
+/* Brand */
+:root { --color-primary:         hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness)); }
+:root { --color-primaryLight:    hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) * 1.5), calc(var(--color-primary-lightness) + 10%)); }
+:root { --color-primaryDark:     hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) / 1.5), calc(var(--color-primary-lightness) - 10%)); }
+:root { --color-secondary:       hsl(var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lightness)); }
+:root { --color-secondaryLight:  hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) * 1.5), calc(var(--color-secondary-lightness) + 10%)); }
+:root { --color-secondaryDark:   hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) / 1.5), calc(var(--color-secondary-lightness) - 10%)); }
+:root { --color-tertiary:        hsl(var(--color-tertiary-hue), var(--color-tertiary-saturation), var(--color-tertiary-lightness)); }
+:root { --color-tertiaryLight:   hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) * 1.5), calc(var(--color-tertiary-lightness) + 10%)); }
+:root { --color-tertiaryDark:    hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) / 1.5), calc(var(--color-tertiary-lightness) - 10%)); }
+
+/* Black & White */
+:root { --color-white:           hsl(0, 0%, 100%); }
+:root { --color-black:           hsl(0, 0%, 0%); }
+
+/* Greys based off of Primary */
+:root { --color-grey100:         hsl(var(--color-primary-hue), 20%, 95%); }
+:root { --color-grey200:         hsl(var(--color-primary-hue), 20%, 90%); }
+:root { --color-grey300:         hsl(var(--color-primary-hue), 20%, 85%); }
+:root { --color-grey400:         hsl(var(--color-primary-hue), 20%, 80%); }
+:root { --color-grey500:         hsl(var(--color-primary-hue), 20%, 70%); }
+:root { --color-grey600:         hsl(var(--color-primary-hue), 20%, 60%); }
+:root { --color-grey700:         hsl(var(--color-primary-hue), 20%, 45%); }
+:root { --color-grey800:         hsl(var(--color-primary-hue), 20%, 30%); }
+:root { --color-grey900:         hsl(var(--color-primary-hue), 20%, 15%); }
+
+/* Other */
 :root { --color-red:             #ff0000; }
 :root { --color-green:           #ffff00; }
 :root { --color-blue:            #0000ff; }
@@ -51,6 +69,8 @@
 :root { --color-azure:           #0080ff; } /* Blue-Cyan */
 :root { --color-teal:            #00ff7f; } /* Green-Cyan (Spring Green) */
 :root { --color-lime:            #80ff00; } /* Green-Yellow (Chartreuse) */
+
+/* UI */
 :root { --color-info:            #007ACA; }
 :root { --color-success:         #3EA157; }
 :root { --color-warning:         #FF9A3D; }
@@ -59,6 +79,7 @@
 /*--------------------/
 	Fonts & Sizes
 /--------------------*/
+
 :root { --font-primary: 'roboto'; }
 :root { --font-secondary: 'Open Sans'; }
 :root { --fontsize-1: '4.0'; }
@@ -71,6 +92,7 @@
 /*--------------------/
 	Breakpoints
 /--------------------*/
+
 :root { --breakpoint-xsm: 480; }
 :root { --breakpoint-sm: 768; }
 :root { --breakpoint-md: 1024; }

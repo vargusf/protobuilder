@@ -1,0 +1,8 @@
+.Header { 
+	background: var(--color-primary);
+	padding: var(--size-sm);
+}
+
+.logo {
+	max-width: 180px;
+}
