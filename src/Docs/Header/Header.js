@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Header.css';
-// import logo from './logo-realtorbase.png';
 import logo from './logo-proto-white.png';
 
 const Header = () => {

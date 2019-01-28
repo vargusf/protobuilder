@@ -1,0 +1,644 @@
+/* Background Colors */
+
+.backgroundColorWhite           { background-color: var(--color-white); }
+.backgroundColorBlack           { background-color: var(--color-black); }
+.backgroundColorGrey100         { background-color: var(--color-grey100); }
+.backgroundColorGrey200         { background-color: var(--color-grey200); }
+.backgroundColorGrey300         { background-color: var(--color-grey300); }
+.backgroundColorGrey400         { background-color: var(--color-grey400); }
+.backgroundColorGrey500         { background-color: var(--color-grey500); }
+.backgroundColorGrey600         { background-color: var(--color-grey600); }
+.backgroundColorGrey700         { background-color: var(--color-grey700); }
+.backgroundColorGrey800         { background-color: var(--color-grey800); }
+.backgroundColorGrey900         { background-color: var(--color-grey900); }
+.backgroundColorPrimary         { background-color: var(--color-primary); }
+.backgroundColorPrimaryLight    { background-color: var(--color-primaryLight); }
+.backgroundColorPrimaryDark     { background-color: var(--color-primaryDark); }
+.backgroundColorSecondary       { background-color: var(--color-secondary); }
+.backgroundColorSecondaryLight  { background-color: var(--color-secondaryLight); }
+.backgroundColorSecondaryDark   { background-color: var(--color-secondaryDark); }
+.backgroundColorTertiary        { background-color: var(--color-tertiary); }
+.backgroundColorTertiaryLight   { background-color: var(--color-tertiaryLight); }
+.backgroundColorTertiaryDark    { background-color: var(--color-tertiaryDark); }
+.backgroundColorRed             { background-color: var(--color-red); }
+.backgroundColorGreen           { background-color: var(--color-green); }
+.backgroundColorBlue            { background-color: var(--color-blue); }
+.backgroundColorYellow          { background-color: var(--color-yellow); }
+.backgroundColorCyan            { background-color: var(--color-cyan); }
+.backgroundColorMagenta         { background-color: var(--color-magenta); }
+.backgroundColorOrange          { background-color: var(--color-orange); }
+.backgroundColorPink            { background-color: var(--color-pink); }
+.backgroundColorPurple          { background-color: var(--color-purple); }
+.backgroundColorAzure           { background-color: var(--color-azure); }
+.backgroundColorTeal            { background-color: var(--color-teal); }
+.backgroundColorLime            { background-color: var(--color-lime); }
+.backgroundColorInfo            { background-color: var(--color-info); }
+.backgroundColorSuccess         { background-color: var(--color-success); }
+.backgroundColorWarning         { background-color: var(--color-warning); }
+.backgroundColorError           { background-color: var(--color-error); }
+
+
+/* Margins */
+
+/* .Utils--margin-none          { margin: 0; } */
+/* .Utils--margin-tiny          { margin: var(--size-tiny) }
+.Utils--margin-xxsm          { @include margin(all, xxsm); }
+.Utils--margin-xsm           { @include margin(all, xsm); }
+.Utils--margin-sm            { @include margin(all, sm); }
+.Utils--margin-md            { @include margin(all, md); }
+.Utils--margin-lg            { @include margin(all, lg); }
+.Utils--margin-xlg           { @include margin(all, xlg); }
+.Utils--margin-xxlg          { @include margin(all, xxlg); }
+.Utils--margin-jumbo         { @include margin(all, jumbo); }
+.Utils--margin-top-none      { @include margin(top, 0); }
+.Utils--margin-top-tiny      { @include margin(top, tiny); }
+.Utils--margin-top-xxsm      { @include margin(top, xxsm); }
+.Utils--margin-top-xsm       { @include margin(top, xsm); }
+.Utils--margin-top-sm        { @include margin(top, sm); }
+.Utils--margin-top-md        { @include margin(top, md); }
+.Utils--margin-top-lg        { @include margin(top, lg); }
+.Utils--margin-top-xlg       { @include margin(top, xlg); }
+.Utils--margin-top-xxlg      { @include margin(top, xxlg); }
+.Utils--margin-top-jumbo     { @include margin(top, jumbo); }
+.Utils--margin-right-none    { @include margin(right, 0); }
+.Utils--margin-right-tiny    { @include margin(right, tiny); }
+.Utils--margin-right-xxsm    { @include margin(right, xxsm); }
+.Utils--margin-right-xsm     { @include margin(right, xsm); }
+.Utils--margin-right-sm      { @include margin(right, sm); }
+.Utils--margin-right-md      { @include margin(right, md); }
+.Utils--margin-right-lg      { @include margin(right, lg); }
+.Utils--margin-right-xlg     { @include margin(right, xlg); }
+.Utils--margin-right-xxlg    { @include margin(right, xxlg); }
+.Utils--margin-right-jumbo   { @include margin(right, jumbo); }
+.Utils--margin-bottom-none   { @include margin(bottom, 0); }
+.Utils--margin-bottom-tiny   { @include margin(bottom, tiny); }
+.Utils--margin-bottom-xxsm   { @include margin(bottom, xxsm); }
+.Utils--margin-bottom-xsm    { @include margin(bottom, xsm); }
+.Utils--margin-bottom-sm     { @include margin(bottom, sm); }
+.Utils--margin-bottom-md     { @include margin(bottom, md); }
+.Utils--margin-bottom-lg     { @include margin(bottom, lg); }
+.Utils--margin-bottom-xlg    { @include margin(bottom, xlg); }
+.Utils--margin-bottom-xxlg   { @include margin(bottom, xxlg); }
+.Utils--margin-bottom-jumbo  { @include margin(bottom, jumbo); }
+.Utils--margin-left-none     { @include margin(left, 0); }
+.Utils--margin-left-tiny     { @include margin(left, tiny); }
+.Utils--margin-left-xxsm     { @include margin(left, xxsm); }
+.Utils--margin-left-xsm      { @include margin(left, xsm); }
+.Utils--margin-left-sm       { @include margin(left, sm); }
+.Utils--margin-left-md       { @include margin(left, md); }
+.Utils--margin-left-lg       { @include margin(left, lg); }
+.Utils--margin-left-xlg      { @include margin(left, xlg); }
+.Utils--margin-left-xxlg     { @include margin(left, xxlg); }
+.Utils--margin-left-jumbo    { @include margin(left, jumbo); }
+.Utils--margin-sides-auto    { @include margin(sides, auto); }
+.Utils--margin-sides-none    { @include margin(sides, 0); }
+.Utils--margin-sides-tiny    { @include margin(sides, tiny); }
+.Utils--margin-sides-xxsm    { @include margin(sides, xxsm); }
+.Utils--margin-sides-xsm     { @include margin(sides, xsm); }
+.Utils--margin-sides-sm      { @include margin(sides, sm); }
+.Utils--margin-sides-md      { @include margin(sides, md); }
+.Utils--margin-sides-lg      { @include margin(sides, lg); }
+.Utils--margin-sides-xlg     { @include margin(sides, xlg); }
+.Utils--margin-sides-xxlg    { @include margin(sides, xxlg); }
+.Utils--margin-sides-jumbo   { @include margin(sides, jumbo); }
+.Utils--margin-ends-none     { @include margin(ends, 0); }
+.Utils--margin-ends-tiny     { @include margin(ends, tiny); }
+.Utils--margin-ends-xxsm     { @include margin(ends, xxsm); }
+.Utils--margin-ends-xsm      { @include margin(ends, xsm); }
+.Utils--margin-ends-sm       { @include margin(ends, sm); }
+.Utils--margin-ends-md       { @include margin(ends, md); }
+.Utils--margin-ends-lg       { @include margin(ends, lg); }
+.Utils--margin-ends-xlg      { @include margin(ends, xlg); }
+.Utils--margin-ends-xxlg     { @include margin(ends, xxlg); }
+.Utils--margin-ends-jumbo    { @include margin(ends, jumbo); } */
+
+/* // Paddings
+.Utils--padding-none          { @include padding(all, 0); }
+.Utils--padding-tiny          { @include padding(all, tiny); }
+.Utils--padding-xxsm          { @include padding(all, xxsm); }
+.Utils--padding-xsm           { @include padding(all, xsm); }
+.Utils--padding-sm            { @include padding(all, sm); }
+.Utils--padding-md            { @include padding(all, md); }
+.Utils--padding-lg            { @include padding(all, lg); }
+.Utils--padding-xlg           { @include padding(all, xlg); }
+.Utils--padding-xxlg          { @include padding(all, xxlg); }
+.Utils--padding-jumbo         { @include padding(all, jumbo); }
+.Utils--padding-top-none      { @include padding(top, 0); }
+.Utils--padding-top-tiny      { @include padding(top, tiny); }
+.Utils--padding-top-xxsm      { @include padding(top, xxsm); }
+.Utils--padding-top-xsm       { @include padding(top, xsm); }
+.Utils--padding-top-sm        { @include padding(top, sm); }
+.Utils--padding-top-md        { @include padding(top, md); }
+.Utils--padding-top-lg        { @include padding(top, lg); }
+.Utils--padding-top-xlg       { @include padding(top, xlg); }
+.Utils--padding-top-xxlg      { @include padding(top, xxlg); }
+.Utils--padding-top-jumbo     { @include padding(top, jumbo); }
+.Utils--padding-right-none    { @include padding(right, 0); }
+.Utils--padding-right-tiny    { @include padding(right, tiny); }
+.Utils--padding-right-xxsm    { @include padding(right, xxsm); }
+.Utils--padding-right-xsm     { @include padding(right, xsm); }
+.Utils--padding-right-sm      { @include padding(right, sm); }
+.Utils--padding-right-md      { @include padding(right, md); }
+.Utils--padding-right-lg      { @include padding(right, lg); }
+.Utils--padding-right-xlg     { @include padding(right, xlg); }
+.Utils--padding-right-xxlg    { @include padding(right, xxlg); }
+.Utils--padding-right-jumbo   { @include padding(right, jumbo); }
+.Utils--padding-bottom-none   { @include padding(bottom, 0); }
+.Utils--padding-bottom-tiny   { @include padding(bottom, tiny); }
+.Utils--padding-bottom-xxsm   { @include padding(bottom, xxsm); }
+.Utils--padding-bottom-xsm    { @include padding(bottom, xsm); }
+.Utils--padding-bottom-sm     { @include padding(bottom, sm); }
+.Utils--padding-bottom-md     { @include padding(bottom, md); }
+.Utils--padding-bottom-lg     { @include padding(bottom, lg); }
+.Utils--padding-bottom-xlg    { @include padding(bottom, xlg); }
+.Utils--padding-bottom-xxlg   { @include padding(bottom, xxlg); }
+.Utils--padding-bottom-jumbo  { @include padding(bottom, jumbo); }
+.Utils--padding-left-none     { @include padding(left, 0); }
+.Utils--padding-left-tiny     { @include padding(left, tiny); }
+.Utils--padding-left-xxsm     { @include padding(left, xxsm); }
+.Utils--padding-left-xsm      { @include padding(left, xsm); }
+.Utils--padding-left-sm       { @include padding(left, sm); }
+.Utils--padding-left-md       { @include padding(left, md); }
+.Utils--padding-left-lg       { @include padding(left, lg); }
+.Utils--padding-left-xlg      { @include padding(left, xlg); }
+.Utils--padding-left-xxlg     { @include padding(left, xxlg); }
+.Utils--padding-left-jumbo    { @include padding(left, jumbo); }
+.Utils--padding-sides-none    { @include padding(sides, 0); }
+.Utils--padding-sides-tiny    { @include padding(sides, tiny); }
+.Utils--padding-sides-xxsm    { @include padding(sides, xxsm); }
+.Utils--padding-sides-xsm     { @include padding(sides, xsm); }
+.Utils--padding-sides-sm      { @include padding(sides, sm); }
+.Utils--padding-sides-md      { @include padding(sides, md); }
+.Utils--padding-sides-lg      { @include padding(sides, lg); }
+.Utils--padding-sides-xlg     { @include padding(sides, xlg); }
+.Utils--padding-sides-xxlg    { @include padding(sides, xxlg); }
+.Utils--padding-sides-jumbo   { @include padding(sides, jumbo); }
+.Utils--padding-ends-none     { @include padding(ends, 0); }
+.Utils--padding-ends-tiny     { @include padding(ends, tiny); }
+.Utils--padding-ends-xxsm     { @include padding(ends, xxsm); }
+.Utils--padding-ends-xsm      { @include padding(ends, xsm); }
+.Utils--padding-ends-sm       { @include padding(ends, sm); }
+.Utils--padding-ends-md       { @include padding(ends, md); }
+.Utils--padding-ends-lg       { @include padding(ends, lg); }
+.Utils--padding-ends-xlg      { @include padding(ends, xlg); }
+.Utils--padding-ends-xxlg     { @include padding(ends, xxlg); }
+.Utils--padding-ends-jumbo    { @include padding(ends, jumbo); } */
+
+/* // Height & Width
+.Utils--width-100per { width: 100%; }
+.Utils--width-90per  { width: 90%; }
+.Utils--width-80per  { width: 80%; }
+.Utils--width-75per  { width: 75%; }
+.Utils--width-70per  { width: 70%; }
+.Utils--width-66per  { width: 66%; }
+.Utils--width-60per  { width: 60%; }
+.Utils--width-50per  { width: 50%; }
+.Utils--width-40per  { width: 40%; }
+.Utils--width-33per  { width: 33%; }
+.Utils--width-30per  { width: 30%; }
+.Utils--width-25per  { width: 25%; }
+.Utils--width-20per  { width: 20%; }
+.Utils--width-10per  { width: 10%; }
+.Utils--width-5per   { width: 5%; }
+.Utils--width-0per   { width: 0%; }
+.Utils--height-100per     { height: 100%; }
+.Utils--min-height-100per { min-height: 100%; }
+.Utils--height-100vh      { height: 100vh; }
+.Utils--min-height-100vh  { min-height: 100vh; } */
+
+/* // Display
+.Utils--display-none                  { display: none; }
+.Utils--display-inline                { display: inline; }
+.Utils--display-inline-block          { display: inline-block; }
+.Utils--display-block                 { display: block; }
+.Utils--display-flex                  { @include display-flex(); }
+.Utils--display-inline-bpxlg          { @include bp(xlg) { display: inline; } }
+.Utils--display-inline-block-bpxlg    { @include bp(xlg) { display: inline-block; } }
+.Utils--display-block-bpxlg           { @include bp(xlg) { display: block; } }
+.Utils--display-flex-bpxlg            { @include bp(xlg) { @include display-flex(); } }
+.Utils--display-inline-bplg           { @include bp(lg) { display: inline; } }
+.Utils--display-inline-block-bplg     { @include bp(lg) { display: inline-block; } }
+.Utils--display-block-bplg            { @include bp(lg) { display: block; } }
+.Utils--display-flex-bplg             { @include bp(lg) { @include display-flex(); } }
+.Utils--display-none-bpmd             { @include bp(md) { display: none; } }
+.Utils--display-inline-bpmd           { @include bp(md) { display: inline; } }
+.Utils--display-inline-block-bpmd     { @include bp(md) { display: inline-block; } }
+.Utils--display-block-bpmd            { @include bp(md) { display: block; } }
+.Utils--display-flex-bpmd             { @include bp(md) { @include display-flex(); } }
+.Utils--display-none-bpsm             { @include bp(sm) { display: none } }
+.Utils--display-inline-bpsm           { @include bp(sm) { display: inline; } }
+.Utils--display-inline-block-bpsm     { @include bp(sm) { display: inline-block; } }
+.Utils--display-block-bpsm            { @include bp(sm) { display: block; } }
+.Utils--display-flex-bpsm             { @include bp(sm) { @include display-flex(); } }
+.Utils--display-none-bpxsm            { @include bp(xsm) { display: none; } }
+.Utils--display-inline-bpxsm          { @include bp(xsm) { display: inline; } }
+.Utils--display-inline-block-bpxsm    { @include bp(xsm) { display: inline-block; } }
+.Utils--display-block-bpxsm           { @include bp(xsm) { display: block; } }
+.Utils--display-flex-bpxsm            { @include bp(xsm) { @include display-flex(); } }
+.Utils--display-none-bplg             { @include bp(lg) { display: none; } }
+.Utils--display-none-bpxlg            { @include bp(xlg) { display: none; } } */
+
+/* // Position
+.Utils--position-static   { position: static; }
+.Utils--position-relative { position: relative; }
+.Utils--position-absolute { position: absolute; }
+.Utils--position-fixed    { position: fixed; } */
+
+
+/* // Opacity
+.Utils--opacity-0   { opacity: 0; }
+.Utils--opacity-5   { opacity: 5; }
+.Utils--opacity-10  { opacity: 10; }
+.Utils--opacity-20  { opacity: 20; }
+.Utils--opacity-30  { opacity: 30; }
+.Utils--opacity-40  { opacity: 40; }
+.Utils--opacity-50  { opacity: 50; }
+.Utils--opacity-60  { opacity: 60; }
+.Utils--opacity-70  { opacity: 70; }
+.Utils--opacity-80  { opacity: 80; }
+.Utils--opacity-90  { opacity: 90; }
+.Utils--opacity-100 { opacity: 100; } */
+
+/* // Borders
+.Utils--border-top-one-solid-grey300    { @include border(top, one, solid, grey300); }
+.Utils--border-bottom-one-solid-grey300 { @include border(bottom, one, solid, grey300); } */
+
+/* // Border Radius
+.Utils--border-radius-none          { @include border-radius(all, 0); }
+.Utils--border-radius-tiny          { @include border-radius(all, tiny); }
+.Utils--border-radius-xxsm          { @include border-radius(all, xxsm); }
+.Utils--border-radius-xsm           { @include border-radius(all, xsm); }
+.Utils--border-radius-sm            { @include border-radius(all, sm); }
+.Utils--border-radius-md            { @include border-radius(all, md); }
+.Utils--border-radius-lg            { @include border-radius(all, lg); }
+.Utils--border-radius-xlg           { @include border-radius(all, xlg); }
+.Utils--border-radius-xxlg          { @include border-radius(all, xxlg); }
+.Utils--border-radius-jumbo         { @include border-radius(all, jumbo); }
+.Utils--border-radius-full          { @include border-radius(all, 100%); }
+.Utils--border-radius-top-none      { @include border-radius(top, 0); }
+.Utils--border-radius-top-tiny      { @include border-radius(top, tiny); }
+.Utils--border-radius-top-xxsm      { @include border-radius(top, xxsm); }
+.Utils--border-radius-top-xsm       { @include border-radius(top, xsm); }
+.Utils--border-radius-top-sm        { @include border-radius(top, sm); }
+.Utils--border-radius-top-md        { @include border-radius(top, md); }
+.Utils--border-radius-top-lg        { @include border-radius(top, lg); }
+.Utils--border-radius-top-xlg       { @include border-radius(top, xlg); }
+.Utils--border-radius-top-xxlg      { @include border-radius(top, xxlg); }
+.Utils--border-radius-top-jumbo     { @include border-radius(top, jumbo); }
+.Utils--border-radius-right-none    { @include border-radius(right, 0); }
+.Utils--border-radius-right-tiny    { @include border-radius(right, tiny); }
+.Utils--border-radius-right-xxsm    { @include border-radius(right, xxsm); }
+.Utils--border-radius-right-xsm     { @include border-radius(right, xsm); }
+.Utils--border-radius-right-sm      { @include border-radius(right, sm); }
+.Utils--border-radius-right-md      { @include border-radius(right, md); }
+.Utils--border-radius-right-lg      { @include border-radius(right, lg); }
+.Utils--border-radius-right-xlg     { @include border-radius(right, xlg); }
+.Utils--border-radius-right-xxlg    { @include border-radius(right, xxlg); }
+.Utils--border-radius-right-jumbo   { @include border-radius(right, jumbo); }
+.Utils--border-radius-bottom-none   { @include border-radius(bottom, 0); }
+.Utils--border-radius-bottom-tiny   { @include border-radius(bottom, tiny); }
+.Utils--border-radius-bottom-xxsm   { @include border-radius(bottom, xxsm); }
+.Utils--border-radius-bottom-xsm    { @include border-radius(bottom, xsm); }
+.Utils--border-radius-bottom-sm     { @include border-radius(bottom, sm); }
+.Utils--border-radius-bottom-md     { @include border-radius(bottom, md); }
+.Utils--border-radius-bottom-lg     { @include border-radius(bottom, lg); }
+.Utils--border-radius-bottom-xlg    { @include border-radius(bottom, xlg); }
+.Utils--border-radius-bottom-xxlg   { @include border-radius(bottom, xxlg); }
+.Utils--border-radius-bottom-jumbo  { @include border-radius(bottom, jumbo); }
+.Utils--border-radius-left-none     { @include border-radius(left, 0); }
+.Utils--border-radius-left-tiny     { @include border-radius(left, tiny); }
+.Utils--border-radius-left-xxsm     { @include border-radius(left, xxsm); }
+.Utils--border-radius-left-xsm      { @include border-radius(left, xsm); }
+.Utils--border-radius-left-sm       { @include border-radius(left, sm); }
+.Utils--border-radius-left-md       { @include border-radius(left, md); }
+.Utils--border-radius-left-lg       { @include border-radius(left, lg); }
+.Utils--border-radius-left-xlg      { @include border-radius(left, xlg); }
+.Utils--border-radius-left-xxlg     { @include border-radius(left, xxlg); }
+.Utils--border-radius-left-jumbo    { @include border-radius(left, jumbo); }
+.Utils--border-radius-sides-auto    { @include border-radius(sides, auto); }
+.Utils--border-radius-sides-none    { @include border-radius(sides, 0); }
+.Utils--border-radius-sides-tiny    { @include border-radius(sides, tiny); }
+.Utils--border-radius-sides-xxsm    { @include border-radius(sides, xxsm); }
+.Utils--border-radius-sides-xsm     { @include border-radius(sides, xsm); }
+.Utils--border-radius-sides-sm      { @include border-radius(sides, sm); }
+.Utils--border-radius-sides-md      { @include border-radius(sides, md); }
+.Utils--border-radius-sides-lg      { @include border-radius(sides, lg); }
+.Utils--border-radius-sides-xlg     { @include border-radius(sides, xlg); }
+.Utils--border-radius-sides-xxlg    { @include border-radius(sides, xxlg); }
+.Utils--border-radius-sides-jumbo   { @include border-radius(sides, jumbo); }
+.Utils--border-radius-ends-none     { @include border-radius(ends, 0); }
+.Utils--border-radius-ends-tiny     { @include border-radius(ends, tiny); }
+.Utils--border-radius-ends-xxsm     { @include border-radius(ends, xxsm); }
+.Utils--border-radius-ends-xsm      { @include border-radius(ends, xsm); }
+.Utils--border-radius-ends-sm       { @include border-radius(ends, sm); }
+.Utils--border-radius-ends-md       { @include border-radius(ends, md); }
+.Utils--border-radius-ends-lg       { @include border-radius(ends, lg); }
+.Utils--border-radius-ends-xlg      { @include border-radius(ends, xlg); }
+.Utils--border-radius-ends-xxlg     { @include border-radius(ends, xxlg); }
+.Utils--border-radius-ends-jumbo    { @include border-radius(ends, jumbo); } */
+
+/* // Float
+.Utils--float-left  { float: left; }
+.Utils--float-right { float: right; } */
+
+
+
+
+
+/* Set the bg color */
+/* body { @include background-color($default-background-color); } */
+
+/* Stretch Edges */
+/* .Layout--stretch-edges { @include stretch-edges(); }
+.Layout--stretch-edges-fixed { @include stretch-edges(); position: fixed; } */
+
+/* Fixed width for container */
+/* .Layout--fixed-width { @include fixed-width(); } */
+
+ /* Positioning */
+/* .Layout--centered           { @include flex-centered(); } */
+.justifyCenter     { justify-content: center; }
+.justifyStart      { justify-content: flex-start; }
+.justifyEnd        { justify-content: flex-end; }
+.justifyBetween    { justify-content: space-between; }
+.justifyAround     { justify-content: space-around; }
+.alignCenter       { align-items: center; }
+.alignStretch      { align-items: stretch; }
+.alignStart        { align-items: flex-start; }
+.alignEnd          { align-items: flex-end; }
+.alignBaseline     { align-items: baseline; }
+.alignSelfStart    { align-self: flex-start; }
+.alignSelf-end     { align-self: flex-end; }
+.alignSelf-center  { align-self: center; }
+.row               { display: flex; flex-direction: row; }
+.col               { display: flex; flex-direction: column; }
+.wrap              { flex-wrap: wrap; }
+.nowrap            { flex-wrap: nowrap; }
+.wrapReverse       { flex-wrap: wrap-reverse; }
+.grow1             { flex-grow: 1; }
+.grow2             { flex-grow: 2; }
+.grow3             { flex-grow: 3; }
+.grow4             { flex-grow: 4; }
+.shrink1           { flex-shrink:1; }
+.shrink2           { flex-shrink:2; }
+.shrink3           { flex-shrink:3; }
+.shrink4           { flex-shrink:4; }
+.minHeight100vh    { min-height: 100vh; }
+
+/* Gutters */
+.colsGutterOne   { &> * { padding-left: var(--size-one);   padding-right: var(--size-one); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterTwo   { &> * { padding-left: var(--size-two);   padding-right: var(--size-two); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterTiny  { &> * { padding-left: var(--size-tiny);  padding-right: var(--size-tiny); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterXxsm  { &> * { padding-left: var(--size-xxsm);  padding-right: var(--size-xxsm); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterXsm   { &> * { padding-left: var(--size-xsm);   padding-right: var(--size-xsm); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterSm    { &> * { padding-left: var(--size-sm);    padding-right: var(--size-sm); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterMd    { &> * { padding-left: var(--size-md);    padding-right: var(--size-md); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterLg    { &> * { padding-left: var(--size-lg);    padding-right: var(--size-lg); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterXlg   { &> * { padding-left: var(--size-xlg);   padding-right: var(--size-xlg); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterXxlg  { &> * { padding-left: var(--size-xxlg);  padding-right: var(--size-xxlg); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterJumbo { &> * { padding-left: var(--size-jumbo); padding-right: var(--size-jumbo); } &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+
+/* Columns */
+.width100 { flex-basis: 100%; min-width: 100% }
+.width90  { flex-basis: 90%; min-width: 90% }
+.width80  { flex-basis: 80%; min-width: 80% }
+.width75  { flex-basis: 75%; min-width: 75% }
+.width70  { flex-basis: 70%; min-width: 70% }
+.width66  { flex-basis: 66.666%; min-width: 66.666% }
+.width60  { flex-basis: 60%; min-width: 60% }
+.width50  { flex-basis: 50%; min-width: 50% }
+.width40  { flex-basis: 40%; min-width: 40% }
+.width33  { flex-basis: 33.333%; min-width: 33.333% }
+.width30  { flex-basis: 30%; min-width: 30% }
+.width25  { flex-basis: 25%; min-width: 25% }
+.width20  { flex-basis: 20%; min-width: 20% }
+.width10  { flex-basis: 10%; min-width: 10% }
+.width5   { flex-basis: 5%; min-width: 5% }
+.width0   { flex-basis: 0%; min-width: 0% }
+
+
+
+
+/*
+// .Layout--cols-2 {
+//   &> .Layout--col-1 { @include flex-basis((100%/2)*1); min-width: (100%/2)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/2)*2); min-width: (100%/2)*2 }
+// }
+// .Layout--cols-3 {
+//   &> .Layout--col-1 { @include flex-basis((100%/3)*1); min-width: (100%/3)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/3)*2); min-width: (100%/3)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/3)*3); min-width: (100%/3)*3 }
+// }
+// .Layout--cols-4 {
+//   &> .Layout--col-1 { @include flex-basis((100%/4)*1); min-width: (100%/4)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/4)*2); min-width: (100%/4)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/4)*3); min-width: (100%/4)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/4)*4); min-width: (100%/4)*4 }
+// }
+// .Layout--cols-5 {
+//   &> .Layout--col-1 { @include flex-basis((100%/5)*1); min-width: (100%/5)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/5)*2); min-width: (100%/5)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/5)*3); min-width: (100%/5)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/5)*4); min-width: (100%/5)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/5)*5); min-width: (100%/5)*5 }
+// }
+// .Layout--cols-6 {
+//   &> .Layout--col-1 { @include flex-basis((100%/6)*1); min-width: (100%/6)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/6)*2); min-width: (100%/6)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/6)*3); min-width: (100%/6)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/6)*4); min-width: (100%/6)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/6)*5); min-width: (100%/6)*5 }
+//   &> .Layout--col-6 { @include flex-basis((100%/6)*6); min-width: (100%/6)*6 }
+// }
+// .Layout--cols-7 {
+//   &> .Layout--col-1 { @include flex-basis((100%/7)*1); min-width: (100%/7)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/7)*2); min-width: (100%/7)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/7)*3); min-width: (100%/7)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/7)*4); min-width: (100%/7)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/7)*5); min-width: (100%/7)*5 }
+//   &> .Layout--col-6 { @include flex-basis((100%/7)*6); min-width: (100%/7)*6 }
+//   &> .Layout--col-7 { @include flex-basis((100%/7)*7); min-width: (100%/7)*7 }
+// }
+// .Layout--cols-8 {
+//   &> .Layout--col-1 { @include flex-basis((100%/8)*1); min-width: (100%/8)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/8)*2); min-width: (100%/8)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/8)*3); min-width: (100%/8)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/8)*4); min-width: (100%/8)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/8)*5); min-width: (100%/8)*5 }
+//   &> .Layout--col-6 { @include flex-basis((100%/8)*6); min-width: (100%/8)*6 }
+//   &> .Layout--col-7 { @include flex-basis((100%/8)*7); min-width: (100%/8)*7 }
+//   &> .Layout--col-8 { @include flex-basis((100%/8)*8); min-width: (100%/8)*8 }
+// }
+// .Layout--cols-9 {
+//   &> .Layout--col-1 { @include flex-basis((100%/9)*1); min-width: (100%/9)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/9)*2); min-width: (100%/9)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/9)*3); min-width: (100%/9)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/9)*4); min-width: (100%/9)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/9)*5); min-width: (100%/9)*5 }
+//   &> .Layout--col-6 { @include flex-basis((100%/9)*6); min-width: (100%/9)*6 }
+//   &> .Layout--col-7 { @include flex-basis((100%/9)*7); min-width: (100%/9)*7 }
+//   &> .Layout--col-8 { @include flex-basis((100%/9)*8); min-width: (100%/9)*8 }
+//   &> .Layout--col-9 { @include flex-basis((100%/9)*9); min-width: (100%/9)*9 }
+// }
+// .Layout--cols-10 {
+//   &> .Layout--col-1 { @include flex-basis((100%/10)*1); min-width: (100%/10)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/10)*2); min-width: (100%/10)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/10)*3); min-width: (100%/10)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/10)*4); min-width: (100%/10)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/10)*5); min-width: (100%/10)*5 }
+//   &> .Layout--col-6 { @include flex-basis((100%/10)*6); min-width: (100%/10)*6 }
+//   &> .Layout--col-7 { @include flex-basis((100%/10)*7); min-width: (100%/10)*7 }
+//   &> .Layout--col-8 { @include flex-basis((100%/10)*8); min-width: (100%/10)*8 }
+//   &> .Layout--col-9 { @include flex-basis((100%/10)*9); min-width: (100%/10)*9 }
+//   &> .Layout--col-10 { @include flex-basis((100%/10)*10); min-width: (100%/10)*10 }
+// }
+// .Layout--cols-11 {
+//   &> .Layout--col-1 { @include flex-basis((100%/11)*1); min-width: (100%/11)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/11)*2); min-width: (100%/11)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/11)*3); min-width: (100%/11)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/11)*4); min-width: (100%/11)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/11)*5); min-width: (100%/11)*5 }
+//   &> .Layout--col-6 { @include flex-basis((100%/11)*6); min-width: (100%/11)*6 }
+//   &> .Layout--col-7 { @include flex-basis((100%/11)*7); min-width: (100%/11)*7 }
+//   &> .Layout--col-8 { @include flex-basis((100%/11)*8); min-width: (100%/11)*8 }
+//   &> .Layout--col-9 { @include flex-basis((100%/11)*9); min-width: (100%/11)*9 }
+//   &> .Layout--col-10 { @include flex-basis((100%/11)*10); min-width: (100%/11)*10 }
+//   &> .Layout--col-11 { @include flex-basis((100%/11)*11); min-width: (100%/11)*11 }
+// }
+// .Layout--cols-12 {
+//   &> .Layout--col-1 { @include flex-basis((100%/12)*1); min-width: (100%/12)*1 }
+//   &> .Layout--col-2 { @include flex-basis((100%/12)*2); min-width: (100%/12)*2 }
+//   &> .Layout--col-3 { @include flex-basis((100%/12)*3); min-width: (100%/12)*3 }
+//   &> .Layout--col-4 { @include flex-basis((100%/12)*4); min-width: (100%/12)*4 }
+//   &> .Layout--col-5 { @include flex-basis((100%/12)*5); min-width: (100%/12)*5 }
+//   &> .Layout--col-6 { @include flex-basis((100%/12)*6); min-width: (100%/12)*6 }
+//   &> .Layout--col-7 { @include flex-basis((100%/12)*7); min-width: (100%/12)*7 }
+//   &> .Layout--col-8 { @include flex-basis((100%/12)*8); min-width: (100%/12)*8 }
+//   &> .Layout--col-9 { @include flex-basis((100%/12)*9); min-width: (100%/12)*9 }
+//   &> .Layout--col-10 { @include flex-basis((100%/12)*10); min-width: (100%/12)*10 }
+//   &> .Layout--col-11 { @include flex-basis((100%/12)*11); min-width: (100%/12)*11 }
+//   &> .Layout--col-12 { @include flex-basis((100%/12)*12); min-width: (100%/12)*12 }
+// }
+
+
+
+
+
+// Flex
+// .Utils--justify-content-center        { @include justify-content(center); }
+// .Utils--justify-content-flex-start    { @include justify-content(flex-start); }
+// .Utils--justify-content-flex-end      { @include justify-content(flex-end); }
+// .Utils--justify-content-space-between { @include justify-content(space-between); }
+// .Utils--justify-content-space-around  { @include justify-content(space-around); }
+// .Utils--align-items-center            { @include align-items(center); }
+// .Utils--align-items-stretch           { @include align-items(stretch); }
+// .Utils--align-items-flex-start        { @include align-items(flex-start); }
+// .Utils--align-items-flex-end          { @include align-items(flex-end); }
+// .Utils--align-items-baseline          { @include align-items(baseline); }
+// .Utils--flex-direction-row            { @include flex-direction(row); }
+// .Utils--flex-direction-column         { @include flex-direction(column); }
+// .Utils--flex-grow-1                   { @include flex-grow(1); }
+// .Utils--flex-grow-2                   { @include flex-grow(2); }
+// .Utils--flex-shrink-1                 { @include flex-shrink(1); }
+// .Utils--flex-shrink-2                 { @include flex-shrink(2); }
+// .Utils--flex-wrap-wrap                { @include flex-wrap(wrap); }
+// .Utils--flex-wrap-nowrap              { @include flex-wrap(nowrap); }
+// .Utils--flex-wrap-wrap-reverse        { @include flex-wrap(wrap-reverse); }
+// .Utils--flex-basis-100per             { @include flex-basis(100%); min-width: 100% }
+// .Utils--flex-basis-90per              { @include flex-basis(90%); min-width: 90% }
+// .Utils--flex-basis-80per              { @include flex-basis(80%); min-width: 80% }
+// .Utils--flex-basis-75per              { @include flex-basis(75%); min-width: 75% }
+// .Utils--flex-basis-70per              { @include flex-basis(70%); min-width: 70% }
+// .Utils--flex-basis-66per              { @include flex-basis(66.666%); min-width: 66.666% }
+// .Utils--flex-basis-60per              { @include flex-basis(60%); min-width: 60% }
+// .Utils--flex-basis-50per              { @include flex-basis(50%); min-width: 50% }
+// .Utils--flex-basis-40per              { @include flex-basis(40%); min-width: 40% }
+// .Utils--flex-basis-33per              { @include flex-basis(33.333%); min-width: 33.333% }
+// .Utils--flex-basis-30per              { @include flex-basis(30%); min-width: 30% }
+// .Utils--flex-basis-25per              { @include flex-basis(25%); min-width: 25% }
+// .Utils--flex-basis-20per              { @include flex-basis(20%); min-width: 20% }
+// .Utils--flex-basis-10per              { @include flex-basis(10%); min-width: 10% }
+// .Utils--flex-basis-5per               { @include flex-basis(5%); min-width: 5% }
+// .Utils--flex-basis-0per               { @include flex-basis(0%); min-width: 0% }
+// .Utils--flex-basis-100per-bpxlg       { @include bp(xlg) { @include flex-basis(100%); min-width: 100%; } }
+// .Utils--flex-basis-90per-bpxlg        { @include bp(xlg) { @include flex-basis(90%); min-width: 90%; } }
+// .Utils--flex-basis-80per-bpxlg        { @include bp(xlg) { @include flex-basis(80%); min-width: 80%; } }
+// .Utils--flex-basis-75per-bpxlg        { @include bp(xlg) { @include flex-basis(75%); min-width: 75%; } }
+// .Utils--flex-basis-70per-bpxlg        { @include bp(xlg) { @include flex-basis(70%); min-width: 70%; } }
+// .Utils--flex-basis-66per-bpxlg        { @include bp(xlg) { @include flex-basis(66.666%); min-width: 66.666%; } }
+// .Utils--flex-basis-60per-bpxlg        { @include bp(xlg) { @include flex-basis(60%); min-width: 60%; } }
+// .Utils--flex-basis-50per-bpxlg        { @include bp(xlg) { @include flex-basis(50%); min-width: 50%; } }
+// .Utils--flex-basis-40per-bpxlg        { @include bp(xlg) { @include flex-basis(40%); min-width: 40%; } }
+// .Utils--flex-basis-33per-bpxlg        { @include bp(xlg) { @include flex-basis(33.333%); min-width: 33.333%; } }
+// .Utils--flex-basis-30per-bpxlg        { @include bp(xlg) { @include flex-basis(30%); min-width: 30%; } }
+// .Utils--flex-basis-25per-bpxlg        { @include bp(xlg) { @include flex-basis(25%); min-width: 25%; } }
+// .Utils--flex-basis-20per-bpxlg        { @include bp(xlg) { @include flex-basis(20%); min-width: 20%; } }
+// .Utils--flex-basis-10per-bpxlg        { @include bp(xlg) { @include flex-basis(10%); min-width: 10%; } }
+// .Utils--flex-basis-5per-bpxlg         { @include bp(xlg) { @include flex-basis(5%); min-width: 5%; } }
+// .Utils--flex-basis-0per-bpxlg         { @include bp(xlg) { @include flex-basis(0%); min-width: 0%; } }
+// .Utils--flex-basis-100per-bplg        { @include bp(lg) { @include flex-basis(100%); min-width: 100%; } }
+// .Utils--flex-basis-90per-bplg         { @include bp(lg) { @include flex-basis(90%); min-width: 90%; } }
+// .Utils--flex-basis-80per-bplg         { @include bp(lg) { @include flex-basis(80%); min-width: 80%; } }
+// .Utils--flex-basis-75per-bplg         { @include bp(lg) { @include flex-basis(75%); min-width: 75%; } }
+// .Utils--flex-basis-70per-bplg         { @include bp(lg) { @include flex-basis(70%); min-width: 70%; } }
+// .Utils--flex-basis-66per-bplg         { @include bp(lg) { @include flex-basis(66.666%); min-width: 66.666%; } }
+// .Utils--flex-basis-60per-bplg         { @include bp(lg) { @include flex-basis(60%); min-width: 60%; } }
+// .Utils--flex-basis-50per-bplg         { @include bp(lg) { @include flex-basis(50%); min-width: 50%; } }
+// .Utils--flex-basis-40per-bplg         { @include bp(lg) { @include flex-basis(40%); min-width: 40%; } }
+// .Utils--flex-basis-33per-bplg         { @include bp(lg) { @include flex-basis(33.333%); min-width: 33.333%; } }
+// .Utils--flex-basis-30per-bplg         { @include bp(lg) { @include flex-basis(30%); min-width: 30%; } }
+// .Utils--flex-basis-25per-bplg         { @include bp(lg) { @include flex-basis(25%); min-width: 25%; } }
+// .Utils--flex-basis-20per-bplg         { @include bp(lg) { @include flex-basis(20%); min-width: 20%; } }
+// .Utils--flex-basis-10per-bplg         { @include bp(lg) { @include flex-basis(10%); min-width: 10%; } }
+// .Utils--flex-basis-5per-bplg          { @include bp(lg) { @include flex-basis(5%); min-width: 5%; } }
+// .Utils--flex-basis-0per-bplg          { @include bp(lg) { @include flex-basis(0%); min-width: 0%; } }
+// .Utils--flex-basis-100per-bpmd        { @include bp(md) { @include flex-basis(100%); min-width: 100%; } }
+// .Utils--flex-basis-90per-bpmd         { @include bp(md) { @include flex-basis(90%); min-width: 90%; } }
+// .Utils--flex-basis-80per-bpmd         { @include bp(md) { @include flex-basis(80%); min-width: 80%; } }
+// .Utils--flex-basis-75per-bpmd         { @include bp(md) { @include flex-basis(75%); min-width: 75%; } }
+// .Utils--flex-basis-70per-bpmd         { @include bp(md) { @include flex-basis(70%); min-width: 70%; } }
+// .Utils--flex-basis-66per-bpmd         { @include bp(md) { @include flex-basis(66.666%); min-width: 66.666%; } }
+// .Utils--flex-basis-60per-bpmd         { @include bp(md) { @include flex-basis(60%); min-width: 60%; } }
+// .Utils--flex-basis-50per-bpmd         { @include bp(md) { @include flex-basis(50%); min-width: 50%; } }
+// .Utils--flex-basis-40per-bpmd         { @include bp(md) { @include flex-basis(40%); min-width: 40%; } }
+// .Utils--flex-basis-33per-bpmd         { @include bp(md) { @include flex-basis(33.333%); min-width: 33.333%; } }
+// .Utils--flex-basis-30per-bpmd         { @include bp(md) { @include flex-basis(30%); min-width: 30%; } }
+// .Utils--flex-basis-25per-bpmd         { @include bp(md) { @include flex-basis(25%); min-width: 25%; } }
+// .Utils--flex-basis-20per-bpmd         { @include bp(md) { @include flex-basis(20%); min-width: 20%; } }
+// .Utils--flex-basis-10per-bpmd         { @include bp(md) { @include flex-basis(10%); min-width: 10%; } }
+// .Utils--flex-basis-5per-bpmd          { @include bp(md) { @include flex-basis(5%); min-width: 5%; } }
+// .Utils--flex-basis-0per-bpmd          { @include bp(md) { @include flex-basis(0%); min-width: 0%; } }
+// .Utils--flex-basis-100per-bpsm        { @include bp(sm) { @include flex-basis(100%); min-width: 100%; } }
+// .Utils--flex-basis-90per-bpsm         { @include bp(sm) { @include flex-basis(90%); min-width: 90%; } }
+// .Utils--flex-basis-80per-bpsm         { @include bp(sm) { @include flex-basis(80%); min-width: 80%; } }
+// .Utils--flex-basis-75per-bpsm         { @include bp(sm) { @include flex-basis(75%); min-width: 75%; } }
+// .Utils--flex-basis-70per-bpsm         { @include bp(sm) { @include flex-basis(70%); min-width: 70%; } }
+// .Utils--flex-basis-66per-bpsm         { @include bp(sm) { @include flex-basis(66.666%); min-width: 66.666%; } }
+// .Utils--flex-basis-60per-bpsm         { @include bp(sm) { @include flex-basis(60%); min-width: 60%; } }
+// .Utils--flex-basis-50per-bpsm         { @include bp(sm) { @include flex-basis(50%); min-width: 50%; } }
+// .Utils--flex-basis-40per-bpsm         { @include bp(sm) { @include flex-basis(40%); min-width: 40%; } }
+// .Utils--flex-basis-33per-bpsm         { @include bp(sm) { @include flex-basis(33.333%); min-width: 33.333%; } }
+// .Utils--flex-basis-30per-bpsm         { @include bp(sm) { @include flex-basis(30%); min-width: 30%; } }
+// .Utils--flex-basis-25per-bpsm         { @include bp(sm) { @include flex-basis(25%); min-width: 25%; } }
+// .Utils--flex-basis-20per-bpsm         { @include bp(sm) { @include flex-basis(20%); min-width: 20%; } }
+// .Utils--flex-basis-10per-bpsm         { @include bp(sm) { @include flex-basis(10%); min-width: 10%; } }
+// .Utils--flex-basis-5per-bpsm          { @include bp(sm) { @include flex-basis(5%); min-width: 5%; } }
+// .Utils--flex-basis-0per-bpsm          { @include bp(sm) { @include flex-basis(0%); min-width: 0%; } }
+// .Utils--flex-basis-100per-bpxsm       { @include bp(xsm) { @include flex-basis(100%); min-width: 100%; } }
+// .Utils--flex-basis-90per-bpxsm        { @include bp(xsm) { @include flex-basis(90%); min-width: 90%; } }
+// .Utils--flex-basis-80per-bpxsm        { @include bp(xsm) { @include flex-basis(80%); min-width: 80%; } }
+// .Utils--flex-basis-75per-bpxsm        { @include bp(xsm) { @include flex-basis(75%); min-width: 75%; } }
+// .Utils--flex-basis-70per-bpxsm        { @include bp(xsm) { @include flex-basis(70%); min-width: 70%; } }
+// .Utils--flex-basis-66per-bpxsm        { @include bp(xsm) { @include flex-basis(66.666%); min-width: 66.666%; } }
+// .Utils--flex-basis-60per-bpxsm        { @include bp(xsm) { @include flex-basis(60%); min-width: 60%; } }
+// .Utils--flex-basis-50per-bpxsm        { @include bp(xsm) { @include flex-basis(50%); min-width: 50%; } }
+// .Utils--flex-basis-40per-bpxsm        { @include bp(xsm) { @include flex-basis(40%); min-width: 40%; } }
+// .Utils--flex-basis-33per-bpxsm        { @include bp(xsm) { @include flex-basis(33.333%); min-width: 33.333%; } }
+// .Utils--flex-basis-30per-bpxsm        { @include bp(xsm) { @include flex-basis(30%); min-width: 30%; } }
+// .Utils--flex-basis-25per-bpxsm        { @include bp(xsm) { @include flex-basis(25%); min-width: 25%; } }
+// .Utils--flex-basis-20per-bpxsm        { @include bp(xsm) { @include flex-basis(20%); min-width: 20%; } }
+// .Utils--flex-basis-10per-bpxsm        { @include bp(xsm) { @include flex-basis(10%); min-width: 10%; } }
+// .Utils--flex-basis-5per-bpxsm         { @include bp(xsm) { @include flex-basis(5%); min-width: 5%; } }
+// .Utils--flex-basis-0per-bpxsm         { @include bp(xsm) { @include flex-basis(0%); min-width: 0%; } }
+
+*/

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import Sidebar from './Sidebar/Sidebar';
-import globalStyles from './Docs.css';
-import styles from './Docs.css';
+import styleGlobal from '../Styles/global.css';
+import style from './Docs.css';
 
 class Docs extends Component {
 	render() {
@@ -10,98 +10,98 @@ class Docs extends Component {
 			<div>
 				<Header />
 				
-				<div className="Layout--row">
-					<div className="Layout--width-20"><Sidebar /></div>
-					<div className="Layout--width-80">
+				<div className={styleGlobal.row}>
+					<div className={styleGlobal.width20}><Sidebar /></div>
+					<div className={styleGlobal.width80}>
 
-						<div className="Layout--row Layout--wrap">
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-primary`}></div>
-								<div className={styles.swatchText}>primary</div>
+						<div className={`${styleGlobal.row} ${styleGlobal.wrap}`}>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorPrimary}`}></div>
+								<div className={style.swatchText}>primary</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-primaryLight`}></div>
-								<div className={styles.swatchText}>primaryLight</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor}`}></div>
+								<div className={style.swatchText}>primaryLight</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-primaryDark`}></div>
-								<div className={styles.swatchText}>primaryDark</div>
-							</div>
-						</div>
-						<div className="Layout--row Layout--wrap">
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-secondary`}></div>
-								<div className={styles.swatchText}>secondary</div>
-							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-secondaryLight`}></div>
-								<div className={styles.swatchText}>secondaryLight</div>
-							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-secondaryDark`}></div>
-								<div className={styles.swatchText}>secondaryDark</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorPrimaryDark}`}></div>
+								<div className={style.swatchText}>primaryDark</div>
 							</div>
 						</div>
-						<div className="Layout--row Layout--wrap">
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-tertiary`}></div>
-								<div className={styles.swatchText}>tertiary</div>
+						<div className={`${styleGlobal.row} ${styleGlobal.wrap}`}>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorSecondary}`}></div>
+								<div className={style.swatchText}>secondary</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-tertiaryLight`}></div>
-								<div className={styles.swatchText}>tertiaryLight</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorSecondaryLight}`}></div>
+								<div className={style.swatchText}>secondaryLight</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-tertiaryDark`}></div>
-								<div className={styles.swatchText}>tertiaryDark</div>
-							</div>
-						</div>
-						<div className="Layout--row">
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-white`}></div>
-								<div className={styles.swatchText}>white</div>
-							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-black`}></div>
-								<div className={styles.swatchText}>black</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorSecondaryDark}`}></div>
+								<div className={style.swatchText}>secondaryDark</div>
 							</div>
 						</div>
-						<div className="Layout--row Layout--wrap">
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey100`}></div>
-								<div className={styles.swatchText}>grey100</div>
+						<div className={`${styleGlobal.row} ${styleGlobal.wrap}`}>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorTertiary}`}></div>
+								<div className={style.swatchText}>tertiary</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey200`}></div>
-								<div className={styles.swatchText}>grey200</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorTertiaryLight}`}></div>
+								<div className={style.swatchText}>tertiaryLight</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey300`}></div>
-								<div className={styles.swatchText}>grey300</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorTertiaryDark}`}></div>
+								<div className={style.swatchText}>tertiaryDark</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey400`}></div>
-								<div className={styles.swatchText}>grey400</div>
+						</div>
+						<div className={styleGlobal.row}>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorWhite}`}></div>
+								<div className={style.swatchText}>white</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey500`}></div>
-								<div className={styles.swatchText}>grey500</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorBlack}`}></div>
+								<div className={style.swatchText}>black</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey600`}></div>
-								<div className={styles.swatchText}>grey600</div>
+						</div>
+						<div className={`${styleGlobal.row} ${styleGlobal.wrap}`}>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey100}`}></div>
+								<div className={style.swatchText}>grey100</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey700`}></div>
-								<div className={styles.swatchText}>grey700</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey200}`}></div>
+								<div className={style.swatchText}>grey200</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey800`}></div>
-								<div className={styles.swatchText}>grey800</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey300}`}></div>
+								<div className={style.swatchText}>grey300</div>
 							</div>
-							<div className={styles.swatch}>
-								<div className={`${styles.swatchColor} Utils--background-color-grey900`}></div>
-								<div className={styles.swatchText}>grey900</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey400}`}></div>
+								<div className={style.swatchText}>grey400</div>
+							</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey500}`}></div>
+								<div className={style.swatchText}>grey500</div>
+							</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey600}`}></div>
+								<div className={style.swatchText}>grey600</div>
+							</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey700}`}></div>
+								<div className={style.swatchText}>grey700</div>
+							</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey800}`}></div>
+								<div className={style.swatchText}>grey800</div>
+							</div>
+							<div className={style.swatch}>
+								<div className={`${style.swatchColor} ${styleGlobal.backgroundColorGrey900}`}></div>
+								<div className={style.swatchText}>grey900</div>
 							</div>
 						</div>
 

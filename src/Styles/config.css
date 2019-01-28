@@ -19,7 +19,7 @@
 	Colors
 /--------------------*/
 
-/* Used for branding and greys */
+/* Branding colors */
 :root { --color-primary-hue: 200; }
 :root { --color-primary-saturation: 60%; }
 :root { --color-primary-lightness: 40%; }
@@ -45,7 +45,7 @@
 :root { --color-white:           hsl(0, 0%, 100%); }
 :root { --color-black:           hsl(0, 0%, 0%); }
 
-/* Greys based off of Primary */
+/* Greys (with a tinge of primary hue) */
 :root { --color-grey100:         hsl(var(--color-primary-hue), 20%, 95%); }
 :root { --color-grey200:         hsl(var(--color-primary-hue), 20%, 90%); }
 :root { --color-grey300:         hsl(var(--color-primary-hue), 20%, 85%); }
