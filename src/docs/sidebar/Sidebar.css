@@ -1,0 +1,4 @@
+.Sidebar { 
+	background: var(--color-red);
+	padding: var(--size-lg) var(--size-sm);
+}
