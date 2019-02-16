@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import Sidebar from './Sidebar/Sidebar';
-import styleGlobal from '../Styles/global.css';
+import styleGlobal from '../styles/global.css';
 import style from './Docs.css';
 
 class Docs extends Component {

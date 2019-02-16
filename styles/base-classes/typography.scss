@@ -123,11 +123,11 @@
 }
 
 // Text Reset
-html { font-size: 62.5%; }
-body {
-  @include font-family($default-font-family);
-  @include color($default-color);
-  @include font-size-in-rem($default-font-size);
-  line-height: normal;
-  font-weight: 400;
-}
+// html { font-size: 62.5%; }
+// body {
+//   @include font-family($default-font-family);
+//   @include color($default-color);
+//   @include font-size-in-rem($default-font-size);
+//   line-height: normal;
+//   font-weight: 400;
+// }

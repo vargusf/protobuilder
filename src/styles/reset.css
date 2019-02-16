@@ -394,3 +394,13 @@ select {
   padding: 0;
   margin: 0;
 }
+
+/* Text Reset */
+html { font-size: 62.5%; }
+body {
+  font-family: var(--font-primary), sans-serif;
+  color: var(--fontcolor-text);
+  font-size: var(--fontsize-text5);
+  line-height: normal;
+  font-weight: 400;
+}
