@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Docs = exports.Alert = exports.protoGlobal = undefined;
+exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Docs = exports.Alert = exports.protoStyle = undefined;
 
 var _global = require('./styles/global.css');
 
@@ -33,7 +33,7 @@ var _Modal = require('./components/Modal');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.protoGlobal = _global2.default;
+exports.protoStyle = _global2.default;
 exports.Alert = _Alert2.default;
 exports.Docs = _Docs2.default;
 exports.Button = _Button2.default;

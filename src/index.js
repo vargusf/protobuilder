@@ -1,4 +1,4 @@
-import protoGlobal from './styles/global.css';
+import protoStyle from './styles/global.css';
 import Alert from './components/Alert';
 import Docs from './docs/Docs';
 import Button from './components/Button';
@@ -7,7 +7,7 @@ import Nag from './components/Nag';
 import { Modal, ModalHeader, ModalBody, ModalActions } from './components/Modal';
 
 export {
-  protoGlobal,
+  protoStyle,
   Alert,
   Docs,
   Button,

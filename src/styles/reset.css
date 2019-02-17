@@ -400,7 +400,7 @@ html { font-size: 62.5%; }
 body {
   font-family: var(--font-primary), sans-serif;
   color: var(--fontcolor-text);
-  font-size: var(--fontsize-text5);
+  font-size: var(--fontsize-text2);
   line-height: normal;
   font-weight: 400;
 }

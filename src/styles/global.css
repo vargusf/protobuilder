@@ -195,7 +195,7 @@
 .colsGutterXxlg  { &> * { padding-left: var(--size-xxlg);  padding-right: var(--size-xxlg); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
 .colsGutterJumbo { &> * { padding-left: var(--size-jumbo); padding-right: var(--size-jumbo); } &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
 
-/* Widths */
+/* Widths & Heights */
 .colWidth100    { flex-basis: 100%; min-width: 100% }
 .colWidth90     { flex-basis: 90%; min-width: 90% }
 .colWidth80     { flex-basis: 80%; min-width: 80% }
@@ -215,7 +215,7 @@
 .width100       { width: 100% }
 .minHeight100vh { min-height: 100vh; }
 
-// Colors
+/* Colors */
 .colorWhite           { color: var(--color-white); }
 .colorBlack           { color: var(--color-black); }
 .colorGrey100         { color: var(--color-grey100); }
@@ -314,17 +314,17 @@
 .fontsizeText5    { font-size: var(--fontsize-text5); }
 .fontsizeText6    { font-size: var(--fontsize-text6); }
 .fontsizeHeading1 { font-size: var(--fontsize-Heading1); }
-.fontsizeHeading2 { font-size: var(--fontsize-Heading2); }
+.fontsizeHeading2 { font-size: var(--fontsize-heading2); }
 .fontsizeHeading3 { font-size: var(--fontsize-Heading3); }
 .fontsizeHeading4 { font-size: var(--fontsize-Heading4); }
 .fontsizeHeading5 { font-size: var(--fontsize-Heading5); }
 .fontsizeHeading6 { font-size: var(--fontsize-Heading6); }
 
 /* Alignment */
-.alignLeft     { text-align: left; }
-.alignRight    { text-align: right; }
-.alignCenter   { text-align: center; }
-.alignJustify  { text-align: justify; }
+.textAlignLeft     { text-align: left; }
+.textAlignRight    { text-align: right; }
+.textAlignCenter   { text-align: center; }
+.textAlignJustify  { text-align: justify; }
 
 /* Styles */
 .italic        { font-style: italic; }
@@ -446,3 +446,10 @@
 .borderRadiusLeftXlg          { border-top-left-radius: var(--size-xlg); border-bottom-left-radius: var(--size-xlg); }
 .borderRadiusLeftXxlg         { border-top-left-radius: var(--size-xxlg); border-bottom-left-radius: var(--size-xxlg); }
 .borderRadiusLeftJumbo        { border-top-left-radius: var(--size-jumbo); border-bottom-left-radius: var(--size-jumbo); }
+
+/* Z Index */
+.zIndex1 { z-index: 1; }
+.zIndex2 { z-index: 2; }
+.zIndex3 { z-index: 3; }
+.zIndex4 { z-index: 4; }
+.zIndex5 { z-index: 5; }
