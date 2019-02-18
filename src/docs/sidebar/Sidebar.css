@@ -1,4 +1,23 @@
-.Sidebar { 
-	background: var(--color-red);
-	padding: var(--size-lg) var(--size-sm);
+.container {
+	padding: var(--size-lg);
+	background-color: var(--color-grey100);
+	height: 100%;
+}
+
+.link {
+	display: block;
+	padding: var(--size-xxsm) var(--size-xsm);
+	color: var(--color-grey700);
+	border-radius: var(--size-two);
+}
+
+.linkActive,
+.linkActive.link:hover {
+	color: var(--color-white);
+	background-color: var(--color-secondary);
+}
+
+.link:hover { 
+	background-color: var(--color-grey300);
+	color: var(--color-grey800);
 }

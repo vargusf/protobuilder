@@ -1,14 +1,34 @@
-.swatch {
-	width: 200px;
-	border: 1px solid var(--color-grey400);
-	border-radius: var(--size-xxsm);
-	margin: 0 calc(var(--size-md)/2) var(--size-md);
+.docHeading1 {
+	font-size: var(--fontsize-heading4);
+	margin-bottom: var(--size-md);
 }
 
-.swatchColor {
-	height: 100px;
+.docHeading2 {
+	font-size: var(--fontsize-heading6);
+	margin-bottom: var(--size-sm);
+	color: var(--color-grey700);
 }
 
-.swatchText {
-	padding: var(--size-md) var(--size-sm); 
+.docHeading3 {
+	font-size: var(--fontsize-fontsizeText1);
+	margin-bottom: var(--size-sm);
+	color: var(--color-grey600);
+}
+
+.docbox {
+	border: 1px solid var(--color-grey300);
+	border-radius: var(--size-tiny);
+	margin-bottom: var(--size-xlg)
+}
+
+.docboxContent {
+	padding: var(--size-md);
+}
+
+.docboxCode {
+	background-color: var(--color-grey200);
+	padding: var(--size-md);
+	border-bottom-left-radius: var(--size-tiny);
+	border-bottom-right-radius: var(--size-tiny);
+	font-family: Monospace;
 }

@@ -9,7 +9,7 @@ var _global = require('./styles/global.css');
 
 var _global2 = _interopRequireDefault(_global);
 
-var _Alert = require('./components/Alert');
+var _Alert = require('./components/Alert/Alert');
 
 var _Alert2 = _interopRequireDefault(_Alert);
 
@@ -17,7 +17,7 @@ var _Docs = require('./docs/Docs');
 
 var _Docs2 = _interopRequireDefault(_Docs);
 
-var _Button = require('./components/Button');
+var _Button = require('./components/Button/Button');
 
 var _Button2 = _interopRequireDefault(_Button);
 

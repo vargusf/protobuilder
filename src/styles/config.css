@@ -77,17 +77,36 @@
 :root { --color-error:           #DC1232; }
 
 /*--------------------/
-	Fonts & Sizes
+	Fonts
 /--------------------*/
 
 :root { --font-primary: 'roboto'; }
-:root { --font-secondary: 'Open Sans'; }
-:root { --fontsize-1: '4.0'; }
-:root { --fontsize-2: '3.2'; }
-:root { --fontsize-3: '2.8'; }
-:root { --fontsize-4: '2.4'; }
-:root { --fontsize-5: '2.0'; }
-:root { --fontsize-6: '1.6'; }
+:root { --font-secondary: 'arial'; }
+
+/*--------------------/
+	Font Colors
+/--------------------*/
+
+:root { --fontcolor-text:     var(--color-grey900); }
+:root { --fontcolor-headings: var(--color-grey700); }
+
+/*--------------------/
+	Font Sizes
+/--------------------*/
+
+:root { --fontsize-text1: 2.0rem; }
+:root { --fontsize-text2: 1.8rem; }
+:root { --fontsize-text3: 1.6rem; }
+:root { --fontsize-text4: 1.4rem; }
+:root { --fontsize-text5: 1.2rem; }
+:root { --fontsize-text6: 1.1rem; }
+
+:root { --fontsize-heading1: 8.0rem; }
+:root { --fontsize-heading2: 6.0rem; }
+:root { --fontsize-heading3: 4.0rem; }
+:root { --fontsize-heading4: 3.2rem; }
+:root { --fontsize-heading5: 2.6rem; }
+:root { --fontsize-heading6: 2.2rem; }
 
 /*--------------------/
 	Breakpoints
@@ -98,3 +117,10 @@
 :root { --breakpoint-md: 1024; }
 :root { --breakpoint-lg: 1200; }
 :root { --breakpoint-xlg: 1400; }
+
+/*--------------------/
+	Fixed Width
+/--------------------*/
+
+:root { --fixedwidth-maxWidth: 1180px; }
+:root { --fixedwidth-sidePadding: 15px; }

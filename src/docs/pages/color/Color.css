@@ -1,0 +1,16 @@
+.swatch {
+	width: 200px;
+	margin: 0 calc(var(--size-md)/2) var(--size-md);
+}
+
+.swatchColor {
+	height: 100px;
+	border-radius: var(--size-tiny);
+}
+
+.swatchText {
+	padding: var(--size-xxsm) 0; 
+	border-top: none;
+	border-bottom-left-radius: var(--size-xxsm);
+	border-bottom-right-radius: var(--size-xxsm);
+}

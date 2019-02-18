@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import style from './Button.css';
+
 const Button = ({
   type = 'button',           // (link|button|submit|reset|href)
   display = 'inline-block',  // (inline|inline-block|flex)
