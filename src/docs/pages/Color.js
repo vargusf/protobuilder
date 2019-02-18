@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 
-import protoStyle from '../../../styles/global.css';
-import globalStyle from '../../Docs.css';
-import style from './color.css';
+import protoStyle from '../../styles/global.css';
+import style from '../Docs.css';
 
 const PageColor = () => (
 	<div>
 
-		<h1 className={globalStyle.docHeading1}>Color</h1>
+		<h1 className={style.docHeading1}>Color</h1>
 
-		<h2 className={globalStyle.docHeading2}>Primary</h2>
+		<h2 className={style.docHeading2}>Primary</h2>
 
-		<div className={globalStyle.docbox}>
-			<div className={globalStyle.docboxContent}>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexWrap}`}>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorPrimary}`}></div>
@@ -28,17 +27,17 @@ const PageColor = () => (
 					</div>
 				</div>
 			</div>
-			<div className={globalStyle.docboxCode}>
+			<div className={style.docboxCode}>
 				<div>primary</div>
 				<div>primaryLight</div>
 				<div>primaryDark</div>
 			</div>
 		</div>
 
-		<h2 className={globalStyle.docHeading2}>Secondary</h2>
+		<h2 className={style.docHeading2}>Secondary</h2>
 
-		<div className={globalStyle.docbox}>
-			<div className={globalStyle.docboxContent}>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexWrap}`}>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorSecondary}`}></div>
@@ -54,17 +53,17 @@ const PageColor = () => (
 					</div>
 				</div>
 			</div>
-			<div className={globalStyle.docboxCode}>
+			<div className={style.docboxCode}>
 				<div>secondary</div>
 				<div>secondaryLight</div>
 				<div>secondaryDark</div>
 			</div>
 		</div>
 
-		<h2 className={globalStyle.docHeading2}>Tertiary</h2>
+		<h2 className={style.docHeading2}>Tertiary</h2>
 
-		<div className={globalStyle.docbox}>
-			<div className={globalStyle.docboxContent}>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexWrap}`}>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorTertiary}`}></div>
@@ -80,17 +79,17 @@ const PageColor = () => (
 					</div>
 				</div>
 			</div>
-			<div className={globalStyle.docboxCode}>
+			<div className={style.docboxCode}>
 				<div>tertiary</div>
 				<div>tertiaryLight</div>
 				<div>tertiaryDark</div>
 			</div>
 		</div>
 
-		<h2 className={globalStyle.docHeading2}>Greys</h2>
+		<h2 className={style.docHeading2}>Greys</h2>
 
-		<div className={globalStyle.docbox}>
-			<div className={globalStyle.docboxContent}>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexWrap}`}>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorGrey100}`}></div>
@@ -130,7 +129,7 @@ const PageColor = () => (
 					</div>
 				</div>
 			</div>
-			<div className={globalStyle.docboxCode}>
+			<div className={style.docboxCode}>
 				<div>grey100</div>
 				<div>grey200</div>
 				<div>grey300</div>
@@ -143,10 +142,10 @@ const PageColor = () => (
 			</div>
 		</div>
 
-		<h2 className={globalStyle.docHeading2}>Black &amp; White</h2>
+		<h2 className={style.docHeading2}>Black &amp; White</h2>
 
-		<div className={globalStyle.docbox}>
-			<div className={globalStyle.docboxContent}>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexWrap}`}>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorWhite}`}></div>
@@ -158,16 +157,16 @@ const PageColor = () => (
 					</div>
 				</div>
 			</div>
-			<div className={globalStyle.docboxCode}>
+			<div className={style.docboxCode}>
 				<div>white</div>
 				<div>black</div>
 			</div>
 		</div>
 
-		<h2 className={globalStyle.docHeading2}>Others</h2>
+		<h2 className={style.docHeading2}>Others</h2>
 
-		<div className={globalStyle.docbox}>
-			<div className={globalStyle.docboxContent}>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexWrap}`}>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorRed}`}></div>
@@ -219,7 +218,7 @@ const PageColor = () => (
 					</div>
 				</div>
 			</div>
-			<div className={globalStyle.docboxCode}>
+			<div className={style.docboxCode}>
 				<div>red</div>
 				<div>green</div>
 				<div>blue</div>
@@ -235,10 +234,10 @@ const PageColor = () => (
 			</div>
 		</div>
 
-		<h2 className={globalStyle.docHeading2}>UI</h2>
+		<h2 className={style.docHeading2}>UI</h2>
 
-		<div className={globalStyle.docbox}>
-			<div className={globalStyle.docboxContent}>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexWrap}`}>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorInfo}`}></div>
@@ -258,7 +257,7 @@ const PageColor = () => (
 					</div>
 				</div>
 			</div>
-			<div className={globalStyle.docboxCode}>
+			<div className={style.docboxCode}>
 				<div>info</div>
 				<div>success</div>
 				<div>warning</div>

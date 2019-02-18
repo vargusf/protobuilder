@@ -16,8 +16,8 @@ const Sidebar = () => {
 
 			<div className={` ${protoStyle.fontsizeHeading6} ${protoStyle.marginBottomSm} `}>Components</div>
 			<ul className={protoStyle.marginBottomLg}>
-				<li><NavLink to="/proto/button" className={style.link} activeClassName={style.linkActive}>Button</NavLink></li>
 				<li><NavLink to="/proto/alert" className={style.link} activeClassName={style.linkActive}>Alert</NavLink></li>
+				<li><NavLink to="/proto/button" className={style.link} activeClassName={style.linkActive}>Button</NavLink></li>
 			</ul>
 		</div>
 	)

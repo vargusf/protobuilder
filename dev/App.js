@@ -7,9 +7,7 @@ import '../src/styles/reset.css';
 
 const App = () => {
 	return (
-		<div>
-			<Docs />
-		</div>
+		<Docs />
 	)
 }
 
