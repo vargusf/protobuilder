@@ -1,4 +1,4 @@
-.Nag {
+/* .Nag {
   position: relative;
   height: 30px;
   @include flex-centered();
@@ -33,4 +33,4 @@
   i {
     @include font-size-in-rem(1.6);
   }
-}
+} */

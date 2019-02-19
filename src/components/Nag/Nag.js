@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import style from './Nag.css';
 
 class Nag extends Component {
 	static defaultProps = {

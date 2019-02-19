@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './Modal.css';
 
 const Modal = ({
 	type = 'default', // (default|custom)

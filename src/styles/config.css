@@ -13,7 +13,10 @@
 :root { --size-lg:    32px; }
 :root { --size-xlg:   48px; }
 :root { --size-xxlg:  64px; }
-:root { --size-jumbo: 128px; }
+
+:root { --elheight-sm: 28px; }
+:root { --elheight-md: 44px; }
+:root { --elheight-lg: 52px; }
 
 /*--------------------/
 	Colors (HSL)
@@ -100,7 +103,6 @@
 :root { --fontsize-text4: 1.4rem; }
 :root { --fontsize-text5: 1.2rem; }
 :root { --fontsize-text6: 1.1rem; }
-
 :root { --fontsize-heading1: 8.0rem; }
 :root { --fontsize-heading2: 6.0rem; }
 :root { --fontsize-heading3: 4.0rem; }

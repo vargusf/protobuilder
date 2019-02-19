@@ -7,12 +7,11 @@ const AlertComponenet = (
 		children
 	}
 ) => {
-	
-	const alertColor = style['alert' + color.charAt(0).toUpperCase() + color.slice(1)];
+		
 	return (
 		<div className={`
 			${style.alert}
-			${alertColor}
+			${style['alert_' + color]}
 		`}>
 			{children}
 		</div>

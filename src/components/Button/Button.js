@@ -5,12 +5,12 @@ import style from './Button.css';
 
 const Button = ({
   type = 'button',           // (link|button|submit|reset|href)
-  display = 'inline-block',  // (inline|inline-block|flex)
   fill = 'true',             // (true|false)
   color = 'primary',         // (primary|secondary|grey|white)
   size = 'md',               // (sm|md|lg|xlg)
   sizeWidth = 'md',          // (sm|md|lg|xlg)
   sizeHeight = 'md',         // (sm|md|lg|xlg)
+  display = 'inline-block',  // (inline|inline-block|flex)
   pill = false,
   to = null,
   target = '_self',
@@ -18,16 +18,29 @@ const Button = ({
 	onClick = () => {},
   children
 }) => {
+
+  // const classes = `
+  //   Button
+  //   Button--display-${display}
+  //   Button--fill-${fill}
+  //   Button--color-${color}
+  //   Button--size-${size}
+  //   Button--size-width-${sizeWidth}
+  //   Button--size--height-${sizeHeight}
+  //   Button--pill-${pill}
+  //   Button--disabled-${disabled}
+  // `;
+
   const classes = `
-    Button
-    Button--display-${display}
-    Button--fill-${fill}
-    Button--color-${color}
-    Button--size-${size}
-    Button--size-width-${sizeWidth}
-    Button--size--height-${sizeHeight}
-    Button--pill-${pill}
-    Button--disabled-${disabled}
+    ${style.button}
+    ${style['button_color_' + color]}
+    ${style['button_fill_' + fill]}
+    ${style['button_size_' + size]}
+    ${style['display_' + display]}
+    button--size-width-${sizeWidth}
+    button--size--height-${sizeHeight}
+    button--pill-${pill}
+    button--disabled-${disabled}
   `;
 
   if (disabled == "true") onClick = null;

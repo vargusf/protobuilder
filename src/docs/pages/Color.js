@@ -182,7 +182,7 @@ const PageColor = () => (
 					</div>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorYellow}`}></div>
-						<div className={style.swatchText}>Yllow</div>
+						<div className={style.swatchText}>Yellow</div>
 					</div>
 					<div className={style.swatch}>
 						<div className={`${style.swatchColor} ${protoStyle.backgroundColorCyan}`}></div>

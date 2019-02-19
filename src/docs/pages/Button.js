@@ -7,21 +7,70 @@ import style from '../Docs.css';
 
 const PageButton = () => (
 	<div>
-		<h1 className={style.docHeading1}>Alert</h1>
+
+		<h1 className={style.docHeading1}>Button</h1>
+
+		<h2 className={style.docHeading2}>Default</h2>
+
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<h3 className={style.docHeading3}>Info</h3>
-				<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Success</h3>
-				<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Warning</h3>
-				<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Error</h3>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+					<div><Button>Button</Button></div>
+					<div><Button fill="false">Button</Button></div>
+				</div>
 			</div>
 			<div className={style.docboxCode}>
-				<div>{`<Alert>This is an alert!</Alert>`}</div>
-				<div>{`<Alert color="success">This is an alert!</Alert>`}</div>
-				<div>{`<Alert color="warning">This is an alert!</Alert>`}</div>
-				<div>{`<Alert color="error">This is an alert!</Alert>`}</div>
+				<div>{`	<Button>Button</Button>`}</div>
 			</div>
 		</div>
+
+		<h2 className={style.docHeading2}>Sizes</h2>
+
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+					<div><Button size="sm">Button</Button></div>
+					<div><Button size="md">Button</Button></div>
+					<div><Button size="lg">Button</Button></div>
+				</div>
+			</div>
+			<div className={style.docboxCode}>
+				<div>{`	<Button>Button</Button>`}</div>
+			</div>
+		</div>
+
+		<h2 className={style.docHeading2}>Types</h2>
+
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+					<div>
+						<h3 className={style.docHeading3}>Button</h3>
+						<Button>Button</Button>
+					</div>
+					<div>
+						<h3 className={style.docHeading3}>Link</h3>
+						<Button type="link" to="">Button</Button>
+					</div>
+					<div>
+						<h3 className={style.docHeading3}>Href</h3>
+						<Button type="href">Button</Button>
+					</div>
+					<div>
+						<h3 className={style.docHeading3}>Submit</h3>
+						<Button type="submit">Button</Button>
+					</div>
+					<div>
+						<h3 className={style.docHeading3}>Reset</h3>
+						<Button type="reset">Button</Button>
+					</div>
+				</div>
+			</div>
+			<div className={style.docboxCode}>
+				<div>{`	<Button>Button</Button>`}</div>
+			</div>
+		</div>
+
 	</div>
 );
 

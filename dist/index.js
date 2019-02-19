@@ -21,15 +21,15 @@ var _Button = require('./components/Button/Button');
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _Spinner = require('./components/Spinner');
+var _Spinner = require('./components/Spinner/Spinner');
 
 var _Spinner2 = _interopRequireDefault(_Spinner);
 
-var _Nag = require('./components/Nag');
+var _Nag = require('./components/Nag/Nag');
 
 var _Nag2 = _interopRequireDefault(_Nag);
 
-var _Modal = require('./components/Modal');
+var _Modal = require('./components/Modal/Modal');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

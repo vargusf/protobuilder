@@ -1,52 +1,53 @@
-.Button {
+.button {
   cursor: pointer;
   position: relative;
   border-radius: var(--size-tiny);
   transition: all .5s;
   border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 /* Size */
 
-.Button--size-sm {
-  padding: 8px 10px;
-  font-size: 1.3rem;
-  line-height: 100%;
+.button_size_sm {
+  height: var(--elheight-sm);
+  padding-left: var(--size-sm);
+  padding-right: var(--size-sm);
+  font-size: var(--fontsize-text4);
 }
 
-.Button--size-md {
-  padding: 14px 20px;
-  font-size: 1.4rem;
-  line-height: 100%;
-  text-transform: uppercase;
+.button_size_md {
+  height: var(--elheight-md);
+  padding-left: var(--size-md);
+  padding-right: var(--size-md);
+  font-size: var(--fontsize-text3);
 }
 
-.Button--size-lg {
-  padding: 18px 30px;
-  font-size: 1.5rem;
-  line-height: 100%;
-  text-transform: uppercase;
+.button_size_lg {
+  height: var(--elheight-lg);
+  padding-left: var(--size-lg);
+  padding-right: var(--size-lg);
+  font-size: var(--fontsize-text2);
 }
 
-.Button--size-xlg {
-  padding: 22px 60px;
-  font-size: 1.8rem;
-  line-height: 100%;
-  text-transform: uppercase;
+.button_size_lg {
+  height: var(--elheight-lg);
+  padding-left: var(--size-lg);
+  padding-right: var(--size-lg);
+  font-size: var(--fontsize-text2);
 }
 
-.Button--size-width-xlg {
-  padding-left: 60px;
-  padding-right: 60px;
-}
-
+\
 /* Display - Flex */
 
-.Button--display-inline-block {
+.button_display_inlineblock {
   display: inline-block;
 }
 
-.Button--display-block {
+.button_display_block {
   display: block;
   width: 100%;
   text-align: center;
@@ -56,131 +57,132 @@
 
 /* Fill */
 
+.button_color_primary.button_fill_true       { border: 1px solid var(--color-primary); color: var(--color-white); background-color: var(--color-primary); }
+.button_color_primary.button_fill_false      { border: 1px solid var(--color-primary); color: var(--color-primary); }
 
-/* Color should be worked into fill */
 
-/* .Button--color-primary        { @include color(primary); }
-.Button--color-primaryLight   { @include color(primaryLight); }
-.Button--color-primaryDark    { @include color(primaryDark); }
-.Button--color-secondary      { @include color(secondary); }
-.Button--color-secondaryLight { @include color(secondaryLight); }
-.Button--color-secondaryDark  { @include color(secondaryDark); }
-.Button--color-teriary        { @include color(teriary); }
-.Button--color-teriaryLight   { @include color(teriaryLight); }
-.Button--color-teriaryDark    { @include color(teriaryDark); }
-.Button--color-white          { @include color(white); }
-.Button--color-black          { @include color(black); }
-.Button--color-grey100        { @include color(grey100); }
-.Button--color-grey200        { @include color(grey200); }
-.Button--color-grey300        { @include color(grey300); }
-.Button--color-grey400        { @include color(grey400); }
-.Button--color-grey500        { @include color(grey500); }
-.Button--color-info           { @include color(info); }
-.Button--color-success        { @include color(success); }
-.Button--color-warning        { @include color(warning); }
-.Button--color-error          { @include color(error); } */
 
-.Button--fill-false { background-color: transparent; }
+.button_color_primaryLight   { color: var(--color-primaryLight); }
+.button_color_primaryDark    { color: var(--color-primaryDark); }
+.button_color_secondary      { color: var(--color-secondary); }
+.button_color_secondaryLight { color: var(--color-secondaryLight); }
+.button_color_secondaryDark  { color: var(--color-secondaryDark); }
+.button_color_teriary        { color: var(--color-teriary); }
+.button_color_teriaryLight   { color: var(--color-teriaryLight); }
+.button_color_teriaryDark    { color: var(--color-teriaryDark); }
+.button_color_white          { color: var(--color-white); }
+.button_color_black          { color: var(--color-black); }
+.button_color_grey100        { color: var(--color-grey100); }
+.button_color_grey200        { color: var(--color-grey200); }
+.button_color_grey300        { color: var(--color-grey300); }
+.button_color_grey400        { color: var(--color-grey400); }
+.button_color_grey500        { color: var(--color-grey500); }
+.button_color_info           { color: var(--color-info); }
+.button_color_success        { color: var(--color-success); }
+.button_color_warning        { color: var(--color-warning); }
+.button_color_error          { color: var(--color-error); }
 
-/* .Button--fill-false.Button--color-primary { @include border(all, one, solid, primary); @include color(primary);
-    &:hover.Button--disabled-false { @include background-color(primary); @include color(white); }
+.button--fill-false { background-color: transparent; }
+
+/* .button--fill-false.button--color-primary { @include border(all, one, solid, primary); @include color(primary);
+    &:hover.button--disabled-false { @include background-color(primary); @include color(white); }
   }
-  &.Button--color-secondary { @include border(all, one, solid, secondary); @include color(secondary);
-    &:hover.Button--disabled-false { @include background-color(secondary); @include color(white); }
+  &.button--color-secondary { @include border(all, one, solid, secondary); @include color(secondary);
+    &:hover.button--disabled-false { @include background-color(secondary); @include color(white); }
   }
-  &.Button--color-tertiary { @include border(all, one, solid, tertiary); @include color(tertiary);
-    &:hover.Button--disabled-false { @include background-color(tertiary); @include color(white); }
+  &.button--color-tertiary { @include border(all, one, solid, tertiary); @include color(tertiary);
+    &:hover.button--disabled-false { @include background-color(tertiary); @include color(white); }
   }
-  &.Button--color-grey100 { @include border(all, one, solid, grey100); @include color(grey900);
-    &:hover.Button--disabled-false { @include background-color(grey100); @include color(white); }
+  &.button--color-grey100 { @include border(all, one, solid, grey100); @include color(grey900);
+    &:hover.button--disabled-false { @include background-color(grey100); @include color(white); }
   }
-  &.Button--color-grey200 { @include border(all, one, solid, grey200); @include color(grey900);
-    &:hover.Button--disabled-false { @include background-color(grey200); @include color(white); }
+  &.button--color-grey200 { @include border(all, one, solid, grey200); @include color(grey900);
+    &:hover.button--disabled-false { @include background-color(grey200); @include color(white); }
   }
-  &.Button--color-grey300 { @include border(all, one, solid, grey300); @include color(grey400);
-    &:hover.Button--disabled-false { @include background-color(grey300); @include color(white); }
+  &.button--color-grey300 { @include border(all, one, solid, grey300); @include color(grey400);
+    &:hover.button--disabled-false { @include background-color(grey300); @include color(white); }
   }
-  &.Button--color-grey400 { @include border(all, one, solid, grey400); @include color(grey900);
-    &:hover.Button--disabled-false { @include background-color(grey400); @include color(white); }
+  &.button--color-grey400 { @include border(all, one, solid, grey400); @include color(grey900);
+    &:hover.button--disabled-false { @include background-color(grey400); @include color(white); }
   }
-  &.Button--color-grey500 { @include border(all, one, solid, grey500); @include color(grey900);
-    &:hover.Button--disabled-false { @include background-color(grey500); @include color(white); }
+  &.button--color-grey500 { @include border(all, one, solid, grey500); @include color(grey900);
+    &:hover.button--disabled-false { @include background-color(grey500); @include color(white); }
   }
-  &.Button--color-grey600 { @include border(all, one, solid, grey600); @include color(grey900);
-    &:hover.Button--disabled-false { @include background-color(grey600); @include color(white); }
+  &.button--color-grey600 { @include border(all, one, solid, grey600); @include color(grey900);
+    &:hover.button--disabled-false { @include background-color(grey600); @include color(white); }
   }
-  &.Button--color-grey700 { @include border(all, one, solid, grey700); @include color(grey900);
-    &:hover.Button--disabled-false { @include background-color(grey700); @include color(white); }
+  &.button--color-grey700 { @include border(all, one, solid, grey700); @include color(grey900);
+    &:hover.button--disabled-false { @include background-color(grey700); @include color(white); }
   }
-  &.Button--color-grey800 { @include border(all, one, solid, grey800); @include color(white);
-    &:hover.Button--disabled-false { @include background-color(grey800); @include color(grey900); }
+  &.button--color-grey800 { @include border(all, one, solid, grey800); @include color(white);
+    &:hover.button--disabled-false { @include background-color(grey800); @include color(grey900); }
   }
-  &.Button--color-grey900 { @include border(all, one, solid, grey900); @include color(white);
-    &:hover.Button--disabled-false { @include background-color(grey900); @include color(grey900); }
+  &.button--color-grey900 { @include border(all, one, solid, grey900); @include color(white);
+    &:hover.button--disabled-false { @include background-color(grey900); @include color(grey900); }
   }
-  &.Button--color-white { @include border(all, one, solid, white); @include color(white);
-    &:hover.Button--disabled-false { @include background-color(white); @include color(grey900); }
+  &.button--color-white { @include border(all, one, solid, white); @include color(white);
+    &:hover.button--disabled-false { @include background-color(white); @include color(grey900); }
   }
-  &.Button--color-error { @include border(all, one, solid, error); @include color(error);
-    &:hover.Button--disabled-false { @include background-color(error); @include color(white); }
+  &.button--color-error { @include border(all, one, solid, error); @include color(error);
+    &:hover.button--disabled-false { @include background-color(error); @include color(white); }
   }
 }
 
-.Button--fill-true {
-  &.Button--color-primary {
+.button--fill-true {
+  &.button--color-primary {
     @include background-color(primary);
     @include border(all, one, solid, primary);
     @include color(white);
-    &:hover.Button--disabled-false {
+    &:hover.button--disabled-false {
       @include background-color(primaryDark);
     }
   }
-  &.Button--color-secondary {
+  &.button--color-secondary {
     @include background-color(secondary);
     @include border(all, one, solid, secondary);
     @include color(white);
-    &:hover.Button--disabled-false {
+    &:hover.button--disabled-false {
       @include background-color(secondaryDark);
     }
   }
-  &.Button--color-tertiary {
+  &.button--color-tertiary {
     @include background-color(tertiary);
     @include border(all, one, solid, tertiary);
     @include color(white);
-    &:hover.Button--disabled-false {
+    &:hover.button--disabled-false {
       @include background-color(tertiaryDark);
     }
   }
-  &.Button--color-grey200 {
+  &.button--color-grey200 {
     @include background-color(grey200);
     @include border(all, one, solid, grey200);
     @include color(white);
-    &:hover.Button--disabled-false {
+    &:hover.button--disabled-false {
       @include background-color(grey500);
       @include border(all, one, solid, grey500);
     }
   }
-  &.Button--color-grey300 {
+  &.button--color-grey300 {
     @include background-color(grey300);
     @include border(all, one, solid, grey300);
     @include color(white);
-    &:hover.Button--disabled-false {
+    &:hover.button--disabled-false {
       @include background-color(grey500);
       @include border(all, one, solid, grey500);
     }
   }
-  &.Button--color-white {
+  &.button--color-white {
     @include background-color(white);
     @include color(primary);
     font-weight: 500;
   }
 } */
 
-.Button--disabled-true {
+.button--disabled-true {
   opacity: .5;
   cursor: not-allowed;
 }
 
-.Button--pill-true {
+.button--pill-true {
   border-radius: var(--size-lg);
 }
