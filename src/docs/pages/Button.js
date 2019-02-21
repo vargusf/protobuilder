@@ -29,9 +29,9 @@ const PageButton = () => (
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
-					<div><Button size="sm">Button</Button></div>
-					<div><Button size="md">Button</Button></div>
-					<div><Button size="lg">Button</Button></div>
+					<Button size="sm">Button</Button>
+					<Button size="md">Button</Button>
+					<Button size="lg">Button</Button>
 				</div>
 			</div>
 			<div className={style.docboxCode}>

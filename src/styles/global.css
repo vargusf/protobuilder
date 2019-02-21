@@ -187,7 +187,12 @@
 .colsGutterTwo   { &> * { padding-left: var(--size-two);   padding-right: var(--size-two); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
 .colsGutterTiny  { &> * { padding-left: var(--size-tiny);  padding-right: var(--size-tiny); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
 .colsGutterXxsm  { &> * { padding-left: var(--size-xxsm);  padding-right: var(--size-xxsm); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterXsm   { &> * { padding-left: var(--size-xsm);   padding-right: var(--size-xsm); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+
+
+.colsGutterXsm > * { margin-left: var(--size-xsm); margin-right: var(--size-xsm); }   
+.colsGutterXsm:first-child > { margin-left: var(--size-zero); }
+.colsGutterXsm:last-child > { margin-right: var(--size-zero); }
+
 .colsGutterSm    { &> * { padding-left: var(--size-sm);    padding-right: var(--size-sm); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
 .colsGutterMd    { &> * { padding-left: var(--size-md);    padding-right: var(--size-md); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
 .colsGutterLg    { &> * { padding-left: var(--size-lg);    padding-right: var(--size-lg); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
