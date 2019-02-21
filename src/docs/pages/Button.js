@@ -8,7 +8,7 @@ import style from '../Docs.css';
 const PageButton = () => (
 	<div>
 
-		<h1 className={style.docHeading1}>Button</h1>
+		<h1 className={style.docHeading1}>Buttonnnn</h1>
 
 		<h2 className={style.docHeading2}>Default</h2>
 
