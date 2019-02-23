@@ -183,22 +183,27 @@
 .flexCentered        { display: flex; justify-content: center; align-items: center; }
 
 /* Gutters */
-.colsGutterOne   { &> * { padding-left: var(--size-one);   padding-right: var(--size-one); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterTwo   { &> * { padding-left: var(--size-two);   padding-right: var(--size-two); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterTiny  { &> * { padding-left: var(--size-tiny);  padding-right: var(--size-tiny); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterXxsm  { &> * { padding-left: var(--size-xxsm);  padding-right: var(--size-xxsm); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-
-
-.colsGutterXsm > * { margin-left: var(--size-xsm); margin-right: var(--size-xsm); }   
+.colsGutterXsm > * { margin-left: var(--size-xsm); margin-right: var(--size-xsm); }
 .colsGutterXsm:first-child > { margin-left: var(--size-zero); }
 .colsGutterXsm:last-child > { margin-right: var(--size-zero); }
-
-.colsGutterSm    { &> * { padding-left: var(--size-sm);    padding-right: var(--size-sm); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterMd    { &> * { padding-left: var(--size-md);    padding-right: var(--size-md); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterLg    { &> * { padding-left: var(--size-lg);    padding-right: var(--size-lg); }    &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterXlg   { &> * { padding-left: var(--size-xlg);   padding-right: var(--size-xlg); }   &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterXxlg  { &> * { padding-left: var(--size-xxlg);  padding-right: var(--size-xxlg); }  &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
-.colsGutterJumbo { &> * { padding-left: var(--size-jumbo); padding-right: var(--size-jumbo); } &> :first-child { padding-left: var(--size-zero); } &> :last-child { padding-right: var(--size-zero); } }
+.colsGutterSm > * { margin-left: var(--size-sm); margin-right: var(--size-sm); }
+.colsGutterSm:first-child > { margin-left: var(--size-zero); }
+.colsGutterSm:last-child > { margin-right: var(--size-zero); }
+.colsGutterMd > * { margin-left: var(--size-md); margin-right: var(--size-md); }
+.colsGutterMd:first-child > { margin-left: var(--size-zero); }
+.colsGutterMd:last-child > { margin-right: var(--size-zero); }
+.colsGutterLg > * { margin-left: var(--size-lg); margin-right: var(--size-lg); }
+.colsGutterLg:first-child > { margin-left: var(--size-zero); }
+.colsGutterLg:last-child > { margin-right: var(--size-zero); }
+.colsGutterXlg > * { margin-left: var(--size-xlg); margin-right: var(--size-xlg); }
+.colsGutterXlg:first-child > { margin-left: var(--size-zero); }
+.colsGutterXlg:last-child > { margin-right: var(--size-zero); }
+.colsGutterXxlg > * { margin-left: var(--size-xxlg); margin-right: var(--size-xxlg); }
+.colsGutterXxlg:first-child > { margin-left: var(--size-zero); }
+.colsGutterXxlg:last-child > { margin-right: var(--size-zero); }
+.colsGutterJumbo > * { margin-left: var(--size-jumbo); margin-right: var(--size-jumbo); }
+.colsGutterJumbo:first-child > { margin-left: var(--size-zero); }
+.colsGutterJumbo:last-child > { margin-right: var(--size-zero); }
 
 /* Widths & Heights */
 .colWidth100    { flex-basis: 100%; min-width: 100% }

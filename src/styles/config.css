@@ -16,7 +16,7 @@
 
 :root { --elheight-sm: 28px; }
 :root { --elheight-md: 44px; }
-:root { --elheight-lg: 52px; }
+:root { --elheight-lg: 60px; }
 
 /*--------------------/
 	Colors (HSL)
@@ -35,6 +35,7 @@
 
 /* Brand */
 :root { --color-primary:         hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness)); }
+:root { --color-primaryAsHsl:    var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness) }
 :root { --color-primaryLight:    hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) * 1.5), calc(var(--color-primary-lightness) + 10%)); }
 :root { --color-primaryDark:     hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) / 1.5), calc(var(--color-primary-lightness) - 10%)); }
 :root { --color-secondary:       hsl(var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lightness)); }

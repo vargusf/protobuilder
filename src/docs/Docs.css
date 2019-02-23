@@ -29,7 +29,7 @@
 }
 
 .docboxContent {
-	padding: var(--size-md);
+	padding: var(--size-lg) var(--size-md);
 }
 
 .docboxCode {
@@ -38,6 +38,7 @@
 	border-bottom-left-radius: var(--size-tiny);
 	border-bottom-right-radius: var(--size-tiny);
 	font-family: Monospace;
+	color: var(--color-grey700);
 }
 
 .swatch {
