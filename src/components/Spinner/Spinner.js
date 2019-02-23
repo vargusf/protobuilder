@@ -2,27 +2,24 @@ import React from 'react';
 import style from './Spinner.css';
 
 const Spinner = ({
-  size = 'md',            // (xsm|sm|md)
-  color = 'primary',      // (primary|white)
-  display = 'inline'    // (inline|centered)
+	size = 'md',
+	color = 'primary',
 }) => {
 
-  const classes = `
-    Spinner
-    Spinner--color-${color}
-    Spinner--size-${size}
-    Spinner--display-${display}
-  `;
+	const classes = `
+		${style.spinner}
+		${style['color_' + color]}
+		${style['size_' + size]}
+	`;
 
-  return (
-    <div className={classes}>
-      <svg className="Spinner__svg" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
-        <circle className="Spinner__path" fill="none" strokeWidth="6" strokeLinecap="round" cx="33" cy="33" r="30"></circle>
-      </svg>
-    </div>
-  )
+	return (
+		<div className={classes}>
+			<svg className={style.svg} viewBox="25 25 50 50">
+				<circle className={style.path} cx="50" cy="50" r="20" fill="none" />
+			</svg>
+		</div>
+	);
 
-  
 }
 
 export default Spinner;
