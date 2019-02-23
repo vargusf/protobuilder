@@ -9,6 +9,7 @@ import PageText from './pages/Text';
 import PageAlert from './pages/Alert';
 import PageButton from './pages/Button';
 import PageSpinner from './pages/Spinner';
+import PageModal from './pages/modal';
 
 import protoStyle from '../styles/global.css';
 import style from './Docs.css';
@@ -27,6 +28,7 @@ class Docs extends Component {
 						<Route exact path='/proto/button' component={PageButton} />
 						<Route exact path='/proto/alert' component={PageAlert} />
 						<Route exact path='/proto/spinner' component={PageSpinner} />
+						<Route exact path='/proto/modal' component={PageModal} />
 					</div>
 				</div>
 			</div>

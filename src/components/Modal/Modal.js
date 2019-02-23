@@ -2,21 +2,14 @@ import React from 'react';
 import style from './Modal.css';
 
 const Modal = ({
-	type = 'default', // (default|custom)
-	bgColor = 'white', // (white|black)
+	type = 'default',
 	bgClick = () => {},
 	children
 }) => {
-	const classes = `
-		Modal
-		Modal--bg-${bgColor}
-		Modal--type-${type}
-	`;
-
 	return (
-		<div className={classes}>
-			<div className="Modal_bg" onClick={bgClick}></div>
-			<div className="Modal_container">
+		<div className={style.modal}>
+			<div className={style.modalbg} onClick={bgClick}></div>
+			<div className={` ${style.container} ${style['type_' + type]} `}>
 				{children}
 			</div>
 		</div>
@@ -24,15 +17,15 @@ const Modal = ({
 }
 
 const ModalHeader = props => (
-	<div className="Modal_header">{props.children}</div>
+	<div className={style.header}>{props.children}</div>
 )
 
 const ModalBody = props => (
-	<div className="Modal_body">{props.children}</div>
+	<div className={style.body}>{props.children}</div>
 )
 
 const ModalActions = props => (
-	<div className="Modal_actions">
+	<div className={style.actions}>
 		{props.children}
 	</div>
 )

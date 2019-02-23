@@ -1,61 +1,53 @@
-/* .Modal {
+.modal {
   position: fixed;
   z-index: 100;
-  @include stretch-edges();
-  @include flex-centered();
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.Modal_bg {
+.modalbg {
   position: absolute;
   z-index: 1;
-  @include stretch-edges(); 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   opacity: .7;
-  .Modal--bg-white & { @include background-color(white); }
-  .Modal--bg-dark & { @include background-color(black); }
+  background: var(--color-white);
 }
 
-.Modal_container {
+.container {
   position: relative;
   z-index: 2;
-  .Modal--type-default & {
-    @include background-color(white);
-    @include border-radius(all, tiny);
-    @include padding(top, lg);
-    @include padding(all, md);
-    @include padding(bottom, md);
-    @include border(all, one, solid, grey200);
-    width: 500px;
-    box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.3);
-    @include bp(sm) {
-        width: 400px;
-    }
-    @include bp(xsm) {
-        width: auto;
-    }
-  }
 }
 
-.Modal_header {
-  @include font-size-in-rem(2.4);
+.header { font-size: var(--fontsize-heading6: 2.2rem); }
+.header ~ .body { margin-top: var(--size-md); }
+
+.body {
+  font-size: var(--fontsize-text3);
+  color: var(--color-grey600);
 }
 
-.Modal_header ~ .Modal_body {
-  @include margin(top, md);
+.type_default {
+  background-color: var(--color-white);
+  border-radius: var(--size-tiny);
+  padding: var(--size-lg) var(--size-md) var(--size-md);
+  border: 1px solid var(--color-grey200);
+  width: 500px;
+  box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.3);
 }
 
-.Modal_body {
-  @include font-size-in-rem(1.6);
-  @include color(grey600);
+.actions {
+  margin-top: var(--size-md);
+  display: flex;
+  justify-content: flex-end;
 }
 
-.Modal_actions {
-  @include margin(top, md);
-  @include display-flex();
-  @include justify-content(flex-end);
-  & > * {
-    @include margin(right, sm);
-    &:last-child {
-      @include margin(right, 0);
-    }
-  }
-} */
+.actions > div { margin-left: var(--size-sm); }
+.actions > div:first-child { margin-left: 0; }
