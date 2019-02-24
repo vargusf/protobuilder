@@ -20,6 +20,7 @@ const Sidebar = () => {
 				<li><NavLink to="/proto/button" className={style.link} activeClassName={style.linkActive}>Button</NavLink></li>
 				<li><NavLink to="/proto/spinner" className={style.link} activeClassName={style.linkActive}>Spinner</NavLink></li>
 				<li><NavLink to="/proto/modal" className={style.link} activeClassName={style.linkActive}>Modal</NavLink></li>
+				<li><NavLink to="/proto/icon" className={style.link} activeClassName={style.linkActive}>Icon</NavLink></li>
 			</ul>
 		</div>
 	)

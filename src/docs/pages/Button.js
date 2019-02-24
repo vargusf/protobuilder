@@ -20,6 +20,7 @@ const PageButton = () => (
 					<div><Button color="secondary">Secondary</Button></div>
 					<div><Button color="tertiary">Tertiary</Button></div>
 					<div><Button color="grey">Grey</Button></div>
+					<div><Button color="white">White</Button></div>
 					<div><Button color="info">Info</Button></div>
 					<div><Button color="success">Success</Button></div>
 					<div><Button color="warning">Warning</Button></div>
@@ -31,6 +32,7 @@ const PageButton = () => (
 				<div>{`<Button color="secondary">Secondary</Button>`}</div>
 				<div>{`<Button color="tertiary">Tertiary</Button>`}</div>
 				<div>{`<Button color="grey">Grey</Button>`}</div>
+				<div>{`<Button color="white">White</Button>`}</div>
 				<div>{`<Button color="info">Info</Button>`}</div>
 				<div>{`<Button color="success">Success</Button>`}</div>
 				<div>{`<Button color="warning">Warning</Button>`}</div>
@@ -180,6 +182,7 @@ const PageButton = () => (
 
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
+				<h3 className={style.docHeading3}>Horizontal</h3>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
 					<div><Button>Button</Button></div>
 					<div><Button type="link" to="">Link</Button></div>
@@ -187,6 +190,13 @@ const PageButton = () => (
 					<div><Button type="submit">Submit</Button></div>
 					<div><Button type="reset">Reset</Button></div>
 				</div>
+				<h3 className={`${style.docHeading3} ${protoStyle.marginTopXsm}`}>Vertical</h3>
+				<div><Button>Button</Button></div>
+				<div className={protoStyle.marginTopXsm}><Button type="link" to="">Link</Button></div>
+				<div className={protoStyle.marginTopXsm}><Button type="href">Href</Button></div>
+				<div className={protoStyle.marginTopXsm}><Button type="submit">Submit</Button></div>
+				<div className={protoStyle.marginTopXsm}><Button type="reset">Reset</Button></div>
+
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Button>Button</Button>`}</div>

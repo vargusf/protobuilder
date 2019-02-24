@@ -9,10 +9,10 @@ const Button = ({
   color = 'primary',
   border = 'true',
   size = 'md',
-  fullwidth = false,
-  rounded = false,
-  disabled = false,
-  circle = false,
+  fullwidth = 'false',
+  rounded = 'false',
+  disabled = 'false',
+  circle = 'false',
   to = null,
   target = '_self',
 	onClick = () => {},
@@ -33,11 +33,11 @@ const Button = ({
   if (disabled == "true") onClick = null;
 
   if (type == "link") {
-    return <Link to={to} onClick={onClick} className={classes}>{children}</Link>
+    return <div className={style.buttonContainer}><Link to={to} onClick={onClick} className={classes}>{children}</Link></div>
   } else if (type == "href") {
-    return <a href={to} onClick={onClick} className={classes} target={target}>{children}</a>
+    return <div className={style.buttonContainer}><a href={to} onClick={onClick} className={classes} target={target}>{children}</a></div>
   } else {
-    return <button onClick={onClick} className={classes} type={type}>{children}</button>
+    return <div className={style.buttonContainer}><button onClick={onClick} className={classes} type={type}>{children}</button></div>
   }
 }
 
