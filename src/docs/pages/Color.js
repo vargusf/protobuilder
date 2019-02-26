@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';

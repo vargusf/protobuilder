@@ -1,0 +1,24 @@
+.progress {
+	position: relative;
+	height: 6px;
+	width: 100%;
+	border-radius: 100px;
+	background-color: var(--color-grey300);
+}
+
+.inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	border-radius: 100px;
+}
+
+.color_primary .inner   { background: var(--color-primary); }
+.color_secondary .inner { background: var(--color-secondary); }
+.color_tertiary .inner  { background: var(--color-tertiary); }
+.color_grey .inner      { background: var(--color-grey800); }
+.color_info .inner      { background: var(--color-info); }
+.color_warning .inner   { background: var(--color-warning); }
+.color_success .inner   { background: var(--color-success); }
+.color_error .inner     { background: var(--color-error); }
