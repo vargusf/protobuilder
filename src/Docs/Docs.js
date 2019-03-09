@@ -6,6 +6,7 @@ import Sidebar from './sidebar/Sidebar';
 
 import PageColor from './pages/Color';
 import PageText from './pages/Text';
+import PageLayout from './pages/Layout';
 import PageAlert from './pages/Alert';
 import PageButton from './pages/Button';
 import PageSpinner from './pages/Spinner';
@@ -23,9 +24,10 @@ class Docs extends Component {
 				<Header />
 				<div className={`${protoStyle.displayFlex} ${protoStyle.flexGrow1}`}>
 					<div className={protoStyle.colWidth20}><Sidebar /></div>
-					<div className={` ${protoStyle.colWidth80} ${protoStyle.paddingLg} `}>
+					<div className={`${protoStyle.colWidth80} ${protoStyle.paddingLg}`}>
 						<Route exact path='/proto/color' component={PageColor} />
 						<Route exact path='/proto/text' component={PageText} />
+						<Route exact path='/proto/layout' component={PageLayout} />
 						<Route exact path='/proto/button' component={PageButton} />
 						<Route exact path='/proto/alert' component={PageAlert} />
 						<Route exact path='/proto/spinner' component={PageSpinner} />

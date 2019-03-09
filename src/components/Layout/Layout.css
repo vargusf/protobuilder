@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.gutter_zero > * { padding-left: var(--size-zero); padding-right: var(--size-zero); }
+.gutter_zero > :first-child { padding-left: var(--size-zero); }
+.gutter_zero > :last-child { padding-right: var(--size-zero); }
+.gutter_xsm > * { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }
+.gutter_xsm > :first-child { padding-left: var(--size-zero); }
+.gutter_xsm > :last-child { padding-right: var(--size-zero); }
+.gutter_sm > * { padding-left: var(--size-sm); padding-right: var(--size-sm); }
+.gutter_sm > :first-child { padding-left: var(--size-zero); }
+.gutter_sm > :last-child { padding-right: var(--size-zero); }
+.gutter_md > * { padding-left: var(--size-md); padding-right: var(--size-md); }
+.gutter_md > :first-child { padding-left: var(--size-zero); }
+.gutter_md > :last-child { padding-right: var(--size-zero); }
+.gutter_lg > * { padding-left: var(--size-lg); padding-right: var(--size-lg); }
+.gutter_lg > :first-child { padding-left: var(--size-zero); }
+.gutter_lg > :last-child { padding-right: var(--size-zero); }
+.gutter_xlg > * { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }
+.gutter_xlg > :first-child { padding-left: var(--size-zero); }
+.gutter_xlg > :last-child { padding-right: var(--size-zero); }
+.gutter_xxlg > * { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }
+.gutter_xxlg > :first-child { padding-left: var(--size-zero); }
+.gutter_xxlg > :last-child { padding-right: var(--size-zero); }
+.gutter_jumbo > * { padding-left: var(--size-jumbo); padding-right: var(--size-jumbo); }
+.gutter_jumbo > :first-child { padding-left: var(--size-zero); }
+.gutter_jumbo > :last-child { padding-right: var(--size-zero); }
+
+.wrap_true    { flex-wrap: wrap; }
+.wrap_false   { flex-wrap: nowrap; }
+.wrap_reverse { flex-wrap: wrap-reverse; }
+
+.alignItems_stretch { align-items: stretch; }
+.alignItems_center  { align-items: center; }
+.alignItems_start   { align-items: flex-start; }
+.alignItems_end     { align-items: flex-end; }
+
+.justifyContent_start   { justify-content: flex-start; }
+.justifyContent_end     { justify-content: flex-end; }
+.justifyContent_center  { justify-content: center; }
+.justifyContent_between { justify-content: space-between; }
