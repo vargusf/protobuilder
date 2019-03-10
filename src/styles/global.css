@@ -19,7 +19,7 @@
 .marginTopXlg        { margin-top: var(--size-xlg); }
 .marginTopXxlg       { margin-top: var(--size-xxlg); }
 .marginTopJumbo      { margin-top: var(--size-jumbo); }
-.marginRight-Zero    { margin-right: var(--size-zero); }
+.marginRightZero     { margin-right: var(--size-zero); }
 .marginRightTiny     { margin-right: var(--size-tiny); }
 .marginRightXxsm     { margin-right: var(--size-xxsm); }
 .marginRightXsm      { margin-right: var(--size-xsm); }
@@ -39,7 +39,7 @@
 .marginBottomXlg     { margin-bottom: var(--size-xlg); }
 .marginBottomXxlg    { margin-bottom: var(--size-xxlg); }
 .marginBottomJumbo   { margin-bottom: var(--size-jumbo); }
-.marginLeft-Zero     { margin-left: var(--size-zero); }
+.marginLeftZero      { margin-left: var(--size-zero); }
 .marginLeftTiny      { margin-left: var(--size-tiny); }
 .marginLeftXxsm      { margin-left: var(--size-xxsm); }
 .marginLeftXsm       { margin-left: var(--size-xsm); }
@@ -60,7 +60,7 @@
 .marginSidesXlg      { margin-left: var(--size-xlg); margin-right: var(--size-xlg); }
 .marginSidesXxlg     { margin-left: var(--size-xxlg); margin-right: var(--size-xxlg); }
 .marginsidesJumbo    { margin-left: var(--size-jumbo); margin-right: var(--size-jumbo); }
-.marginEnds-Zero     { margin-top: var(--size-zero); margin-bottom: var(--size-zero); }
+.marginEndsZero      { margin-top: var(--size-zero); margin-bottom: var(--size-zero); }
 .marginEndsTiny      { margin-top: var(--size-tiny); margin-bottom: var(--size-tiny); }
 .marginEndsXxsm      { margin-top: var(--size-xxsm); margin-bottom: var(--size-xxsm); }
 .marginEndsXsm       { margin-top: var(--size-xsm); margin-bottom: var(--size-xsm); }
@@ -172,10 +172,7 @@
 .flexNowrap          { flex-wrap: nowrap; }
 .flexWrapReverse     { flex-wrap: wrap-reverse; }
 .flexGrow1           { flex-grow: 1; }
-.fixedWidth          { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }
-.flexCentered        { display: flex; justify-content: center; align-items: center; }
 .width100            { width: 100% }
-.minHeight100vh      { min-height: 100vh; }
 
 /* Float */
 .floatLeft  { float: left; }
@@ -429,6 +426,9 @@
 
 /* to be deprecated */
 
+.fixedWidth          { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }
+.flexCentered        { display: flex; justify-content: center; align-items: center; }
+.minHeight100vh      { min-height: 100vh; }
 
 /* Gutters */
 .colsGutterXsm > * { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Progress = exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Alert = exports.Docs = exports.protoStyle = undefined;
+exports.Progress = exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Alert = exports.Row = exports.Col = exports.Container = exports.Docs = exports.protoStyle = undefined;
 
 var _global = require('./styles/global.css');
 
@@ -12,6 +12,8 @@ var _global2 = _interopRequireDefault(_global);
 var _Docs = require('./docs/Docs');
 
 var _Docs2 = _interopRequireDefault(_Docs);
+
+var _Layout = require('./components/Layout/Layout');
 
 var _Alert = require('./components/Alert/Alert');
 
@@ -39,6 +41,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.protoStyle = _global2.default;
 exports.Docs = _Docs2.default;
+exports.Container = _Layout.Container;
+exports.Col = _Layout.Col;
+exports.Row = _Layout.Row;
 exports.Alert = _Alert2.default;
 exports.Button = _Button2.default;
 exports.Spinner = _Spinner2.default;

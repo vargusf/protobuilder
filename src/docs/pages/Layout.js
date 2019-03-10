@@ -28,23 +28,35 @@ class PageLayout extends Component {
 
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
+						<h3 className={style.docHeading3}>Fixed Width</h3>
+						<Container fixedWidth="true">
+							<div className={style.itemTint}>fixedWidth</div>
+						</Container>
+						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Centered</h3>
+						<Container centered="true">
+							<div className={style.itemTint}>centered</div>
+						</Container>
+						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Height</h3>
 						<Container height="200">
-							<Row>
-								<Col width="200">
-									<div className={style.colTint}>1</div>
-								</Col>
-								<Col>
-									<div className={style.colTint}>2</div>
-								</Col>
-							</Row>
-
+							<div className={style.itemTint}>height 200px</div>
+						</Container>
+						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Min Height 100vh</h3>
+						<Container min100vh="true">
+							<div className={style.itemTint}>min100vh</div>
+						</Container>
+						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Background Color</h3>
+						<Container backgroundColor="primary" height="100">
+							<div className={style.itemTintColored}>primary</div>
 						</Container>
 					</div>
 					<div className={style.docboxCode}>
-						<div>{`<Container></Container>`}</div>
+						<div>{`<Container fixedWidth="true"></Container>`}</div>
+						<div>{`<Container centered="true"></Container>`}</div>
+						<div>{`<Container height="200" centered="true"></Container>`}</div>
+						<div>{`<Container min100vh="true" centered="true"></Container>`}</div>
+						<div>{`<Container backgroundColor="primary"></Container>`}</div>
 					</div>
 				</div>
-
 
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>

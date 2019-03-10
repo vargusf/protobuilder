@@ -58,6 +58,26 @@
 	border-bottom-right-radius: var(--size-xxsm);
 }
 
+.itemTint {
+	border-radius: var(--size-tiny);
+	background-color: var(--color-grey100);
+	padding: 20px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.itemTintColored {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	color: white;
+}
+
 .colTint {
 	border-radius: var(--size-tiny);
 	background-color: var(--color-grey100);

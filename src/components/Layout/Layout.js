@@ -4,25 +4,29 @@ import protoStyle from '../../styles/global.css';
 import style from './Layout.css';
 
 const Container = ({
-	fixedWidth = false,
-	centered = false,
-	height = null, // null|min100vh|number
+	fixedWidth = "false",
+	centered = "false",
+	height = null, // null|number
+	min100vh = "false",
+	backgroundColor = "", // color
+	grow = null, // null|true
 	children
 }) => {
-	const fixedWidthClass = fixedWidth ? 'fixedWidth' : null;
-	const centeredClass = centered ? 'flexCentered' : null;
-
 	const classes = `
-		${protoStyle[fixedWidthClass]}
-		${protoStyle[centeredClass]}
+		${style.container}
+		${style['fixedWidth_' + fixedWidth]}
+		${style['centered_' + centered]}
+		${style['min100vh_' + min100vh]}
+		${style['grow_' + grow]}
+		${protoStyle['backgroundColor' + backgroundColor.charAt(0).toUpperCase() + backgroundColor.slice(1)]}
 	`;
 
-	const style = {
+	const inlineStyle = {
 		height: height + "px",
 	};
 
 	return (
-		<div className={classes} style={style}>
+		<div className={classes} style={inlineStyle}>
 			{children}
 		</div>
 	);
@@ -31,16 +35,24 @@ const Container = ({
 const Row = ({
 	gutter = "md", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	wrap = "false", // true|false|reverse
-	align = 'center', // stretch|center|start|end
-	justify = 'start', // start|end|center|between
+	align = "center", // stretch|center|start|end
+	justify = "start", // start|end|center|between
+	paddingTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
+	paddingBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
+	marginTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
+	marginBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	children
 }) => {
 	const classes = `
-		${protoStyle.displayFlex}
+		${style.row}
 		${style['gutter_' + gutter]}
 		${style['wrap_' + wrap]}
 		${style['alignItems_' + align]}
 		${style['justifyContent_' + justify]}
+		${protoStyle['paddingTop' + paddingTop.charAt(0).toUpperCase() + paddingTop.slice(1)]}
+		${protoStyle['paddingBottom' + paddingBottom.charAt(0).toUpperCase() + paddingBottom.slice(1)]}
+		${protoStyle['marginTop' + marginTop.charAt(0).toUpperCase() + marginTop.slice(1)]}
+		${protoStyle['marginBottom' + marginBottom.charAt(0).toUpperCase() + marginBottom.slice(1)]}
 	`;
 
 	return (
