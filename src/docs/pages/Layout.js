@@ -82,6 +82,9 @@ class PageLayout extends Component {
 								<Col grow="auto">
 									<div className={style.colTint}>2</div>
 								</Col>
+								<Col grow="auto">
+									<div className={style.colTint}>2</div>
+								</Col>
 							</Row>
 
 							<Row justify="end">
