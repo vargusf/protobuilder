@@ -48,13 +48,18 @@ class PageLayout extends Component {
 						<Container backgroundColor="primary" height="100">
 							<div className={style.itemTintColored}>primary</div>
 						</Container>
+						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Grow</h3>
+						<Container grow="true">
+							<div className={style.itemTint}>grow</div>
+						</Container>
 					</div>
 					<div className={style.docboxCode}>
 						<div>{`<Container fixedWidth="true"></Container>`}</div>
 						<div>{`<Container centered="true"></Container>`}</div>
-						<div>{`<Container height="200" centered="true"></Container>`}</div>
-						<div>{`<Container min100vh="true" centered="true"></Container>`}</div>
+						<div>{`<Container height="200"></Container>`}</div>
+						<div>{`<Container min100vh="true"></Container>`}</div>
 						<div>{`<Container backgroundColor="primary"></Container>`}</div>
+						<div>{`<Container grow="true"></Container>`}</div>
 					</div>
 				</div>
 

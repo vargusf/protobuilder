@@ -35,12 +35,13 @@ const Container = ({
 const Row = ({
 	gutter = "md", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	wrap = "false", // true|false|reverse
-	align = "center", // stretch|center|start|end
+	align = "stretch", // stretch|center|start|end
 	justify = "start", // start|end|center|between
 	paddingTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	paddingBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	marginTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	marginBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
+	grow = null, // null|true
 	children
 }) => {
 	const classes = `
@@ -49,6 +50,7 @@ const Row = ({
 		${style['wrap_' + wrap]}
 		${style['alignItems_' + align]}
 		${style['justifyContent_' + justify]}
+		${style['grow_' + grow]}
 		${protoStyle['paddingTop' + paddingTop.charAt(0).toUpperCase() + paddingTop.slice(1)]}
 		${protoStyle['paddingBottom' + paddingBottom.charAt(0).toUpperCase() + paddingBottom.slice(1)]}
 		${protoStyle['marginTop' + marginTop.charAt(0).toUpperCase() + marginTop.slice(1)]}
@@ -69,7 +71,7 @@ const Col = ({
 	children
 }) => {
 	const spacing = width ? width + "px" : ( percent ? percent + "%" : null );
-	const flexBasis = spacing ? spacing : 0;
+	const flexBasis = spacing ? spacing : ( grow == "auto" ? "auto" : 0 );
 	const minWidth = spacing ? spacing : null;
 	const colGrow = spacing ? "auto" : grow;
 

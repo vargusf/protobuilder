@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-
-import Header from './header/Header';
-import Sidebar from './sidebar/Sidebar';
+import { Route, NavLink } from 'react-router-dom';
 
 import PageColor from './pages/Color';
 import PageText from './pages/Text';
@@ -13,29 +10,53 @@ import PageSpinner from './pages/Spinner';
 import PageModal from './pages/Modal';
 import PageProgress from './pages/Progress';
 
+import { Container, Col, Row } from '../../index';
+
 import protoStyle from '../styles/global.css';
 import style from './Docs.css';
-
 
 class Docs extends Component {
 	render() {
 		return (
-			<div className={style.docContainer}>
-				<Header />
-				<div className={`${protoStyle.displayFlex} ${protoStyle.flexGrow1}`}>
-					<div className={protoStyle.colWidth20}><Sidebar /></div>
-					<div className={`${protoStyle.colWidth80} ${protoStyle.paddingLg}`}>
-						<Route exact path='/proto/color' component={PageColor} />
-						<Route exact path='/proto/text' component={PageText} />
-						<Route exact path='/proto/layout' component={PageLayout} />
-						<Route exact path='/proto/button' component={PageButton} />
-						<Route exact path='/proto/alert' component={PageAlert} />
-						<Route exact path='/proto/spinner' component={PageSpinner} />
-						<Route exact path='/proto/modal' component={PageModal} />
-						<Route exact path='/proto/progress' component={PageProgress} />
-					</div>
+			<Container min100vh="true">
+				<div className={style.header}>
+					<div className={style.logo}></div>
 				</div>
-			</div>
+				<Container grow="true">
+					<Row grow="true">
+						<Col width="300">
+							<div className={style.sidebar_container}>
+								<div className={` ${protoStyle.fontsizeHeading6} ${protoStyle.marginBottomSm} `}>Basic</div>
+								<ul className={protoStyle.marginBottomLg}>
+									<li><NavLink to="/proto/color" className={style.link} activeClassName={style.linkActive}>Color</NavLink></li>
+									<li><NavLink to="/proto/text" className={style.link} activeClassName={style.linkActive}>Text</NavLink></li>
+									<li><NavLink to="/proto/layout" className={style.link} activeClassName={style.linkActive}>Layout</NavLink></li>
+								</ul>
+
+								<div className={` ${protoStyle.fontsizeHeading6} ${protoStyle.marginBottomSm} `}>Components</div>
+								<ul className={protoStyle.marginBottomLg}>
+									<li><NavLink to="/proto/alert" className={style.link} activeClassName={style.linkActive}>Alert</NavLink></li>
+									<li><NavLink to="/proto/button" className={style.link} activeClassName={style.linkActive}>Button</NavLink></li>
+									<li><NavLink to="/proto/spinner" className={style.link} activeClassName={style.linkActive}>Spinner</NavLink></li>
+									<li><NavLink to="/proto/modal" className={style.link} activeClassName={style.linkActive}>Modal</NavLink></li>
+									<li><NavLink to="/proto/icon" className={style.link} activeClassName={style.linkActive}>Icon</NavLink></li>
+									<li><NavLink to="/proto/progress" className={style.link} activeClassName={style.linkActive}>Progress</NavLink></li>
+								</ul>
+							</div>
+						</Col>
+						<Col>
+							<Route exact path='/proto/color' component={PageColor} />
+							<Route exact path='/proto/text' component={PageText} />
+							<Route exact path='/proto/layout' component={PageLayout} />
+							<Route exact path='/proto/button' component={PageButton} />
+							<Route exact path='/proto/alert' component={PageAlert} />
+							<Route exact path='/proto/spinner' component={PageSpinner} />
+							<Route exact path='/proto/modal' component={PageModal} />
+							<Route exact path='/proto/progress' component={PageProgress} />
+						</Col>
+					</Row>
+				</Container>
+			</Container>
 		);
 	}
 }
