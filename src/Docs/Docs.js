@@ -23,7 +23,7 @@ class Docs extends Component {
 					<div className={style.logo}></div>
 				</div>
 				<Container grow="true">
-					<Row grow="true">
+					<Row grow="true" gutter="zero">
 						<Col width="300">
 							<div className={style.sidebar_container}>
 								<div className={` ${protoStyle.fontsizeHeading6} ${protoStyle.marginBottomSm} `}>Basic</div>
@@ -44,15 +44,21 @@ class Docs extends Component {
 								</ul>
 							</div>
 						</Col>
-						<Col>
-							<Route exact path='/proto/color' component={PageColor} />
-							<Route exact path='/proto/text' component={PageText} />
-							<Route exact path='/proto/layout' component={PageLayout} />
-							<Route exact path='/proto/button' component={PageButton} />
-							<Route exact path='/proto/alert' component={PageAlert} />
-							<Route exact path='/proto/spinner' component={PageSpinner} />
-							<Route exact path='/proto/modal' component={PageModal} />
-							<Route exact path='/proto/progress' component={PageProgress} />
+						<Col grow="1">
+							<Container fixedWidth="true">
+								<Row paddingTop="lg">
+									<Col grow="1">
+										<Route exact path='/proto/color' component={PageColor} />
+										<Route exact path='/proto/text' component={PageText} />
+										<Route exact path='/proto/layout' component={PageLayout} />
+										<Route exact path='/proto/button' component={PageButton} />
+										<Route exact path='/proto/alert' component={PageAlert} />
+										<Route exact path='/proto/spinner' component={PageSpinner} />
+										<Route exact path='/proto/modal' component={PageModal} />
+										<Route exact path='/proto/progress' component={PageProgress} />
+									</Col>
+								</Row>
+							</Container>
 						</Col>
 					</Row>
 				</Container>

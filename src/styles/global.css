@@ -408,12 +408,34 @@
 .borderRadiusLeftXxlg         { border-top-left-radius: var(--size-xxlg); border-bottom-left-radius: var(--size-xxlg); }
 .borderRadiusLeftJumbo        { border-top-left-radius: var(--size-jumbo); border-bottom-left-radius: var(--size-jumbo); }
 
-/* Z Index */
+/* Z index */
 .zIndex1 { z-index: 1; }
 .zIndex2 { z-index: 2; }
 .zIndex3 { z-index: 3; }
 .zIndex4 { z-index: 4; }
 .zIndex5 { z-index: 5; }
+
+/* Clamp text */
+.clampLine { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.clampLines {
+	overflow: hidden;
+	white-space: normal;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: inherit;
+}
+.clampLines2 { -webkit-line-clamp: 2; }
+.clampLines3 { -webkit-line-clamp: 3; }
+.clampLines4 { -webkit-line-clamp: 4; }
+.clampLines5 { -webkit-line-clamp: 5; }
+
+/* Break long strings */
+.breakLongStrings {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-word;
+	-moz-hyphens: auto;
+}
 
 
 

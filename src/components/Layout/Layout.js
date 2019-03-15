@@ -67,7 +67,7 @@ const Row = ({
 const Col = ({
 	width = null, // null|number
 	percent = null, // null|number
-	grow = 1, // null|number|auto
+	grow = "auto", // null|number|auto
 	children
 }) => {
 	const spacing = width ? width + "px" : ( percent ? percent + "%" : null );
