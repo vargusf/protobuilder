@@ -34,13 +34,13 @@ const Container = ({
 
 const Row = ({
 	gutter = "md", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
-	wrap = "false", // true|false|reverse
-	align = "stretch", // stretch|center|start|end
+	align = "stretch", // start|end|center|stretch
 	justify = "start", // start|end|center|between
-	paddingTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
-	paddingBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
+	wrap = "false", // true|false|reverse
 	marginTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	marginBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
+	paddingTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
+	paddingBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
 	grow = null, // null|true
 	children
 }) => {

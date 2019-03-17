@@ -13,6 +13,7 @@
 :root { --size-lg:    32px; }
 :root { --size-xlg:   48px; }
 :root { --size-xxlg:  64px; }
+:root { --size-jumbo: 128px; }
 
 :root { --elheight-sm: 28px; }
 :root { --elheight-md: 44px; }

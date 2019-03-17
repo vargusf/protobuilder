@@ -139,6 +139,9 @@ const PageColor = () => (
 						<div className={` ${protoStyle.fontPrimary} ${protoStyle.uppercase} `}>Uppercase</div>
 						<div className={` ${protoStyle.fontPrimary} ${protoStyle.capitalize} `}>Capitalize</div>
 						<div className={` ${protoStyle.fontPrimary} ${protoStyle.lineThrough} `}>Line Through</div>
+						<div><a className={` ${protoStyle.fontSecondary} ${protoStyle.linkUnderline} `}>Link Underline</a></div>
+						<div><a className={` ${protoStyle.fontSecondary} ${protoStyle.linkDarken} `}>Link Darken</a></div>
+						<div><a className={` ${protoStyle.fontSecondary} ${protoStyle.linkLighten} `}>Link Lighten</a></div>
 					</div>
 					<div className={style.docboxCode}>
 						<div>.italic</div>
@@ -146,6 +149,9 @@ const PageColor = () => (
 						<div>.uppercase</div>
 						<div>.capitalize</div>
 						<div>.lineThrough</div>
+						<div>.linkUnderline</div>
+						<div>.linkDarken</div>
+						<div>.linkLighten</div>
 					</div>
 				</div>
 			</div>
@@ -158,6 +164,9 @@ const PageColor = () => (
 						<div className={` ${protoStyle.fontSecondary} ${protoStyle.uppercase} `}>Uppercase</div>
 						<div className={` ${protoStyle.fontSecondary} ${protoStyle.capitalize} `}>Capitalize</div>
 						<div className={` ${protoStyle.fontSecondary} ${protoStyle.lineThrough} `}>Line Through</div>
+						<div><a className={` ${protoStyle.fontSecondary} ${protoStyle.linkUnderline} `}>Link Underline</a></div>
+						<div><a className={` ${protoStyle.fontSecondary} ${protoStyle.linkDarken} `}>Link Darken</a></div>
+						<div><a className={` ${protoStyle.fontSecondary} ${protoStyle.linkLighten} `}>Link Lighten</a></div>
 					</div>
 					<div className={style.docboxCode}>
 						<div>.italic</div>
@@ -165,6 +174,9 @@ const PageColor = () => (
 						<div>.uppercase</div>
 						<div>.capitalize</div>
 						<div>.lineThrough</div>
+						<div>.linkUnderline</div>
+						<div>.linkDarken</div>
+						<div>.linkLighten</div>
 					</div>
 				</div>
 			</div>

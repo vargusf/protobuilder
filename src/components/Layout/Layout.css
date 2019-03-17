@@ -26,9 +26,6 @@
 .gutter_xxlg > * { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }
 .gutter_xxlg > :first-child { padding-left: var(--size-zero); }
 .gutter_xxlg > :last-child { padding-right: var(--size-zero); }
-.gutter_jumbo > * { padding-left: var(--size-jumbo); padding-right: var(--size-jumbo); }
-.gutter_jumbo > :first-child { padding-left: var(--size-zero); }
-.gutter_jumbo > :last-child { padding-right: var(--size-zero); }
 
 .wrap_true    { flex-wrap: wrap; }
 .wrap_false   { flex-wrap: nowrap; }
