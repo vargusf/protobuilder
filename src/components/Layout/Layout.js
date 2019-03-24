@@ -2,35 +2,49 @@ import React from 'react';
 import styled from 'styled-components';
 import { getStyleConfig, getResponsiveObj } from '../../utils/utils';
 
-import protoStyle from '../../styles/global.css';
-import style from './Layout.css';
-
 const Container = ({
-	fixedWidth = "false",
-	centered = "false",
-	height = null, // null|number
-	min100vh = "false",
-	backgroundColor = "", // color
-	grow = null, // null|true
+	height = "auto", // "[number(%|px)]"|"auto", default: "auto"
+	fixedWidth = "false", // "false"|"true", default: false
+	centered = "false", // "false"|"true", default: false
+	min100vh = "false", // "false"|"true", default: false
+	grow = "0", //  "0"|"1", default: "0"
+	backgroundColor = "none", // "none"|config.size, default: "none"
 	children
 }) => {
-	const classes = `
-		${style.container}
-		${style['fixedWidth_' + fixedWidth]}
-		${style['centered_' + centered]}
-		${style['min100vh_' + min100vh]}
-		${style['grow_' + grow]}
-		${protoStyle['backgroundColor' + backgroundColor.charAt(0).toUpperCase() + backgroundColor.slice(1)]}
+
+	const ColStyles = size => {
+		return `
+			display: flex; 
+			flex-direction: column; 
+			width: 100%; 
+			position: relative;
+			height: ${getResponsiveObj(height)[size] == "auto" ? "auto" : getResponsiveObj(height)[size]};
+			max-width: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.maxWidth : "none"};
+			margin-left: ${getResponsiveObj(fixedWidth)[size] == "true" ? "auto" : 0}; 
+			margin-right: ${getResponsiveObj(fixedWidth)[size] == "true" ? "auto" : 0}; 
+			padding-left: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.sidePadding : 0};
+			padding-right: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.sidePadding : 0};
+			justify-content: ${getResponsiveObj(centered)[size] == "true" ? "center" : "flex-start"};
+			align-items: ${getResponsiveObj(centered)[size] == "true" ? "center" : "stretch"};
+			min-height: ${getResponsiveObj(min100vh)[size] == "true" ? "100vh" : 0};
+			flex-grow: ${getResponsiveObj(grow)[size]};
+			background-color: ${getResponsiveObj(backgroundColor)[size] == "none" ? "transparent" : getStyleConfig().color[getResponsiveObj(backgroundColor)[size]] };
+		`;
+	}
+
+	const ContainerDiv = styled.div`
+		${ColStyles("d")}
+		@media (max-width: ${getStyleConfig().breakpoint.xlg}) { ${ColStyles("xlg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${ColStyles("lg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${ColStyles("md")} }
+		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${ColStyles("sm")} }
+		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${ColStyles("xsm")} }
 	`;
 
-	const inlineStyle = {
-		height: height + "px",
-	};
-
 	return (
-		<div className={classes} style={inlineStyle}>
+		<ContainerDiv>
 			{children}
-		</div>
+		</ContainerDiv>
 	);
 }
 
@@ -82,30 +96,15 @@ const Row = ({
 }
 
 const Col = ({
-	width = null, // null|"[number(%|px)]"|("auto":  mobile), default: null
+	width = "auto", // "[number(%|px)]"|"auto"|"grow", default: "auto"
 	grow = "0", // "0"|"1", default: "0"
 	children
 }) => {
-
-	let widthRes = {};
-	if (width == null) {
-		widthRes.d = null;
-	}
-	else if (typeof width == 'string') {
-		widthRes = { d: width, xsm: width, sm: width, md: width, lg: width, xlg: width };
-	} else if (typeof width == 'object') {
-		widthRes.d = width.d == "auto" ? 0 : width.d;
-		widthRes.xsm = width.xsm == "auto" ? 0 : (width.xsm ? width.xsm : (width.sm == "auto" ? 0 : (width.sm ? width.sm : (width.md == "auto" ? 0 : (width.md ? width.md : (width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)))))))));
-		widthRes.sm = width.sm == "auto" ? 0 : (width.sm ? width.sm : (width.md == "auto" ? 0 : (width.md ? width.md : (width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)))))));
-		widthRes.md = width.md == "auto" ? 0 : (width.md ? width.md : (width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)))));
-		widthRes.lg = width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)));
-		widthRes.xlg = width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d);
-	}
-
+	
 	const ColStyles = size => {
 		return `
-			flex-basis: ${widthRes[size] ? widthRes[size] : (getResponsiveObj(grow)[size] == 1 ? 0 : "auto")};
-			min-width: ${widthRes[size]};
+			flex-basis: ${getResponsiveObj(width)[size] == "auto" ? (getResponsiveObj(grow)[size] == 1 ? 0 : "auto") : (getResponsiveObj(width)[size] == "grow" ? 0 : getResponsiveObj(width)[size])}
+			min-width: ${(getResponsiveObj(width)[size] == "grow" || getResponsiveObj(width)[size] == "auto") ? 0 : getResponsiveObj(width)[size]};
 			flex-grow: ${getResponsiveObj(grow)[size]};
 		`;
 	}

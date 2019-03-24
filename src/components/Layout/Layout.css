@@ -1,4 +1,0 @@
-.container       { display: flex; flex-direction: column; width: 100%; position: relative; }
-.fixedWidth_true { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }
-.centered_true   { display: flex; justify-content: center; align-items: center; }
-.min100vh_true   { min-height: 100vh; }

@@ -4,7 +4,6 @@ import { Container, Row, Col } from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
-import { Z_BUF_ERROR } from 'zlib';
 
 class PageLayout extends Component {
 	constructor(props) {
@@ -38,7 +37,7 @@ class PageLayout extends Component {
 							<div className={style.itemTint}>centered</div>
 						</Container>
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Height</h3>
-						<Container height="200">
+						<Container height="200px">
 							<div className={style.itemTint}>height 200px</div>
 						</Container>
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Min Height 100vh</h3>
@@ -46,7 +45,7 @@ class PageLayout extends Component {
 							<div className={style.itemTint}>min100vh</div>
 						</Container>
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Background Color</h3>
-						<Container backgroundColor="primary" height="100">
+						<Container backgroundColor="primary" height="100px">
 							<div className={style.itemTintColored}>primary</div>
 						</Container>
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Grow</h3>
@@ -616,27 +615,13 @@ class PageLayout extends Component {
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Row marginBottom="sm">
-							<Col width={{ d: "200px", md: "70%", sm: "auto" }} grow={{ d: "0", md: "0", sm: "1" }}><div className={style.colTint}>Responsive</div></Col>
+							<Col width={{ d: "200px", md: "70%", sm: "grow" }} grow={{ d: "0", md: "0", sm: "1" }}><div className={style.colTint}>Responsive asl;kdfj asldkf jasldkf jasld ;fjals;kd fjsla; df</div></Col>
 							<Col grow={{ d: "1", md: "30%", sm: "1" }}><div className={style.colTint}>grow 1</div></Col>
 						</Row>
 					</div>
 					<div className={style.docboxCode}>
-						<div>{`<Col width={{ d: "200px", md: "70%", sm: "auto" }} grow={{ d: "0", md: "0", sm: "1" }}></Col>`}</div>
+						<div>{`<Col width={{ d: "200px", md: "70%", sm: "grow" }} grow={{ d: "0", md: "0", sm: "1" }}></Col>`}</div>
 						<div>{`<Col grow={{ d: "1", md: "30%", sm: "1" }}></Col>`}</div>
-					</div>
-				</div>
-
-				<h2 className={style.docHeading2}>Test Lab</h2>
-				<div className={style.docbox}>
-					<div className={style.docboxContent}>
-						<Row gutter={{d: "zero", md: "xlg"}}>
-							<Col grow="1"><div className={style.colTint}>Respon asdf asd fas dfsive</div></Col>
-							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
-						</Row>
-						<Row marginTop={{d:"zero", md: "xlg"}} gutter={{d: "zero", md: "xlg"}}>
-							<Col grow="1"><div className={style.colTint}>Respon asdf asd fas dfsive</div></Col>
-							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
-						</Row>
 					</div>
 				</div>
 
