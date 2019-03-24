@@ -559,96 +559,65 @@ class PageLayout extends Component {
 							<Col grow="1"><div className={style.colTint}>1</div></Col>
 							<Col grow="1"><div className={style.colTint}>1</div></Col>
 						</Row>
-						<h3 className={` ${style.docHeading3} ${protoStyle.paddingTopSm}`}>Auto</h3>
+						<h3 className={` ${style.docHeading3} ${protoStyle.paddingTopSm}`}>0 (Default)</h3>
 						<Row marginBottom="sm">
 							<Col grow="auto"><div className={style.colTint}>A Column</div></Col>
 							<Col grow="auto"><div className={style.colTint}>Just Another Larger Column</div></Col>
 						</Row>
-						<h3 className={` ${style.docHeading3} ${protoStyle.paddingTopSm}`}>Null</h3>
-						<Row marginBottom="sm">
-							<Col grow="null"><div className={style.colTint}>A Column</div></Col>
-							<Col grow="null"><div className={style.colTint}>Just Another Larger Column</div></Col>
-						</Row>
 					</div>
 					<div className={style.docboxCode}>
 						<div>{`<Col grow="1"></Col>`}</div>
-						<div>{`<Col grow="auto"></Col>`}</div>
-						<div>{`<Col grow="null"></Col>`}</div>
+						<div>{`<Col grow="0"></Col>`}</div>
 					</div>
 				</div>
 
-				<h2 className={style.docHeading2}>Col Width</h2>
+				<h2 className={style.docHeading2}>Width</h2>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Row marginBottom="sm">
-							<Col width="200"><div className={style.colTint}>200px</div></Col>
+							<Col width="200px"><div className={style.colTint}>200px</div></Col>
 							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
 						</Row>
 						<Row marginBottom="sm">
-							<Col width="400"><div className={style.colTint}>400px</div></Col>
+							<Col width="400px"><div className={style.colTint}>400px</div></Col>
 							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
 						</Row>
-						<Row>
-							<Col width="250"><div className={style.colTint}>250px</div></Col>
-							<Col width="250"><div className={style.colTint}>250px</div></Col>
-						</Row>
-					</div>
-					<div className={style.docboxCode}>
-						<div>{`<Col width="200"></Col>`}</div>
-						<div>{`<Col width="400"></Col>`}</div>
-						<div>{`<Col width="250"></Col>`}</div>
-					</div>
-				</div>
-
-				<h2 className={style.docHeading2}>Col Percent</h2>
-				<div className={style.docbox}>
-					<div className={style.docboxContent}>
 						<Row marginBottom="sm">
-							<Col percent="25"><div className={style.colTint}>25%</div></Col>
-							<Col percent="25"><div className={style.colTint}>25%</div></Col>
-							<Col percent="50"><div className={style.colTint}>50%</div></Col>
+							<Col width="150px"><div className={style.colTint}>150px</div></Col>
+							<Col width="250px"><div className={style.colTint}>250px</div></Col>
 						</Row>
 						<Row marginBottom="sm">
-							<Col percent="33.33"><div className={style.colTint}>33.33%</div></Col>
-							<Col percent="33.33"><div className={style.colTint}>33.33%</div></Col>
-							<Col percent="33.33"><div className={style.colTint}>33.33%</div></Col>
-						</Row>
-						<Row marginBottom="sm">
-							<Col percent="25"><div className={style.colTint}>25%</div></Col>
-							<Col percent="75"><div className={style.colTint}>75%</div></Col>
-						</Row>
-					</div>
-					<div className={style.docboxCode}>
-						<div>{`<Col percent="25"></Col>`}</div>
-						<div>{`<Col percent="33.33"></Col>`}</div>
-						<div>{`<Col percent="75"></Col>`}</div>
-					</div>
-				</div> */}
-
-
-				<h2 className={style.docHeading2}>Test Lab</h2>
-				<div className={style.docbox}>
-					<div className={style.docboxContent}>
-						{/* <Row marginBottom="sm">
 							<Col width="25%"><div className={style.colTint}>25%</div></Col>
 							<Col width="25%"><div className={style.colTint}>25%</div></Col>
 							<Col width="50%"><div className={style.colTint}>50%</div></Col>
 						</Row>
 						<Row marginBottom="sm">
-							<Col width="100px"><div className={style.colTint}>100px</div></Col>
-							<Col width="100px"><div className={style.colTint}>100px</div></Col>
+							<Col width="33.33%"><div className={style.colTint}>33.33%</div></Col>
+							<Col width="33.33%"><div className={style.colTint}>33.33%</div></Col>
+							<Col width="33.33%"><div className={style.colTint}>33.33%</div></Col>
 						</Row>
 						<Row marginBottom="sm">
-							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
-							<Col grow="1"><div className={style.colTint}>grow 1 - Minim eiusmod laboris sint temporasdfasdf sadfasdf asdf sad fasd fasd fsad fasdf .</div></Col>
+							<Col width="25%"><div className={style.colTint}>25%</div></Col>
+							<Col width="75%"><div className={style.colTint}>75%</div></Col>
 						</Row>
+					</div>
+					<div className={style.docboxCode}>
+						<div>{`<Col width="200px"></Col>`}</div>
+						<div>{`<Col width="400px"></Col>`}</div>
+						<div>{`<Col width="250px"></Col>`}</div>
+						<div>{`<Col width="25%"></Col>`}</div>
+						<div>{`<Col width="33.33%"></Col>`}</div>
+						<div>{`<Col width="75%"></Col>`}</div>
+
+					</div>
+				</div> */}
+
+				<h2 className={style.docHeading2}>Test Lab</h2>
+				<div className={style.docbox}>
+					<div className={style.docboxContent}>
 						<Row marginBottom="sm">
-							<Col width="100px"><div className={style.colTint}>100px</div></Col>
-							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
-						</Row> */}
-						<Row marginBottom="sm">
-							<Col width={{d: "50%", sm: "10%"}}><div className={style.colTint}>default: 50% / sm: 10%</div></Col>
-							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
+							<Col width={{ d: "200px", sm: "auto", md: "70%" }} grow={{ d: "0", sm: "1", md: "0" }}><div className={style.colTint}>default: 50% / sm: 10%</div></Col>
+							<Col grow={{ d: "1", sm: "1", md: "30%" }}><div className={style.colTint}>grow 1</div></Col>
 						</Row>
 					</div>
 				</div>

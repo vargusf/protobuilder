@@ -66,47 +66,42 @@ const Row = ({
 }
 
 const Col = ({
-	width = null, // null|number(%|px)
+	width = null, // null|number(%|px)|(auto: if mobile)
 	grow = "0", // 0|1
 	children
 }) => {
-
 	let widthRes = {};
 	if (width == null) {
 		widthRes.d = null;
 	}
 	else if (typeof width == 'string') {
-		widthRes.d = width;
-		widthRes.xsm = width;
-		widthRes.sm = width;
-		widthRes.md = width;
-		widthRes.lg = width;
-		widthRes.xlg = width;
+		widthRes = { d: width, xsm: width, sm: width, md: width, lg: width, xlg: width };
 	} else if (typeof width == 'object') {
-		widthRes.d = width.d;
-		widthRes.xsm = width.xsm ? width.xsm : width.d;
-		widthRes.sm = width.sm ? width.sm : width.d;
-		widthRes.md = width.md ? width.md : width.d;
-		widthRes.lg = width.lg ? width.lg : width.d;
-		widthRes.xlg = width.xlg ? width.xlg : width.d;
+		widthRes.d = width.d == "auto" ? 0 : width.d;
+		widthRes.xsm = width.xsm == "auto" ? 0 : (width.xsm ? width.xsm : (width.sm ? width.sm : (width.md ? width.md : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d)))));
+		widthRes.sm = width.sm == "auto" ? 0 : (width.sm ? width.sm : (width.md ? width.md : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d))));
+		widthRes.md = width.md == "auto" ? 0 : (width.md ? width.md : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d)));
+		widthRes.lg = width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d));
+		widthRes.xlg = width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d);
 	}
-
-	console.log(widthRes);
 
 	let growRes = {};
 	if (typeof grow == 'string') {
-		growRes.d = grow;
-		growRes.xsm = grow;
-		growRes.sm = grow;
-		growRes.md = grow;
-		growRes.lg = grow;
-		growRes.xlg = grow;
+		growRes = {
+			d: grow,
+			xsm: grow,
+			sm: grow,
+			md: grow,
+			lg: grow,
+			xlg: grow,
+
+		};
 	} else if (typeof grow == 'object') {
 		growRes.d = grow.d;
-		growRes.xsm = grow.xsm ? grow.xsm : grow.d;
-		growRes.sm = grow.sm ? grow.sm : grow.d;
-		growRes.md = grow.md ? grow.md : grow.d;
-		growRes.lg = grow.lg ? grow.lg : grow.d;
+		growRes.xsm = grow.xsm ? grow.xsm : (grow.sm ? grow.sm : (grow.md ? grow.md : (grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d))));
+		growRes.sm = grow.sm ? grow.sm : (grow.md ? grow.md : (grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d)));
+		growRes.md = grow.md ? grow.md : (grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d));
+		growRes.lg = grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d);
 		growRes.xlg = grow.xlg ? grow.xlg : grow.d;
 	}
 
@@ -122,41 +117,35 @@ const Col = ({
 		flex-basis: ${widthRes.d ? widthRes.d : (growRes.d == 1 ? 0 : "auto")};
 		min-width: ${widthRes.d};
 		flex-grow: ${growRes.d};
-		background: red;
 
 		@media (max-width: ${breakpoint.xlg}px) {
 			flex-basis: ${widthRes.xlg ? widthRes.xlg : (growRes.xlg == 1 ? 0 : "auto")};
 			min-width: ${widthRes.xlg};
 			flex-grow: ${growRes.xlg};
-			background: green;
 		}
 		
 		@media (max-width: ${breakpoint.lg}px) {
 			flex-basis: ${widthRes.lg ? widthRes.lg : (growRes.lg == 1 ? 0 : "auto")};
 			min-width: ${widthRes.lg};
 			flex-grow: ${growRes.lg};
-			background: green;
 		}
 		
 		@media (max-width: ${breakpoint.md}px) {
 			flex-basis: ${widthRes.md ? widthRes.md : (growRes.md == 1 ? 0 : "auto")};
 			min-width: ${widthRes.md};
 			flex-grow: ${growRes.md};
-			background: green;
 		}
 
 		@media (max-width: ${breakpoint.sm}px) {
 			flex-basis: ${widthRes.sm ? widthRes.sm : (growRes.sm == 1 ? 0 : "auto")};
 			min-width: ${widthRes.sm};
 			flex-grow: ${growRes.sm};
-			background: yellow;
 		}
 
 		@media (max-width: ${breakpoint.xsm}px) {
 			flex-basis: ${widthRes.xsm ? widthRes.xsm : (growRes.xsm == 1 ? 0 : "auto")};
 			min-width: ${widthRes.xsm};
 			flex-grow: ${growRes.xsm};
-			background: blue;
 		}
 	`;
 
