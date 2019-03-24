@@ -192,8 +192,8 @@
 .alignEnd            { align-items: flex-end; }
 .alignBaseline       { align-items: baseline; }
 .alignSelfStart      { align-self: flex-start; }
-.alignSelf-end       { align-self: flex-end; }
-.alignSelf-center    { align-self: center; }
+.alignSelfEnd        { align-self: flex-end; }
+.alignSelfCenter    { align-self: center; }
 .flexDirectionRow    { display: flex; flex-direction: row; }
 .flexDirectionColumn { display: flex; flex-direction: column; }
 .flexWrap            { flex-wrap: wrap; }

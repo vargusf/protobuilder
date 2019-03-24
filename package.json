@@ -4,8 +4,7 @@
   "description": "Rapid Prototyping & Development",
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run watch",
-    "dev": "webpack-dev-server --open --config ./dev/config/webpack.config.js",
+    "start": "webpack-dev-server --open --config ./dev/config/webpack.config.js",
     "watch": "npm run transpile && onchange 'src/**/*.js' 'src/**/*.css' -- npm run transpile",
     "transpile": "babel src -d dist --copy-files",
     "dist": "npm run transpile && git add . && git commit -m 'update' && git push && npm version patch && npm publish"
@@ -46,6 +45,7 @@
     "react-dom": "16.4.2",
     "react-router-dom": "^4.3.1",
     "style-loader": "^0.23.1",
+    "styled-components": "^4.2.0",
     "webpack": "4.16.1",
     "webpack-cli": "3.0.8"
   },

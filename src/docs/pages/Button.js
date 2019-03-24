@@ -12,7 +12,6 @@ const PageButton = () => (
 		<h1 className={style.docHeading1}>Button</h1>
 
 		<h2 className={style.docHeading2}>Colors</h2>
-
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
@@ -41,7 +40,6 @@ const PageButton = () => (
 		</div>
 
 		<h2 className={style.docHeading2}>No Fill</h2>
-
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
@@ -68,7 +66,6 @@ const PageButton = () => (
 		</div>
 
 		<h2 className={style.docHeading2}>No Border</h2>
-
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
@@ -95,7 +92,6 @@ const PageButton = () => (
 		</div>
 
 		<h2 className={style.docHeading2}>Icons</h2>
-
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
@@ -124,7 +120,6 @@ const PageButton = () => (
 		</div>
 
 		<h2 className={style.docHeading2}>Rounded</h2>
-
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
@@ -151,7 +146,6 @@ const PageButton = () => (
 		</div>
 
 		<h2 className={style.docHeading2}>Sizes</h2>
-
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
@@ -168,7 +162,6 @@ const PageButton = () => (
 		</div>
 
 		<h2 className={style.docHeading2}>Full Width</h2>
-
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div><Button fullwidth="true">Button</Button></div>
@@ -178,8 +171,21 @@ const PageButton = () => (
 			</div>
 		</div>
 
-		<h2 className={style.docHeading2}>Types</h2>
+		<h2 className={style.docHeading2}>Disabled</h2>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+					<div><Button disabled="true">Button</Button></div>
+					<div><Button disabled="true" fill="false">Button</Button></div>
+				</div>
+			</div>
+			<div className={style.docboxCode}>
+				<div>{`<Button disabled="true">Button</Button>`}</div>
+				<div>{`<Button disabled="true" fill="false">Button</Button>`}</div>
+			</div>
+		</div>
 
+		<h2 className={style.docHeading2}>Types</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<h3 className={style.docHeading3}>Horizontal</h3>
@@ -199,26 +205,11 @@ const PageButton = () => (
 
 			</div>
 			<div className={style.docboxCode}>
-				<div>{`<Button>Button</Button>`}</div>
+				<div>{`<Button onClick={}>Button</Button>`}</div>
 				<div>{`<Button type="link" to="">Link</Button>`}</div>
-				<div>{`<Button type="href">Href</Button>`}</div>
+				<div>{`<Button type="href" to="" target="_self">Href</Button>`}</div>
 				<div>{`<Button type="submit">Submit</Button>`}</div>
 				<div>{`<Button type="reset">Reset</Button>`}</div>
-			</div>
-		</div>
-		
-		<h2 className={style.docHeading2}>Disabled</h2>
-
-		<div className={style.docbox}>
-			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
-					<div><Button disabled="true">Button</Button></div>
-					<div><Button disabled="true" fill="false">Button</Button></div>
-				</div>
-			</div>
-			<div className={style.docboxCode}>
-				<div>{`<Button disabled="true">Button</Button>`}</div>
-				<div>{`<Button disabled="true" fill="false">Button</Button>`}</div>
 			</div>
 		</div>
 

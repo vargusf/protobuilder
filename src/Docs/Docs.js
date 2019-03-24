@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
 
+import PageDashboard from './pages/Dashboard';
 import PageColor from './pages/Color';
 import PageText from './pages/Text';
 import PageLayout from './pages/Layout';
@@ -16,6 +17,7 @@ import { Container, Col, Row } from '../../index';
 import protoStyle from '../styles/global.css';
 import style from './Docs.css';
 
+
 class Docs extends Component {
 	render() {
 		return (
@@ -27,6 +29,11 @@ class Docs extends Component {
 					<Row grow="true" gutter="zero">
 						<Col width="300">
 							<div className={style.sidebar_container}>
+
+								<ul className={protoStyle.marginBottomLg}>
+									<li><NavLink to="/proto/dashboard" className={style.link} activeClassName={style.linkActive}>Dashboard</NavLink></li>
+								</ul>
+
 								<div className={` ${protoStyle.fontsizeHeading6} ${protoStyle.marginBottomSm} `}>Basic</div>
 								<ul className={protoStyle.marginBottomLg}>
 									<li><NavLink to="/proto/color" className={style.link} activeClassName={style.linkActive}>Color</NavLink></li>
@@ -49,6 +56,7 @@ class Docs extends Component {
 							<Container fixedWidth="true">
 								<Row paddingTop="lg">
 									<Col grow="1">
+										<Route exact path='/proto/dashboard' component={PageDashboard} />
 										<Route exact path='/proto/color' component={PageColor} />
 										<Route exact path='/proto/text' component={PageText} />
 										<Route exact path='/proto/layout' component={PageLayout} />

@@ -24,8 +24,8 @@ class PageLayout extends Component {
 		return (
 			<div>
 				<h1 className={style.docHeading1}>Layout</h1>
-				<h2 className={style.docHeading2}>Container</h2>
 
+				{/* <h2 className={style.docHeading2}>Container</h2>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<h3 className={style.docHeading3}>Fixed Width</h3>
@@ -64,7 +64,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Row Gutter</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Row gutter="zero" marginBottom="lg">
@@ -115,7 +114,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Row Align</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Row align="start" marginBottom="lg">
@@ -148,7 +146,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Row Justify</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Row justify="start" marginBottom="lg">
@@ -181,7 +178,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Row Wrap</h2>
-
 				<div className={style.docbox} style={{ width: "50%" }}>
 					<div className={style.docboxContent}>
 						<Row wrap="true" gutter="zero" marginBottom="lg">
@@ -213,7 +209,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Row Margin</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<h3 className={style.docHeading3}>Margin Top</h3>
@@ -368,7 +363,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Row Padding</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<h3 className={style.docHeading3}>Padding Top</h3>
@@ -523,7 +517,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Row Grow</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Container height="200">
@@ -545,7 +538,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Col Grow</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<h3 className={` ${style.docHeading3} `}>1</h3>
@@ -586,7 +578,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Col Width</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Row marginBottom="sm">
@@ -610,7 +601,6 @@ class PageLayout extends Component {
 				</div>
 
 				<h2 className={style.docHeading2}>Col Percent</h2>
-
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Row marginBottom="sm">
@@ -633,8 +623,36 @@ class PageLayout extends Component {
 						<div>{`<Col percent="33.33"></Col>`}</div>
 						<div>{`<Col percent="75"></Col>`}</div>
 					</div>
+				</div> */}
+
+
+				<h2 className={style.docHeading2}>Test Lab</h2>
+				<div className={style.docbox}>
+					<div className={style.docboxContent}>
+						{/* <Row marginBottom="sm">
+							<Col width="25%"><div className={style.colTint}>25%</div></Col>
+							<Col width="25%"><div className={style.colTint}>25%</div></Col>
+							<Col width="50%"><div className={style.colTint}>50%</div></Col>
+						</Row>
+						<Row marginBottom="sm">
+							<Col width="100px"><div className={style.colTint}>100px</div></Col>
+							<Col width="100px"><div className={style.colTint}>100px</div></Col>
+						</Row>
+						<Row marginBottom="sm">
+							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
+							<Col grow="1"><div className={style.colTint}>grow 1 - Minim eiusmod laboris sint temporasdfasdf sadfasdf asdf sad fasd fasd fsad fasdf .</div></Col>
+						</Row>
+						<Row marginBottom="sm">
+							<Col width="100px"><div className={style.colTint}>100px</div></Col>
+							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
+						</Row> */}
+						<Row marginBottom="sm">
+							<Col width={{d: "50%", sm: "10%"}}><div className={style.colTint}>default: 50% / sm: 10%</div></Col>
+							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
+						</Row>
+					</div>
 				</div>
-				
+
 			</div>
 		)
 	}
