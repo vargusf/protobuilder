@@ -4,6 +4,7 @@ import { Container, Row, Col } from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
+import { Z_BUF_ERROR } from 'zlib';
 
 class PageLayout extends Component {
 	constructor(props) {
@@ -25,7 +26,7 @@ class PageLayout extends Component {
 			<div>
 				<h1 className={style.docHeading1}>Layout</h1>
 
-				{/* <h2 className={style.docHeading2}>Container</h2>
+				<h2 className={style.docHeading2}>Container</h2>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<h3 className={style.docHeading3}>Fixed Width</h3>
@@ -520,12 +521,12 @@ class PageLayout extends Component {
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Container height="200">
-							<Row grow="true">
+							<Row grow="1">
 								<Col grow="1"><div className={style.colTint}>grow</div></Col>
 								<Col grow="1"><div className={style.colTint}>grow</div></Col>
 								<Col grow="1"><div className={style.colTint}>grow</div></Col>
 							</Row>
-							<Row grow="true" marginTop="xsm">
+							<Row grow="1" marginTop="xsm">
 								<Col grow="1"><div className={style.colTint}>grow</div></Col>
 								<Col grow="1"><div className={style.colTint}>grow</div></Col>
 								<Col grow="1"><div className={style.colTint}>grow</div></Col>
@@ -533,7 +534,7 @@ class PageLayout extends Component {
 						</Container>
 					</div>
 					<div className={style.docboxCode}>
-						<div>{`<Row grow="true"></Row>`}</div>
+						<div>{`<Row grow="1"></Row>`}</div>
 					</div>
 				</div>
 
@@ -608,16 +609,33 @@ class PageLayout extends Component {
 						<div>{`<Col width="25%"></Col>`}</div>
 						<div>{`<Col width="33.33%"></Col>`}</div>
 						<div>{`<Col width="75%"></Col>`}</div>
-
 					</div>
-				</div> */}
+				</div> 
+
+				<h2 className={style.docHeading2}>Mobile</h2>
+				<div className={style.docbox}>
+					<div className={style.docboxContent}>
+						<Row marginBottom="sm">
+							<Col width={{ d: "200px", md: "70%", sm: "auto" }} grow={{ d: "0", md: "0", sm: "1" }}><div className={style.colTint}>Responsive</div></Col>
+							<Col grow={{ d: "1", md: "30%", sm: "1" }}><div className={style.colTint}>grow 1</div></Col>
+						</Row>
+					</div>
+					<div className={style.docboxCode}>
+						<div>{`<Col width={{ d: "200px", md: "70%", sm: "auto" }} grow={{ d: "0", md: "0", sm: "1" }}></Col>`}</div>
+						<div>{`<Col grow={{ d: "1", md: "30%", sm: "1" }}></Col>`}</div>
+					</div>
+				</div>
 
 				<h2 className={style.docHeading2}>Test Lab</h2>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
-						<Row marginBottom="sm">
-							<Col width={{ d: "200px", sm: "auto", md: "70%" }} grow={{ d: "0", sm: "1", md: "0" }}><div className={style.colTint}>default: 50% / sm: 10%</div></Col>
-							<Col grow={{ d: "1", sm: "1", md: "30%" }}><div className={style.colTint}>grow 1</div></Col>
+						<Row gutter={{d: "zero", md: "xlg"}}>
+							<Col grow="1"><div className={style.colTint}>Respon asdf asd fas dfsive</div></Col>
+							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
+						</Row>
+						<Row marginTop={{d:"zero", md: "xlg"}} gutter={{d: "zero", md: "xlg"}}>
+							<Col grow="1"><div className={style.colTint}>Respon asdf asd fas dfsive</div></Col>
+							<Col grow="1"><div className={style.colTint}>grow 1</div></Col>
 						</Row>
 					</div>
 				</div>

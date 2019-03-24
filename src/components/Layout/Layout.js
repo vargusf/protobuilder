@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { getStyleConfig, getResponsiveObj } from '../../utils/utils';
 
 import protoStyle from '../../styles/global.css';
 import style from './Layout.css';
@@ -34,42 +35,58 @@ const Container = ({
 }
 
 const Row = ({
-	gutter = "md", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
-	align = "stretch", // start|end|center|stretch
-	justify = "start", // start|end|center|between
-	wrap = "false", // true|false|reverse
-	marginTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
-	marginBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
-	paddingTop = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
-	paddingBottom = "zero", // zero|xsm|sm|md|lg|xlg|xxlg|jumbo
-	grow = null, // null|true
+	wrap = "false", // "true"|"false"|"reverse", default: "false"
+	grow = "0", //  "0"|"1", default: "0"
+	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
+	justify = "start", // "start"|"end"|"center"|"between", default: "start"
+	marginTop = "zero", // config.size, default: "zero"
+	marginBottom = "zero", // config.size, default: "zero"
+	paddingTop = "zero", // config.size, default: "zero"
+	paddingBottom = "zero", // config.size, default: "zero"
+	gutter = "md", // config.size, default: "md"
 	children
 }) => {
-	const classes = `
-		${style.row}
-		${style['gutter_' + gutter]}
-		${style['wrap_' + wrap]}
-		${style['alignItems_' + align]}
-		${style['justifyContent_' + justify]}
-		${style['grow_' + grow]}
-		${protoStyle['paddingTop' + paddingTop.charAt(0).toUpperCase() + paddingTop.slice(1)]}
-		${protoStyle['paddingBottom' + paddingBottom.charAt(0).toUpperCase() + paddingBottom.slice(1)]}
-		${protoStyle['marginTop' + marginTop.charAt(0).toUpperCase() + marginTop.slice(1)]}
-		${protoStyle['marginBottom' + marginBottom.charAt(0).toUpperCase() + marginBottom.slice(1)]}
+
+	const ColStyles = size => {
+		return `
+			display: flex;
+			width: 100%;
+			flex-wrap: ${getResponsiveObj(wrap)[size] == "true" ? "wrap" : (getResponsiveObj(wrap)[size] == "false" ? "nowrap" : "wrap-reverse")} ;
+			flex-grow: ${getResponsiveObj(grow)[size]};
+			align-items: ${getResponsiveObj(align)[size] == "stretch" ? "stretch" : (getResponsiveObj(align)[size] == "start" ? "flex-start" : (getResponsiveObj(align)[size] == "end" ? "flex-end" : "center"))};
+			justify-content: ${getResponsiveObj(justify)[size] == "start" ? "flex-start" : (getResponsiveObj(justify)[size] == "end" ? "flex-end" : (getResponsiveObj(justify)[size] == "center" ? "center" : "space-between"))};
+			margin-top: ${getStyleConfig().size[getResponsiveObj(marginTop)[size]]};
+			margin-bottom: ${getStyleConfig().size[getResponsiveObj(marginBottom)[size]]};
+			padding-top: ${getStyleConfig().size[getResponsiveObj(paddingTop)[size]]};
+			padding-bottom: ${getStyleConfig().size[getResponsiveObj(paddingBottom)[size]]};
+			> * { padding-left: ${getStyleConfig().size[getResponsiveObj(gutter)[size]]}; padding-right: ${getStyleConfig().size[getResponsiveObj(gutter)[size]]}; }
+			> :first-child { padding-left: 0; }
+			> :last-child { padding-right: 0; }
+		`;
+	}
+
+	const RowDiv = styled.div`
+		${ColStyles("d")}
+		@media (max-width: ${getStyleConfig().breakpoint.xlg}) { ${ColStyles("xlg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${ColStyles("lg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${ColStyles("md")} }
+		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${ColStyles("sm")} }
+		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${ColStyles("xsm")} }
 	`;
 
 	return (
-		<div className={classes}>
+		<RowDiv>
 			{children}
-		</div>
+		</RowDiv>
 	);
 }
 
 const Col = ({
-	width = null, // null|number(%|px)|(auto: if mobile)
-	grow = "0", // 0|1
+	width = null, // null|"[number(%|px)]"|("auto":  mobile), default: null
+	grow = "0", // "0"|"1", default: "0"
 	children
 }) => {
+
 	let widthRes = {};
 	if (width == null) {
 		widthRes.d = null;
@@ -78,75 +95,28 @@ const Col = ({
 		widthRes = { d: width, xsm: width, sm: width, md: width, lg: width, xlg: width };
 	} else if (typeof width == 'object') {
 		widthRes.d = width.d == "auto" ? 0 : width.d;
-		widthRes.xsm = width.xsm == "auto" ? 0 : (width.xsm ? width.xsm : (width.sm ? width.sm : (width.md ? width.md : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d)))));
-		widthRes.sm = width.sm == "auto" ? 0 : (width.sm ? width.sm : (width.md ? width.md : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d))));
-		widthRes.md = width.md == "auto" ? 0 : (width.md ? width.md : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d)));
-		widthRes.lg = width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg ? width.xlg : width.d));
+		widthRes.xsm = width.xsm == "auto" ? 0 : (width.xsm ? width.xsm : (width.sm == "auto" ? 0 : (width.sm ? width.sm : (width.md == "auto" ? 0 : (width.md ? width.md : (width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)))))))));
+		widthRes.sm = width.sm == "auto" ? 0 : (width.sm ? width.sm : (width.md == "auto" ? 0 : (width.md ? width.md : (width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)))))));
+		widthRes.md = width.md == "auto" ? 0 : (width.md ? width.md : (width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)))));
+		widthRes.lg = width.lg == "auto" ? 0 : (width.lg ? width.lg : (width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d)));
 		widthRes.xlg = width.xlg == "auto" ? 0 : (width.xlg ? width.xlg : width.d);
 	}
 
-	let growRes = {};
-	if (typeof grow == 'string') {
-		growRes = {
-			d: grow,
-			xsm: grow,
-			sm: grow,
-			md: grow,
-			lg: grow,
-			xlg: grow,
-
-		};
-	} else if (typeof grow == 'object') {
-		growRes.d = grow.d;
-		growRes.xsm = grow.xsm ? grow.xsm : (grow.sm ? grow.sm : (grow.md ? grow.md : (grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d))));
-		growRes.sm = grow.sm ? grow.sm : (grow.md ? grow.md : (grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d)));
-		growRes.md = grow.md ? grow.md : (grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d));
-		growRes.lg = grow.lg ? grow.lg : (grow.xlg ? grow.xlg : grow.d);
-		growRes.xlg = grow.xlg ? grow.xlg : grow.d;
-	}
-
-	const breakpoint = {
-		xsm: getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-xsm'),
-		sm: getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-sm'),
-		md: getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-md'),
-		lg: getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-lg'),
-		xlg: getComputedStyle(document.documentElement).getPropertyValue('--breakpoint-xlg'),
+	const ColStyles = size => {
+		return `
+			flex-basis: ${widthRes[size] ? widthRes[size] : (getResponsiveObj(grow)[size] == 1 ? 0 : "auto")};
+			min-width: ${widthRes[size]};
+			flex-grow: ${getResponsiveObj(grow)[size]};
+		`;
 	}
 
 	const ColDiv = styled.div`
-		flex-basis: ${widthRes.d ? widthRes.d : (growRes.d == 1 ? 0 : "auto")};
-		min-width: ${widthRes.d};
-		flex-grow: ${growRes.d};
-
-		@media (max-width: ${breakpoint.xlg}px) {
-			flex-basis: ${widthRes.xlg ? widthRes.xlg : (growRes.xlg == 1 ? 0 : "auto")};
-			min-width: ${widthRes.xlg};
-			flex-grow: ${growRes.xlg};
-		}
-		
-		@media (max-width: ${breakpoint.lg}px) {
-			flex-basis: ${widthRes.lg ? widthRes.lg : (growRes.lg == 1 ? 0 : "auto")};
-			min-width: ${widthRes.lg};
-			flex-grow: ${growRes.lg};
-		}
-		
-		@media (max-width: ${breakpoint.md}px) {
-			flex-basis: ${widthRes.md ? widthRes.md : (growRes.md == 1 ? 0 : "auto")};
-			min-width: ${widthRes.md};
-			flex-grow: ${growRes.md};
-		}
-
-		@media (max-width: ${breakpoint.sm}px) {
-			flex-basis: ${widthRes.sm ? widthRes.sm : (growRes.sm == 1 ? 0 : "auto")};
-			min-width: ${widthRes.sm};
-			flex-grow: ${growRes.sm};
-		}
-
-		@media (max-width: ${breakpoint.xsm}px) {
-			flex-basis: ${widthRes.xsm ? widthRes.xsm : (growRes.xsm == 1 ? 0 : "auto")};
-			min-width: ${widthRes.xsm};
-			flex-grow: ${growRes.xsm};
-		}
+		${ColStyles("d")}
+		@media (max-width: ${getStyleConfig().breakpoint.xlg}) { ${ColStyles("xlg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${ColStyles("lg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${ColStyles("md")} }
+		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${ColStyles("sm")} }
+		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${ColStyles("xsm")} }
 	`;
 
 	return (

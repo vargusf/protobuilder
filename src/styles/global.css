@@ -29,6 +29,7 @@
 .marginRightTiny     { margin-right: var(--size-tiny); }
 .marginRightXxsm     { margin-right: var(--size-xxsm); }
 .marginRightXsm      { margin-right: var(--size-xsm); }
+.marginRightXsm      { margin-right: var(--size-xsm); }
 .marginRightSm       { margin-right: var(--size-sm); }
 .marginRightMd       { margin-right: var(--size-md); }
 .marginRightLg       { margin-right: var(--size-lg); }
