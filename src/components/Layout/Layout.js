@@ -49,8 +49,9 @@ const Container = ({
 }
 
 const Row = ({
-	wrap = "false", // "true"|"false"|"reverse", default: "false"
+	wrap = "true", // "true"|"false"|"reverse", default: "true"
 	grow = "0", //  "0"|"1", default: "0"
+	stack = "false", //"false"|"true", default: "false"
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
 	marginTop = "zero", // config.size, default: "zero"
@@ -65,6 +66,7 @@ const Row = ({
 		return `
 			display: flex;
 			width: 100%;
+			flex-direction: ${getResponsiveObj(stack)[size] == "true" ? "column" : "row"};
 			flex-wrap: ${getResponsiveObj(wrap)[size] == "true" ? "wrap" : (getResponsiveObj(wrap)[size] == "false" ? "nowrap" : "wrap-reverse")} ;
 			flex-grow: ${getResponsiveObj(grow)[size]};
 			align-items: ${getResponsiveObj(align)[size] == "stretch" ? "stretch" : (getResponsiveObj(align)[size] == "start" ? "flex-start" : (getResponsiveObj(align)[size] == "end" ? "flex-end" : "center"))};
@@ -73,7 +75,10 @@ const Row = ({
 			margin-bottom: ${getStyleConfig().size[getResponsiveObj(marginBottom)[size]]};
 			padding-top: ${getStyleConfig().size[getResponsiveObj(paddingTop)[size]]};
 			padding-bottom: ${getStyleConfig().size[getResponsiveObj(paddingBottom)[size]]};
-			> * { padding-left: ${getStyleConfig().size[getResponsiveObj(gutter)[size]]}; padding-right: ${getStyleConfig().size[getResponsiveObj(gutter)[size]]}; }
+			> * { 
+				padding-left: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
+				padding-right: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
+			}
 			> :first-child { padding-left: 0; }
 			> :last-child { padding-right: 0; }
 		`;
