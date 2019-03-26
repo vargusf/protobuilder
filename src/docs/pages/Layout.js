@@ -49,7 +49,7 @@ class PageLayout extends Component {
 							<div className={style.itemTintColored}>primary</div>
 						</Container>
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Grow</h3>
-						<Container grow="true">
+						<Container grow="1">
 							<div className={style.itemTint}>grow</div>
 						</Container>
 					</div>
@@ -59,7 +59,7 @@ class PageLayout extends Component {
 						<div>{`<Container height="200"></Container>`}</div>
 						<div>{`<Container min100vh="true"></Container>`}</div>
 						<div>{`<Container backgroundColor="primary"></Container>`}</div>
-						<div>{`<Container grow="true"></Container>`}</div>
+						<div>{`<Container grow="1"></Container>`}</div>
 					</div>
 				</div>
 

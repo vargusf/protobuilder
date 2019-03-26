@@ -12,7 +12,7 @@ const Container = ({
 	children
 }) => {
 
-	const ColStyles = size => {
+	const styles = size => {
 		return `
 			display: flex; 
 			flex-direction: column; 
@@ -33,12 +33,11 @@ const Container = ({
 	}
 
 	const ContainerDiv = styled.div`
-		${ColStyles("d")}
-		@media (max-width: ${getStyleConfig().breakpoint.xlg}) { ${ColStyles("xlg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${ColStyles("lg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${ColStyles("md")} }
-		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${ColStyles("sm")} }
-		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${ColStyles("xsm")} }
+		${styles("d")}
+		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
+		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
+		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
 	`;
 
 	return (
@@ -52,6 +51,7 @@ const Row = ({
 	wrap = "true", // "true"|"false"|"reverse", default: "true"
 	grow = "0", //  "0"|"1", default: "0"
 	stack = "false", //"false"|"true", default: "false"
+	reverse = "false", //"false"|"true", default: "false"
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
 	marginTop = "zero", // config.size, default: "zero"
@@ -62,11 +62,11 @@ const Row = ({
 	children
 }) => {
 
-	const ColStyles = size => {
+	const styles = size => {
 		return `
 			display: flex;
 			width: 100%;
-			flex-direction: ${getResponsiveObj(stack)[size] == "true" ? "column" : "row"};
+			flex-direction: ${getResponsiveObj(stack)[size] == "true" ? (getResponsiveObj(reverse)[size] == "true" ? "column-reverse" : "column") : (getResponsiveObj(reverse)[size] == "true" ? "row-reverse" : "row")};
 			flex-wrap: ${getResponsiveObj(wrap)[size] == "true" ? "wrap" : (getResponsiveObj(wrap)[size] == "false" ? "nowrap" : "wrap-reverse")} ;
 			flex-grow: ${getResponsiveObj(grow)[size]};
 			align-items: ${getResponsiveObj(align)[size] == "stretch" ? "stretch" : (getResponsiveObj(align)[size] == "start" ? "flex-start" : (getResponsiveObj(align)[size] == "end" ? "flex-end" : "center"))};
@@ -79,18 +79,23 @@ const Row = ({
 				padding-left: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
 				padding-right: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
 			}
-			> :first-child { padding-left: 0; }
-			> :last-child { padding-right: 0; }
+			> :first-child {
+				padding-left: ${getResponsiveObj(reverse)[size] == "true" ? (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]) : 0};
+				padding-right: ${getResponsiveObj(reverse)[size] == "true" ? 0 : (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]])};
+			}
+			> :last-child { 
+				padding-left: ${getResponsiveObj(reverse)[size] == "true" ? 0 : (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]])};
+				padding-right: ${getResponsiveObj(reverse)[size] == "true" ? (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]): 0};
+			}
 		`;
 	}
 
 	const RowDiv = styled.div`
-		${ColStyles("d")}
-		@media (max-width: ${getStyleConfig().breakpoint.xlg}) { ${ColStyles("xlg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${ColStyles("lg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${ColStyles("md")} }
-		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${ColStyles("sm")} }
-		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${ColStyles("xsm")} }
+		${styles("d")}
+		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
+		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
+		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
 	`;
 
 	return (
@@ -106,7 +111,7 @@ const Col = ({
 	children
 }) => {
 	
-	const ColStyles = size => {
+	const styles = size => {
 		return `
 			flex-basis: ${getResponsiveObj(width)[size] == "auto" ? (getResponsiveObj(grow)[size] == 1 ? 0 : "auto") : (getResponsiveObj(width)[size] == "grow" ? 0 : getResponsiveObj(width)[size])}
 			min-width: ${(getResponsiveObj(width)[size] == "grow" || getResponsiveObj(width)[size] == "auto") ? 0 : getResponsiveObj(width)[size]};
@@ -115,12 +120,11 @@ const Col = ({
 	}
 
 	const ColDiv = styled.div`
-		${ColStyles("d")}
-		@media (max-width: ${getStyleConfig().breakpoint.xlg}) { ${ColStyles("xlg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${ColStyles("lg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${ColStyles("md")} }
-		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${ColStyles("sm")} }
-		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${ColStyles("xsm")} }
+		${styles("d")}
+		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
+		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
+		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
+		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
 	`;
 
 	return (

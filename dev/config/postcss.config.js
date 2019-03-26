@@ -4,15 +4,7 @@ module.exports = {
 		require('cssnano'),
 		require('postcss-mixins'),
 		require('postcss-nested'),
-		require('postcss-preset-env')
+		require('postcss-preset-env'),
+		require('postcss-custom-media'),
 	]
 }
-
-// module.exports = {
-// 	parser: 'sugarss',
-// 	plugins: {
-// 		'postcss-import': {},
-// 		'postcss-preset-env': {},
-// 		'cssnano': {}
-// 	}
-// }

@@ -113,14 +113,18 @@
 :root { --fontsize-heading6: 2.2rem; }
 
 /*--------------------/
-	Breakpoints
+	Breakpoints 
+	-CSS Variable can't be used in media queries yet, so using custom-media
 /--------------------*/
 
-:root { --breakpoint-xsm: 480px; }
-:root { --breakpoint-sm: 768px; }
-:root { --breakpoint-md: 1024px; }
-:root { --breakpoint-lg: 1200px; }
-:root { --breakpoint-xlg: 1400px; }
+:root       { --breakpoint-xsm:            480px;}
+@custom-media --breakpoint-xsm (max-width: 480px);
+:root {       --breakpoint-sm:             768px;}
+@custom-media --breakpoint-sm (max-width:  768px);
+:root {       --breakpoint-md:             1024px;}
+@custom-media --breakpoint-md (max-width:  1024px);
+:root {       --breakpoint-lg:             1200px;}
+@custom-media --breakpoint-lg (max-width:  1200px);
 
 /*--------------------/
 	Fixed Width

@@ -25,9 +25,9 @@ class Docs extends Component {
 				<div className={style.header}>
 					<div className={style.logo}></div>
 				</div>
-				<Container grow="true">
-					<Row grow="true" gutter="zero">
-						<Col width="300">
+				<Container grow="1">
+					<Row grow="1">
+						<Col width="300px">
 							<div className={style.sidebar_container}>
 
 								<ul className={protoStyle.marginBottomLg}>
