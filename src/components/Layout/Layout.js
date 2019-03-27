@@ -87,6 +87,10 @@ const Row = ({
 				padding-left: ${getResponsiveObj(reverse)[size] == "true" ? 0 : (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]])};
 				padding-right: ${getResponsiveObj(reverse)[size] == "true" ? (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]): 0};
 			}
+			> :only-child {
+				padding-left: 0;
+				padding-right: 0;
+			}
 		`;
 	}
 
@@ -108,6 +112,10 @@ const Row = ({
 const Col = ({
 	width = "auto", // "[number(%|px)]"|"auto"|"grow", default: "auto"
 	grow = "0", // "0"|"1", default: "0"
+	marginTop = "zero", // config.size, default: "zero"
+	marginBottom = "zero", // config.size, default: "zero"
+	paddingTop = "zero", // config.size, default: "zero"
+	paddingBottom = "zero", // config.size, default: "zero"
 	children
 }) => {
 	
@@ -116,6 +124,10 @@ const Col = ({
 			flex-basis: ${getResponsiveObj(width)[size] == "auto" ? (getResponsiveObj(grow)[size] == 1 ? 0 : "auto") : (getResponsiveObj(width)[size] == "grow" ? 0 : getResponsiveObj(width)[size])}
 			min-width: ${(getResponsiveObj(width)[size] == "grow" || getResponsiveObj(width)[size] == "auto") ? 0 : getResponsiveObj(width)[size]};
 			flex-grow: ${getResponsiveObj(grow)[size]};
+			margin-top: ${getStyleConfig().size[getResponsiveObj(marginTop)[size]]};
+			margin-bottom: ${getStyleConfig().size[getResponsiveObj(marginBottom)[size]]};
+			padding-top: ${getStyleConfig().size[getResponsiveObj(paddingTop)[size]]};
+			padding-bottom: ${getStyleConfig().size[getResponsiveObj(paddingBottom)[size]]};
 		`;
 	}
 
