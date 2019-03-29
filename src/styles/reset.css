@@ -352,9 +352,10 @@ template {
 
 html,
 body,
-:global(..AppContainer),
+:global(.AppContainer),
 :global(.App) {
   min-height: 100vh;
+  min-width: 280px;
 }
 
 html {

@@ -95,27 +95,27 @@ const PageButton = () => (
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
-					<div><Button circle="true"><FontAwesomeIcon icon="times" /></Button></div>
-					<div><Button circle="true" color="secondary"><FontAwesomeIcon icon="times" /></Button></div>
-					<div><Button circle="true" fill="false" color="grey"><FontAwesomeIcon icon="times" /></Button></div>
-					<div><Button circle="true" color="grey" size="sm"><FontAwesomeIcon icon="copy" transform='shrink-3' /></Button></div>
-					<div><Button circle="true" color="grey"><FontAwesomeIcon icon="copy" /></Button></div>
-					<div><Button circle="true" color="grey"size="lg"><FontAwesomeIcon icon="copy" transform='grow-3' /></Button></div>
-					<div><Button circle="true" color="info" size="sm"><FontAwesomeIcon icon="info" transform='shrink-3' /></Button></div>
-					<div><Button circle="true" color="info"><FontAwesomeIcon icon="info" /></Button></div>
-					<div><Button circle="true" color="info"size="lg"><FontAwesomeIcon icon="info" transform='grow-3' /></Button></div>
+					<div><Button circle="true"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
+					<div><Button circle="true" color="secondary"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
+					<div><Button circle="true" fill="false" color="grey"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
+					<div><Button circle="true" color="grey" size="sm"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='shrink-3' /></Button></div>
+					<div><Button circle="true" color="grey"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
+					<div><Button circle="true" color="grey"size="lg"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='grow-3' /></Button></div>
+					<div><Button circle="true" color="info" size="sm"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='shrink-3' /></Button></div>
+					<div><Button circle="true" color="info"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
+					<div><Button circle="true" color="info"size="lg"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='grow-3' /></Button></div>
 				</div>
 			</div>
 			<div className={style.docboxCode}>
-				<div>{`<Button circle="true"><FontAwesomeIcon icon="times" /></Button>`}</div>
-				<div>{`<Button circle="true" color="secondary"><FontAwesomeIcon icon="times" /></Button>`}</div>
-				<div>{`<Button circle="true" fill="false" color="grey"><FontAwesomeIcon icon="times" /></Button>`}</div>
-				<div>{`<Button circle="true" color="grey" size="sm"><FontAwesomeIcon icon="copy" transform='shrink-3' /></Button>`}</div>
-				<div>{`<Button circle="true" color="grey"><FontAwesomeIcon icon="copy" /></Button>`}</div>
-				<div>{`<Button circle="true" color="grey"size="lg"><FontAwesomeIcon icon="copy" transform='grow-3' /></Button>`}</div>
-				<div>{`<Button circle="true" color="info" size="sm"><FontAwesomeIcon icon="info" transform='shrink-3' /></Button>`}</div>
-				<div>{`<Button circle="true" color="info"><FontAwesomeIcon icon="info" /></Button>`}</div>
-				<div>{`<Button circle="true" color="info"size="lg"><FontAwesomeIcon icon="info" transform='grow-3' /></Button>`}</div>
+				<div>{`<Button circle="true"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button>`}</div>
+				<div>{`<Button circle="true" color="secondary"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button>`}</div>
+				<div>{`<Button circle="true" fill="false" color="grey"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button>`}</div>
+				<div>{`<Button circle="true" color="grey" size="sm"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='shrink-3' /></Button>`}</div>
+				<div>{`<Button circle="true" color="grey"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button>`}</div>
+				<div>{`<Button circle="true" color="grey"size="lg"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='grow-3' /></Button>`}</div>
+				<div>{`<Button circle="true" color="info" size="sm"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='shrink-3' /></Button>`}</div>
+				<div>{`<Button circle="true" color="info"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button>`}</div>
+				<div>{`<Button circle="true" color="info"size="lg"><FontAwesomeIcon icon={['fas', 'external-link-alt']} transform='grow-3' /></Button>`}</div>
 			</div>
 		</div>
 

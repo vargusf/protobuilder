@@ -8,7 +8,8 @@ const Container = ({
 	centered = "false", // "false"|"true", default: false
 	min100vh = "false", // "false"|"true", default: false
 	grow = "0", //  "0"|"1", default: "0"
-	backgroundColor = "none", // "none"|config.size, default: "none"
+	backgroundColor = "none", // "none"|config.size, default: "none",
+	className = "",
 	children
 }) => {
 
@@ -41,7 +42,7 @@ const Container = ({
 	`;
 
 	return (
-		<ContainerDiv>
+		<ContainerDiv className={`${className}`}>
 			{children}
 		</ContainerDiv>
 	);
@@ -59,6 +60,7 @@ const Row = ({
 	paddingTop = "zero", // config.size, default: "zero"
 	paddingBottom = "zero", // config.size, default: "zero"
 	gutter = "md", // config.size, default: "md"
+	className = "",
 	children
 }) => {
 
@@ -103,24 +105,27 @@ const Row = ({
 	`;
 
 	return (
-		<RowDiv>
+		<RowDiv className={`${className}`}>
 			{children}
 		</RowDiv>
 	);
 }
 
 const Col = ({
+	display = "block", // "block"|"none", default: block
 	width = "auto", // "[number(%|px)]"|"auto"|"grow", default: "auto"
 	grow = "0", // "0"|"1", default: "0"
 	marginTop = "zero", // config.size, default: "zero"
 	marginBottom = "zero", // config.size, default: "zero"
 	paddingTop = "zero", // config.size, default: "zero"
 	paddingBottom = "zero", // config.size, default: "zero"
+	className = "",
 	children
 }) => {
 	
 	const styles = size => {
 		return `
+			display: ${getResponsiveObj(display)[size]}
 			flex-basis: ${getResponsiveObj(width)[size] == "auto" ? (getResponsiveObj(grow)[size] == 1 ? 0 : "auto") : (getResponsiveObj(width)[size] == "grow" ? 0 : getResponsiveObj(width)[size])}
 			min-width: ${(getResponsiveObj(width)[size] == "grow" || getResponsiveObj(width)[size] == "auto") ? 0 : getResponsiveObj(width)[size]};
 			flex-grow: ${getResponsiveObj(grow)[size]};
@@ -140,7 +145,7 @@ const Col = ({
 	`;
 
 	return (
-		<ColDiv >
+		<ColDiv className={`${className}`}>
 			{children}
 		</ColDiv>
 	);
