@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import { getStyleConfig, getResponsiveObj } from '../../utils/utils';
+// import styled from 'styled-components';
+import { getResponsiveClasses } from '../../utils/utils';
+import globalStyle from '../../styles/global.css';
 
 const Container = ({
 	height = "auto", // "[number(%|px)]"|"auto", default: "auto"
@@ -13,43 +14,65 @@ const Container = ({
 	children
 }) => {
 
-	const styles = size => {
-		return `
-			display: flex; 
-			flex-direction: column; 
-			width: 100%; 
-			position: relative;
-			height: ${getResponsiveObj(height)[size] == "auto" ? "auto" : getResponsiveObj(height)[size]};
-			max-width: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.maxWidth : "none"};
-			margin-left: ${getResponsiveObj(fixedWidth)[size] == "true" ? "auto" : 0}; 
-			margin-right: ${getResponsiveObj(fixedWidth)[size] == "true" ? "auto" : 0}; 
-			padding-left: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.sidePadding : 0};
-			padding-right: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.sidePadding : 0};
-			justify-content: ${getResponsiveObj(centered)[size] == "true" ? "center" : "flex-start"};
-			align-items: ${getResponsiveObj(centered)[size] == "true" ? "center" : "stretch"};
-			min-height: ${getResponsiveObj(min100vh)[size] == "true" ? "100vh" : 0};
-			flex-grow: ${getResponsiveObj(grow)[size]};
-			background-color: ${getResponsiveObj(backgroundColor)[size] == "none" ? "transparent" : getStyleConfig().color[getResponsiveObj(backgroundColor)[size]] };
-		`;
-	}
+	// const styles = size => {
+	// 	return `
+	// 		display: flex; 
+	// 		flex-direction: column; 
+	// 		width: 100%; 
+	// 		position: relative;
+	// 		height: ${getResponsiveObj(height)[size] == "auto" ? "auto" : getResponsiveObj(height)[size]};
+	// 		max-width: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.maxWidth : "none"};
+	// 		margin-left: ${getResponsiveObj(fixedWidth)[size] == "true" ? "auto" : 0}; 
+	// 		margin-right: ${getResponsiveObj(fixedWidth)[size] == "true" ? "auto" : 0}; 
+	// 		padding-left: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.sidePadding : 0};
+	// 		padding-right: ${getResponsiveObj(fixedWidth)[size] == "true" ? getStyleConfig().fixedwidth.sidePadding : 0};
+	// 		justify-content: ${getResponsiveObj(centered)[size] == "true" ? "center" : "flex-start"};
+	// 		align-items: ${getResponsiveObj(centered)[size] == "true" ? "center" : "stretch"};
+	// 		min-height: ${getResponsiveObj(min100vh)[size] == "true" ? "100vh" : 0};
+	// 		flex-grow: ${getResponsiveObj(grow)[size]};
+	// 		background-color: ${getResponsiveObj(backgroundColor)[size] == "none" ? "transparent" : getStyleConfig().color[getResponsiveObj(backgroundColor)[size]] };
+	// 	`;
+	// }
 
-	const ContainerDiv = styled.div`
-		${styles("d")}
-		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
-		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
-		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
+	// const ContainerDiv = styled.div`
+	// 	${styles("d")}
+	// 	@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
+	// `;
+
+	const classes = ` 
+		${globalStyle.displayFlex} 
+		${globalStyle.flexDirectionColumn}
+		${globalStyle.width100per}
+		${globalStyle.positionRelative}
+		${getResponsiveClasses('backgroundColor', backgroundColor)}
+		${( fixedWidth == "true" ? getResponsiveClasses('fixedWidth') : '')}
+		${(centered == "true" ? `${getResponsiveClasses('justifyCenter')} ${getResponsiveClasses('alignCenter')}` : '')}
 	`;
 
+	// const classes = ` 
+	// 	${globalStyle.displayFlex} 
+	// 	${globalStyle.flexDirectionColumn}
+	// 	${globalStyle[`backgroundColor${capitalizeFirstLetter(getResponsiveObj(backgroundColor).d)}`]}
+	// 	${globalStyle[`backgroundColor${capitalizeFirstLetter(getResponsiveObj(backgroundColor).lg)}BpLg`]}
+	// 	${globalStyle[`backgroundColor${capitalizeFirstLetter(getResponsiveObj(backgroundColor).md)}BpMd`]}
+	// 	${globalStyle[`backgroundColor${capitalizeFirstLetter(getResponsiveObj(backgroundColor).sm)}BpSm`]}
+	// 	${globalStyle[`backgroundColor${capitalizeFirstLetter(getResponsiveObj(backgroundColor).xsm)}BpXsm`]}
+	// `;
+
 	return (
-		<ContainerDiv className={`${className}`}>
+		<div className={classes}>
+		{/* <ContainerDiv className={`${className}`}> */}
 			{children}
-		</ContainerDiv>
+		{/* </ContainerDiv> */}
+		</div>
 	);
 }
 
 const Row = ({
-	wrap = "true", // "true"|"false"|"reverse", default: "true"
+	wrap = "false", // "true"|"false"|"reverse", default: "true"
 	grow = "0", //  "0"|"1", default: "0"
 	stack = "false", //"false"|"true", default: "false"
 	reverse = "false", //"false"|"true", default: "false"
@@ -64,50 +87,52 @@ const Row = ({
 	children
 }) => {
 
-	const styles = size => {
-		return `
-			display: flex;
-			width: 100%;
-			flex-direction: ${getResponsiveObj(stack)[size] == "true" ? (getResponsiveObj(reverse)[size] == "true" ? "column-reverse" : "column") : (getResponsiveObj(reverse)[size] == "true" ? "row-reverse" : "row")};
-			flex-wrap: ${getResponsiveObj(wrap)[size] == "true" ? "wrap" : (getResponsiveObj(wrap)[size] == "false" ? "nowrap" : "wrap-reverse")} ;
-			flex-grow: ${getResponsiveObj(grow)[size]};
-			align-items: ${getResponsiveObj(align)[size] == "stretch" ? "stretch" : (getResponsiveObj(align)[size] == "start" ? "flex-start" : (getResponsiveObj(align)[size] == "end" ? "flex-end" : "center"))};
-			justify-content: ${getResponsiveObj(justify)[size] == "start" ? "flex-start" : (getResponsiveObj(justify)[size] == "end" ? "flex-end" : (getResponsiveObj(justify)[size] == "center" ? "center" : "space-between"))};
-			margin-top: ${getStyleConfig().size[getResponsiveObj(marginTop)[size]]};
-			margin-bottom: ${getStyleConfig().size[getResponsiveObj(marginBottom)[size]]};
-			padding-top: ${getStyleConfig().size[getResponsiveObj(paddingTop)[size]]};
-			padding-bottom: ${getStyleConfig().size[getResponsiveObj(paddingBottom)[size]]};
-			> * { 
-				padding-left: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
-				padding-right: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
-			}
-			> :first-child {
-				padding-left: ${getResponsiveObj(reverse)[size] == "true" ? (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]) : 0};
-				padding-right: ${getResponsiveObj(reverse)[size] == "true" ? 0 : (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]])};
-			}
-			> :last-child { 
-				padding-left: ${getResponsiveObj(reverse)[size] == "true" ? 0 : (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]])};
-				padding-right: ${getResponsiveObj(reverse)[size] == "true" ? (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]): 0};
-			}
-			> :only-child {
-				padding-left: 0;
-				padding-right: 0;
-			}
-		`;
-	}
+	// const styles = size => {
+	// 	return `
+	// 		display: flex;
+	// 		width: 100%;
+	// 		flex-direction: ${getResponsiveObj(stack)[size] == "true" ? (getResponsiveObj(reverse)[size] == "true" ? "column-reverse" : "column") : (getResponsiveObj(reverse)[size] == "true" ? "row-reverse" : "row")};
+	// 		flex-wrap: ${getResponsiveObj(wrap)[size] == "true" ? "wrap" : (getResponsiveObj(wrap)[size] == "false" ? "nowrap" : "wrap-reverse")} ;
+	// 		flex-grow: ${getResponsiveObj(grow)[size]};
+	// 		align-items: ${getResponsiveObj(align)[size] == "stretch" ? "stretch" : (getResponsiveObj(align)[size] == "start" ? "flex-start" : (getResponsiveObj(align)[size] == "end" ? "flex-end" : "center"))};
+	// 		justify-content: ${getResponsiveObj(justify)[size] == "start" ? "flex-start" : (getResponsiveObj(justify)[size] == "end" ? "flex-end" : (getResponsiveObj(justify)[size] == "center" ? "center" : "space-between"))};
+	// 		margin-top: ${getStyleConfig().size[getResponsiveObj(marginTop)[size]]};
+	// 		margin-bottom: ${getStyleConfig().size[getResponsiveObj(marginBottom)[size]]};
+	// 		padding-top: ${getStyleConfig().size[getResponsiveObj(paddingTop)[size]]};
+	// 		padding-bottom: ${getStyleConfig().size[getResponsiveObj(paddingBottom)[size]]};
+	// 		> * { 
+	// 			padding-left: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
+	// 			padding-right: ${getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]};
+	// 		}
+	// 		> :first-child {
+	// 			padding-left: ${getResponsiveObj(reverse)[size] == "true" ? (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]) : 0};
+	// 			padding-right: ${getResponsiveObj(reverse)[size] == "true" ? 0 : (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]])};
+	// 		}
+	// 		> :last-child { 
+	// 			padding-left: ${getResponsiveObj(reverse)[size] == "true" ? 0 : (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]])};
+	// 			padding-right: ${getResponsiveObj(reverse)[size] == "true" ? (getResponsiveObj(stack)[size] == "true" ? 0 : getStyleConfig().size[getResponsiveObj(gutter)[size]]): 0};
+	// 		}
+	// 		> :only-child {
+	// 			padding-left: 0;
+	// 			padding-right: 0;
+	// 		}
+	// 	`;
+	// }
 
-	const RowDiv = styled.div`
-		${styles("d")}
-		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
-		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
-		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
-	`;
+	// const RowDiv = styled.div`
+	// 	${styles("d")}
+	// 	@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
+	// `;
 
 	return (
-		<RowDiv className={`${className}`}>
-			{children}
-		</RowDiv>
+		<div>
+			{/* <RowDiv className={`${className}`}> */}
+				{children}
+			{/* </RowDiv> */}
+		</div>
 	);
 }
 
@@ -123,31 +148,33 @@ const Col = ({
 	children
 }) => {
 	
-	const styles = size => {
-		return `
-			display: ${getResponsiveObj(display)[size]}
-			flex-basis: ${getResponsiveObj(width)[size] == "auto" ? (getResponsiveObj(grow)[size] == 1 ? 0 : "auto") : (getResponsiveObj(width)[size] == "grow" ? 0 : getResponsiveObj(width)[size])}
-			min-width: ${(getResponsiveObj(width)[size] == "grow" || getResponsiveObj(width)[size] == "auto") ? 0 : getResponsiveObj(width)[size]};
-			flex-grow: ${getResponsiveObj(grow)[size]};
-			margin-top: ${getStyleConfig().size[getResponsiveObj(marginTop)[size]]};
-			margin-bottom: ${getStyleConfig().size[getResponsiveObj(marginBottom)[size]]};
-			padding-top: ${getStyleConfig().size[getResponsiveObj(paddingTop)[size]]};
-			padding-bottom: ${getStyleConfig().size[getResponsiveObj(paddingBottom)[size]]};
-		`;
-	}
+	// const styles = size => {
+	// 	return `
+	// 		display: ${getResponsiveObj(display)[size]}
+	// 		flex-basis: ${getResponsiveObj(width)[size] == "auto" ? (getResponsiveObj(grow)[size] == 1 ? 0 : "auto") : (getResponsiveObj(width)[size] == "grow" ? 0 : getResponsiveObj(width)[size])}
+	// 		min-width: ${(getResponsiveObj(width)[size] == "grow" || getResponsiveObj(width)[size] == "auto") ? 0 : getResponsiveObj(width)[size]};
+	// 		flex-grow: ${getResponsiveObj(grow)[size]};
+	// 		margin-top: ${getStyleConfig().size[getResponsiveObj(marginTop)[size]]};
+	// 		margin-bottom: ${getStyleConfig().size[getResponsiveObj(marginBottom)[size]]};
+	// 		padding-top: ${getStyleConfig().size[getResponsiveObj(paddingTop)[size]]};
+	// 		padding-bottom: ${getStyleConfig().size[getResponsiveObj(paddingBottom)[size]]};
+	// 	`;
+	// }
 
-	const ColDiv = styled.div`
-		${styles("d")}
-		@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
-		@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
-		@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
-		@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
-	`;
+	// const ColDiv = styled.div`
+	// 	${styles("d")}
+	// 	@media (max-width: ${getStyleConfig().breakpoint.lg}) { ${styles("lg")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.md}) { ${styles("md")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.sm}) { ${styles("sm")} }
+	// 	@media (max-width: ${getStyleConfig().breakpoint.xsm}) { ${styles("xsm")} }
+	// `;
 
 	return (
-		<ColDiv className={`${className}`}>
+		<div>
+		{/* <ColDiv className={`${className}`}> */}
 			{children}
-		</ColDiv>
+		{/* </ColDiv> */}
+		</div>
 	);
 }
 
