@@ -180,13 +180,13 @@ class PageLayout extends Component {
 				<h2 className={style.docHeading2}>Row Wrap</h2>
 				<div className={style.docbox} style={{ width: "50%" }}>
 					<div className={style.docboxContent}>
-						<Row wrap="true" gutter="zero" marginBottom="lg">
+						<Row wrap="wrap" gutter="zero" marginBottom="lg">
 							<Col percent="33.33"><div className={style.colTint}>1 true</div></Col>
 							<Col percent="33.33"><div className={style.colTint}>2 true</div></Col>
 							<Col percent="33.33"><div className={style.colTint}>3 true</div></Col>
 							<Col percent="33.33"><div className={style.colTint}>4 true</div></Col>
 						</Row>
-						<Row wrap="false" gutter="zero" marginBottom="lg">
+						<Row wrap="nowrap" gutter="zero" marginBottom="lg">
 							<Col percent="33.33"><div className={style.colTint}>1 false</div></Col>
 							<Col percent="33.33"><div className={style.colTint}>2 false</div></Col>
 							<Col percent="33.33"><div className={style.colTint}>3 false</div></Col>
@@ -202,8 +202,8 @@ class PageLayout extends Component {
 						</Row>
 					</div>
 					<div className={style.docboxCode}>
-						<div>{`<Row wrap="true"></Row>`}</div>
-						<div>{`<Row wrap="false"></Row>`}</div>
+						<div>{`<Row wrap="wrap"></Row>`}</div>
+						<div>{`<Row wrap="nowrap"></Row>`}</div>
 						<div>{`<Row wrap="reverse"></Row>`}</div>
 					</div>
 				</div>

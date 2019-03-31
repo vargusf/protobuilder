@@ -19,8 +19,8 @@ const Container = ({
 		${globalStyle.positionRelative}
 		${getResponsiveClasses('height', height)}
 		${getResponsiveClasses('backgroundColor', backgroundColor)}
-		${( fixedWidth == "true" ? getResponsiveClasses('fixedWidth') : '' )}
-		${( centered == "true" ? `${getResponsiveClasses('justifyCenter')} ${getResponsiveClasses('alignCenter')}`: '' )}
+		${getResponsiveClasses('fixedWidth', fixedWidth)}
+		${getResponsiveClasses('centered', centered)}
 		${getResponsiveClasses('flexGrow', grow)}
 		${className}
 	`;
@@ -33,8 +33,7 @@ const Container = ({
 }
 
 const Row = ({
-	stack = "false", //"false"|"true", default: "false"
-	reverse = "false", //"false"|"true", default: "false"
+	direction = "row", //"row"|"column"|"row-reverse"|"column-reverse", default: "row"
 	wrap = "false", // "true"|"false"|"reverse", default: "false"
 	grow = "0", //  "0"|"1", default: "0"
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
@@ -51,7 +50,8 @@ const Row = ({
 	const classes = ` 
 		${globalStyle.displayFlex} 
 		${globalStyle.width100per}
-		${(wrap == "true" ? getResponsiveClasses('flexWrap') : (wrap == "reverse" ? getResponsiveClasses('flexWrapReverse') : getResponsiveClasses('flexNowrap')))}
+		${globalStyle.gutter}
+		${getResponsiveClasses('flex', wrap)}
 		${getResponsiveClasses('flexGrow', grow)}
 		${getResponsiveClasses('align', align)}
 		${getResponsiveClasses('justify', justify)}
@@ -59,31 +59,8 @@ const Row = ({
 		${getResponsiveClasses('marginBottom', marginBottom)}
 		${getResponsiveClasses('paddingTop', paddingTop)}
 		${getResponsiveClasses('paddingBottom', paddingBottom)}
+		${getResponsiveClasses('colDirection', direction)}
 		${getResponsiveClasses('gutter', gutter)}
-		${(
-			stack == "true" ? 
-				(
-					`
-						${getResponsiveClasses('gutterStacked')} 
-						${(
-							reverse == "true" ? 
-								getResponsiveClasses('flexDirectionColumnReverse') : 
-								getResponsiveClasses('flexDirectionColumn')
-						)}
-					`
-				) : 
-				(
-					reverse == "true" ? 
-						`
-							${getResponsiveClasses('gutterReversed')}
-							${getResponsiveClasses('flexDirectionRowReverse')}
-						` : 
-						`
-							${getResponsiveClasses('gutter')}
-							${getResponsiveClasses('flexDirectionRow')}
-						`
-				)
-		)}
 		${className}
 	`;
 
@@ -106,12 +83,10 @@ const Col = ({
 	children
 }) => {
 
-	console.log(getResponsiveClasses(grow));
-
 	const classes = ` 
-		${(display == "block" ? getResponsiveClasses('displayBlock') : getResponsiveClasses('displayNone'))}
+		${getResponsiveClasses('display', display)}
 		${getResponsiveClasses('flexWidth', width)}
-		${(grow == "1" ? `${getResponsiveClasses('flexGrow1')} ${getResponsiveClasses('flexBasis0')} ` : getResponsiveClasses('flexGrow0'))}
+		${getResponsiveClasses('flexGrow', grow)}
 		${getResponsiveClasses('marginTop', marginTop)}
 		${getResponsiveClasses('marginBottom', marginBottom)}
 		${getResponsiveClasses('paddingTop', paddingTop)}

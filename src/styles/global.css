@@ -875,13 +875,14 @@
 .alignStretch                    { align-items: stretch; }
 .alignStart                      { align-items: flex-start; }
 .alignEnd                        { align-items: flex-end; }
+.centered                        { justify-content: center; align-items: center; }
 .flexDirectionRow                { flex-direction: row; }
 .flexDirectionRowReverse         { flex-direction: row-reverse; }
 .flexDirectionColumn             { flex-direction: column; }
 .flexDirectionColumnReverse      { flex-direction: column-reverse; }
 .flexWrap                        { flex-wrap: wrap; }
 .flexNowrap                      { flex-wrap: nowrap; }
-.flexWrapReverse                 { flex-wrap: wrap-reverse; }
+.flexReverse                     { flex-wrap: wrap-reverse; }
 .floatLeft                       { float: left; }
 .floatRight                      { float: right; }
 .fixedWidth                      { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }
@@ -1627,76 +1628,87 @@
 	Gutter
 /--------------------*/
 
-.gutterZero > *                     { padding-left: var(--size-zero); padding-right: var(--size-zero); }
-.gutterXxsm > *                     { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }
-.gutterXsm > *                      { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }
-.gutterSm > *                       { padding-left: var(--size-sm); padding-right: var(--size-sm); }
-.gutterMd > *                       { padding-left: var(--size-md); padding-right: var(--size-md); }
-.gutterLg > *                       { padding-left: var(--size-lg); padding-right: var(--size-lg); }
-.gutterXlg > *                      { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }
-.gutterXxlg > *                     { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }
-.gutter > :first-child              { padding-left: var(--size-zero); }
-.gutter > :last-child               { padding-right: var(--size-zero); }
-.gutterReversed > :first-child      { padding-right: var(--size-zero); }
-.gutterReversed > :last-child       { padding-left: var(--size-zero); }
-.gutterStacked > *                  { padding-left: var(--size-zero); padding-right: var(--size-zero); }
-.gutter > :only-child               { padding-left: var(--size-zero); padding-right: var(--size-zero); }
-.gutterZeroBpLg > *                 { @media (--breakpoint-lg) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterXxsmBpLg > *                 { @media (--breakpoint-lg) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
-.gutterXsmBpLg > *                  { @media (--breakpoint-lg) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
-.gutterSmBpLg > *                   { @media (--breakpoint-lg) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
-.gutterMdBpLg > *                   { @media (--breakpoint-lg) { padding-left: var(--size-md); padding-right: var(--size-md); }}
-.gutterLgBpLg > *                   { @media (--breakpoint-lg) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
-.gutterXlgBpLg > *                  { @media (--breakpoint-lg) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
-.gutterXxlgBpLg > *                 { @media (--breakpoint-lg) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
-.gutterBpLg > :first-child          { @media (--breakpoint-lg) { padding-left: var(--size-zero); }}
-.gutterBpLg > :last-child           { @media (--breakpoint-lg) { padding-right: var(--size-zero); }}
-.gutterReversedBpLg > :first-child  { @media (--breakpoint-lg) { padding-right: var(--size-zero); }}
-.gutterReversedBpLg > :last-child   { @media (--breakpoint-lg) { padding-left: var(--size-zero); }}
-.gutterStackedBpLg > *              { @media (--breakpoint-lg) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterBpLg > :only-child           { @media (--breakpoint-lg) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterZeroBpMd > *                 { @media (--breakpoint-md) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterXxsmBpMd > *                 { @media (--breakpoint-md) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
-.gutterXsmBpMd > *                  { @media (--breakpoint-md) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
-.gutterSmBpMd > *                   { @media (--breakpoint-md) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
-.gutterMdBpMd > *                   { @media (--breakpoint-md) { padding-left: var(--size-md); padding-right: var(--size-md); }}
-.gutterLgBpMd > *                   { @media (--breakpoint-md) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
-.gutterXlgBpMd > *                  { @media (--breakpoint-md) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
-.gutterXxlgBpMd > *                 { @media (--breakpoint-md) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
-.gutterBpMd > :first-child          { @media (--breakpoint-md) { padding-left: var(--size-zero); }}
-.gutterBpMd > :last-child           { @media (--breakpoint-md) { padding-right: var(--size-zero); }}
-.gutterReversedBpMd > :first-child  { @media (--breakpoint-md) { padding-right: var(--size-zero); }}
-.gutterReversedBpMd > :last-child   { @media (--breakpoint-md) { padding-left: var(--size-zero); }}
-.gutterStackedBpMd > *              { @media (--breakpoint-md) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterBpMd > :only-child           { @media (--breakpoint-md) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterZeroBpSm > *                 { @media (--breakpoint-sm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterXxsmBpSm > *                 { @media (--breakpoint-sm) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
-.gutterXsmBpSm > *                  { @media (--breakpoint-sm) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
-.gutterSmBpSm > *                   { @media (--breakpoint-sm) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
-.gutterMdBpSm > *                   { @media (--breakpoint-sm) { padding-left: var(--size-md); padding-right: var(--size-md); }}
-.gutterLgBpSm > *                   { @media (--breakpoint-sm) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
-.gutterXlgBpSm > *                  { @media (--breakpoint-sm) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
-.gutterXxlgBpSm > *                 { @media (--breakpoint-sm) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
-.gutterBpSm > :first-child          { @media (--breakpoint-sm) { padding-left: var(--size-zero); }}
-.gutterBpSm > :last-child           { @media (--breakpoint-sm) { padding-right: var(--size-zero); }}
-.gutterReversedBpSm > :first-child  { @media (--breakpoint-sm) { padding-right: var(--size-zero); }}
-.gutterReversedBpSm > :last-child   { @media (--breakpoint-sm) { padding-left: var(--size-zero); }}
-.gutterStackedBpSm > *              { @media (--breakpoint-sm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterBpSm > :only-child           { @media (--breakpoint-sm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterZeroBpXsm > *                { @media (--breakpoint-xsm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterXxsmBpXsm > *                { @media (--breakpoint-xsm) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
-.gutterXsmBpXsm > *                 { @media (--breakpoint-xsm) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
-.gutterSmBpXsm > *                  { @media (--breakpoint-xsm) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
-.gutterMdBpXsm > *                  { @media (--breakpoint-xsm) { padding-left: var(--size-md); padding-right: var(--size-md); }}
-.gutterLgBpXsm > *                  { @media (--breakpoint-xsm) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
-.gutterXlgBpXsm > *                 { @media (--breakpoint-xsm) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
-.gutterXxlgBpXsm > *                { @media (--breakpoint-xsm) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
-.gutterBpXsm > :first-child         { @media (--breakpoint-xsm) { padding-left: var(--size-zero); }}
-.gutterBpXsm > :last-child          { @media (--breakpoint-xsm) { padding-right: var(--size-zero); }}
-.gutterReversedBpXsm > :first-child { @media (--breakpoint-xsm) { padding-right: var(--size-zero); }}
-.gutterReversedBpXsm > :last-child  { @media (--breakpoint-xsm) { padding-left: var(--size-zero); }}
-.gutterStackedBpXsm > *             { @media (--breakpoint-xsm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
-.gutterBpXsm > :only-child          { @media (--breakpoint-xsm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterZero > *                               { padding-left: var(--size-zero); padding-right: var(--size-zero); }
+.gutterXxsm > *                               { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }
+.gutterXsm > *                                { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }
+.gutterSm > *                                 { padding-left: var(--size-sm); padding-right: var(--size-sm); }
+.gutterMd > *                                 { padding-left: var(--size-md); padding-right: var(--size-md); }
+.gutterLg > *                                 { padding-left: var(--size-lg); padding-right: var(--size-lg); }
+.gutterXlg > *                                { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }
+.gutterXxlg > *                               { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }
+.colDirectionRow                              { flex-direction: row; }
+.colDirectionRow > :first-child               { padding-left: 0; }
+.colDirectionRow > :last-child                { padding-right: 0; }
+.colDirectionRowReverse                       { flex-direction: row-reverse; }
+.colDirectionRowReverse > :first-child        { padding-right: 0; }
+.colDirectionRowReverse > :last-child         { padding-left: 0; }
+.colDirectionColumn                           { flex-direction: column; padding-left: 0; padding-right: 0; }
+.colDirectionColumnReverse                    { flex-direction: column-reverse; padding-left: 0; padding-right: 0; }
+.gutterZeroBpLg > *                           { @media (--breakpoint-lg) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpLg > *                           { @media (--breakpoint-lg) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpLg > *                            { @media (--breakpoint-lg) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpLg > *                             { @media (--breakpoint-lg) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpLg > *                             { @media (--breakpoint-lg) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpLg > *                             { @media (--breakpoint-lg) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpLg > *                            { @media (--breakpoint-lg) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpLg > *                           { @media (--breakpoint-lg) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.colDirectionRowBpLg                          { @media (--breakpoint-lg) { flex-direction: row; }}
+.colDirectionRowBpLg > :first-child           { @media (--breakpoint-lg) { padding-left: 0; }}
+.colDirectionRowBpLg > :last-child            { @media (--breakpoint-lg) { padding-right: 0; }}
+.colDirectionRowReverseBpLg                   { @media (--breakpoint-lg) { flex-direction: row-reverse; }}
+.colDirectionRowReverseBpLg > :first-child    { @media (--breakpoint-lg) { padding-right: 0; }}
+.colDirectionRowReverseBpLg > :last-child     { @media (--breakpoint-lg) { padding-left: 0; }}
+.colDirectionColumnBpLg                       { @media (--breakpoint-lg) { flex-direction: column; padding-left: 0; padding-right: 0; }}
+.colDirectionColumnReverseBpLg                { @media (--breakpoint-lg) { flex-direction: column-reverse; padding-left: 0; padding-right: 0; }}
+.gutterZeroBpMd > *                           { @media (--breakpoint-md) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpMd > *                           { @media (--breakpoint-md) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpMd > *                            { @media (--breakpoint-md) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpMd > *                             { @media (--breakpoint-md) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpMd > *                             { @media (--breakpoint-md) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpMd > *                             { @media (--breakpoint-md) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpMd > *                            { @media (--breakpoint-md) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpMd > *                           { @media (--breakpoint-md) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.colDirectionRowBpMd                          { @media (--breakpoint-md) { flex-direction: row; }}
+.colDirectionRowBpMd > :first-child           { @media (--breakpoint-md) { padding-left: 0; }}
+.colDirectionRowBpMd > :last-child            { @media (--breakpoint-md) { padding-right: 0; }}
+.colDirectionRowReverseBpMd                   { @media (--breakpoint-md) { flex-direction: row-reverse; }}
+.colDirectionRowReverseBpMd > :first-child    { @media (--breakpoint-md) { padding-right: 0; }}
+.colDirectionRowReverseBpMd > :last-child     { @media (--breakpoint-md) { padding-left: 0; }}
+.colDirectionColumnBpMd                       { @media (--breakpoint-md) { flex-direction: column; padding-left: 0; padding-right: 0; }}
+.colDirectionColumnReverseBpMd                { @media (--breakpoint-md) { flex-direction: column-reverse; padding-left: 0; padding-right: 0; }}
+.gutterZeroBpSm > *                           { @media (--breakpoint-sm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpSm > *                           { @media (--breakpoint-sm) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpSm > *                            { @media (--breakpoint-sm) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpSm > *                             { @media (--breakpoint-sm) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpSm > *                             { @media (--breakpoint-sm) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpSm > *                             { @media (--breakpoint-sm) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpSm > *                            { @media (--breakpoint-sm) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpSm > *                           { @media (--breakpoint-sm) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.colDirectionRowBpSm                          { @media (--breakpoint-sm) { flex-direction: row; }}
+.colDirectionRowBpSm > :first-child           { @media (--breakpoint-sm) { padding-left: 0; }}
+.colDirectionRowBpSm > :last-child            { @media (--breakpoint-sm) { padding-right: 0; }}
+.colDirectionRowReverseBpSm                   { @media (--breakpoint-sm) { flex-direction: row-reverse; }}
+.colDirectionRowReverseBpSm > :first-child    { @media (--breakpoint-sm) { padding-right: 0; }}
+.colDirectionRowReverseBpSm > :last-child     { @media (--breakpoint-sm) { padding-left: 0; }}
+.colDirectionColumnBpSm                       { @media (--breakpoint-sm) { flex-direction: column; padding-left: 0; padding-right: 0; }}
+.colDirectionColumnReverseBpSm                { @media (--breakpoint-sm) { flex-direction: column-reverse; padding-left: 0; padding-right: 0; }}
+.gutterZeroBpXsm > *                          { @media (--breakpoint-xsm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpXsm > *                          { @media (--breakpoint-xsm) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpXsm > *                           { @media (--breakpoint-xsm) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpXsm > *                            { @media (--breakpoint-xsm) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpXsm > *                            { @media (--breakpoint-xsm) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpXsm > *                            { @media (--breakpoint-xsm) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpXsm > *                           { @media (--breakpoint-xsm) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpXsm > *                          { @media (--breakpoint-xsm) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.colDirectionRowBpXsm                         { @media (--breakpoint-xsm) { flex-direction: row; }}
+.colDirectionRowBpXsm > :first-child          { @media (--breakpoint-xsm) { padding-left: 0; }}
+.colDirectionRowBpXsm > :last-child           { @media (--breakpoint-xsm) { padding-right: 0; }}
+.colDirectionRowReverseBpXsm                  { @media (--breakpoint-xsm) { flex-direction: row-reverse; }}
+.colDirectionRowReverseBpXsm > :first-child   { @media (--breakpoint-xsm) { padding-right: 0; }}
+.colDirectionRowReverseBpXsm > :last-child    { @media (--breakpoint-xsm) { padding-left: 0; }}
+.colDirectionColumnBpXsm                      { @media (--breakpoint-xsm) { flex-direction: column; padding-left: 0; padding-right: 0; }}
+.colDirectionColumnReverseBpXsm               { @media (--breakpoint-xsm) { flex-direction: column-reverse; padding-left: 0; padding-right: 0; }}
+.gutter > :only-child                         { padding-left: 0; padding-right: 0; }
 
 /*--------------------/
 	Widths & Heights
@@ -2431,26 +2443,16 @@
 .height1000pxBpXsm      { @media (--breakpoint-xsm) { height: 1000px; }}
 
 .flexGrow0              { flex-grow: 0; }
-.flexGrow1              { flex-grow: 1; }
+.flexGrow1              { flex-grow: 1; flex-basis: 0; }
 .flexGrow0BpLg          { @media (--breakpoint-lg) { flex-grow: 0 }}
-.flexGrow1BpLg          { @media (--breakpoint-lg) { flex-grow: 1; }}
+.flexGrow1BpLg          { @media (--breakpoint-lg) { flex-grow: 1; flex-basis: 0; }}
 .flexGrow0BpMd          { @media (--breakpoint-md) { flex-grow: 0 }}
-.flexGrow1BpMd          { @media (--breakpoint-md) { flex-grow: 1; }}
+.flexGrow1BpMd          { @media (--breakpoint-md) { flex-grow: 1; flex-basis: 0; }}
 .flexGrow0BpSm          { @media (--breakpoint-sm) { flex-grow: 0 }}
-.flexGrow1BpSm          { @media (--breakpoint-sm) { flex-grow: 1; }}
+.flexGrow1BpSm          { @media (--breakpoint-sm) { flex-grow: 1; flex-basis: 0; }}
 .flexGrow0BpXsm         { @media (--breakpoint-xsm) { flex-grow: 0 }}
-.flexGrow1BpXsm         { @media (--breakpoint-xsm) { flex-grow: 1; }}
+.flexGrow1BpXsm         { @media (--breakpoint-xsm) { flex-grow: 1; flex-basis: 0; }}
 
-.flexBasis0             { flex-basis: 0; }
-.flexBasisAuto          { flex-basis: auto; }
-.flexBasis0BpLg         { @media (--breakpoint-lg) { flex-basis: 0; }}
-.flexBasisAutoBpLg      { @media (--breakpoint-lg) { flex-basis: auto; }}
-.flexBasis0BpMd         { @media (--breakpoint-md) { flex-basis: 0; }}
-.flexBasisAutoBpMd      { @media (--breakpoint-md) { flex-basis: auto; }}
-.flexBasis0BpSm         { @media (--breakpoint-sm) { flex-basis: 0; }}
-.flexBasisAutoBpSm      { @media (--breakpoint-sm) { flex-basis: auto; }}
-.flexBasis0BpXsm        { @media (--breakpoint-xsm) { flex-basis: 0; }}
-.flexBasisAutoBpXsm     { @media (--breakpoint-xsm) { flex-basis: auto; }}
 
 
 

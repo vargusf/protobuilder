@@ -22,24 +22,28 @@ const capitalizeFirstLetter = string => {
 }
 
 export const getResponsiveClasses = (style, property = null) => {
-	if (property) {
-		return `
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).d)}`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).lg)}BpLg`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).md)}BpMd`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).sm)}BpSm`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).xsm)}BpXsm`]}
-		`
-	} else {
+	if (property == "false") {
+		return;
+	}
+	if (property == "true" || property == null) {
 		return `
 			${globalStyle[`${style}`]}
 			${globalStyle[`${style}BpLg`]}
 			${globalStyle[`${style}BpMd`]}
 			${globalStyle[`${style}BpSm`]}
 			${globalStyle[`${style}BpXsm`]}
-		`
+		`;
+	} else {
+		return `
+			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).d)}`]}
+			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).lg)}BpLg`]}
+			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).md)}BpMd`]}
+			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).sm)}BpSm`]}
+			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).xsm)}BpXsm`]}
+		`;
 	}
 }
+
 
 // export const getStyleConfig = () => {
 // 	const getCssVar = cssVar => getComputedStyle(document.documentElement).getPropertyValue(cssVar);
