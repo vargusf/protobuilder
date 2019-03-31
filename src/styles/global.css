@@ -876,11 +876,13 @@
 .alignStart                      { align-items: flex-start; }
 .alignEnd                        { align-items: flex-end; }
 .flexDirectionRow                { flex-direction: row; }
-.flexDirectionRowReverse         { flex-direction: row; }
-.flexDirectionColumnReverse      { flex-direction: column; }
+.flexDirectionRowReverse         { flex-direction: row-reverse; }
+.flexDirectionColumn             { flex-direction: column; }
+.flexDirectionColumnReverse      { flex-direction: column-reverse; }
 .flexWrap                        { flex-wrap: wrap; }
 .flexNowrap                      { flex-wrap: nowrap; }
 .flexWrapReverse                 { flex-wrap: wrap-reverse; }
+.flexGrow0                       { flex-grow: 0; }
 .flexGrow1                       { flex-grow: 1; }
 .floatLeft                       { float: left; }
 .floatRight                      { float: right; }
@@ -904,11 +906,13 @@
 .alignStartBpLg                  { @media (--breakpoint-lg) { align-items: flex-start; }}
 .alignEndBpLg                    { @media (--breakpoint-lg) { align-items: flex-end; }}
 .flexDirectionRowBpLg            { @media (--breakpoint-lg) { flex-direction: row; }}
-.flexDirectionRowReverseBpLg     { @media (--breakpoint-lg) { flex-direction: row; }}
-.flexDirectionColumnReverseBpLg  { @media (--breakpoint-lg) { flex-direction: column; }}
+.flexDirectionRowReverseBpLg     { @media (--breakpoint-lg) { flex-direction: row-reverse; }}
+.flexDirectionColumnBpLg         { @media (--breakpoint-lg) { flex-direction: column; }}
+.flexDirectionColumnReverseBpLg  { @media (--breakpoint-lg) { flex-direction: column-reverse; }}
 .flexWrapBpLg                    { @media (--breakpoint-lg) { flex-wrap: wrap; }}
 .flexNowrapBpLg                  { @media (--breakpoint-lg) { flex-wrap: nowrap; }}
 .flexWrapReverseBpLg             { @media (--breakpoint-lg) { flex-wrap: wrap-reverse; }}
+.flexGrow0BpLg                   { @media (--breakpoint-lg) { flex-grow:  0 }}
 .flexGrow1BpLg                   { @media (--breakpoint-lg) { flex-grow: 1; }}
 .floatLeftBpLg                   { @media (--breakpoint-lg) { float: left; }}
 .floatRightBpLg                  { @media (--breakpoint-lg) { float: right; }}
@@ -932,11 +936,13 @@
 .alignStartBpMd                  { @media (--breakpoint-md) { align-items: flex-start; }}
 .alignEndBpMd                    { @media (--breakpoint-md) { align-items: flex-end; }}
 .flexDirectionRowBpMd            { @media (--breakpoint-md) { flex-direction: row; }}
-.flexDirectionRowReverseBpMd     { @media (--breakpoint-md) { flex-direction: row; }}
-.flexDirectionColumnReverseBpMd  { @media (--breakpoint-md) { flex-direction: column; }}
+.flexDirectionRowReverseBpMd     { @media (--breakpoint-md) { flex-direction: row-reverse; }}
+.flexDirectionColumnBpMd         { @media (--breakpoint-md) { flex-direction: column; }}
+.flexDirectionColumnReverseBpMd  { @media (--breakpoint-md) { flex-direction: column-reverse; }}
 .flexWrapBpMd                    { @media (--breakpoint-md) { flex-wrap: wrap; }}
 .flexNowrapBpMd                  { @media (--breakpoint-md) { flex-wrap: nowrap; }}
 .flexWrapReverseBpMd             { @media (--breakpoint-md) { flex-wrap: wrap-reverse; }}
+.flexGrow0BpMd                   { @media (--breakpoint-md) { flex-grow:  0 }}
 .flexGrow1BpMd                   { @media (--breakpoint-md) { flex-grow: 1; }}
 .floatLeftBpMd                   { @media (--breakpoint-md) { float: left; }}
 .floatRightBpMd                  { @media (--breakpoint-md) { float: right; }}
@@ -960,11 +966,13 @@
 .alignStartBpSm                  { @media (--breakpoint-sm) { align-items: flex-start; }}
 .alignEndBpSm                    { @media (--breakpoint-sm) { align-items: flex-end; }}
 .flexDirectionRowBpSm            { @media (--breakpoint-sm) { flex-direction: row; }}
-.flexDirectionRowReverseBpSm     { @media (--breakpoint-sm) { flex-direction: row; }}
-.flexDirectionColumnReverseBpSm  { @media (--breakpoint-sm) { flex-direction: column; }}
+.flexDirectionRowReverseBpSm     { @media (--breakpoint-sm) { flex-direction: row-reverse; }}
+.flexDirectionColumnBpSm         { @media (--breakpoint-sm) { flex-direction: column; }}
+.flexDirectionColumnReverseBpSm  { @media (--breakpoint-sm) { flex-direction: column-reverse; }}
 .flexWrapBpSm                    { @media (--breakpoint-sm) { flex-wrap: wrap; }}
 .flexNowrapBpSm                  { @media (--breakpoint-sm) { flex-wrap: nowrap; }}
 .flexWrapReverseBpSm             { @media (--breakpoint-sm) { flex-wrap: wrap-reverse; }}
+.flexGrow0BpSm                   { @media (--breakpoint-sm) { flex-grow:  0 }}
 .flexGrow1BpSm                   { @media (--breakpoint-sm) { flex-grow: 1; }}
 .floatLeftBpSm                   { @media (--breakpoint-sm) { float: left; }}
 .floatRightBpSm                  { @media (--breakpoint-sm) { float: right; }}
@@ -988,44 +996,17 @@
 .alignStartBpXsm                 { @media (--breakpoint-xsm) { align-items: flex-start; }}
 .alignEndBpXsm                   { @media (--breakpoint-xsm) { align-items: flex-end; }}
 .flexDirectionRowBpXsm           { @media (--breakpoint-xsm) { flex-direction: row; }}
-.flexDirectionRowReverseBpXsm    { @media (--breakpoint-xsm) { flex-direction: row; }}
-.flexDirectionColumnReverseBpXsm { @media (--breakpoint-xsm) { flex-direction: column; }}
+.flexDirectionRowReverseBpXsm    { @media (--breakpoint-xsm) { flex-direction: row-reverse; }}
+.flexDirectionColumnBpXsm        { @media (--breakpoint-xsm) { flex-direction: column; }}
+.flexDirectionColumnReverseBpXsm { @media (--breakpoint-xsm) { flex-direction: column-reverse; }}
 .flexWrapBpXsm                   { @media (--breakpoint-xsm) { flex-wrap: wrap; }}
 .flexNowrapBpXsm                 { @media (--breakpoint-xsm) { flex-wrap: nowrap; }}
 .flexWrapReverseBpXsm            { @media (--breakpoint-xsm) { flex-wrap: wrap-reverse; }}
+.flexGrow0BpXsm                  { @media (--breakpoint-xsm) { flex-grow:  0 }}
 .flexGrow1BpXsm                  { @media (--breakpoint-xsm) { flex-grow: 1; }}
 .floatLeftBpXsm                  { @media (--breakpoint-xsm) { float: left; }}
 .floatRightBpXsm                 { @media (--breakpoint-xsm) { float: right; }}
 .fixedWidthBpXsm                 { @media (--breakpoint-xsm) { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }}
-
-
-
-
-.min100vh       { min-height: 100vh; }
-.width100per    { flex-basis: 100%; min-width: 100%; }
-.width95per     { flex-basis: 95%; min-width: 95%; }
-.width90per     { flex-basis: 90%; min-width: 90%; }
-.width85per     { flex-basis: 85%; min-width: 85%; }
-.width80per     { flex-basis: 80%; min-width: 80%; }
-.width75per     { flex-basis: 75%; min-width: 75%; }
-.width70per     { flex-basis: 70%; min-width: 70%; }
-.width66per     { flex-basis: 66.66; min-width: 66.66%; }
-.width65per     { flex-basis: 65%; min-width: 65%; }
-.width60per     { flex-basis: 60%; min-width: 60%; }
-.width55per     { flex-basis: 55%; min-width: 55%; }
-.width50per     { flex-basis: 50%; min-width: 50%; }
-.width45per     { flex-basis: 45%; min-width: 45%; }
-.width40per     { flex-basis: 40%; min-width: 40%; }
-.width33per     { flex-basis: 33%.33; min-width: 33%.33; }
-.width35per     { flex-basis: 35%; min-width: 35%; }
-.width30per     { flex-basis: 30%; min-width: 30%; }
-.width25per     { flex-basis: 25%; min-width: 25%; }
-.width20per     { flex-basis: 20%; min-width: 20%; }
-.width15per     { flex-basis: 15%; min-width: 15%; }
-.width10per     { flex-basis: 10%; min-width: 10%; }
-.width5per      { flex-basis: 5%; min-width: 5%; }
-.width0per      { flex-basis: 0%; min-width: 0%; }
-
 
 /*--------------------/
 	Colors
@@ -1652,6 +1633,733 @@
 	-moz-hyphens: auto;
 }
 
+/*--------------------/
+	Widths & Heights
+/--------------------*/
+
+.width0per              { width: 0%; }
+.width100per            { width: 100%; }
+.width0perBpLg          { @media (--breakpoint-lg) { width: 0%; }}
+.width100perBpLg        { @media (--breakpoint-lg) { width: 100%; }}
+.width0perBpMd          { @media (--breakpoint-md) { width: 0%; }}
+.width100perBpMd        { @media (--breakpoint-md) { width: 100%; }}
+.width0perBpSm          { @media (--breakpoint-sm) { width: 0%; }}
+.width100perBpSm        { @media (--breakpoint-sm) { width: 100%; }}
+.width0perBpXsm         { @media (--breakpoint-xsm) { width: 0%; }}
+.width100perBpXsm       { @media (--breakpoint-xsm) { width: 100%; }}
+
+.flexWidth0per          { flex-basis: 0%; min-width: 0%; }
+.flexWidth5per          { flex-basis: 5%; min-width: 5%; }
+.flexWidth10per         { flex-basis: 10%; min-width: 10%; }
+.flexWidth15per         { flex-basis: 15%; min-width: 15%; }
+.flexWidth20per         { flex-basis: 20%; min-width: 20%; }
+.flexWidth25per         { flex-basis: 25%; min-width: 25%; }
+.flexWidth30per         { flex-basis: 30%; min-width: 30%; }
+.flexWidth35per         { flex-basis: 35%; min-width: 35%; }
+.flexWidth33per         { flex-basis: 33%.33; min-width: 33%.33; }
+.flexWidth40per         { flex-basis: 40%; min-width: 40%; }
+.flexWidth45per         { flex-basis: 45%; min-width: 45%; }
+.flexWidth50per         { flex-basis: 50%; min-width: 50%; }
+.flexWidth55per         { flex-basis: 55%; min-width: 55%; }
+.flexWidth60per         { flex-basis: 60%; min-width: 60%; }
+.flexWidth65per         { flex-basis: 65%; min-width: 65%; }
+.flexWidth66per         { flex-basis: 66.66; min-width: 66.66%; }
+.flexWidth70per         { flex-basis: 70%; min-width: 70%; }
+.flexWidth75per         { flex-basis: 75%; min-width: 75%; }
+.flexWidth80per         { flex-basis: 80%; min-width: 80%; }
+.flexWidth85per         { flex-basis: 85%; min-width: 85%; }
+.flexWidth90per         { flex-basis: 90%; min-width: 90%; }
+.flexWidth95per         { flex-basis: 95%; min-width: 95%; }
+.flexWidth100per        { flex-basis: 100%; min-width: 100%; }
+.flexWidth5px           { flex-basis: 5px; min-width: 5px; }
+.flexWidth10px          { flex-basis: 10px; min-width: 10px; }
+.flexWidth15px          { flex-basis: 15px; min-width: 15px; }
+.flexWidth20px          { flex-basis: 20px; min-width: 20px; }
+.flexWidth25px          { flex-basis: 25px; min-width: 25px; }
+.flexWidth30px          { flex-basis: 30px; min-width: 30px; }
+.flexWidth35px          { flex-basis: 35px; min-width: 35px; }
+.flexWidth40px          { flex-basis: 40px; min-width: 40px; }
+.flexWidth45px          { flex-basis: 45px; min-width: 45px; }
+.flexWidth50px          { flex-basis: 50px; min-width: 50px; }
+.flexWidth55px          { flex-basis: 55px; min-width: 55px; }
+.flexWidth60px          { flex-basis: 60px; min-width: 60px; }
+.flexWidth65px          { flex-basis: 65px; min-width: 65px; }
+.flexWidth70px          { flex-basis: 70px; min-width: 70px; }
+.flexWidth75px          { flex-basis: 75px; min-width: 75px; }
+.flexWidth80px          { flex-basis: 80px; min-width: 80px; }
+.flexWidth85px          { flex-basis: 85px; min-width: 85px; }
+.flexWidth90px          { flex-basis: 90px; min-width: 90px; }
+.flexWidth95px          { flex-basis: 95px; min-width: 95px; }
+.flexWidth100px         { flex-basis: 100px; min-width: 100px; }
+.flexWidth110px         { flex-basis: 110px; min-width: 110px; }
+.flexWidth120px         { flex-basis: 120px; min-width: 120px; }
+.flexWidth130px         { flex-basis: 130px; min-width: 130px; }
+.flexWidth140px         { flex-basis: 140px; min-width: 140px; }
+.flexWidth150px         { flex-basis: 150px; min-width: 150px; }
+.flexWidth160px         { flex-basis: 160px; min-width: 160px; }
+.flexWidth170px         { flex-basis: 170px; min-width: 170px; }
+.flexWidth180px         { flex-basis: 180px; min-width: 180px; }
+.flexWidth190px         { flex-basis: 190px; min-width: 190px; }
+.flexWidth200px         { flex-basis: 200px; min-width: 200px; }
+.flexWidth210px         { flex-basis: 210px; min-width: 210px; }
+.flexWidth220px         { flex-basis: 220px; min-width: 220px; }
+.flexWidth230px         { flex-basis: 230px; min-width: 230px; }
+.flexWidth240px         { flex-basis: 240px; min-width: 240px; }
+.flexWidth250px         { flex-basis: 250px; min-width: 250px; }
+.flexWidth260px         { flex-basis: 260px; min-width: 260px; }
+.flexWidth270px         { flex-basis: 270px; min-width: 270px; }
+.flexWidth280px         { flex-basis: 280px; min-width: 280px; }
+.flexWidth290px         { flex-basis: 290px; min-width: 290px; }
+.flexWidth300px         { flex-basis: 300px; min-width: 300px; }
+.flexWidth320px         { flex-basis: 320px; min-width: 320px; }
+.flexWidth340px         { flex-basis: 340px; min-width: 340px; }
+.flexWidth350px         { flex-basis: 350px; min-width: 350px; }
+.flexWidth360px         { flex-basis: 360px; min-width: 360px; }
+.flexWidth380px         { flex-basis: 380px; min-width: 380px; }
+.flexWidth400px         { flex-basis: 400px; min-width: 400px; }
+.flexWidth450px         { flex-basis: 450px; min-width: 450px; }
+.flexWidth500px         { flex-basis: 500px; min-width: 500px; }
+.flexWidth550px         { flex-basis: 550px; min-width: 550px; }
+.flexWidth600px         { flex-basis: 600px; min-width: 600px; }
+.flexWidth650px         { flex-basis: 650px; min-width: 650px; }
+.flexWidth700px         { flex-basis: 700px; min-width: 700px; }
+.flexWidth750px         { flex-basis: 750px; min-width: 750px; }
+.flexWidth800px         { flex-basis: 800px; min-width: 800px; }
+.flexWidth850px         { flex-basis: 850px; min-width: 850px; }
+.flexWidth900px         { flex-basis: 900px; min-width: 900px; }
+.flexWidth950px         { flex-basis: 950px; min-width: 950px; }
+.flexWidth1000px        { flex-basis: 1000px; min-width: 1000px; } 
+.flexWidth0perBpLg      { @media (--breakpoint-lg) { flex-basis: 0%; min-width: 0%; }}
+.flexWidth5perBpLg      { @media (--breakpoint-lg) { flex-basis: 5%; min-width: 5%; }}
+.flexWidth10perBpLg     { @media (--breakpoint-lg) { flex-basis: 10%; min-width: 10%; }}
+.flexWidth15perBpLg     { @media (--breakpoint-lg) { flex-basis: 15%; min-width: 15%; }}
+.flexWidth20perBpLg     { @media (--breakpoint-lg) { flex-basis: 20%; min-width: 20%; }}
+.flexWidth25perBpLg     { @media (--breakpoint-lg) { flex-basis: 25%; min-width: 25%; }}
+.flexWidth30perBpLg     { @media (--breakpoint-lg) { flex-basis: 30%; min-width: 30%; }}
+.flexWidth35perBpLg     { @media (--breakpoint-lg) { flex-basis: 35%; min-width: 35%; }}
+.flexWidth33perBpLg     { @media (--breakpoint-lg) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth40perBpLg     { @media (--breakpoint-lg) { flex-basis: 40%; min-width: 40%; }}
+.flexWidth45perBpLg     { @media (--breakpoint-lg) { flex-basis: 45%; min-width: 45%; }}
+.flexWidth50perBpLg     { @media (--breakpoint-lg) { flex-basis: 50%; min-width: 50%; }}
+.flexWidth55perBpLg     { @media (--breakpoint-lg) { flex-basis: 55%; min-width: 55%; }}
+.flexWidth60perBpLg     { @media (--breakpoint-lg) { flex-basis: 60%; min-width: 60%; }}
+.flexWidth65perBpLg     { @media (--breakpoint-lg) { flex-basis: 65%; min-width: 65%; }}
+.flexWidth66perBpLg     { @media (--breakpoint-lg) { flex-basis: 66.66; min-width: 66.66%; }}
+.flexWidth70perBpLg     { @media (--breakpoint-lg) { flex-basis: 70%; min-width: 70%; }}
+.flexWidth75perBpLg     { @media (--breakpoint-lg) { flex-basis: 75%; min-width: 75%; }}
+.flexWidth80perBpLg     { @media (--breakpoint-lg) { flex-basis: 80%; min-width: 80%; }}
+.flexWidth85perBpLg     { @media (--breakpoint-lg) { flex-basis: 85%; min-width: 85%; }}
+.flexWidth90perBpLg     { @media (--breakpoint-lg) { flex-basis: 90%; min-width: 90%; }}
+.flexWidth95perBpLg     { @media (--breakpoint-lg) { flex-basis: 95%; min-width: 95%; }}
+.flexWidth100perBpLg    { @media (--breakpoint-lg) { flex-basis: 100%; min-width: 100%; }}
+.flexWidth5pxBpLg       { @media (--breakpoint-lg) { flex-basis: 5px; min-width: 5px; }}
+.flexWidth10pxBpLg      { @media (--breakpoint-lg) { flex-basis: 10px; min-width: 10px; }}
+.flexWidth15pxBpLg      { @media (--breakpoint-lg) { flex-basis: 15px; min-width: 15px; }}
+.flexWidth20pxBpLg      { @media (--breakpoint-lg) { flex-basis: 20px; min-width: 20px; }}
+.flexWidth25pxBpLg      { @media (--breakpoint-lg) { flex-basis: 25px; min-width: 25px; }}
+.flexWidth30pxBpLg      { @media (--breakpoint-lg) { flex-basis: 30px; min-width: 30px; }}
+.flexWidth35pxBpLg      { @media (--breakpoint-lg) { flex-basis: 35px; min-width: 35px; }}
+.flexWidth40pxBpLg      { @media (--breakpoint-lg) { flex-basis: 40px; min-width: 40px; }}
+.flexWidth45pxBpLg      { @media (--breakpoint-lg) { flex-basis: 45px; min-width: 45px; }}
+.flexWidth50pxBpLg      { @media (--breakpoint-lg) { flex-basis: 50px; min-width: 50px; }}
+.flexWidth55pxBpLg      { @media (--breakpoint-lg) { flex-basis: 55px; min-width: 55px; }}
+.flexWidth60pxBpLg      { @media (--breakpoint-lg) { flex-basis: 60px; min-width: 60px; }}
+.flexWidth65pxBpLg      { @media (--breakpoint-lg) { flex-basis: 65px; min-width: 65px; }}
+.flexWidth70pxBpLg      { @media (--breakpoint-lg) { flex-basis: 70px; min-width: 70px; }}
+.flexWidth75pxBpLg      { @media (--breakpoint-lg) { flex-basis: 75px; min-width: 75px; }}
+.flexWidth80pxBpLg      { @media (--breakpoint-lg) { flex-basis: 80px; min-width: 80px; }}
+.flexWidth85pxBpLg      { @media (--breakpoint-lg) { flex-basis: 85px; min-width: 85px; }}
+.flexWidth90pxBpLg      { @media (--breakpoint-lg) { flex-basis: 90px; min-width: 90px; }}
+.flexWidth95pxBpLg      { @media (--breakpoint-lg) { flex-basis: 95px; min-width: 95px; }}
+.flexWidth100pxBpLg     { @media (--breakpoint-lg) { flex-basis: 100px; min-width: 100px; }}
+.flexWidth110pxBpLg     { @media (--breakpoint-lg) { flex-basis: 110px; min-width: 110px; }}
+.flexWidth120pxBpLg     { @media (--breakpoint-lg) { flex-basis: 120px; min-width: 120px; }}
+.flexWidth130pxBpLg     { @media (--breakpoint-lg) { flex-basis: 130px; min-width: 130px; }}
+.flexWidth140pxBpLg     { @media (--breakpoint-lg) { flex-basis: 140px; min-width: 140px; }}
+.flexWidth150pxBpLg     { @media (--breakpoint-lg) { flex-basis: 150px; min-width: 150px; }}
+.flexWidth160pxBpLg     { @media (--breakpoint-lg) { flex-basis: 160px; min-width: 160px; }}
+.flexWidth170pxBpLg     { @media (--breakpoint-lg) { flex-basis: 170px; min-width: 170px; }}
+.flexWidth180pxBpLg     { @media (--breakpoint-lg) { flex-basis: 180px; min-width: 180px; }}
+.flexWidth190pxBpLg     { @media (--breakpoint-lg) { flex-basis: 190px; min-width: 190px; }}
+.flexWidth200pxBpLg     { @media (--breakpoint-lg) { flex-basis: 200px; min-width: 200px; }}
+.flexWidth210pxBpLg     { @media (--breakpoint-lg) { flex-basis: 210px; min-width: 210px; }}
+.flexWidth220pxBpLg     { @media (--breakpoint-lg) { flex-basis: 220px; min-width: 220px; }}
+.flexWidth230pxBpLg     { @media (--breakpoint-lg) { flex-basis: 230px; min-width: 230px; }}
+.flexWidth240pxBpLg     { @media (--breakpoint-lg) { flex-basis: 240px; min-width: 240px; }}
+.flexWidth250pxBpLg     { @media (--breakpoint-lg) { flex-basis: 250px; min-width: 250px; }}
+.flexWidth260pxBpLg     { @media (--breakpoint-lg) { flex-basis: 260px; min-width: 260px; }}
+.flexWidth270pxBpLg     { @media (--breakpoint-lg) { flex-basis: 270px; min-width: 270px; }}
+.flexWidth280pxBpLg     { @media (--breakpoint-lg) { flex-basis: 280px; min-width: 280px; }}
+.flexWidth290pxBpLg     { @media (--breakpoint-lg) { flex-basis: 290px; min-width: 290px; }}
+.flexWidth300pxBpLg     { @media (--breakpoint-lg) { flex-basis: 300px; min-width: 300px; }}
+.flexWidth320pxBpLg     { @media (--breakpoint-lg) { flex-basis: 320px; min-width: 320px; }}
+.flexWidth340pxBpLg     { @media (--breakpoint-lg) { flex-basis: 340px; min-width: 340px; }}
+.flexWidth350pxBpLg     { @media (--breakpoint-lg) { flex-basis: 350px; min-width: 350px; }}
+.flexWidth360pxBpLg     { @media (--breakpoint-lg) { flex-basis: 360px; min-width: 360px; }}
+.flexWidth380pxBpLg     { @media (--breakpoint-lg) { flex-basis: 380px; min-width: 380px; }}
+.flexWidth400pxBpLg     { @media (--breakpoint-lg) { flex-basis: 400px; min-width: 400px; }}
+.flexWidth450pxBpLg     { @media (--breakpoint-lg) { flex-basis: 450px; min-width: 450px; }}
+.flexWidth500pxBpLg     { @media (--breakpoint-lg) { flex-basis: 500px; min-width: 500px; }}
+.flexWidth550pxBpLg     { @media (--breakpoint-lg) { flex-basis: 550px; min-width: 550px; }}
+.flexWidth600pxBpLg     { @media (--breakpoint-lg) { flex-basis: 600px; min-width: 600px; }}
+.flexWidth650pxBpLg     { @media (--breakpoint-lg) { flex-basis: 650px; min-width: 650px; }}
+.flexWidth700pxBpLg     { @media (--breakpoint-lg) { flex-basis: 700px; min-width: 700px; }}
+.flexWidth750pxBpLg     { @media (--breakpoint-lg) { flex-basis: 750px; min-width: 750px; }}
+.flexWidth800pxBpLg     { @media (--breakpoint-lg) { flex-basis: 800px; min-width: 800px; }}
+.flexWidth850pxBpLg     { @media (--breakpoint-lg) { flex-basis: 850px; min-width: 850px; }}
+.flexWidth900pxBpLg     { @media (--breakpoint-lg) { flex-basis: 900px; min-width: 900px; }}
+.flexWidth950pxBpLg     { @media (--breakpoint-lg) { flex-basis: 950px; min-width: 950px; }}
+.flexWidth1000pxBpLg    { @media (--breakpoint-lg) { flex-basis: 1000px; min-width: 1000px; } }
+.flexWidth0perBpMd      { @media (--breakpoint-md) { flex-basis: 0%; min-width: 0%; }}
+.flexWidth5perBpMd      { @media (--breakpoint-md) { flex-basis: 5%; min-width: 5%; }}
+.flexWidth10perBpMd     { @media (--breakpoint-md) { flex-basis: 10%; min-width: 10%; }}
+.flexWidth15perBpMd     { @media (--breakpoint-md) { flex-basis: 15%; min-width: 15%; }}
+.flexWidth20perBpMd     { @media (--breakpoint-md) { flex-basis: 20%; min-width: 20%; }}
+.flexWidth25perBpMd     { @media (--breakpoint-md) { flex-basis: 25%; min-width: 25%; }}
+.flexWidth30perBpMd     { @media (--breakpoint-md) { flex-basis: 30%; min-width: 30%; }}
+.flexWidth35perBpMd     { @media (--breakpoint-md) { flex-basis: 35%; min-width: 35%; }}
+.flexWidth33perBpMd     { @media (--breakpoint-md) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth40perBpMd     { @media (--breakpoint-md) { flex-basis: 40%; min-width: 40%; }}
+.flexWidth45perBpMd     { @media (--breakpoint-md) { flex-basis: 45%; min-width: 45%; }}
+.flexWidth50perBpMd     { @media (--breakpoint-md) { flex-basis: 50%; min-width: 50%; }}
+.flexWidth55perBpMd     { @media (--breakpoint-md) { flex-basis: 55%; min-width: 55%; }}
+.flexWidth60perBpMd     { @media (--breakpoint-md) { flex-basis: 60%; min-width: 60%; }}
+.flexWidth65perBpMd     { @media (--breakpoint-md) { flex-basis: 65%; min-width: 65%; }}
+.flexWidth66perBpMd     { @media (--breakpoint-md) { flex-basis: 66.66; min-width: 66.66%; }}
+.flexWidth70perBpMd     { @media (--breakpoint-md) { flex-basis: 70%; min-width: 70%; }}
+.flexWidth75perBpMd     { @media (--breakpoint-md) { flex-basis: 75%; min-width: 75%; }}
+.flexWidth80perBpMd     { @media (--breakpoint-md) { flex-basis: 80%; min-width: 80%; }}
+.flexWidth85perBpMd     { @media (--breakpoint-md) { flex-basis: 85%; min-width: 85%; }}
+.flexWidth90perBpMd     { @media (--breakpoint-md) { flex-basis: 90%; min-width: 90%; }}
+.flexWidth95perBpMd     { @media (--breakpoint-md) { flex-basis: 95%; min-width: 95%; }}
+.flexWidth100perBpMd    { @media (--breakpoint-md) { flex-basis: 100%; min-width: 100%; }}
+.flexWidth5pxBpMd       { @media (--breakpoint-md) { flex-basis: 5px; min-width: 5px; }}
+.flexWidth10pxBpMd      { @media (--breakpoint-md) { flex-basis: 10px; min-width: 10px; }}
+.flexWidth15pxBpMd      { @media (--breakpoint-md) { flex-basis: 15px; min-width: 15px; }}
+.flexWidth20pxBpMd      { @media (--breakpoint-md) { flex-basis: 20px; min-width: 20px; }}
+.flexWidth25pxBpMd      { @media (--breakpoint-md) { flex-basis: 25px; min-width: 25px; }}
+.flexWidth30pxBpMd      { @media (--breakpoint-md) { flex-basis: 30px; min-width: 30px; }}
+.flexWidth35pxBpMd      { @media (--breakpoint-md) { flex-basis: 35px; min-width: 35px; }}
+.flexWidth40pxBpMd      { @media (--breakpoint-md) { flex-basis: 40px; min-width: 40px; }}
+.flexWidth45pxBpMd      { @media (--breakpoint-md) { flex-basis: 45px; min-width: 45px; }}
+.flexWidth50pxBpMd      { @media (--breakpoint-md) { flex-basis: 50px; min-width: 50px; }}
+.flexWidth55pxBpMd      { @media (--breakpoint-md) { flex-basis: 55px; min-width: 55px; }}
+.flexWidth60pxBpMd      { @media (--breakpoint-md) { flex-basis: 60px; min-width: 60px; }}
+.flexWidth65pxBpMd      { @media (--breakpoint-md) { flex-basis: 65px; min-width: 65px; }}
+.flexWidth70pxBpMd      { @media (--breakpoint-md) { flex-basis: 70px; min-width: 70px; }}
+.flexWidth75pxBpMd      { @media (--breakpoint-md) { flex-basis: 75px; min-width: 75px; }}
+.flexWidth80pxBpMd      { @media (--breakpoint-md) { flex-basis: 80px; min-width: 80px; }}
+.flexWidth85pxBpMd      { @media (--breakpoint-md) { flex-basis: 85px; min-width: 85px; }}
+.flexWidth90pxBpMd      { @media (--breakpoint-md) { flex-basis: 90px; min-width: 90px; }}
+.flexWidth95pxBpMd      { @media (--breakpoint-md) { flex-basis: 95px; min-width: 95px; }}
+.flexWidth100pxBpMd     { @media (--breakpoint-md) { flex-basis: 100px; min-width: 100px; }}
+.flexWidth110pxBpMd     { @media (--breakpoint-md) { flex-basis: 110px; min-width: 110px; }}
+.flexWidth120pxBpMd     { @media (--breakpoint-md) { flex-basis: 120px; min-width: 120px; }}
+.flexWidth130pxBpMd     { @media (--breakpoint-md) { flex-basis: 130px; min-width: 130px; }}
+.flexWidth140pxBpMd     { @media (--breakpoint-md) { flex-basis: 140px; min-width: 140px; }}
+.flexWidth150pxBpMd     { @media (--breakpoint-md) { flex-basis: 150px; min-width: 150px; }}
+.flexWidth160pxBpMd     { @media (--breakpoint-md) { flex-basis: 160px; min-width: 160px; }}
+.flexWidth170pxBpMd     { @media (--breakpoint-md) { flex-basis: 170px; min-width: 170px; }}
+.flexWidth180pxBpMd     { @media (--breakpoint-md) { flex-basis: 180px; min-width: 180px; }}
+.flexWidth190pxBpMd     { @media (--breakpoint-md) { flex-basis: 190px; min-width: 190px; }}
+.flexWidth200pxBpMd     { @media (--breakpoint-md) { flex-basis: 200px; min-width: 200px; }}
+.flexWidth210pxBpMd     { @media (--breakpoint-md) { flex-basis: 210px; min-width: 210px; }}
+.flexWidth220pxBpMd     { @media (--breakpoint-md) { flex-basis: 220px; min-width: 220px; }}
+.flexWidth230pxBpMd     { @media (--breakpoint-md) { flex-basis: 230px; min-width: 230px; }}
+.flexWidth240pxBpMd     { @media (--breakpoint-md) { flex-basis: 240px; min-width: 240px; }}
+.flexWidth250pxBpMd     { @media (--breakpoint-md) { flex-basis: 250px; min-width: 250px; }}
+.flexWidth260pxBpMd     { @media (--breakpoint-md) { flex-basis: 260px; min-width: 260px; }}
+.flexWidth270pxBpMd     { @media (--breakpoint-md) { flex-basis: 270px; min-width: 270px; }}
+.flexWidth280pxBpMd     { @media (--breakpoint-md) { flex-basis: 280px; min-width: 280px; }}
+.flexWidth290pxBpMd     { @media (--breakpoint-md) { flex-basis: 290px; min-width: 290px; }}
+.flexWidth300pxBpMd     { @media (--breakpoint-md) { flex-basis: 300px; min-width: 300px; }}
+.flexWidth320pxBpMd     { @media (--breakpoint-md) { flex-basis: 320px; min-width: 320px; }}
+.flexWidth340pxBpMd     { @media (--breakpoint-md) { flex-basis: 340px; min-width: 340px; }}
+.flexWidth350pxBpMd     { @media (--breakpoint-md) { flex-basis: 350px; min-width: 350px; }}
+.flexWidth360pxBpMd     { @media (--breakpoint-md) { flex-basis: 360px; min-width: 360px; }}
+.flexWidth380pxBpMd     { @media (--breakpoint-md) { flex-basis: 380px; min-width: 380px; }}
+.flexWidth400pxBpMd     { @media (--breakpoint-md) { flex-basis: 400px; min-width: 400px; }}
+.flexWidth450pxBpMd     { @media (--breakpoint-md) { flex-basis: 450px; min-width: 450px; }}
+.flexWidth500pxBpMd     { @media (--breakpoint-md) { flex-basis: 500px; min-width: 500px; }}
+.flexWidth550pxBpMd     { @media (--breakpoint-md) { flex-basis: 550px; min-width: 550px; }}
+.flexWidth600pxBpMd     { @media (--breakpoint-md) { flex-basis: 600px; min-width: 600px; }}
+.flexWidth650pxBpMd     { @media (--breakpoint-md) { flex-basis: 650px; min-width: 650px; }}
+.flexWidth700pxBpMd     { @media (--breakpoint-md) { flex-basis: 700px; min-width: 700px; }}
+.flexWidth750pxBpMd     { @media (--breakpoint-md) { flex-basis: 750px; min-width: 750px; }}
+.flexWidth800pxBpMd     { @media (--breakpoint-md) { flex-basis: 800px; min-width: 800px; }}
+.flexWidth850pxBpMd     { @media (--breakpoint-md) { flex-basis: 850px; min-width: 850px; }}
+.flexWidth900pxBpMd     { @media (--breakpoint-md) { flex-basis: 900px; min-width: 900px; }}
+.flexWidth950pxBpMd     { @media (--breakpoint-md) { flex-basis: 950px; min-width: 950px; }}
+.flexWidth1000pxBpMd    { @media (--breakpoint-md) { flex-basis: 1000px; min-width: 1000px; } }
+.flexWidth0perBpSm      { @media (--breakpoint-sm) { flex-basis: 0%; min-width: 0%; }}
+.flexWidth5perBpSm      { @media (--breakpoint-sm) { flex-basis: 5%; min-width: 5%; }}
+.flexWidth10perBpSm     { @media (--breakpoint-sm) { flex-basis: 10%; min-width: 10%; }}
+.flexWidth15perBpSm     { @media (--breakpoint-sm) { flex-basis: 15%; min-width: 15%; }}
+.flexWidth20perBpSm     { @media (--breakpoint-sm) { flex-basis: 20%; min-width: 20%; }}
+.flexWidth25perBpSm     { @media (--breakpoint-sm) { flex-basis: 25%; min-width: 25%; }}
+.flexWidth30perBpSm     { @media (--breakpoint-sm) { flex-basis: 30%; min-width: 30%; }}
+.flexWidth35perBpSm     { @media (--breakpoint-sm) { flex-basis: 35%; min-width: 35%; }}
+.flexWidth33perBpSm     { @media (--breakpoint-sm) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth40perBpSm     { @media (--breakpoint-sm) { flex-basis: 40%; min-width: 40%; }}
+.flexWidth45perBpSm     { @media (--breakpoint-sm) { flex-basis: 45%; min-width: 45%; }}
+.flexWidth50perBpSm     { @media (--breakpoint-sm) { flex-basis: 50%; min-width: 50%; }}
+.flexWidth55perBpSm     { @media (--breakpoint-sm) { flex-basis: 55%; min-width: 55%; }}
+.flexWidth60perBpSm     { @media (--breakpoint-sm) { flex-basis: 60%; min-width: 60%; }}
+.flexWidth65perBpSm     { @media (--breakpoint-sm) { flex-basis: 65%; min-width: 65%; }}
+.flexWidth66perBpSm     { @media (--breakpoint-sm) { flex-basis: 66.66; min-width: 66.66%; }}
+.flexWidth70perBpSm     { @media (--breakpoint-sm) { flex-basis: 70%; min-width: 70%; }}
+.flexWidth75perBpSm     { @media (--breakpoint-sm) { flex-basis: 75%; min-width: 75%; }}
+.flexWidth80perBpSm     { @media (--breakpoint-sm) { flex-basis: 80%; min-width: 80%; }}
+.flexWidth85perBpSm     { @media (--breakpoint-sm) { flex-basis: 85%; min-width: 85%; }}
+.flexWidth90perBpSm     { @media (--breakpoint-sm) { flex-basis: 90%; min-width: 90%; }}
+.flexWidth95perBpSm     { @media (--breakpoint-sm) { flex-basis: 95%; min-width: 95%; }}
+.flexWidth100perBpSm    { @media (--breakpoint-sm) { flex-basis: 100%; min-width: 100%; }}
+.flexWidth5pxBpSm       { @media (--breakpoint-sm) { flex-basis: 5px; min-width: 5px; }}
+.flexWidth10pxBpSm      { @media (--breakpoint-sm) { flex-basis: 10px; min-width: 10px; }}
+.flexWidth15pxBpSm      { @media (--breakpoint-sm) { flex-basis: 15px; min-width: 15px; }}
+.flexWidth20pxBpSm      { @media (--breakpoint-sm) { flex-basis: 20px; min-width: 20px; }}
+.flexWidth25pxBpSm      { @media (--breakpoint-sm) { flex-basis: 25px; min-width: 25px; }}
+.flexWidth30pxBpSm      { @media (--breakpoint-sm) { flex-basis: 30px; min-width: 30px; }}
+.flexWidth35pxBpSm      { @media (--breakpoint-sm) { flex-basis: 35px; min-width: 35px; }}
+.flexWidth40pxBpSm      { @media (--breakpoint-sm) { flex-basis: 40px; min-width: 40px; }}
+.flexWidth45pxBpSm      { @media (--breakpoint-sm) { flex-basis: 45px; min-width: 45px; }}
+.flexWidth50pxBpSm      { @media (--breakpoint-sm) { flex-basis: 50px; min-width: 50px; }}
+.flexWidth55pxBpSm      { @media (--breakpoint-sm) { flex-basis: 55px; min-width: 55px; }}
+.flexWidth60pxBpSm      { @media (--breakpoint-sm) { flex-basis: 60px; min-width: 60px; }}
+.flexWidth65pxBpSm      { @media (--breakpoint-sm) { flex-basis: 65px; min-width: 65px; }}
+.flexWidth70pxBpSm      { @media (--breakpoint-sm) { flex-basis: 70px; min-width: 70px; }}
+.flexWidth75pxBpSm      { @media (--breakpoint-sm) { flex-basis: 75px; min-width: 75px; }}
+.flexWidth80pxBpSm      { @media (--breakpoint-sm) { flex-basis: 80px; min-width: 80px; }}
+.flexWidth85pxBpSm      { @media (--breakpoint-sm) { flex-basis: 85px; min-width: 85px; }}
+.flexWidth90pxBpSm      { @media (--breakpoint-sm) { flex-basis: 90px; min-width: 90px; }}
+.flexWidth95pxBpSm      { @media (--breakpoint-sm) { flex-basis: 95px; min-width: 95px; }}
+.flexWidth100pxBpSm     { @media (--breakpoint-sm) { flex-basis: 100px; min-width: 100px; }}
+.flexWidth110pxBpSm     { @media (--breakpoint-sm) { flex-basis: 110px; min-width: 110px; }}
+.flexWidth120pxBpSm     { @media (--breakpoint-sm) { flex-basis: 120px; min-width: 120px; }}
+.flexWidth130pxBpSm     { @media (--breakpoint-sm) { flex-basis: 130px; min-width: 130px; }}
+.flexWidth140pxBpSm     { @media (--breakpoint-sm) { flex-basis: 140px; min-width: 140px; }}
+.flexWidth150pxBpSm     { @media (--breakpoint-sm) { flex-basis: 150px; min-width: 150px; }}
+.flexWidth160pxBpSm     { @media (--breakpoint-sm) { flex-basis: 160px; min-width: 160px; }}
+.flexWidth170pxBpSm     { @media (--breakpoint-sm) { flex-basis: 170px; min-width: 170px; }}
+.flexWidth180pxBpSm     { @media (--breakpoint-sm) { flex-basis: 180px; min-width: 180px; }}
+.flexWidth190pxBpSm     { @media (--breakpoint-sm) { flex-basis: 190px; min-width: 190px; }}
+.flexWidth200pxBpSm     { @media (--breakpoint-sm) { flex-basis: 200px; min-width: 200px; }}
+.flexWidth210pxBpSm     { @media (--breakpoint-sm) { flex-basis: 210px; min-width: 210px; }}
+.flexWidth220pxBpSm     { @media (--breakpoint-sm) { flex-basis: 220px; min-width: 220px; }}
+.flexWidth230pxBpSm     { @media (--breakpoint-sm) { flex-basis: 230px; min-width: 230px; }}
+.flexWidth240pxBpSm     { @media (--breakpoint-sm) { flex-basis: 240px; min-width: 240px; }}
+.flexWidth250pxBpSm     { @media (--breakpoint-sm) { flex-basis: 250px; min-width: 250px; }}
+.flexWidth260pxBpSm     { @media (--breakpoint-sm) { flex-basis: 260px; min-width: 260px; }}
+.flexWidth270pxBpSm     { @media (--breakpoint-sm) { flex-basis: 270px; min-width: 270px; }}
+.flexWidth280pxBpSm     { @media (--breakpoint-sm) { flex-basis: 280px; min-width: 280px; }}
+.flexWidth290pxBpSm     { @media (--breakpoint-sm) { flex-basis: 290px; min-width: 290px; }}
+.flexWidth300pxBpSm     { @media (--breakpoint-sm) { flex-basis: 300px; min-width: 300px; }}
+.flexWidth320pxBpSm     { @media (--breakpoint-sm) { flex-basis: 320px; min-width: 320px; }}
+.flexWidth340pxBpSm     { @media (--breakpoint-sm) { flex-basis: 340px; min-width: 340px; }}
+.flexWidth350pxBpSm     { @media (--breakpoint-sm) { flex-basis: 350px; min-width: 350px; }}
+.flexWidth360pxBpSm     { @media (--breakpoint-sm) { flex-basis: 360px; min-width: 360px; }}
+.flexWidth380pxBpSm     { @media (--breakpoint-sm) { flex-basis: 380px; min-width: 380px; }}
+.flexWidth400pxBpSm     { @media (--breakpoint-sm) { flex-basis: 400px; min-width: 400px; }}
+.flexWidth450pxBpSm     { @media (--breakpoint-sm) { flex-basis: 450px; min-width: 450px; }}
+.flexWidth500pxBpSm     { @media (--breakpoint-sm) { flex-basis: 500px; min-width: 500px; }}
+.flexWidth550pxBpSm     { @media (--breakpoint-sm) { flex-basis: 550px; min-width: 550px; }}
+.flexWidth600pxBpSm     { @media (--breakpoint-sm) { flex-basis: 600px; min-width: 600px; }}
+.flexWidth650pxBpSm     { @media (--breakpoint-sm) { flex-basis: 650px; min-width: 650px; }}
+.flexWidth700pxBpSm     { @media (--breakpoint-sm) { flex-basis: 700px; min-width: 700px; }}
+.flexWidth750pxBpSm     { @media (--breakpoint-sm) { flex-basis: 750px; min-width: 750px; }}
+.flexWidth800pxBpSm     { @media (--breakpoint-sm) { flex-basis: 800px; min-width: 800px; }}
+.flexWidth850pxBpSm     { @media (--breakpoint-sm) { flex-basis: 850px; min-width: 850px; }}
+.flexWidth900pxBpSm     { @media (--breakpoint-sm) { flex-basis: 900px; min-width: 900px; }}
+.flexWidth950pxBpSm     { @media (--breakpoint-sm) { flex-basis: 950px; min-width: 950px; }}
+.flexWidth1000pxBpSm    { @media (--breakpoint-sm) { flex-basis: 1000px; min-width: 1000px; } }
+.flexWidth0perBpXsm      { @media (--breakpoint-xsm) { flex-basis: 0%; min-width: 0%; }}
+.flexWidth5perBpXsm      { @media (--breakpoint-xsm) { flex-basis: 5%; min-width: 5%; }}
+.flexWidth10perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 10%; min-width: 10%; }}
+.flexWidth15perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 15%; min-width: 15%; }}
+.flexWidth20perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 20%; min-width: 20%; }}
+.flexWidth25perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 25%; min-width: 25%; }}
+.flexWidth30perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 30%; min-width: 30%; }}
+.flexWidth35perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 35%; min-width: 35%; }}
+.flexWidth33perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth40perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 40%; min-width: 40%; }}
+.flexWidth45perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 45%; min-width: 45%; }}
+.flexWidth50perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 50%; min-width: 50%; }}
+.flexWidth55perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 55%; min-width: 55%; }}
+.flexWidth60perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 60%; min-width: 60%; }}
+.flexWidth65perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 65%; min-width: 65%; }}
+.flexWidth66perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 66.66; min-width: 66.66%; }}
+.flexWidth70perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 70%; min-width: 70%; }}
+.flexWidth75perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 75%; min-width: 75%; }}
+.flexWidth80perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 80%; min-width: 80%; }}
+.flexWidth85perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 85%; min-width: 85%; }}
+.flexWidth90perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 90%; min-width: 90%; }}
+.flexWidth95perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 95%; min-width: 95%; }}
+.flexWidth100perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 100%; min-width: 100%; }}
+.flexWidth5pxBpXsm       { @media (--breakpoint-xsm) { flex-basis: 5px; min-width: 5px; }}
+.flexWidth10pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 10px; min-width: 10px; }}
+.flexWidth15pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 15px; min-width: 15px; }}
+.flexWidth20pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 20px; min-width: 20px; }}
+.flexWidth25pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 25px; min-width: 25px; }}
+.flexWidth30pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 30px; min-width: 30px; }}
+.flexWidth35pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 35px; min-width: 35px; }}
+.flexWidth40pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 40px; min-width: 40px; }}
+.flexWidth45pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 45px; min-width: 45px; }}
+.flexWidth50pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 50px; min-width: 50px; }}
+.flexWidth55pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 55px; min-width: 55px; }}
+.flexWidth60pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 60px; min-width: 60px; }}
+.flexWidth65pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 65px; min-width: 65px; }}
+.flexWidth70pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 70px; min-width: 70px; }}
+.flexWidth75pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 75px; min-width: 75px; }}
+.flexWidth80pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 80px; min-width: 80px; }}
+.flexWidth85pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 85px; min-width: 85px; }}
+.flexWidth90pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 90px; min-width: 90px; }}
+.flexWidth95pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 95px; min-width: 95px; }}
+.flexWidth100pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 100px; min-width: 100px; }}
+.flexWidth110pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 110px; min-width: 110px; }}
+.flexWidth120pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 120px; min-width: 120px; }}
+.flexWidth130pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 130px; min-width: 130px; }}
+.flexWidth140pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 140px; min-width: 140px; }}
+.flexWidth150pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 150px; min-width: 150px; }}
+.flexWidth160pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 160px; min-width: 160px; }}
+.flexWidth170pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 170px; min-width: 170px; }}
+.flexWidth180pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 180px; min-width: 180px; }}
+.flexWidth190pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 190px; min-width: 190px; }}
+.flexWidth200pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 200px; min-width: 200px; }}
+.flexWidth210pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 210px; min-width: 210px; }}
+.flexWidth220pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 220px; min-width: 220px; }}
+.flexWidth230pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 230px; min-width: 230px; }}
+.flexWidth240pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 240px; min-width: 240px; }}
+.flexWidth250pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 250px; min-width: 250px; }}
+.flexWidth260pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 260px; min-width: 260px; }}
+.flexWidth270pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 270px; min-width: 270px; }}
+.flexWidth280pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 280px; min-width: 280px; }}
+.flexWidth290pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 290px; min-width: 290px; }}
+.flexWidth300pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 300px; min-width: 300px; }}
+.flexWidth320pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 320px; min-width: 320px; }}
+.flexWidth340pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 340px; min-width: 340px; }}
+.flexWidth350pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 350px; min-width: 350px; }}
+.flexWidth360pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 360px; min-width: 360px; }}
+.flexWidth380pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 380px; min-width: 380px; }}
+.flexWidth400pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 400px; min-width: 400px; }}
+.flexWidth450pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 450px; min-width: 450px; }}
+.flexWidth500pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 500px; min-width: 500px; }}
+.flexWidth550pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 550px; min-width: 550px; }}
+.flexWidth600pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 600px; min-width: 600px; }}
+.flexWidth650pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 650px; min-width: 650px; }}
+.flexWidth700pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 700px; min-width: 700px; }}
+.flexWidth750pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 750px; min-width: 750px; }}
+.flexWidth800pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 800px; min-width: 800px; }}
+.flexWidth850pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 850px; min-width: 850px; }}
+.flexWidth900pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 900px; min-width: 900px; }}
+.flexWidth950pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 950px; min-width: 950px; }}
+.flexWidth1000pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 1000px; min-width: 1000px; } }
+
+.heightMin100vh         { min-height: 100vh; }
+.height100per           { height: 100%; }
+.heightAuto             { height: auto; }
+.height5px              { height: 5px; }
+.height10px             { height: 10px; }
+.height15px             { height: 15px; }
+.height20px             { height: 20px; }
+.height25px             { height: 25px; }
+.height30px             { height: 30px; }
+.height35px             { height: 35px; }
+.height40px             { height: 40px; }
+.height45px             { height: 45px; }
+.height50px             { height: 50px; }
+.height55px             { height: 55px; }
+.height60px             { height: 60px; }
+.height65px             { height: 65px; }
+.height70px             { height: 70px; }
+.height75px             { height: 75px; }
+.height80px             { height: 80px; }
+.height85px             { height: 85px; }
+.height90px             { height: 90px; }
+.height95px             { height: 95px; }
+.height100px            { height: 100px; }
+.height110px            { height: 110px; }
+.height120px            { height: 120px; }
+.height130px            { height: 130px; }
+.height140px            { height: 140px; }
+.height150px            { height: 150px; }
+.height160px            { height: 160px; }
+.height170px            { height: 170px; }
+.height180px            { height: 180px; }
+.height190px            { height: 190px; }
+.height200px            { height: 200px; }
+.height210px            { height: 210px; }
+.height220px            { height: 220px; }
+.height230px            { height: 230px; }
+.height240px            { height: 240px; }
+.height250px            { height: 250px; }
+.height260px            { height: 260px; }
+.height270px            { height: 270px; }
+.height280px            { height: 280px; }
+.height290px            { height: 290px; }
+.height300px            { height: 300px; }
+.height320px            { height: 320px; }
+.height340px            { height: 340px; }
+.height350px            { height: 350px; }
+.height360px            { height: 360px; }
+.height380px            { height: 380px; }
+.height400px            { height: 400px; }
+.height450px            { height: 450px; }
+.height500px            { height: 500px; }
+.height550px            { height: 550px; }
+.height600px            { height: 600px; }
+.height650px            { height: 650px; }
+.height700px            { height: 700px; }
+.height750px            { height: 750px; }
+.height800px            { height: 800px; }
+.height850px            { height: 850px; }
+.height900px            { height: 900px; }
+.height950px            { height: 950px; }
+.height1000px           { height: 1000px; }
+.heightMin100vhBpLg     { @media (--breakpoint-lg) { min-height: 100vh; }}
+.height100perBpLg       { @media (--breakpoint-lg) { height: 100%; }}
+.heightAutoBpLg         { @media (--breakpoint-lg) { height: auto }}
+.height5pxBpLg          { @media (--breakpoint-lg) { height: 5px; }}
+.height10pxBpLg         { @media (--breakpoint-lg) { height: 10px; }}
+.height15pxBpLg         { @media (--breakpoint-lg) { height: 15px; }}
+.height20pxBpLg         { @media (--breakpoint-lg) { height: 20px; }}
+.height25pxBpLg         { @media (--breakpoint-lg) { height: 25px; }}
+.height30pxBpLg         { @media (--breakpoint-lg) { height: 30px; }}
+.height35pxBpLg         { @media (--breakpoint-lg) { height: 35px; }}
+.height40pxBpLg         { @media (--breakpoint-lg) { height: 40px; }}
+.height45pxBpLg         { @media (--breakpoint-lg) { height: 45px; }}
+.height50pxBpLg         { @media (--breakpoint-lg) { height: 50px; }}
+.height55pxBpLg         { @media (--breakpoint-lg) { height: 55px; }}
+.height60pxBpLg         { @media (--breakpoint-lg) { height: 60px; }}
+.height65pxBpLg         { @media (--breakpoint-lg) { height: 65px; }}
+.height70pxBpLg         { @media (--breakpoint-lg) { height: 70px; }}
+.height75pxBpLg         { @media (--breakpoint-lg) { height: 75px; }}
+.height80pxBpLg         { @media (--breakpoint-lg) { height: 80px; }}
+.height85pxBpLg         { @media (--breakpoint-lg) { height: 85px; }}
+.height90pxBpLg         { @media (--breakpoint-lg) { height: 90px; }}
+.height95pxBpLg         { @media (--breakpoint-lg) { height: 95px; }}
+.height100pxBpLg        { @media (--breakpoint-lg) { height: 100px; }}
+.height110pxBpLg        { @media (--breakpoint-lg) { height: 110px; }}
+.height120pxBpLg        { @media (--breakpoint-lg) { height: 120px; }}
+.height130pxBpLg        { @media (--breakpoint-lg) { height: 130px; }}
+.height140pxBpLg        { @media (--breakpoint-lg) { height: 140px; }}
+.height150pxBpLg        { @media (--breakpoint-lg) { height: 150px; }}
+.height160pxBpLg        { @media (--breakpoint-lg) { height: 160px; }}
+.height170pxBpLg        { @media (--breakpoint-lg) { height: 170px; }}
+.height180pxBpLg        { @media (--breakpoint-lg) { height: 180px; }}
+.height190pxBpLg        { @media (--breakpoint-lg) { height: 190px; }}
+.height200pxBpLg        { @media (--breakpoint-lg) { height: 200px; }}
+.height210pxBpLg        { @media (--breakpoint-lg) { height: 210px; }}
+.height220pxBpLg        { @media (--breakpoint-lg) { height: 220px; }}
+.height230pxBpLg        { @media (--breakpoint-lg) { height: 230px; }}
+.height240pxBpLg        { @media (--breakpoint-lg) { height: 240px; }}
+.height250pxBpLg        { @media (--breakpoint-lg) { height: 250px; }}
+.height260pxBpLg        { @media (--breakpoint-lg) { height: 260px; }}
+.height270pxBpLg        { @media (--breakpoint-lg) { height: 270px; }}
+.height280pxBpLg        { @media (--breakpoint-lg) { height: 280px; }}
+.height290pxBpLg        { @media (--breakpoint-lg) { height: 290px; }}
+.height300pxBpLg        { @media (--breakpoint-lg) { height: 300px; }}
+.height320pxBpLg        { @media (--breakpoint-lg) { height: 320px; }}
+.height340pxBpLg        { @media (--breakpoint-lg) { height: 340px; }}
+.height350pxBpLg        { @media (--breakpoint-lg) { height: 350px; }}
+.height360pxBpLg        { @media (--breakpoint-lg) { height: 360px; }}
+.height380pxBpLg        { @media (--breakpoint-lg) { height: 380px; }}
+.height400pxBpLg        { @media (--breakpoint-lg) { height: 400px; }}
+.height450pxBpLg        { @media (--breakpoint-lg) { height: 450px; }}
+.height500pxBpLg        { @media (--breakpoint-lg) { height: 500px; }}
+.height550pxBpLg        { @media (--breakpoint-lg) { height: 550px; }}
+.height600pxBpLg        { @media (--breakpoint-lg) { height: 600px; }}
+.height650pxBpLg        { @media (--breakpoint-lg) { height: 650px; }}
+.height700pxBpLg        { @media (--breakpoint-lg) { height: 700px; }}
+.height750pxBpLg        { @media (--breakpoint-lg) { height: 750px; }}
+.height800pxBpLg        { @media (--breakpoint-lg) { height: 800px; }}
+.height850pxBpLg        { @media (--breakpoint-lg) { height: 850px; }}
+.height900pxBpLg        { @media (--breakpoint-lg) { height: 900px; }}
+.height950pxBpLg        { @media (--breakpoint-lg) { height: 950px; }}
+.height1000pxBpLg       { @media (--breakpoint-lg) { height: 1000px; }}
+.heightMin100vhBpMd     { @media (--breakpoint-md) { min-height: 100vh; }}
+.height100perBpMd       { @media (--breakpoint-md) { height: 100%; }}
+.heightAutoBpMd         { @media (--breakpoint-md) { height: auto }}
+.height5pxBpMd          { @media (--breakpoint-md) { height: 5px; }}
+.height10pxBpMd         { @media (--breakpoint-md) { height: 10px; }}
+.height15pxBpMd         { @media (--breakpoint-md) { height: 15px; }}
+.height20pxBpMd         { @media (--breakpoint-md) { height: 20px; }}
+.height25pxBpMd         { @media (--breakpoint-md) { height: 25px; }}
+.height30pxBpMd         { @media (--breakpoint-md) { height: 30px; }}
+.height35pxBpMd         { @media (--breakpoint-md) { height: 35px; }}
+.height40pxBpMd         { @media (--breakpoint-md) { height: 40px; }}
+.height45pxBpMd         { @media (--breakpoint-md) { height: 45px; }}
+.height50pxBpMd         { @media (--breakpoint-md) { height: 50px; }}
+.height55pxBpMd         { @media (--breakpoint-md) { height: 55px; }}
+.height60pxBpMd         { @media (--breakpoint-md) { height: 60px; }}
+.height65pxBpMd         { @media (--breakpoint-md) { height: 65px; }}
+.height70pxBpMd         { @media (--breakpoint-md) { height: 70px; }}
+.height75pxBpMd         { @media (--breakpoint-md) { height: 75px; }}
+.height80pxBpMd         { @media (--breakpoint-md) { height: 80px; }}
+.height85pxBpMd         { @media (--breakpoint-md) { height: 85px; }}
+.height90pxBpMd         { @media (--breakpoint-md) { height: 90px; }}
+.height95pxBpMd         { @media (--breakpoint-md) { height: 95px; }}
+.height100pxBpMd        { @media (--breakpoint-md) { height: 100px; }}
+.height110pxBpMd        { @media (--breakpoint-md) { height: 110px; }}
+.height120pxBpMd        { @media (--breakpoint-md) { height: 120px; }}
+.height130pxBpMd        { @media (--breakpoint-md) { height: 130px; }}
+.height140pxBpMd        { @media (--breakpoint-md) { height: 140px; }}
+.height150pxBpMd        { @media (--breakpoint-md) { height: 150px; }}
+.height160pxBpMd        { @media (--breakpoint-md) { height: 160px; }}
+.height170pxBpMd        { @media (--breakpoint-md) { height: 170px; }}
+.height180pxBpMd        { @media (--breakpoint-md) { height: 180px; }}
+.height190pxBpMd        { @media (--breakpoint-md) { height: 190px; }}
+.height200pxBpMd        { @media (--breakpoint-md) { height: 200px; }}
+.height210pxBpMd        { @media (--breakpoint-md) { height: 210px; }}
+.height220pxBpMd        { @media (--breakpoint-md) { height: 220px; }}
+.height230pxBpMd        { @media (--breakpoint-md) { height: 230px; }}
+.height240pxBpMd        { @media (--breakpoint-md) { height: 240px; }}
+.height250pxBpMd        { @media (--breakpoint-md) { height: 250px; }}
+.height260pxBpMd        { @media (--breakpoint-md) { height: 260px; }}
+.height270pxBpMd        { @media (--breakpoint-md) { height: 270px; }}
+.height280pxBpMd        { @media (--breakpoint-md) { height: 280px; }}
+.height290pxBpMd        { @media (--breakpoint-md) { height: 290px; }}
+.height300pxBpMd        { @media (--breakpoint-md) { height: 300px; }}
+.height320pxBpMd        { @media (--breakpoint-md) { height: 320px; }}
+.height340pxBpMd        { @media (--breakpoint-md) { height: 340px; }}
+.height350pxBpMd        { @media (--breakpoint-md) { height: 350px; }}
+.height360pxBpMd        { @media (--breakpoint-md) { height: 360px; }}
+.height380pxBpMd        { @media (--breakpoint-md) { height: 380px; }}
+.height400pxBpMd        { @media (--breakpoint-md) { height: 400px; }}
+.height450pxBpMd        { @media (--breakpoint-md) { height: 450px; }}
+.height500pxBpMd        { @media (--breakpoint-md) { height: 500px; }}
+.height550pxBpMd        { @media (--breakpoint-md) { height: 550px; }}
+.height600pxBpMd        { @media (--breakpoint-md) { height: 600px; }}
+.height650pxBpMd        { @media (--breakpoint-md) { height: 650px; }}
+.height700pxBpMd        { @media (--breakpoint-md) { height: 700px; }}
+.height750pxBpMd        { @media (--breakpoint-md) { height: 750px; }}
+.height800pxBpMd        { @media (--breakpoint-md) { height: 800px; }}
+.height850pxBpMd        { @media (--breakpoint-md) { height: 850px; }}
+.height900pxBpMd        { @media (--breakpoint-md) { height: 900px; }}
+.height950pxBpMd        { @media (--breakpoint-md) { height: 950px; }}
+.height1000pxBpMd       { @media (--breakpoint-md) { height: 1000px; }}
+.heightMin100vhBpSm     { @media (--breakpoint-sm) { min-height: 100vh; }}
+.height100perBpSm       { @media (--breakpoint-sm) { height: 100%; }}
+.heightAutoBpSm         { @media (--breakpoint-sm) { height: auto }}
+.height5pxBpSm          { @media (--breakpoint-sm) { height: 5px; }}
+.height10pxBpSm         { @media (--breakpoint-sm) { height: 10px; }}
+.height15pxBpSm         { @media (--breakpoint-sm) { height: 15px; }}
+.height20pxBpSm         { @media (--breakpoint-sm) { height: 20px; }}
+.height25pxBpSm         { @media (--breakpoint-sm) { height: 25px; }}
+.height30pxBpSm         { @media (--breakpoint-sm) { height: 30px; }}
+.height35pxBpSm         { @media (--breakpoint-sm) { height: 35px; }}
+.height40pxBpSm         { @media (--breakpoint-sm) { height: 40px; }}
+.height45pxBpSm         { @media (--breakpoint-sm) { height: 45px; }}
+.height50pxBpSm         { @media (--breakpoint-sm) { height: 50px; }}
+.height55pxBpSm         { @media (--breakpoint-sm) { height: 55px; }}
+.height60pxBpSm         { @media (--breakpoint-sm) { height: 60px; }}
+.height65pxBpSm         { @media (--breakpoint-sm) { height: 65px; }}
+.height70pxBpSm         { @media (--breakpoint-sm) { height: 70px; }}
+.height75pxBpSm         { @media (--breakpoint-sm) { height: 75px; }}
+.height80pxBpSm         { @media (--breakpoint-sm) { height: 80px; }}
+.height85pxBpSm         { @media (--breakpoint-sm) { height: 85px; }}
+.height90pxBpSm         { @media (--breakpoint-sm) { height: 90px; }}
+.height95pxBpSm         { @media (--breakpoint-sm) { height: 95px; }}
+.height100pxBpSm        { @media (--breakpoint-sm) { height: 100px; }}
+.height110pxBpSm        { @media (--breakpoint-sm) { height: 110px; }}
+.height120pxBpSm        { @media (--breakpoint-sm) { height: 120px; }}
+.height130pxBpSm        { @media (--breakpoint-sm) { height: 130px; }}
+.height140pxBpSm        { @media (--breakpoint-sm) { height: 140px; }}
+.height150pxBpSm        { @media (--breakpoint-sm) { height: 150px; }}
+.height160pxBpSm        { @media (--breakpoint-sm) { height: 160px; }}
+.height170pxBpSm        { @media (--breakpoint-sm) { height: 170px; }}
+.height180pxBpSm        { @media (--breakpoint-sm) { height: 180px; }}
+.height190pxBpSm        { @media (--breakpoint-sm) { height: 190px; }}
+.height200pxBpSm        { @media (--breakpoint-sm) { height: 200px; }}
+.height210pxBpSm        { @media (--breakpoint-sm) { height: 210px; }}
+.height220pxBpSm        { @media (--breakpoint-sm) { height: 220px; }}
+.height230pxBpSm        { @media (--breakpoint-sm) { height: 230px; }}
+.height240pxBpSm        { @media (--breakpoint-sm) { height: 240px; }}
+.height250pxBpSm        { @media (--breakpoint-sm) { height: 250px; }}
+.height260pxBpSm        { @media (--breakpoint-sm) { height: 260px; }}
+.height270pxBpSm        { @media (--breakpoint-sm) { height: 270px; }}
+.height280pxBpSm        { @media (--breakpoint-sm) { height: 280px; }}
+.height290pxBpSm        { @media (--breakpoint-sm) { height: 290px; }}
+.height300pxBpSm        { @media (--breakpoint-sm) { height: 300px; }}
+.height320pxBpSm        { @media (--breakpoint-sm) { height: 320px; }}
+.height340pxBpSm        { @media (--breakpoint-sm) { height: 340px; }}
+.height350pxBpSm        { @media (--breakpoint-sm) { height: 350px; }}
+.height360pxBpSm        { @media (--breakpoint-sm) { height: 360px; }}
+.height380pxBpSm        { @media (--breakpoint-sm) { height: 380px; }}
+.height400pxBpSm        { @media (--breakpoint-sm) { height: 400px; }}
+.height450pxBpSm        { @media (--breakpoint-sm) { height: 450px; }}
+.height500pxBpSm        { @media (--breakpoint-sm) { height: 500px; }}
+.height550pxBpSm        { @media (--breakpoint-sm) { height: 550px; }}
+.height600pxBpSm        { @media (--breakpoint-sm) { height: 600px; }}
+.height650pxBpSm        { @media (--breakpoint-sm) { height: 650px; }}
+.height700pxBpSm        { @media (--breakpoint-sm) { height: 700px; }}
+.height750pxBpSm        { @media (--breakpoint-sm) { height: 750px; }}
+.height800pxBpSm        { @media (--breakpoint-sm) { height: 800px; }}
+.height850pxBpSm        { @media (--breakpoint-sm) { height: 850px; }}
+.height900pxBpSm        { @media (--breakpoint-sm) { height: 900px; }}
+.height950pxBpSm        { @media (--breakpoint-sm) { height: 950px; }}
+.height1000pxBpSm       { @media (--breakpoint-sm) { height: 1000px; }}
+.heightMin100vhBpXsm    { @media (--breakpoint-xsm) { min-height: 100vh; }}
+.height100perBpXsm      { @media (--breakpoint-xsm) { height: 100%; }}
+.heightAutoBpXsm        { @media (--breakpoint-xsm) { height: auto }}
+.height5pxBpXsm         { @media (--breakpoint-xsm) { height: 5px; }}
+.height10pxBpXsm        { @media (--breakpoint-xsm) { height: 10px; }}
+.height15pxBpXsm        { @media (--breakpoint-xsm) { height: 15px; }}
+.height20pxBpXsm        { @media (--breakpoint-xsm) { height: 20px; }}
+.height25pxBpXsm        { @media (--breakpoint-xsm) { height: 25px; }}
+.height30pxBpXsm        { @media (--breakpoint-xsm) { height: 30px; }}
+.height35pxBpXsm        { @media (--breakpoint-xsm) { height: 35px; }}
+.height40pxBpXsm        { @media (--breakpoint-xsm) { height: 40px; }}
+.height45pxBpXsm        { @media (--breakpoint-xsm) { height: 45px; }}
+.height50pxBpXsm        { @media (--breakpoint-xsm) { height: 50px; }}
+.height55pxBpXsm        { @media (--breakpoint-xsm) { height: 55px; }}
+.height60pxBpXsm        { @media (--breakpoint-xsm) { height: 60px; }}
+.height65pxBpXsm        { @media (--breakpoint-xsm) { height: 65px; }}
+.height70pxBpXsm        { @media (--breakpoint-xsm) { height: 70px; }}
+.height75pxBpXsm        { @media (--breakpoint-xsm) { height: 75px; }}
+.height80pxBpXsm        { @media (--breakpoint-xsm) { height: 80px; }}
+.height85pxBpXsm        { @media (--breakpoint-xsm) { height: 85px; }}
+.height90pxBpXsm        { @media (--breakpoint-xsm) { height: 90px; }}
+.height95pxBpXsm        { @media (--breakpoint-xsm) { height: 95px; }}
+.height100pxBpXsm       { @media (--breakpoint-xsm) { height: 100px; }}
+.height110pxBpXsm       { @media (--breakpoint-xsm) { height: 110px; }}
+.height120pxBpXsm       { @media (--breakpoint-xsm) { height: 120px; }}
+.height130pxBpXsm       { @media (--breakpoint-xsm) { height: 130px; }}
+.height140pxBpXsm       { @media (--breakpoint-xsm) { height: 140px; }}
+.height150pxBpXsm       { @media (--breakpoint-xsm) { height: 150px; }}
+.height160pxBpXsm       { @media (--breakpoint-xsm) { height: 160px; }}
+.height170pxBpXsm       { @media (--breakpoint-xsm) { height: 170px; }}
+.height180pxBpXsm       { @media (--breakpoint-xsm) { height: 180px; }}
+.height190pxBpXsm       { @media (--breakpoint-xsm) { height: 190px; }}
+.height200pxBpXsm       { @media (--breakpoint-xsm) { height: 200px; }}
+.height210pxBpXsm       { @media (--breakpoint-xsm) { height: 210px; }}
+.height220pxBpXsm       { @media (--breakpoint-xsm) { height: 220px; }}
+.height230pxBpXsm       { @media (--breakpoint-xsm) { height: 230px; }}
+.height240pxBpXsm       { @media (--breakpoint-xsm) { height: 240px; }}
+.height250pxBpXsm       { @media (--breakpoint-xsm) { height: 250px; }}
+.height260pxBpXsm       { @media (--breakpoint-xsm) { height: 260px; }}
+.height270pxBpXsm       { @media (--breakpoint-xsm) { height: 270px; }}
+.height280pxBpXsm       { @media (--breakpoint-xsm) { height: 280px; }}
+.height290pxBpXsm       { @media (--breakpoint-xsm) { height: 290px; }}
+.height300pxBpXsm       { @media (--breakpoint-xsm) { height: 300px; }}
+.height320pxBpXsm       { @media (--breakpoint-xsm) { height: 320px; }}
+.height340pxBpXsm       { @media (--breakpoint-xsm) { height: 340px; }}
+.height350pxBpXsm       { @media (--breakpoint-xsm) { height: 350px; }}
+.height360pxBpXsm       { @media (--breakpoint-xsm) { height: 360px; }}
+.height380pxBpXsm       { @media (--breakpoint-xsm) { height: 380px; }}
+.height400pxBpXsm       { @media (--breakpoint-xsm) { height: 400px; }}
+.height450pxBpXsm       { @media (--breakpoint-xsm) { height: 450px; }}
+.height500pxBpXsm       { @media (--breakpoint-xsm) { height: 500px; }}
+.height550pxBpXsm       { @media (--breakpoint-xsm) { height: 550px; }}
+.height600pxBpXsm       { @media (--breakpoint-xsm) { height: 600px; }}
+.height650pxBpXsm       { @media (--breakpoint-xsm) { height: 650px; }}
+.height700pxBpXsm       { @media (--breakpoint-xsm) { height: 700px; }}
+.height750pxBpXsm       { @media (--breakpoint-xsm) { height: 750px; }}
+.height800pxBpXsm       { @media (--breakpoint-xsm) { height: 800px; }}
+.height850pxBpXsm       { @media (--breakpoint-xsm) { height: 850px; }}
+.height900pxBpXsm       { @media (--breakpoint-xsm) { height: 900px; }}
+.height950pxBpXsm       { @media (--breakpoint-xsm) { height: 950px; }}
+.height1000pxBpXsm      { @media (--breakpoint-xsm) { height: 1000px; }}
+
 
 
 
@@ -1662,32 +2370,6 @@
 
 
 /* to be deprecated */
-
-.justifyCenter       { justify-content: center; }
-.justifyStart        { justify-content: flex-start; }
-.justifyEnd          { justify-content: flex-end; }
-.justifyBetween      { justify-content: space-between; }
-.justifyAround       { justify-content: space-around; }
-.alignCenter         { align-items: center; }
-.alignStretch        { align-items: stretch; }
-.alignStart          { align-items: flex-start; }
-.alignEnd            { align-items: flex-end; }
-.alignBaseline       { align-items: baseline; }
-.alignSelfStart      { align-self: flex-start; }
-.alignSelfEnd        { align-self: flex-end; }
-.alignSelfCenter    { align-self: center; }
-.flexDirectionRow    { display: flex; flex-direction: row; }
-.flexDirectionColumn { display: flex; flex-direction: column; }
-.flexWrap            { flex-wrap: wrap; }
-.flexNowrap          { flex-wrap: nowrap; }
-.flexWrapReverse     { flex-wrap: wrap-reverse; }
-.flexGrow1           { flex-grow: 1; }
-.width100            { width: 100% }
-
-.fixedWidth          { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }
-.flexCentered        { display: flex; justify-content: center; align-items: center; }
-.minHeight100vh      { min-height: 100vh; }
-.height100           { height: 100%; }
 
 /* Gutters */
 .colsGutterXsm > * { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }

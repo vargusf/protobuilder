@@ -21,7 +21,7 @@ import style from './Docs.css';
 class Docs extends Component {
 	render() {
 		return (
-			<Container min100vh="true">
+			<Container height="min100vh">
 				<div className={style.header}>
 					<div className={style.logo}></div>
 				</div>

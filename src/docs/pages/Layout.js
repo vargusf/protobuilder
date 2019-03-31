@@ -41,7 +41,7 @@ class PageLayout extends Component {
 							<div className={style.itemTint}>height 200px</div>
 						</Container>
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Min Height 100vh</h3>
-						<Container min100vh="true">
+						<Container height="min100vh">
 							<div className={style.itemTint}>min100vh</div>
 						</Container>
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginTopMd} `}>Background Color</h3>
@@ -57,7 +57,7 @@ class PageLayout extends Component {
 						<div>{`<Container fixedWidth="true"></Container>`}</div>
 						<div>{`<Container centered="true"></Container>`}</div>
 						<div>{`<Container height="200"></Container>`}</div>
-						<div>{`<Container min100vh="true"></Container>`}</div>
+						<div>{`<Container height="min100vh"></Container>`}</div>
 						<div>{`<Container backgroundColor="primary"></Container>`}</div>
 						<div>{`<Container grow="1"></Container>`}</div>
 					</div>
@@ -561,8 +561,8 @@ class PageLayout extends Component {
 						</Row>
 						<h3 className={` ${style.docHeading3} ${protoStyle.paddingTopSm}`}>0 (Default)</h3>
 						<Row marginBottom="sm">
-							<Col grow="auto"><div className={style.colTint}>A Column</div></Col>
-							<Col grow="auto"><div className={style.colTint}>Just Another Larger Column</div></Col>
+							<Col grow="1"><div className={style.colTint}>A Column</div></Col>
+							<Col grow="1"><div className={style.colTint}>Just Another Larger Column</div></Col>
 						</Row>
 					</div>
 					<div className={style.docboxCode}>
