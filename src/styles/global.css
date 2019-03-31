@@ -882,8 +882,6 @@
 .flexWrap                        { flex-wrap: wrap; }
 .flexNowrap                      { flex-wrap: nowrap; }
 .flexWrapReverse                 { flex-wrap: wrap-reverse; }
-.flexGrow0                       { flex-grow: 0; }
-.flexGrow1                       { flex-grow: 1; }
 .floatLeft                       { float: left; }
 .floatRight                      { float: right; }
 .fixedWidth                      { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }
@@ -912,8 +910,6 @@
 .flexWrapBpLg                    { @media (--breakpoint-lg) { flex-wrap: wrap; }}
 .flexNowrapBpLg                  { @media (--breakpoint-lg) { flex-wrap: nowrap; }}
 .flexWrapReverseBpLg             { @media (--breakpoint-lg) { flex-wrap: wrap-reverse; }}
-.flexGrow0BpLg                   { @media (--breakpoint-lg) { flex-grow:  0 }}
-.flexGrow1BpLg                   { @media (--breakpoint-lg) { flex-grow: 1; }}
 .floatLeftBpLg                   { @media (--breakpoint-lg) { float: left; }}
 .floatRightBpLg                  { @media (--breakpoint-lg) { float: right; }}
 .fixedWidthBpLg                  { @media (--breakpoint-lg) { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }}
@@ -942,8 +938,6 @@
 .flexWrapBpMd                    { @media (--breakpoint-md) { flex-wrap: wrap; }}
 .flexNowrapBpMd                  { @media (--breakpoint-md) { flex-wrap: nowrap; }}
 .flexWrapReverseBpMd             { @media (--breakpoint-md) { flex-wrap: wrap-reverse; }}
-.flexGrow0BpMd                   { @media (--breakpoint-md) { flex-grow:  0 }}
-.flexGrow1BpMd                   { @media (--breakpoint-md) { flex-grow: 1; }}
 .floatLeftBpMd                   { @media (--breakpoint-md) { float: left; }}
 .floatRightBpMd                  { @media (--breakpoint-md) { float: right; }}
 .fixedWidthBpMd                  { @media (--breakpoint-md) { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }}
@@ -972,8 +966,6 @@
 .flexWrapBpSm                    { @media (--breakpoint-sm) { flex-wrap: wrap; }}
 .flexNowrapBpSm                  { @media (--breakpoint-sm) { flex-wrap: nowrap; }}
 .flexWrapReverseBpSm             { @media (--breakpoint-sm) { flex-wrap: wrap-reverse; }}
-.flexGrow0BpSm                   { @media (--breakpoint-sm) { flex-grow:  0 }}
-.flexGrow1BpSm                   { @media (--breakpoint-sm) { flex-grow: 1; }}
 .floatLeftBpSm                   { @media (--breakpoint-sm) { float: left; }}
 .floatRightBpSm                  { @media (--breakpoint-sm) { float: right; }}
 .fixedWidthBpSm                  { @media (--breakpoint-sm) { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }}
@@ -1002,8 +994,6 @@
 .flexWrapBpXsm                   { @media (--breakpoint-xsm) { flex-wrap: wrap; }}
 .flexNowrapBpXsm                 { @media (--breakpoint-xsm) { flex-wrap: nowrap; }}
 .flexWrapReverseBpXsm            { @media (--breakpoint-xsm) { flex-wrap: wrap-reverse; }}
-.flexGrow0BpXsm                  { @media (--breakpoint-xsm) { flex-grow:  0 }}
-.flexGrow1BpXsm                  { @media (--breakpoint-xsm) { flex-grow: 1; }}
 .floatLeftBpXsm                  { @media (--breakpoint-xsm) { float: left; }}
 .floatRightBpXsm                 { @media (--breakpoint-xsm) { float: right; }}
 .fixedWidthBpXsm                 { @media (--breakpoint-xsm) { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }}
@@ -1634,6 +1624,81 @@
 }
 
 /*--------------------/
+	Gutter
+/--------------------*/
+
+.gutterZero > *                     { padding-left: var(--size-zero); padding-right: var(--size-zero); }
+.gutterXxsm > *                     { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }
+.gutterXsm > *                      { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }
+.gutterSm > *                       { padding-left: var(--size-sm); padding-right: var(--size-sm); }
+.gutterMd > *                       { padding-left: var(--size-md); padding-right: var(--size-md); }
+.gutterLg > *                       { padding-left: var(--size-lg); padding-right: var(--size-lg); }
+.gutterXlg > *                      { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }
+.gutterXxlg > *                     { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }
+.gutter > :first-child              { padding-left: var(--size-zero); }
+.gutter > :last-child               { padding-right: var(--size-zero); }
+.gutterReversed > :first-child      { padding-right: var(--size-zero); }
+.gutterReversed > :last-child       { padding-left: var(--size-zero); }
+.gutterStacked > *                  { padding-left: var(--size-zero); padding-right: var(--size-zero); }
+.gutter > :only-child               { padding-left: var(--size-zero); padding-right: var(--size-zero); }
+.gutterZeroBpLg > *                 { @media (--breakpoint-lg) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpLg > *                 { @media (--breakpoint-lg) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpLg > *                  { @media (--breakpoint-lg) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpLg > *                   { @media (--breakpoint-lg) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpLg > *                   { @media (--breakpoint-lg) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpLg > *                   { @media (--breakpoint-lg) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpLg > *                  { @media (--breakpoint-lg) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpLg > *                 { @media (--breakpoint-lg) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.gutterBpLg > :first-child          { @media (--breakpoint-lg) { padding-left: var(--size-zero); }}
+.gutterBpLg > :last-child           { @media (--breakpoint-lg) { padding-right: var(--size-zero); }}
+.gutterReversedBpLg > :first-child  { @media (--breakpoint-lg) { padding-right: var(--size-zero); }}
+.gutterReversedBpLg > :last-child   { @media (--breakpoint-lg) { padding-left: var(--size-zero); }}
+.gutterStackedBpLg > *              { @media (--breakpoint-lg) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterBpLg > :only-child           { @media (--breakpoint-lg) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterZeroBpMd > *                 { @media (--breakpoint-md) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpMd > *                 { @media (--breakpoint-md) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpMd > *                  { @media (--breakpoint-md) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpMd > *                   { @media (--breakpoint-md) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpMd > *                   { @media (--breakpoint-md) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpMd > *                   { @media (--breakpoint-md) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpMd > *                  { @media (--breakpoint-md) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpMd > *                 { @media (--breakpoint-md) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.gutterBpMd > :first-child          { @media (--breakpoint-md) { padding-left: var(--size-zero); }}
+.gutterBpMd > :last-child           { @media (--breakpoint-md) { padding-right: var(--size-zero); }}
+.gutterReversedBpMd > :first-child  { @media (--breakpoint-md) { padding-right: var(--size-zero); }}
+.gutterReversedBpMd > :last-child   { @media (--breakpoint-md) { padding-left: var(--size-zero); }}
+.gutterStackedBpMd > *              { @media (--breakpoint-md) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterBpMd > :only-child           { @media (--breakpoint-md) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterZeroBpSm > *                 { @media (--breakpoint-sm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpSm > *                 { @media (--breakpoint-sm) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpSm > *                  { @media (--breakpoint-sm) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpSm > *                   { @media (--breakpoint-sm) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpSm > *                   { @media (--breakpoint-sm) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpSm > *                   { @media (--breakpoint-sm) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpSm > *                  { @media (--breakpoint-sm) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpSm > *                 { @media (--breakpoint-sm) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.gutterBpSm > :first-child          { @media (--breakpoint-sm) { padding-left: var(--size-zero); }}
+.gutterBpSm > :last-child           { @media (--breakpoint-sm) { padding-right: var(--size-zero); }}
+.gutterReversedBpSm > :first-child  { @media (--breakpoint-sm) { padding-right: var(--size-zero); }}
+.gutterReversedBpSm > :last-child   { @media (--breakpoint-sm) { padding-left: var(--size-zero); }}
+.gutterStackedBpSm > *              { @media (--breakpoint-sm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterBpSm > :only-child           { @media (--breakpoint-sm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterZeroBpXsm > *                { @media (--breakpoint-xsm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterXxsmBpXsm > *                { @media (--breakpoint-xsm) { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }}
+.gutterXsmBpXsm > *                 { @media (--breakpoint-xsm) { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }}
+.gutterSmBpXsm > *                  { @media (--breakpoint-xsm) { padding-left: var(--size-sm); padding-right: var(--size-sm); }}
+.gutterMdBpXsm > *                  { @media (--breakpoint-xsm) { padding-left: var(--size-md); padding-right: var(--size-md); }}
+.gutterLgBpXsm > *                  { @media (--breakpoint-xsm) { padding-left: var(--size-lg); padding-right: var(--size-lg); }}
+.gutterXlgBpXsm > *                 { @media (--breakpoint-xsm) { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }}
+.gutterXxlgBpXsm > *                { @media (--breakpoint-xsm) { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }}
+.gutterBpXsm > :first-child         { @media (--breakpoint-xsm) { padding-left: var(--size-zero); }}
+.gutterBpXsm > :last-child          { @media (--breakpoint-xsm) { padding-right: var(--size-zero); }}
+.gutterReversedBpXsm > :first-child { @media (--breakpoint-xsm) { padding-right: var(--size-zero); }}
+.gutterReversedBpXsm > :last-child  { @media (--breakpoint-xsm) { padding-left: var(--size-zero); }}
+.gutterStackedBpXsm > *             { @media (--breakpoint-xsm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+.gutterBpXsm > :only-child          { @media (--breakpoint-xsm) { padding-left: var(--size-zero); padding-right: var(--size-zero); }}
+
+/*--------------------/
 	Widths & Heights
 /--------------------*/
 
@@ -1648,6 +1713,7 @@
 .width0perBpXsm         { @media (--breakpoint-xsm) { width: 0%; }}
 .width100perBpXsm       { @media (--breakpoint-xsm) { width: 100%; }}
 
+.flexWidthAuto          { flex-basis: auto; min-width: 0; }
 .flexWidth0per          { flex-basis: 0%; min-width: 0%; }
 .flexWidth5per          { flex-basis: 5%; min-width: 5%; }
 .flexWidth10per         { flex-basis: 10%; min-width: 10%; }
@@ -1729,6 +1795,7 @@
 .flexWidth900px         { flex-basis: 900px; min-width: 900px; }
 .flexWidth950px         { flex-basis: 950px; min-width: 950px; }
 .flexWidth1000px        { flex-basis: 1000px; min-width: 1000px; } 
+.flexWidthAutoBpLg      { @media (--breakpoint-lg) { flex-basis: auto; min-width: 0; }}
 .flexWidth0perBpLg      { @media (--breakpoint-lg) { flex-basis: 0%; min-width: 0%; }}
 .flexWidth5perBpLg      { @media (--breakpoint-lg) { flex-basis: 5%; min-width: 5%; }}
 .flexWidth10perBpLg     { @media (--breakpoint-lg) { flex-basis: 10%; min-width: 10%; }}
@@ -1810,6 +1877,7 @@
 .flexWidth900pxBpLg     { @media (--breakpoint-lg) { flex-basis: 900px; min-width: 900px; }}
 .flexWidth950pxBpLg     { @media (--breakpoint-lg) { flex-basis: 950px; min-width: 950px; }}
 .flexWidth1000pxBpLg    { @media (--breakpoint-lg) { flex-basis: 1000px; min-width: 1000px; } }
+.flexWidthAutoBpMd      { @media (--breakpoint-md) { flex-basis: auto; min-width: 0; }}
 .flexWidth0perBpMd      { @media (--breakpoint-md) { flex-basis: 0%; min-width: 0%; }}
 .flexWidth5perBpMd      { @media (--breakpoint-md) { flex-basis: 5%; min-width: 5%; }}
 .flexWidth10perBpMd     { @media (--breakpoint-md) { flex-basis: 10%; min-width: 10%; }}
@@ -1891,6 +1959,7 @@
 .flexWidth900pxBpMd     { @media (--breakpoint-md) { flex-basis: 900px; min-width: 900px; }}
 .flexWidth950pxBpMd     { @media (--breakpoint-md) { flex-basis: 950px; min-width: 950px; }}
 .flexWidth1000pxBpMd    { @media (--breakpoint-md) { flex-basis: 1000px; min-width: 1000px; } }
+.flexWidthAutoBpSm      { @media (--breakpoint-sm) { flex-basis: auto; min-width: 0; }}
 .flexWidth0perBpSm      { @media (--breakpoint-sm) { flex-basis: 0%; min-width: 0%; }}
 .flexWidth5perBpSm      { @media (--breakpoint-sm) { flex-basis: 5%; min-width: 5%; }}
 .flexWidth10perBpSm     { @media (--breakpoint-sm) { flex-basis: 10%; min-width: 10%; }}
@@ -1972,87 +2041,88 @@
 .flexWidth900pxBpSm     { @media (--breakpoint-sm) { flex-basis: 900px; min-width: 900px; }}
 .flexWidth950pxBpSm     { @media (--breakpoint-sm) { flex-basis: 950px; min-width: 950px; }}
 .flexWidth1000pxBpSm    { @media (--breakpoint-sm) { flex-basis: 1000px; min-width: 1000px; } }
-.flexWidth0perBpXsm      { @media (--breakpoint-xsm) { flex-basis: 0%; min-width: 0%; }}
-.flexWidth5perBpXsm      { @media (--breakpoint-xsm) { flex-basis: 5%; min-width: 5%; }}
-.flexWidth10perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 10%; min-width: 10%; }}
-.flexWidth15perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 15%; min-width: 15%; }}
-.flexWidth20perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 20%; min-width: 20%; }}
-.flexWidth25perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 25%; min-width: 25%; }}
-.flexWidth30perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 30%; min-width: 30%; }}
-.flexWidth35perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 35%; min-width: 35%; }}
-.flexWidth33perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 33%.33; min-width: 33%.33; }}
-.flexWidth40perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 40%; min-width: 40%; }}
-.flexWidth45perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 45%; min-width: 45%; }}
-.flexWidth50perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 50%; min-width: 50%; }}
-.flexWidth55perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 55%; min-width: 55%; }}
-.flexWidth60perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 60%; min-width: 60%; }}
-.flexWidth65perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 65%; min-width: 65%; }}
-.flexWidth66perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 66.66; min-width: 66.66%; }}
-.flexWidth70perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 70%; min-width: 70%; }}
-.flexWidth75perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 75%; min-width: 75%; }}
-.flexWidth80perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 80%; min-width: 80%; }}
-.flexWidth85perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 85%; min-width: 85%; }}
-.flexWidth90perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 90%; min-width: 90%; }}
-.flexWidth95perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 95%; min-width: 95%; }}
-.flexWidth100perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 100%; min-width: 100%; }}
-.flexWidth5pxBpXsm       { @media (--breakpoint-xsm) { flex-basis: 5px; min-width: 5px; }}
-.flexWidth10pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 10px; min-width: 10px; }}
-.flexWidth15pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 15px; min-width: 15px; }}
-.flexWidth20pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 20px; min-width: 20px; }}
-.flexWidth25pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 25px; min-width: 25px; }}
-.flexWidth30pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 30px; min-width: 30px; }}
-.flexWidth35pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 35px; min-width: 35px; }}
-.flexWidth40pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 40px; min-width: 40px; }}
-.flexWidth45pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 45px; min-width: 45px; }}
-.flexWidth50pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 50px; min-width: 50px; }}
-.flexWidth55pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 55px; min-width: 55px; }}
-.flexWidth60pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 60px; min-width: 60px; }}
-.flexWidth65pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 65px; min-width: 65px; }}
-.flexWidth70pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 70px; min-width: 70px; }}
-.flexWidth75pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 75px; min-width: 75px; }}
-.flexWidth80pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 80px; min-width: 80px; }}
-.flexWidth85pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 85px; min-width: 85px; }}
-.flexWidth90pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 90px; min-width: 90px; }}
-.flexWidth95pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 95px; min-width: 95px; }}
-.flexWidth100pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 100px; min-width: 100px; }}
-.flexWidth110pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 110px; min-width: 110px; }}
-.flexWidth120pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 120px; min-width: 120px; }}
-.flexWidth130pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 130px; min-width: 130px; }}
-.flexWidth140pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 140px; min-width: 140px; }}
-.flexWidth150pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 150px; min-width: 150px; }}
-.flexWidth160pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 160px; min-width: 160px; }}
-.flexWidth170pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 170px; min-width: 170px; }}
-.flexWidth180pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 180px; min-width: 180px; }}
-.flexWidth190pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 190px; min-width: 190px; }}
-.flexWidth200pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 200px; min-width: 200px; }}
-.flexWidth210pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 210px; min-width: 210px; }}
-.flexWidth220pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 220px; min-width: 220px; }}
-.flexWidth230pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 230px; min-width: 230px; }}
-.flexWidth240pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 240px; min-width: 240px; }}
-.flexWidth250pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 250px; min-width: 250px; }}
-.flexWidth260pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 260px; min-width: 260px; }}
-.flexWidth270pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 270px; min-width: 270px; }}
-.flexWidth280pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 280px; min-width: 280px; }}
-.flexWidth290pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 290px; min-width: 290px; }}
-.flexWidth300pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 300px; min-width: 300px; }}
-.flexWidth320pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 320px; min-width: 320px; }}
-.flexWidth340pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 340px; min-width: 340px; }}
-.flexWidth350pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 350px; min-width: 350px; }}
-.flexWidth360pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 360px; min-width: 360px; }}
-.flexWidth380pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 380px; min-width: 380px; }}
-.flexWidth400pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 400px; min-width: 400px; }}
-.flexWidth450pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 450px; min-width: 450px; }}
-.flexWidth500pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 500px; min-width: 500px; }}
-.flexWidth550pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 550px; min-width: 550px; }}
-.flexWidth600pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 600px; min-width: 600px; }}
-.flexWidth650pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 650px; min-width: 650px; }}
-.flexWidth700pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 700px; min-width: 700px; }}
-.flexWidth750pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 750px; min-width: 750px; }}
-.flexWidth800pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 800px; min-width: 800px; }}
-.flexWidth850pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 850px; min-width: 850px; }}
-.flexWidth900pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 900px; min-width: 900px; }}
-.flexWidth950pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 950px; min-width: 950px; }}
-.flexWidth1000pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 1000px; min-width: 1000px; } }
+.flexWidthAutoBpXsm     { @media (--breakpoint-xsm) { flex-basis: auto; min-width: 0; }}
+.flexWidth0perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 0%; min-width: 0%; }}
+.flexWidth5perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 5%; min-width: 5%; }}
+.flexWidth10perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 10%; min-width: 10%; }}
+.flexWidth15perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 15%; min-width: 15%; }}
+.flexWidth20perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 20%; min-width: 20%; }}
+.flexWidth25perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 25%; min-width: 25%; }}
+.flexWidth30perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 30%; min-width: 30%; }}
+.flexWidth35perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 35%; min-width: 35%; }}
+.flexWidth33perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth40perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 40%; min-width: 40%; }}
+.flexWidth45perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 45%; min-width: 45%; }}
+.flexWidth50perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 50%; min-width: 50%; }}
+.flexWidth55perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 55%; min-width: 55%; }}
+.flexWidth60perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 60%; min-width: 60%; }}
+.flexWidth65perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 65%; min-width: 65%; }}
+.flexWidth66perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 66.66; min-width: 66.66%; }}
+.flexWidth70perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 70%; min-width: 70%; }}
+.flexWidth75perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 75%; min-width: 75%; }}
+.flexWidth80perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 80%; min-width: 80%; }}
+.flexWidth85perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 85%; min-width: 85%; }}
+.flexWidth90perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 90%; min-width: 90%; }}
+.flexWidth95perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 95%; min-width: 95%; }}
+.flexWidth100perBpXsm   { @media (--breakpoint-xsm) { flex-basis: 100%; min-width: 100%; }}
+.flexWidth5pxBpXsm      { @media (--breakpoint-xsm) { flex-basis: 5px; min-width: 5px; }}
+.flexWidth10pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 10px; min-width: 10px; }}
+.flexWidth15pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 15px; min-width: 15px; }}
+.flexWidth20pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 20px; min-width: 20px; }}
+.flexWidth25pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 25px; min-width: 25px; }}
+.flexWidth30pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 30px; min-width: 30px; }}
+.flexWidth35pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 35px; min-width: 35px; }}
+.flexWidth40pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 40px; min-width: 40px; }}
+.flexWidth45pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 45px; min-width: 45px; }}
+.flexWidth50pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 50px; min-width: 50px; }}
+.flexWidth55pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 55px; min-width: 55px; }}
+.flexWidth60pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 60px; min-width: 60px; }}
+.flexWidth65pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 65px; min-width: 65px; }}
+.flexWidth70pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 70px; min-width: 70px; }}
+.flexWidth75pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 75px; min-width: 75px; }}
+.flexWidth80pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 80px; min-width: 80px; }}
+.flexWidth85pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 85px; min-width: 85px; }}
+.flexWidth90pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 90px; min-width: 90px; }}
+.flexWidth95pxBpXsm     { @media (--breakpoint-xsm) { flex-basis: 95px; min-width: 95px; }}
+.flexWidth100pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 100px; min-width: 100px; }}
+.flexWidth110pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 110px; min-width: 110px; }}
+.flexWidth120pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 120px; min-width: 120px; }}
+.flexWidth130pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 130px; min-width: 130px; }}
+.flexWidth140pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 140px; min-width: 140px; }}
+.flexWidth150pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 150px; min-width: 150px; }}
+.flexWidth160pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 160px; min-width: 160px; }}
+.flexWidth170pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 170px; min-width: 170px; }}
+.flexWidth180pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 180px; min-width: 180px; }}
+.flexWidth190pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 190px; min-width: 190px; }}
+.flexWidth200pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 200px; min-width: 200px; }}
+.flexWidth210pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 210px; min-width: 210px; }}
+.flexWidth220pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 220px; min-width: 220px; }}
+.flexWidth230pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 230px; min-width: 230px; }}
+.flexWidth240pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 240px; min-width: 240px; }}
+.flexWidth250pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 250px; min-width: 250px; }}
+.flexWidth260pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 260px; min-width: 260px; }}
+.flexWidth270pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 270px; min-width: 270px; }}
+.flexWidth280pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 280px; min-width: 280px; }}
+.flexWidth290pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 290px; min-width: 290px; }}
+.flexWidth300pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 300px; min-width: 300px; }}
+.flexWidth320pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 320px; min-width: 320px; }}
+.flexWidth340pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 340px; min-width: 340px; }}
+.flexWidth350pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 350px; min-width: 350px; }}
+.flexWidth360pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 360px; min-width: 360px; }}
+.flexWidth380pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 380px; min-width: 380px; }}
+.flexWidth400pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 400px; min-width: 400px; }}
+.flexWidth450pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 450px; min-width: 450px; }}
+.flexWidth500pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 500px; min-width: 500px; }}
+.flexWidth550pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 550px; min-width: 550px; }}
+.flexWidth600pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 600px; min-width: 600px; }}
+.flexWidth650pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 650px; min-width: 650px; }}
+.flexWidth700pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 700px; min-width: 700px; }}
+.flexWidth750pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 750px; min-width: 750px; }}
+.flexWidth800pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 800px; min-width: 800px; }}
+.flexWidth850pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 850px; min-width: 850px; }}
+.flexWidth900pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 900px; min-width: 900px; }}
+.flexWidth950pxBpXsm    { @media (--breakpoint-xsm) { flex-basis: 950px; min-width: 950px; }}
+.flexWidth1000pxBpXsm   { @media (--breakpoint-xsm) { flex-basis: 1000px; min-width: 1000px; } }
 
 .heightMin100vh         { min-height: 100vh; }
 .height100per           { height: 100%; }
@@ -2360,7 +2430,27 @@
 .height950pxBpXsm       { @media (--breakpoint-xsm) { height: 950px; }}
 .height1000pxBpXsm      { @media (--breakpoint-xsm) { height: 1000px; }}
 
+.flexGrow0              { flex-grow: 0; }
+.flexGrow1              { flex-grow: 1; }
+.flexGrow0BpLg          { @media (--breakpoint-lg) { flex-grow: 0 }}
+.flexGrow1BpLg          { @media (--breakpoint-lg) { flex-grow: 1; }}
+.flexGrow0BpMd          { @media (--breakpoint-md) { flex-grow: 0 }}
+.flexGrow1BpMd          { @media (--breakpoint-md) { flex-grow: 1; }}
+.flexGrow0BpSm          { @media (--breakpoint-sm) { flex-grow: 0 }}
+.flexGrow1BpSm          { @media (--breakpoint-sm) { flex-grow: 1; }}
+.flexGrow0BpXsm         { @media (--breakpoint-xsm) { flex-grow: 0 }}
+.flexGrow1BpXsm         { @media (--breakpoint-xsm) { flex-grow: 1; }}
 
+.flexBasis0             { flex-basis: 0; }
+.flexBasisAuto          { flex-basis: auto; }
+.flexBasis0BpLg         { @media (--breakpoint-lg) { flex-basis: 0; }}
+.flexBasisAutoBpLg      { @media (--breakpoint-lg) { flex-basis: auto; }}
+.flexBasis0BpMd         { @media (--breakpoint-md) { flex-basis: 0; }}
+.flexBasisAutoBpMd      { @media (--breakpoint-md) { flex-basis: auto; }}
+.flexBasis0BpSm         { @media (--breakpoint-sm) { flex-basis: 0; }}
+.flexBasisAutoBpSm      { @media (--breakpoint-sm) { flex-basis: auto; }}
+.flexBasis0BpXsm        { @media (--breakpoint-xsm) { flex-basis: 0; }}
+.flexBasisAutoBpXsm     { @media (--breakpoint-xsm) { flex-basis: auto; }}
 
 
 
@@ -2370,48 +2460,6 @@
 
 
 /* to be deprecated */
-
-/* Gutters */
-.colsGutterXsm > * { padding-left: var(--size-xsm); padding-right: var(--size-xsm); }
-.colsGutterXsm > :first-child { padding-left: var(--size-zero); }
-.colsGutterXsm > :last-child { padding-right: var(--size-zero); }
-.colsGutterSm > * { padding-left: var(--size-sm); padding-right: var(--size-sm); }
-.colsGutterSm > :first-child { padding-left: var(--size-zero); }
-.colsGutterSm > :last-child { padding-right: var(--size-zero); }
-.colsGutterMd > * { padding-left: var(--size-md); padding-right: var(--size-md); }
-.colsGutterMd > :first-child { padding-left: var(--size-zero); }
-.colsGutterMd > :last-child { padding-right: var(--size-zero); }
-.colsGutterLg > * { padding-left: var(--size-lg); padding-right: var(--size-lg); }
-.colsGutterLg > :first-child { padding-left: var(--size-zero); }
-.colsGutterLg > :last-child { padding-right: var(--size-zero); }
-.colsGutterXlg > * { padding-left: var(--size-xlg); padding-right: var(--size-xlg); }
-.colsGutterXlg > :first-child { padding-left: var(--size-zero); }
-.colsGutterXlg > :last-child { padding-right: var(--size-zero); }
-.colsGutterXxlg > * { padding-left: var(--size-xxlg); padding-right: var(--size-xxlg); }
-.colsGutterXxlg > :first-child { padding-left: var(--size-zero); }
-.colsGutterXxlg > :last-child { padding-right: var(--size-zero); }
-.colsGutterJumbo > * { padding-left: var(--size-jumbo); padding-right: var(--size-jumbo); }
-.colsGutterJumbo > :first-child { padding-left: var(--size-zero); }
-.colsGutterJumbo > :last-child { padding-right: var(--size-zero); }
-
-/* Widths & Heights */
-.colWidth100    { flex-basis: 100%; min-width: 100% }
-.colWidth90     { flex-basis: 90%; min-width: 90% }
-.colWidth80     { flex-basis: 80%; min-width: 80% }
-.colWidth75     { flex-basis: 75%; min-width: 75% }
-.colWidth70     { flex-basis: 70%; min-width: 70% }
-.colWidth66     { flex-basis: 66.66; min-width: 66.66% }
-.colWidth60     { flex-basis: 60%; min-width: 60% }
-.colWidth50     { flex-basis: 50%; min-width: 50% }
-.colWidth40     { flex-basis: 40%; min-width: 40% }
-.colWidth33     { flex-basis: 33%; min-width: 33%; }
-.colWidth30     { flex-basis: 30%; min-width: 30% }
-.colWidth25     { flex-basis: 25%; min-width: 25% }
-.colWidth20     { flex-basis: 20%; min-width: 20% }
-.colWidth10     { flex-basis: 10%; min-width: 10% }
-.colWidth5      { flex-basis: 5%; min-width: 5% }
-.colWidth0      { flex-basis: 0%; min-width: 0% }
-
 .colWidth1of2   { flex-basis: calc((100%/2)*1); min-width: calc((100%/2)*1) }
 .colWidth2of2   { flex-basis: calc((100%/2)*2); min-width: calc((100%/2)*2) }
 
@@ -2499,11 +2547,3 @@
 .colWidth10of12  { flex-basis: calc((100%/12)*10); min-width: calc((100%/12)*10) }
 .colWidth11of12  { flex-basis: calc((100%/12)*11); min-width: calc((100%/12)*11) }
 .colWidth12of12  { flex-basis: calc((100%/12)*12); min-width: calc((100%/12)*12) }
-
-.flexGrow2           { flex-grow: 2; }
-.flexGrow3           { flex-grow: 3; }
-.flexGrow4           { flex-grow: 4; }
-.flexShrink1         { flex-shrink:1; }
-.flexShrink2         { flex-shrink:2; }
-.flexShrink3         { flex-shrink:3; }
-.flexShrink4         { flex-shrink:4; }
