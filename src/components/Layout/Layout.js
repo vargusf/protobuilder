@@ -5,25 +5,27 @@ import globalStyle from '../../styles/global.css';
 const Container = ({
 	height = "auto", // "[number(%|px)]"|"auto", default: "auto"
 	fixedWidth = "false", // "false"|"true", default: false
-	centered = "false", // "false"|"true", default: false
+	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
+	justify = "start", // "start"|"end"|"center"|"between", default: "start"
 	grow = "0", //  "0"|"1", default: "0"
 	backgroundColor = "none", // "none"|config.size, default: "none",
 	className = "",
 	children
 }) => {
 
-	const classes = ` 
-		${globalStyle.displayFlex} 
-		${globalStyle.flexDirectionColumn}
-		${globalStyle.width100per}
-		${globalStyle.positionRelative}
-		${getResponsiveClasses('height', height)}
-		${getResponsiveClasses('backgroundColor', backgroundColor)}
-		${getResponsiveClasses('fixedWidth', fixedWidth)}
-		${getResponsiveClasses('centered', centered)}
-		${getResponsiveClasses('flexGrow', grow)}
-		${className}
-	`;
+	const classes = [
+		globalStyle.displayFlex,
+		globalStyle.flexDirectionColumn,
+		globalStyle.width100per,
+		globalStyle.positionRelative,
+		getResponsiveClasses('height', height),
+		getResponsiveClasses('backgroundColor', backgroundColor),
+		getResponsiveClasses('fixedWidth', fixedWidth),
+		getResponsiveClasses('flexGrow', grow),
+		getResponsiveClasses('align', align),
+		getResponsiveClasses('justify', justify),
+		className,
+	].join(' ');
 
 	return (
 		<div className={classes}>
@@ -34,7 +36,7 @@ const Container = ({
 
 const Row = ({
 	direction = "row", //"row"|"column"|"row-reverse"|"column-reverse", default: "row"
-	wrap = "false", // "true"|"false"|"reverse", default: "false"
+	wrap = "nowrap", // "true"|"false"|"reverse", default: "false"
 	grow = "0", //  "0"|"1", default: "0"
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
@@ -47,22 +49,22 @@ const Row = ({
 	children
 }) => {
 
-	const classes = ` 
-		${globalStyle.displayFlex} 
-		${globalStyle.width100per}
-		${globalStyle.gutter}
-		${getResponsiveClasses('flex', wrap)}
-		${getResponsiveClasses('flexGrow', grow)}
-		${getResponsiveClasses('align', align)}
-		${getResponsiveClasses('justify', justify)}
-		${getResponsiveClasses('marginTop', marginTop)}
-		${getResponsiveClasses('marginBottom', marginBottom)}
-		${getResponsiveClasses('paddingTop', paddingTop)}
-		${getResponsiveClasses('paddingBottom', paddingBottom)}
-		${getResponsiveClasses('colDirection', direction)}
-		${getResponsiveClasses('gutter', gutter)}
-		${className}
-	`;
+	const classes = [
+		globalStyle.displayFlex,
+		globalStyle.width100per,
+		globalStyle.gutter,
+		getResponsiveClasses('flex', wrap),
+		getResponsiveClasses('flexGrow', grow),
+		getResponsiveClasses('align', align),
+		getResponsiveClasses('justify', justify),
+		getResponsiveClasses('marginTop', marginTop),
+		getResponsiveClasses('marginBottom', marginBottom),
+		getResponsiveClasses('paddingTop', paddingTop),
+		getResponsiveClasses('paddingBottom', paddingBottom),
+		getResponsiveClasses('colDirection', direction),
+		getResponsiveClasses('gutter', gutter),
+		className,
+	].join(' ');
 
 	return (
 		<div className={classes}>
@@ -83,16 +85,16 @@ const Col = ({
 	children
 }) => {
 
-	const classes = ` 
-		${getResponsiveClasses('display', display)}
-		${getResponsiveClasses('flexWidth', width)}
-		${getResponsiveClasses('flexGrow', grow)}
-		${getResponsiveClasses('marginTop', marginTop)}
-		${getResponsiveClasses('marginBottom', marginBottom)}
-		${getResponsiveClasses('paddingTop', paddingTop)}
-		${getResponsiveClasses('paddingBottom', paddingBottom)}
-		${className}
-	`;
+	const classes = [
+		getResponsiveClasses('display', display),
+		getResponsiveClasses('flexWidth', width),
+		getResponsiveClasses('flexGrow', grow),
+		getResponsiveClasses('marginTop', marginTop),
+		getResponsiveClasses('marginBottom', marginBottom),
+		getResponsiveClasses('paddingTop', paddingTop),
+		getResponsiveClasses('paddingBottom', paddingBottom),
+		className,
+	].join(' ');
 	
 	return (
 		<div className={classes}>

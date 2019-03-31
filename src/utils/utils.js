@@ -22,26 +22,41 @@ const capitalizeFirstLetter = string => {
 }
 
 export const getResponsiveClasses = (style, property = null) => {
-	if (property == "false") {
-		return;
+
+	let classes = [];
+
+	if (property) {
+		classes.push(globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).d)}`]);
+	} else if (getResponsiveObj(property).d == "true" || property == null) {
+		classes.push(globalStyle[`${style}`]);
 	}
-	if (property == "true" || property == null) {
-		return `
-			${globalStyle[`${style}`]}
-			${globalStyle[`${style}BpLg`]}
-			${globalStyle[`${style}BpMd`]}
-			${globalStyle[`${style}BpSm`]}
-			${globalStyle[`${style}BpXsm`]}
-		`;
-	} else {
-		return `
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).d)}`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).lg)}BpLg`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).md)}BpMd`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).sm)}BpSm`]}
-			${globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).xsm)}BpXsm`]}
-		`;
+
+	if (property) {
+		classes.push(globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).lg)}BpLg`]);
+	} else if (getResponsiveObj(property).lg == "true" || property == null) {
+		classes.push(globalStyle[`${style}BpLg`]);
 	}
+
+	if (property) {
+		classes.push(globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).md)}BpMd`]);
+	} else if (getResponsiveObj(property).md == "true" || property == null) {
+		classes.push(globalStyle[`${style}BpMd`]);
+	}
+
+	if (property) {
+		classes.push(globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).sm)}BpSm`]);
+	} else if (getResponsiveObj(property).sm == "true" || property == null) {
+		classes.push(globalStyle[`${style}BpSm`]);
+	}
+
+	if (property) {
+		classes.push(globalStyle[`${style}${capitalizeFirstLetter(getResponsiveObj(property).xsm)}BpXsm`]);
+	} else if (getResponsiveObj(property).xsm == "true" || property == null) {
+		classes.push(globalStyle[`${style}BpXsm`]);
+	}
+
+	return classes.join(' ');
+	
 }
 
 
