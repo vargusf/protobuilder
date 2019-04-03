@@ -1749,7 +1749,7 @@
 .width0perBpXsm         { @media (--breakpoint-xsm) { width: 0%; }}
 .width100perBpXsm       { @media (--breakpoint-xsm) { width: 100%; }}
 
-.flexWidthAuto          { flex-basis: auto; min-width: 0; }
+.flexWidthAuto          { flex-basis: auto; min-width: auto; }
 .flexWidth0per          { flex-basis: 0%; min-width: 0%; }
 .flexWidth5per          { flex-basis: 5%; min-width: 5%; }
 .flexWidth10per         { flex-basis: 10%; min-width: 10%; }
@@ -1758,7 +1758,7 @@
 .flexWidth25per         { flex-basis: 25%; min-width: 25%; }
 .flexWidth30per         { flex-basis: 30%; min-width: 30%; }
 .flexWidth35per         { flex-basis: 35%; min-width: 35%; }
-.flexWidth33per         { flex-basis: 33%.33; min-width: 33%.33; }
+.flexWidth33per         { flex-basis: 33.33%; min-width: 33.33%; }
 .flexWidth40per         { flex-basis: 40%; min-width: 40%; }
 .flexWidth45per         { flex-basis: 45%; min-width: 45%; }
 .flexWidth50per         { flex-basis: 50%; min-width: 50%; }
@@ -1831,7 +1831,7 @@
 .flexWidth900px         { flex-basis: 900px; min-width: 900px; }
 .flexWidth950px         { flex-basis: 950px; min-width: 950px; }
 .flexWidth1000px        { flex-basis: 1000px; min-width: 1000px; } 
-.flexWidthAutoBpLg      { @media (--breakpoint-lg) { flex-basis: auto; min-width: 0; }}
+.flexWidthAutoBpLg      { @media (--breakpoint-lg) { flex-basis: auto; min-width: auto; }}
 .flexWidth0perBpLg      { @media (--breakpoint-lg) { flex-basis: 0%; min-width: 0%; }}
 .flexWidth5perBpLg      { @media (--breakpoint-lg) { flex-basis: 5%; min-width: 5%; }}
 .flexWidth10perBpLg     { @media (--breakpoint-lg) { flex-basis: 10%; min-width: 10%; }}
@@ -1840,7 +1840,7 @@
 .flexWidth25perBpLg     { @media (--breakpoint-lg) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpLg     { @media (--breakpoint-lg) { flex-basis: 30%; min-width: 30%; }}
 .flexWidth35perBpLg     { @media (--breakpoint-lg) { flex-basis: 35%; min-width: 35%; }}
-.flexWidth33perBpLg     { @media (--breakpoint-lg) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth33perBpLg     { @media (--breakpoint-lg) { flex-basis: 33.33%; min-width: 33.33%; }}
 .flexWidth40perBpLg     { @media (--breakpoint-lg) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpLg     { @media (--breakpoint-lg) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpLg     { @media (--breakpoint-lg) { flex-basis: 50%; min-width: 50%; }}
@@ -1913,7 +1913,7 @@
 .flexWidth900pxBpLg     { @media (--breakpoint-lg) { flex-basis: 900px; min-width: 900px; }}
 .flexWidth950pxBpLg     { @media (--breakpoint-lg) { flex-basis: 950px; min-width: 950px; }}
 .flexWidth1000pxBpLg    { @media (--breakpoint-lg) { flex-basis: 1000px; min-width: 1000px; } }
-.flexWidthAutoBpMd      { @media (--breakpoint-md) { flex-basis: auto; min-width: 0; }}
+.flexWidthAutoBpMd      { @media (--breakpoint-md) { flex-basis: auto; min-width: auto; }}
 .flexWidth0perBpMd      { @media (--breakpoint-md) { flex-basis: 0%; min-width: 0%; }}
 .flexWidth5perBpMd      { @media (--breakpoint-md) { flex-basis: 5%; min-width: 5%; }}
 .flexWidth10perBpMd     { @media (--breakpoint-md) { flex-basis: 10%; min-width: 10%; }}
@@ -1922,7 +1922,7 @@
 .flexWidth25perBpMd     { @media (--breakpoint-md) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpMd     { @media (--breakpoint-md) { flex-basis: 30%; min-width: 30%; }}
 .flexWidth35perBpMd     { @media (--breakpoint-md) { flex-basis: 35%; min-width: 35%; }}
-.flexWidth33perBpMd     { @media (--breakpoint-md) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth33perBpMd     { @media (--breakpoint-md) { flex-basis: 33.33%; min-width: 33.33%; }}
 .flexWidth40perBpMd     { @media (--breakpoint-md) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpMd     { @media (--breakpoint-md) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpMd     { @media (--breakpoint-md) { flex-basis: 50%; min-width: 50%; }}
@@ -1995,7 +1995,7 @@
 .flexWidth900pxBpMd     { @media (--breakpoint-md) { flex-basis: 900px; min-width: 900px; }}
 .flexWidth950pxBpMd     { @media (--breakpoint-md) { flex-basis: 950px; min-width: 950px; }}
 .flexWidth1000pxBpMd    { @media (--breakpoint-md) { flex-basis: 1000px; min-width: 1000px; } }
-.flexWidthAutoBpSm      { @media (--breakpoint-sm) { flex-basis: auto; min-width: 0; }}
+.flexWidthAutoBpSm      { @media (--breakpoint-sm) { flex-basis: auto; min-width: auto; }}
 .flexWidth0perBpSm      { @media (--breakpoint-sm) { flex-basis: 0%; min-width: 0%; }}
 .flexWidth5perBpSm      { @media (--breakpoint-sm) { flex-basis: 5%; min-width: 5%; }}
 .flexWidth10perBpSm     { @media (--breakpoint-sm) { flex-basis: 10%; min-width: 10%; }}
@@ -2004,7 +2004,7 @@
 .flexWidth25perBpSm     { @media (--breakpoint-sm) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpSm     { @media (--breakpoint-sm) { flex-basis: 30%; min-width: 30%; }}
 .flexWidth35perBpSm     { @media (--breakpoint-sm) { flex-basis: 35%; min-width: 35%; }}
-.flexWidth33perBpSm     { @media (--breakpoint-sm) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth33perBpSm     { @media (--breakpoint-sm) { flex-basis: 33.33%; min-width: 33.33%; }}
 .flexWidth40perBpSm     { @media (--breakpoint-sm) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpSm     { @media (--breakpoint-sm) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpSm     { @media (--breakpoint-sm) { flex-basis: 50%; min-width: 50%; }}
@@ -2077,7 +2077,7 @@
 .flexWidth900pxBpSm     { @media (--breakpoint-sm) { flex-basis: 900px; min-width: 900px; }}
 .flexWidth950pxBpSm     { @media (--breakpoint-sm) { flex-basis: 950px; min-width: 950px; }}
 .flexWidth1000pxBpSm    { @media (--breakpoint-sm) { flex-basis: 1000px; min-width: 1000px; } }
-.flexWidthAutoBpXsm     { @media (--breakpoint-xsm) { flex-basis: auto; min-width: 0; }}
+.flexWidthAutoBpXsm     { @media (--breakpoint-xsm) { flex-basis: auto; min-width: auto; }}
 .flexWidth0perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 0%; min-width: 0%; }}
 .flexWidth5perBpXsm     { @media (--breakpoint-xsm) { flex-basis: 5%; min-width: 5%; }}
 .flexWidth10perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 10%; min-width: 10%; }}
@@ -2086,7 +2086,7 @@
 .flexWidth25perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 30%; min-width: 30%; }}
 .flexWidth35perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 35%; min-width: 35%; }}
-.flexWidth33perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 33%.33; min-width: 33%.33; }}
+.flexWidth33perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 33.33%; min-width: 33.33%; }}
 .flexWidth40perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 50%; min-width: 50%; }}
@@ -2488,8 +2488,8 @@
 
 
 
-/* to be deprecated
-.colWidth1of2   { flex-basis: calc((100%/2)*1); min-width: calc((100%/2)*1) }
+ /* to be deprecated */
+/* .colWidth1of2   { flex-basis: calc((100%/2)*1); min-width: calc((100%/2)*1) }
 .colWidth2of2   { flex-basis: calc((100%/2)*2); min-width: calc((100%/2)*2) }
 
 .colWidth1of3   { flex-basis: calc((100%/3)*1); min-width: calc((100%/3)*1) }
@@ -2575,4 +2575,4 @@
 .colWidth9of12   { flex-basis: calc((100%/12)*9); min-width: calc((100%/12)*9) }
 .colWidth10of12  { flex-basis: calc((100%/12)*10); min-width: calc((100%/12)*10) }
 .colWidth11of12  { flex-basis: calc((100%/12)*11); min-width: calc((100%/12)*11) }
-.colWidth12of12  { flex-basis: calc((100%/12)*12); min-width: calc((100%/12)*12) } */
+.colWidth12of12  { flex-basis: calc((100%/12)*12); min-width: calc((100%/12)*12) }  */

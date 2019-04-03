@@ -35,6 +35,7 @@ const Container = ({
 }
 
 const Row = ({
+	display = "flex", // "flex"|"none", default: block
 	direction = "row", //"row"|"column"|"row-reverse"|"column-reverse", default: "row"
 	wrap = "nowrap", // "true"|"false"|"reverse", default: "false"
 	grow = "0", //  "0"|"1", default: "0"
@@ -50,9 +51,9 @@ const Row = ({
 }) => {
 
 	const classes = [
-		globalStyle.displayFlex,
 		globalStyle.width100per,
 		globalStyle.gutter,
+		getResponsiveClasses('display', display),
 		getResponsiveClasses('flex', wrap),
 		getResponsiveClasses('flexGrow', grow),
 		getResponsiveClasses('align', align),

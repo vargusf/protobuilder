@@ -8,7 +8,7 @@ const PageDashboard = () => (
 	<div>
 
 		<h1 className={style.docHeading1}>Dashboard</h1>
-		<h2 className={style.docHeading2}>Welcome to proto, a rapid prototyping & development tool to be used in conjunction with React.</h2>
+		<h2 className={style.docHeading2}>A rapid prototyping & development tool to be used in conjunction with React.</h2>
 
 	</div>
 );
