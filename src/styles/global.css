@@ -1735,8 +1735,24 @@
 .gutter > :only-child                           { padding-left: 0; padding-right: 0; }
 
 /*--------------------/
-	Widths & Heights
+	Widths & Heights 
 /--------------------*/
+
+.flexGrow0              { flex-grow: 0; flex-basis: auto; }
+.flexGrow1              { flex-grow: 1; flex-basis: auto; }
+.flexGrowEven           { flex-grow: 1; flex-basis: 0; }
+.flexGrow0BpLg          { @media (--breakpoint-lg) { flex-grow: 0; }}
+.flexGrow1BpLg          { @media (--breakpoint-lg) { flex-grow: 1; }}
+.flexGrowEvenBpLg       { @media (--breakpoint-lg) { flex-grow: 1; flex-basis: 0; }}
+.flexGrow0BpMd          { @media (--breakpoint-md) { flex-grow: 0; }}
+.flexGrow1BpMd          { @media (--breakpoint-md) { flex-grow: 1; }}
+.flexGrowEvenBpMd       { @media (--breakpoint-md) { flex-grow: 1; flex-basis: 0; }}
+.flexGrow0BpSm          { @media (--breakpoint-sm) { flex-grow: 0; }}
+.flexGrow1BpSm          { @media (--breakpoint-sm) { flex-grow: 1; }}
+.flexGrowEvenBpSm       { @media (--breakpoint-sm) { flex-grow: 1; flex-basis: 0; }}
+.flexGrow0BpXsm         { @media (--breakpoint-xsm) { flex-grow: 0; }}
+.flexGrow1BpXsm         { @media (--breakpoint-xsm) { flex-grow: 1; }}
+.flexGrowEvenBpXsm      { @media (--breakpoint-xsm) { flex-grow: 1; flex-basis: 0; }}
 
 .width0per              { width: 0%; }
 .width100per            { width: 100%; }
@@ -1757,8 +1773,8 @@
 .flexWidth20per         { flex-basis: 20%; min-width: 20%; }
 .flexWidth25per         { flex-basis: 25%; min-width: 25%; }
 .flexWidth30per         { flex-basis: 30%; min-width: 30%; }
-.flexWidth35per         { flex-basis: 35%; min-width: 35%; }
 .flexWidth33per         { flex-basis: 33.33%; min-width: 33.33%; }
+.flexWidth35per         { flex-basis: 35%; min-width: 35%; }
 .flexWidth40per         { flex-basis: 40%; min-width: 40%; }
 .flexWidth45per         { flex-basis: 45%; min-width: 45%; }
 .flexWidth50per         { flex-basis: 50%; min-width: 50%; }
@@ -1839,8 +1855,8 @@
 .flexWidth20perBpLg     { @media (--breakpoint-lg) { flex-basis: 20%; min-width: 20%; }}
 .flexWidth25perBpLg     { @media (--breakpoint-lg) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpLg     { @media (--breakpoint-lg) { flex-basis: 30%; min-width: 30%; }}
-.flexWidth35perBpLg     { @media (--breakpoint-lg) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth33perBpLg     { @media (--breakpoint-lg) { flex-basis: 33.33%; min-width: 33.33%; }}
+.flexWidth35perBpLg     { @media (--breakpoint-lg) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth40perBpLg     { @media (--breakpoint-lg) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpLg     { @media (--breakpoint-lg) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpLg     { @media (--breakpoint-lg) { flex-basis: 50%; min-width: 50%; }}
@@ -1921,8 +1937,8 @@
 .flexWidth20perBpMd     { @media (--breakpoint-md) { flex-basis: 20%; min-width: 20%; }}
 .flexWidth25perBpMd     { @media (--breakpoint-md) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpMd     { @media (--breakpoint-md) { flex-basis: 30%; min-width: 30%; }}
-.flexWidth35perBpMd     { @media (--breakpoint-md) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth33perBpMd     { @media (--breakpoint-md) { flex-basis: 33.33%; min-width: 33.33%; }}
+.flexWidth35perBpMd     { @media (--breakpoint-md) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth40perBpMd     { @media (--breakpoint-md) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpMd     { @media (--breakpoint-md) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpMd     { @media (--breakpoint-md) { flex-basis: 50%; min-width: 50%; }}
@@ -2003,8 +2019,8 @@
 .flexWidth20perBpSm     { @media (--breakpoint-sm) { flex-basis: 20%; min-width: 20%; }}
 .flexWidth25perBpSm     { @media (--breakpoint-sm) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpSm     { @media (--breakpoint-sm) { flex-basis: 30%; min-width: 30%; }}
-.flexWidth35perBpSm     { @media (--breakpoint-sm) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth33perBpSm     { @media (--breakpoint-sm) { flex-basis: 33.33%; min-width: 33.33%; }}
+.flexWidth35perBpSm     { @media (--breakpoint-sm) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth40perBpSm     { @media (--breakpoint-sm) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpSm     { @media (--breakpoint-sm) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpSm     { @media (--breakpoint-sm) { flex-basis: 50%; min-width: 50%; }}
@@ -2085,8 +2101,8 @@
 .flexWidth20perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 20%; min-width: 20%; }}
 .flexWidth25perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 25%; min-width: 25%; }}
 .flexWidth30perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 30%; min-width: 30%; }}
-.flexWidth35perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth33perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 33.33%; min-width: 33.33%; }}
+.flexWidth35perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 35%; min-width: 35%; }}
 .flexWidth40perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 40%; min-width: 40%; }}
 .flexWidth45perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 45%; min-width: 45%; }}
 .flexWidth50perBpXsm    { @media (--breakpoint-xsm) { flex-basis: 50%; min-width: 50%; }}
@@ -2465,114 +2481,3 @@
 .height900pxBpXsm       { @media (--breakpoint-xsm) { height: 900px; }}
 .height950pxBpXsm       { @media (--breakpoint-xsm) { height: 950px; }}
 .height1000pxBpXsm      { @media (--breakpoint-xsm) { height: 1000px; }}
-
-.flexGrow0              { flex-grow: 0; flex-basis: auto; }
-.flexGrow1              { flex-grow: 1; flex-basis: auto; }
-.flexGrowEven           { flex-grow: 1; flex-basis: 0; }
-.flexGrow0BpLg          { @media (--breakpoint-lg) { flex-grow: 0; }}
-.flexGrow1BpLg          { @media (--breakpoint-lg) { flex-grow: 1; }}
-.flexGrowEvenBpLg       { @media (--breakpoint-lg) { flex-grow: 1; flex-basis: 0; }}
-.flexGrow0BpMd          { @media (--breakpoint-md) { flex-grow: 0; }}
-.flexGrow1BpMd          { @media (--breakpoint-md) { flex-grow: 1; }}
-.flexGrowEvenBpMd       { @media (--breakpoint-md) { flex-grow: 1; flex-basis: 0; }}
-.flexGrow0BpSm          { @media (--breakpoint-sm) { flex-grow: 0; }}
-.flexGrow1BpSm          { @media (--breakpoint-sm) { flex-grow: 1; }}
-.flexGrowEvenBpSm       { @media (--breakpoint-sm) { flex-grow: 1; flex-basis: 0; }}
-.flexGrow0BpXsm         { @media (--breakpoint-xsm) { flex-grow: 0; }}
-.flexGrow1BpXsm         { @media (--breakpoint-xsm) { flex-grow: 1; }}
-.flexGrowEvenBpXsm      { @media (--breakpoint-xsm) { flex-grow: 1; flex-basis: 0; }}
-
-
-
-
-
-
-
- /* to be deprecated */
-/* .colWidth1of2   { flex-basis: calc((100%/2)*1); min-width: calc((100%/2)*1) }
-.colWidth2of2   { flex-basis: calc((100%/2)*2); min-width: calc((100%/2)*2) }
-
-.colWidth1of3   { flex-basis: calc((100%/3)*1); min-width: calc((100%/3)*1) }
-.colWidth2of3   { flex-basis: calc((100%/3)*2); min-width: calc((100%/3)*2) }
-.colWidth3of3   { flex-basis: calc((100%/3)*3); min-width: calc((100%/3)*3) }
-
-.colWidth1of4   { flex-basis: calc((100%/4)*1); min-width: calc((100%/4)*1) }
-.colWidth2of4   { flex-basis: calc((100%/4)*2); min-width: calc((100%/4)*2) }
-.colWidth3of4   { flex-basis: calc((100%/4)*3); min-width: calc((100%/4)*3) }
-.colWidth4of4   { flex-basis: calc((100%/4)*4); min-width: calc((100%/4)*4) }
-
-.colWidth1of5   { flex-basis: calc((100%/5)*1); min-width: calc((100%/5)*1) }
-.colWidth2of5   { flex-basis: calc((100%/5)*2); min-width: calc((100%/5)*2) }
-.colWidth3of5   { flex-basis: calc((100%/5)*3); min-width: calc((100%/5)*3) }
-.colWidth4of5   { flex-basis: calc((100%/5)*4); min-width: calc((100%/5)*4) }
-.colWidth5of5   { flex-basis: calc((100%/5)*5); min-width: calc((100%/5)*5) }
-
-.colWidth1of6   { flex-basis: calc((100%/6)*1); min-width: calc((100%/6)*1) }
-.colWidth2of6   { flex-basis: calc((100%/6)*2); min-width: calc((100%/6)*2) }
-.colWidth3of6   { flex-basis: calc((100%/6)*3); min-width: calc((100%/6)*3) }
-.colWidth4of6   { flex-basis: calc((100%/6)*4); min-width: calc((100%/6)*4) }
-.colWidth5of6   { flex-basis: calc((100%/6)*5); min-width: calc((100%/6)*5) }
-.colWidth6of6   { flex-basis: calc((100%/6)*6); min-width: calc((100%/6)*6) }
-
-.colWidth1of7   { flex-basis: calc((100%/7)*1); min-width: calc((100%/7)*1) }
-.colWidth2of7   { flex-basis: calc((100%/7)*2); min-width: calc((100%/7)*2) }
-.colWidth3of7   { flex-basis: calc((100%/7)*3); min-width: calc((100%/7)*3) }
-.colWidth4of7   { flex-basis: calc((100%/7)*4); min-width: calc((100%/7)*4) }
-.colWidth5of7   { flex-basis: calc((100%/7)*5); min-width: calc((100%/7)*5) }
-.colWidth6of7   { flex-basis: calc((100%/7)*6); min-width: calc((100%/7)*6) }
-.colWidth7of7   { flex-basis: calc((100%/7)*7); min-width: calc((100%/7)*7) }
-
-.colWidth1of8   { flex-basis: calc((100%/8)*1); min-width: calc((100%/8)*1) }
-.colWidth2of8   { flex-basis: calc((100%/8)*2); min-width: calc((100%/8)*2) }
-.colWidth3of8   { flex-basis: calc((100%/8)*3); min-width: calc((100%/8)*3) }
-.colWidth4of8   { flex-basis: calc((100%/8)*4); min-width: calc((100%/8)*4) }
-.colWidth5of8   { flex-basis: calc((100%/8)*5); min-width: calc((100%/8)*5) }
-.colWidth6of8   { flex-basis: calc((100%/8)*6); min-width: calc((100%/8)*6) }
-.colWidth7of8   { flex-basis: calc((100%/8)*7); min-width: calc((100%/8)*7) }
-.colWidth8of8   { flex-basis: calc((100%/8)*8); min-width: calc((100%/8)*8) }
-
-.colWidth1of9   { flex-basis: calc((100%/9)*1); min-width: calc((100%/9)*1) }
-.colWidth2of9   { flex-basis: calc((100%/9)*2); min-width: calc((100%/9)*2) }
-.colWidth3of9   { flex-basis: calc((100%/9)*3); min-width: calc((100%/9)*3) }
-.colWidth4of9   { flex-basis: calc((100%/9)*4); min-width: calc((100%/9)*4) }
-.colWidth5of9   { flex-basis: calc((100%/9)*5); min-width: calc((100%/9)*5) }
-.colWidth6of9   { flex-basis: calc((100%/9)*6); min-width: calc((100%/9)*6) }
-.colWidth7of9   { flex-basis: calc((100%/9)*7); min-width: calc((100%/9)*7) }
-.colWidth8of9   { flex-basis: calc((100%/9)*8); min-width: calc((100%/9)*8) }
-.colWidth9of9   { flex-basis: calc((100%/9)*9); min-width: calc((100%/9)*9) }
-
-.colWidth1of10   { flex-basis: calc((100%/10)*1); min-width: calc((100%/10)*1) }
-.colWidth2of10   { flex-basis: calc((100%/10)*2); min-width: calc((100%/10)*2) }
-.colWidth3of10   { flex-basis: calc((100%/10)*3); min-width: calc((100%/10)*3) }
-.colWidth4of10   { flex-basis: calc((100%/10)*4); min-width: calc((100%/10)*4) }
-.colWidth5of10   { flex-basis: calc((100%/10)*5); min-width: calc((100%/10)*5) }
-.colWidth6of10   { flex-basis: calc((100%/10)*6); min-width: calc((100%/10)*6) }
-.colWidth7of10   { flex-basis: calc((100%/10)*7); min-width: calc((100%/10)*7) }
-.colWidth8of10   { flex-basis: calc((100%/10)*8); min-width: calc((100%/10)*8) }
-.colWidth9of10   { flex-basis: calc((100%/10)*9); min-width: calc((100%/10)*9) }
-.colWidth10of10  { flex-basis: calc((100%/10)*10); min-width: calc((100%/10)*10) }
-
-.colWidth1of11   { flex-basis: calc((100%/11)*1); min-width: calc((100%/11)*1) }
-.colWidth2of11   { flex-basis: calc((100%/11)*2); min-width: calc((100%/11)*2) }
-.colWidth3of11   { flex-basis: calc((100%/11)*3); min-width: calc((100%/11)*3) }
-.colWidth4of11   { flex-basis: calc((100%/11)*4); min-width: calc((100%/11)*4) }
-.colWidth5of11   { flex-basis: calc((100%/11)*5); min-width: calc((100%/11)*5) }
-.colWidth6of11   { flex-basis: calc((100%/11)*6); min-width: calc((100%/11)*6) }
-.colWidth7of11   { flex-basis: calc((100%/11)*7); min-width: calc((100%/11)*7) }
-.colWidth8of11   { flex-basis: calc((100%/11)*8); min-width: calc((100%/11)*8) }
-.colWidth9of11   { flex-basis: calc((100%/11)*9); min-width: calc((100%/11)*9) }
-.colWidth10of11  { flex-basis: calc((100%/11)*10); min-width: calc((100%/11)*10) }
-.colWidth11of11  { flex-basis: calc((100%/11)*11); min-width: calc((100%/11)*11) }
-
-.colWidth1of12   { flex-basis: calc((100%/12)*1); min-width: calc((100%/12)*1) }
-.colWidth2of12   { flex-basis: calc((100%/12)*2); min-width: calc((100%/12)*2) }
-.colWidth3of12   { flex-basis: calc((100%/12)*3); min-width: calc((100%/12)*3) }
-.colWidth4of12   { flex-basis: calc((100%/12)*4); min-width: calc((100%/12)*4) }
-.colWidth5of12   { flex-basis: calc((100%/12)*5); min-width: calc((100%/12)*5) }
-.colWidth6of12   { flex-basis: calc((100%/12)*6); min-width: calc((100%/12)*6) }
-.colWidth7of12   { flex-basis: calc((100%/12)*7); min-width: calc((100%/12)*7) }
-.colWidth8of12   { flex-basis: calc((100%/12)*8); min-width: calc((100%/12)*8) }
-.colWidth9of12   { flex-basis: calc((100%/12)*9); min-width: calc((100%/12)*9) }
-.colWidth10of12  { flex-basis: calc((100%/12)*10); min-width: calc((100%/12)*10) }
-.colWidth11of12  { flex-basis: calc((100%/12)*11); min-width: calc((100%/12)*11) }
-.colWidth12of12  { flex-basis: calc((100%/12)*12); min-width: calc((100%/12)*12) }  */

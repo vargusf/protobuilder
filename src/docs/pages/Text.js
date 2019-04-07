@@ -2,6 +2,7 @@ import React from 'react';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
+import { Row, Col } from '../../components/Layout/Layout';
 
 const PageColor = () => (
 	<div>
@@ -41,8 +42,8 @@ const PageColor = () => (
 
 		<h2 className={style.docHeading2}>Font Family</h2>
 
-		<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterMd} `}>
-			<div className={protoStyle.colWidth1of2}>
+		<Row>
+			<Col grow="even">
 				<h3 className={style.docHeading3}>Primary</h3>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
@@ -53,8 +54,8 @@ const PageColor = () => (
 						<div>.fontPrimary</div>
 					</div>
 				</div>
-			</div>
-			<div className={protoStyle.colWidth1of2}>
+			</Col>
+			<Col grow="even">
 				<h3 className={style.docHeading3}>Secondary</h3>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
@@ -65,13 +66,13 @@ const PageColor = () => (
 						<div>.fontSecondary</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</Col>
+		</Row>
 
 		<h2 className={style.docHeading2}>Weights</h2>
 
-		<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterMd} `}>
-			<div className={protoStyle.colWidth1of2}>
+		<Row>
+			<Col grow="even">
 				<h3 className={style.docHeading3}>Primary</h3>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
@@ -97,8 +98,8 @@ const PageColor = () => (
 						<div>.fontWeight900</div>
 					</div>
 				</div>
-			</div>
-			<div className={protoStyle.colWidth1of2}>
+			</Col>
+			<Col grow="even">
 				<h3 className={style.docHeading3}>Secondary</h3>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
@@ -124,13 +125,13 @@ const PageColor = () => (
 						<div>.fontWeight900</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</Col>
+		</Row>
 
 		<h2 className={style.docHeading2}>Styles</h2>
 
-		<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterMd} `}>
-			<div className={protoStyle.colWidth1of2}>
+		<Row>
+			<Col grow="even">
 				<h3 className={style.docHeading3}>Primary</h3>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
@@ -154,8 +155,8 @@ const PageColor = () => (
 						<div>.linkLighten</div>
 					</div>
 				</div>
-			</div>
-			<div className={protoStyle.colWidth1of2}>
+			</Col>
+			<Col grow="even">
 				<h3 className={style.docHeading3}>Secondary</h3>
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
@@ -179,8 +180,8 @@ const PageColor = () => (
 						<div>.linkLighten</div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</Col>
+		</Row>
 
 	</div>
 );
