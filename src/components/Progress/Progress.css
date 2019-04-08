@@ -1,24 +1,37 @@
 .progress {
 	position: relative;
+}
+
+.bar_bg {
+	position: relative;
+	z-index: 1;
 	height: 6px;
 	width: 100%;
 	border-radius: 100px;
 	background-color: var(--color-grey300);
 }
 
-.inner {
+.bar {
 	position: absolute;
+	z-index: 2;
+	height: 6px;
 	top: 0;
 	left: 0;
 	bottom: 0;
 	border-radius: 100px;
 }
 
-.color_primary .inner   { background: var(--color-primary); }
-.color_secondary .inner { background: var(--color-secondary); }
-.color_tertiary .inner  { background: var(--color-tertiary); }
-.color_grey .inner      { background: var(--color-grey800); }
-.color_info .inner      { background: var(--color-info); }
-.color_warning .inner   { background: var(--color-warning); }
-.color_success .inner   { background: var(--color-success); }
-.color_error .inner     { background: var(--color-error); }
+.message {
+	margin-top: 3px;
+	font-size: var(--fontsize-text5);
+	color: var(--color-error)
+}
+
+.color_info .bar          { background: var(--color-info); }
+.color_info .message      { color: var(--color-info); }
+.color_warning .bar       { background: var(--color-warning); }
+.color_warning .message   { color: var(--color-warning); }
+.color_success .bar       { background: var(--color-success); }
+.color_success .message   { color: var(--color-success); }
+.color_error .bar         { background: var(--color-error); }
+.color_error .message     { color: var(--color-error); }
