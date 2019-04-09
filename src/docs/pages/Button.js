@@ -14,7 +14,7 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>Colors</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button>Primary</Button></div>
 					<div><Button color="secondary">Secondary</Button></div>
 					<div><Button color="tertiary">Tertiary</Button></div>
@@ -42,7 +42,7 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>No Fill</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button fill="false">Primary</Button></div>
 					<div><Button fill="false" color="secondary">Secondary</Button></div>
 					<div><Button fill="false" color="tertiary">Tertiary</Button></div>
@@ -68,7 +68,7 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>No Border</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button fill="false" border="false">Primary</Button></div>
 					<div><Button fill="false" border="false" color="secondary">Secondary</Button></div>
 					<div><Button fill="false" border="false" color="tertiary">Tertiary</Button></div>
@@ -94,7 +94,7 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>Icons</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button circle="true"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
 					<div><Button circle="true" color="secondary"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
 					<div><Button circle="true" fill="false" color="grey"><FontAwesomeIcon icon={['fas', 'external-link-alt']} /></Button></div>
@@ -122,7 +122,7 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>Rounded</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button rounded="true" >Primary</Button></div>
 					<div><Button rounded="true" color="secondary">Secondary</Button></div>
 					<div><Button rounded="true" color="tertiary">Tertiary</Button></div>
@@ -148,7 +148,7 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>Sizes</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button size="sm">Small</Button></div>
 					<div><Button size="md">Medium</Button></div>
 					<div><Button size="lg">Large</Button></div>
@@ -174,7 +174,7 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>Disabled</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button disabled="true">Button</Button></div>
 					<div><Button disabled="true" fill="false">Button</Button></div>
 				</div>
@@ -189,7 +189,7 @@ const PageButton = () => (
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<h3 className={style.docHeading3}>Horizontal</h3>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
 					<div><Button>Button</Button></div>
 					<div><Button type="link" to="">Link</Button></div>
 					<div><Button type="href">Href</Button></div>

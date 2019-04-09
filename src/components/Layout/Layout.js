@@ -3,12 +3,12 @@ import { getResponsiveClasses } from '../../utils/utils';
 import globalStyle from '../../styles/global.css';
 
 const Container = ({
-	height = "auto", // "[number(%|px)]"|"auto", default: "auto"
+	height = "auto", // "[number(per|px)]"|"auto"|"heightMin100vh", default: "auto"
 	fixedWidth = "false", // "false"|"true", default: false
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
 	grow = "0", //  "0"|"1", default: "0"
-	backgroundColor = "none", // "none"|config.size, default: "none",
+	backgroundColor = "none", // "none"|config.color, default: "none",
 	className = "",
 	children
 }) => {
@@ -35,17 +35,17 @@ const Container = ({
 }
 
 const Row = ({
-	display = "flex", // "flex"|"none", default: block
-	direction = "row", //"row"|"column"|"row-reverse"|"column-reverse", default: "row"
-	wrap = "nowrap", // "true"|"false"|"reverse", default: "false"
-	grow = "0", //  "0"|"1", default: "0"
+	gutter = "md", // config.size, default: "md"
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
+	wrap = "nowrap", // "nowrap"|"wrap"|"reverse", default: "nowrap"
+	direction = "row", //"row"|"column"|"rowReverse"|"columnReverse", default: "row"
 	marginTop = "zero", // config.size, default: "zero"
 	marginBottom = "zero", // config.size, default: "zero"
 	paddingTop = "zero", // config.size, default: "zero"
 	paddingBottom = "zero", // config.size, default: "zero"
-	gutter = "md", // config.size, default: "md"
+	grow = "0", //  "0"|"1", default: "0"
+	display = "flex", // "flex"|"none", default: block
 	className = "",
 	children
 }) => {
@@ -75,13 +75,12 @@ const Row = ({
 }
 
 const Col = ({
-	display = "block", // "block"|"none", default: block
-	width = "auto", // "[number(%|px)]"|"auto"|"grow", default: "auto"
-	grow = "0", // "0"|"1", default: "0"
+	width = "auto", // "auto"|"grow"|"even"|"[number(per|px)]", default: "auto"
 	marginTop = "zero", // config.size, default: "zero"
 	marginBottom = "zero", // config.size, default: "zero"
 	paddingTop = "zero", // config.size, default: "zero"
 	paddingBottom = "zero", // config.size, default: "zero"
+	display = "block", // "block"|"none", default: block
 	className = "",
 	children
 }) => {
@@ -89,7 +88,6 @@ const Col = ({
 	const classes = [
 		getResponsiveClasses('display', display),
 		getResponsiveClasses('flexWidth', width),
-		getResponsiveClasses('flexGrow', grow),
 		getResponsiveClasses('marginTop', marginTop),
 		getResponsiveClasses('marginBottom', marginBottom),
 		getResponsiveClasses('paddingTop', paddingTop),
