@@ -149,12 +149,14 @@ const PageButton = () => (
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
+					<div><Button size="xsm">Extra Small</Button></div>
 					<div><Button size="sm">Small</Button></div>
 					<div><Button size="md">Medium</Button></div>
 					<div><Button size="lg">Large</Button></div>
 				</div>
 			</div>
 			<div className={style.docboxCode}>
+				<div>{`<Button size="xsm">Extra Small</Button>`}</div>
 				<div>{`<Button size="sm">Small</Button>`}</div>
 				<div>{`<Button size="md">Medium</Button>`}</div>
 				<div>{`<Button size="lg">Large</Button>`}</div>

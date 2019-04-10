@@ -11,6 +11,7 @@ import PageSpinner from './pages/Spinner';
 import PageModal from './pages/Modal';
 import PageIcon from './pages/Icon';
 import PageProgress from './pages/Progress';
+import PageForm from './pages/Form';
 
 import { Container, Col, Row } from '../../index';
 
@@ -49,13 +50,14 @@ class Docs extends Component {
 									<li><NavLink to="/proto/modal" className={style.link} activeClassName={style.linkActive}>Modal</NavLink></li>
 									<li><NavLink to="/proto/icon" className={style.link} activeClassName={style.linkActive}>Icon</NavLink></li>
 									<li><NavLink to="/proto/progress" className={style.link} activeClassName={style.linkActive}>Progress</NavLink></li>
+									<li><NavLink to="/proto/form" className={style.link} activeClassName={style.linkActive}>Form</NavLink></li>
 								</ul>
 							</div>
 						</Col>
-						<Col grow="1">
+						<Col width="grow">
 							<Container fixedWidth="true">
 								<Row paddingTop="lg">
-									<Col grow="1">
+									<Col width="grow">
 										<Route exact path='/proto/dashboard' component={PageDashboard} />
 										<Route exact path='/proto/color' component={PageColor} />
 										<Route exact path='/proto/text' component={PageText} />
@@ -66,6 +68,7 @@ class Docs extends Component {
 										<Route exact path='/proto/modal' component={PageModal} />
 										<Route exact path='/proto/icon' component={PageIcon} />
 										<Route exact path='/proto/progress' component={PageProgress} />
+										<Route exact path='/proto/form' component={PageForm} />
 									</Col>
 								</Row>
 							</Container>

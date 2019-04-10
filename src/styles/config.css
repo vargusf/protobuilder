@@ -15,9 +15,10 @@
 :root { --size-xxlg:  64px; }
 :root { --size-jumbo: 128px; }
 
-:root { --elheight-sm: 28px; }
-:root { --elheight-md: 44px; }
-:root { --elheight-lg: 60px; }
+:root { --elheight-xsm: 28px; }
+:root { --elheight-sm:  36px; }
+:root { --elheight-md:  44px; }
+:root { --elheight-lg:  60px; }
 
 /*--------------------/
 	Colors (HSL)

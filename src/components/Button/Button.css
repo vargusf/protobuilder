@@ -16,9 +16,10 @@
 }
 
 /* Size */
-.size_sm { height: var(--elheight-sm); padding-left: var(--size-sm); padding-right: var(--size-sm); font-size: var(--fontsize-text4); }
-.size_md { height: var(--elheight-md); padding-left: var(--size-md); padding-right: var(--size-md); font-size: var(--fontsize-text3); }
-.size_lg { height: var(--elheight-lg); padding-left: var(--size-xlg); padding-right: var(--size-xlg); font-size: var(--fontsize-text2); }
+.size_xsm { height: var(--elheight-xsm); padding-left: var(--size-sm); padding-right: var(--size-sm); font-size: var(--fontsize-text5); }
+.size_sm  { height: var(--elheight-sm); padding-left: var(--size-md); padding-right: var(--size-md); font-size: var(--fontsize-text4); }
+.size_md  { height: var(--elheight-md); padding-left: var(--size-md); padding-right: var(--size-md); font-size: var(--fontsize-text3); }
+.size_lg  { height: var(--elheight-lg); padding-left: var(--size-xlg); padding-right: var(--size-xlg); font-size: var(--fontsize-text2); }
 
 
 /* Fill */

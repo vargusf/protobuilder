@@ -1,5 +1,6 @@
 .progress {
 	position: relative;
+	width: 100%;
 }
 
 .bar_bg {

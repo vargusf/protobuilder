@@ -1,9 +1,9 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
-exports.Progress = exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Spinner = exports.Button = exports.Alert = exports.Row = exports.Col = exports.Container = exports.Docs = exports.protoStyle = undefined;
+exports.Progress = exports.ModalActions = exports.ModalBody = exports.ModalHeader = exports.Modal = exports.Nag = exports.Form = exports.Spinner = exports.Button = exports.Alert = exports.Row = exports.Col = exports.Container = exports.Docs = exports.protoStyle = undefined;
 
 var _global = require('./styles/global.css');
 
@@ -37,6 +37,10 @@ var _Progress = require('./components/Progress/Progress');
 
 var _Progress2 = _interopRequireDefault(_Progress);
 
+var _Form = require('./components/Form/Form');
+
+var _Form2 = _interopRequireDefault(_Form);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.protoStyle = _global2.default;
@@ -47,6 +51,7 @@ exports.Row = _Layout.Row;
 exports.Alert = _Alert2.default;
 exports.Button = _Button2.default;
 exports.Spinner = _Spinner2.default;
+exports.Form = _Form2.default;
 exports.Nag = _Nag2.default;
 exports.Modal = _Modal.Modal;
 exports.ModalHeader = _Modal.ModalHeader;

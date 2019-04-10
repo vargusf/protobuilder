@@ -35,7 +35,7 @@ class PageLayout extends Component {
 						<div>{`<Container height="auto"></Container> // default`}</div>
 						<div>{`<Container height="200px"></Container>`}</div>
 						<div>{`<Container height="100per"></Container>`}</div>
-						<div>{`<Container height="heightMin100vh"></Container>`}</div>
+						<div>{`<Container height="min100vh"></Container>`}</div>
 
 						<h3 className={` ${style.docHeading3} ${protoStyle.marginEndsXsm}`}>Fixed Width</h3>
 						<div>{`<Container fixedWidth="false"></Container> // default`}</div>

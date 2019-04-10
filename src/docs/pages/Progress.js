@@ -26,18 +26,18 @@ const PageProgress = () => (
 			<div className={style.docboxCode}>
 				<div>{`<Progress value={45} type="info" />`}</div>
 				<div>{`<Progress value={60} type="warning" />`}</div>
-				<div>{`<Progress value={15} type="success" message="File uploaded" />`}</div>
+				<div>{`<Progress type="success" message="File uploaded" />`}</div>
 			</div>
 		</div>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<h3 className={style.docHeading3}>Error</h3>
 				<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} ${protoStyle.marginTopXsm} ${protoStyle.marginBottomLg}`}>
-					<div className={protoStyle.flexWidth50per}><Progress value={50} type="error" message="There was an error" /></div>
+					<div className={protoStyle.flexWidth50per}><Progress type="error" message="There was an error" /></div>
 				</div>
 			</div>
 			<div className={style.docboxCode}>
-				<div>{`<Progress value={50} type="error" message="There was an error" />`}</div>
+				<div>{`<Progress type="error" message="There was an error" />`}</div>
 			</div>
 		</div>
 	</div>

@@ -8,20 +8,22 @@ import Spinner from './components/Spinner/Spinner';
 import Nag from './components/Nag/Nag';
 import { Modal, ModalHeader, ModalBody, ModalActions } from './components/Modal/Modal';
 import Progress from './components/Progress/Progress';
+import Form from './components/Form/Form';
 
 export {
-  protoStyle,
-  Docs,
-  Container,
-  Col,
-  Row,
-  Alert,
-  Button,
-  Spinner,
-  Nag,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalActions,
-  Progress,
+	protoStyle,
+	Docs,
+	Container,
+	Col,
+	Row,
+	Alert,
+	Button,
+	Spinner,
+	Form,
+	Nag,
+	Modal,
+	ModalHeader,
+	ModalBody,
+	ModalActions,
+	Progress,
 }
