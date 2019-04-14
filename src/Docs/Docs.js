@@ -13,7 +13,7 @@ import PageIcon from './pages/Icon';
 import PageProgress from './pages/Progress';
 import PageForm from './pages/Form';
 
-import { Container, Col, Row } from '../../index';
+import { Container, Col, Row } from '../index';
 
 import protoStyle from '../styles/global.css';
 import style from './Docs.css';

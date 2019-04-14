@@ -1,12 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import style from './Form.css';
 
-const Form = ({
-  children
+const Input = ({
+	size = "md",
+	placeholder = "Enter your email",
+	label = "Email",
+	type = "text", // "text"|"email"|"password"
+	onChange = () => { },
+	value
 }) => {
-    return <div>form</div>
+
+	const classes = [
+    style.input,
+    style['size_' + size]
+	].join(" ");
+	
+	return (
+		<div className={classes}>
+			<input type="text" value={value} placeholder={placeholder} onChange={onChange}/>
+		</div>
+	)
 }
 
-export default Form;
+export {
+	Input,
+};

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Form } from '../../index';
+import { Input } from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
@@ -11,7 +11,7 @@ const PageForm = () => (
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<h3 className={style.docHeading3}>Input</h3>
-				<Form>This is an alert!</Form>
+				<Input />
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Form>`}</div>

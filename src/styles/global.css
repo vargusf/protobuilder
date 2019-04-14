@@ -1,6 +1,6 @@
-/*--------------------/
-	Margins
-/--------------------*/
+//--------------------
+// Margins
+//--------------------
 
 .marginZero              { margin: var(--size-zero); }
 .marginOne               { margin: var(--size-one); }
@@ -428,9 +428,9 @@
 .marginEndsXxlgBpXsm     { @media (--breakpoint-xsm) { margin-top: var(--size-xxlg); margin-bottom: var(--size-xxlg); }}
 .marginEndsJumboBpXsm    { @media (--breakpoint-xsm) { margin-top: var(--size-jumbo); margin-bottom: var(--size-jumbo); }}
 
-/*--------------------/
-	Paddings
-/--------------------*/
+//--------------------
+// Paddings
+//--------------------
 
 .paddingZero              { padding: var(--size-zero); }
 .paddingOne               { padding: var(--size-one); }
@@ -853,9 +853,9 @@
 .paddingEndsXxlgBpXsm     { @media (--breakpoint-xsm) { padding-top: var(--size-xxlg); padding-bottom: var(--size-xxlg); }}
 .paddingEndsJumboBpXsm    { @media (--breakpoint-xsm) { padding-top: var(--size-jumbo); padding-bottom: var(--size-jumbo); }}
 
-/*--------------------/
-	Layout
-/--------------------*/
+//--------------------
+// Layout
+//--------------------
 
 .displayNone                     { display: none; }
 .displayBlock                    { display: block; }
@@ -1013,9 +1013,9 @@
 .fixedWidthTrueBpXsm             { @media (--breakpoint-xsm) { max-width: var(--fixedwidth-maxWidth); margin-left: auto; margin-right: auto; padding-left: var(--fixedwidth-sidePadding); padding-right: var(--fixedwidth-sidePadding); }}
 .fixedWidthFalseBpXsm            { @media (--breakpoint-xsm) { max-width: none; margin-left: 0; margin-right: 0; padding-left: 0; padding-right: 0; }}
 
-/*--------------------/
-	Colors
-/--------------------*/
+//--------------------
+// Colors
+//--------------------
 
 .colorWhite           { color: var(--color-white); }
 .colorBlack           { color: var(--color-black); }
@@ -1198,9 +1198,9 @@
 .colorWarningBpXsm        { @media (--breakpoint-xsm) { color: var(--color-warning); }}
 .colorErrorBpXsm          { @media (--breakpoint-xsm) { color: var(--color-error); }}
 
-/*--------------------/
-	Background Colors
-/--------------------*/
+//--------------------
+// Background Colors
+//--------------------
 
 .backgroundColorNone                { background-color: transparent; }
 .backgroundColorWhite               { background-color: var(--color-white); }
@@ -1388,11 +1388,11 @@
 .backgroundColorWarningBpXsm        { @media (--breakpoint-xsm) { background-color: var(--color-warning); }}
 .backgroundColorErrorBpXsm          { @media (--breakpoint-xsm) { background-color: var(--color-error); }}
 
-/* Fonts */
+// Fonts
 .fontPrimary    { font-family: var(--font-primary), sans-serif; }
 .fontSecondary  { font-family: var(--font-secondary), sans-serif; }
 
-/* Font Weights */
+// Font Weights
 .fontWeight100  { font-weight: 100; }
 .fontWeight200  { font-weight: 200; }
 .fontWeight300  { font-weight: 300; }
@@ -1403,9 +1403,9 @@
 .fontWeight800  { font-weight: 800; }
 .fontWeight900  { font-weight: 900; }
 
-/*--------------------/
-	Font Sizes
-/--------------------*/
+//--------------------
+// Font Sizes
+//--------------------
 
 .fontsizeText1         { font-size: var(--fontsize-text1); }
 .fontsizeText2         { font-size: var(--fontsize-text2); }
@@ -1468,7 +1468,7 @@
 .fontsizeHeading5BpXsm { @media (--breakpoint-xsm) { font-size: var(--fontsize-heading5); } }
 .fontsizeHeading6BpXsm { @media (--breakpoint-xsm) { font-size: var(--fontsize-heading6); } }
 
-/* Text alignment */
+// Text alignment
 .textAlignLeft         { text-align: left; }
 .textAlignRight        { text-align: right; }
 .textAlignCenter       { text-align: center; }
@@ -1490,7 +1490,7 @@
 .textAlignCenterBpXsm  { @media (--breakpoint-xsm) { text-align: center; }}
 .textAlignJustifyBpXsm { @media (--breakpoint-xsm) { text-align: justify; }}
 
-/* Font styles */
+// Font styles
 .italic              { font-style: italic; }
 .underline           { text-decoration: underline; }
 .uppercase           { text-transform: uppercase; }
@@ -1503,7 +1503,7 @@
 .linkLighten         { cursor: pointer; color: var(--color-primary); }
 .linkLighten:hover   { color: lighten(var(--color-primary), 20%) }
 
-/* Opacity */
+// Opacity
 .opacity0   { opacity: 0; }
 .opacity5   { opacity: 5; }
 .opacity10  { opacity: 10; }
@@ -1517,7 +1517,7 @@
 .opacity90  { opacity: 90; }
 .opacity100 { opacity: 100; }
 
-/* Border Radius */
+// Border Radius
 .borderRadiusZero             { border-radius: var(--size-zero); }
 .borderRadiusTiny             { border-radius: var(--size-tiny); }
 .borderRadiusXxsm             { border-radius: var(--size-xxsm); }
@@ -1609,14 +1609,14 @@
 .borderRadiusLeftXxlg         { border-top-left-radius: var(--size-xxlg); border-bottom-left-radius: var(--size-xxlg); }
 .borderRadiusLeftJumbo        { border-top-left-radius: var(--size-jumbo); border-bottom-left-radius: var(--size-jumbo); }
 
-/* Z index */
+// Z index
 .zIndex1 { z-index: 1; }
 .zIndex2 { z-index: 2; }
 .zIndex3 { z-index: 3; }
 .zIndex4 { z-index: 4; }
 .zIndex5 { z-index: 5; }
 
-/* Clamp text */
+// Clamp text
 .clampLine { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .clampLines {
 	overflow: hidden;
@@ -1630,7 +1630,7 @@
 .clampLines4 { -webkit-line-clamp: 4; }
 .clampLines5 { -webkit-line-clamp: 5; }
 
-/* Break long strings */
+// Break long strings
 .breakLongStrings {
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -1638,9 +1638,9 @@
 	-moz-hyphens: auto;
 }
 
-/*--------------------/
-	Gutter
-/--------------------*/
+//--------------------
+// Gutter
+//--------------------
 
 .gutterZero > *                                 { padding-left: var(--size-zero); padding-right: var(--size-zero); }
 .gutterXxsm > *                                 { padding-left: var(--size-xxsm); padding-right: var(--size-xxsm); }
@@ -1734,11 +1734,9 @@
 .colDirectionColumnReverseBpXsm > *             { @media (--breakpoint-xsm) { padding-left: 0; padding-right: 0; }}
 .gutter > :only-child                           { padding-left: 0; padding-right: 0; }
 
-/*--------------------/
-	Widths & Heights 
-/--------------------*/
-
-
+//--------------------
+// Widths & Heights 
+//--------------------
 
 .width0per              { width: 0%; }
 .width100per            { width: 100%; }

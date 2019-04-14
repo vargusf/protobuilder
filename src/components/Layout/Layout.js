@@ -7,6 +7,7 @@ const Container = ({
 	fixedWidth = "false", // "false"|"true", default: false
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
+	centered = "false",
 	grow = "0", //  "0"|"1", default: "0"
 	backgroundColor = "none", // "none"|config.color, default: "none",
 	className = "",
@@ -24,6 +25,7 @@ const Container = ({
 		getResponsiveClasses('flexGrow', grow),
 		getResponsiveClasses('align', align),
 		getResponsiveClasses('justify', justify),
+		(centered === "true" && getResponsiveClasses('centered')),
 		className,
 	].join(' ');
 
@@ -38,6 +40,7 @@ const Row = ({
 	gutter = "md", // config.size, default: "md"
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
+	centered = "false",
 	wrap = "nowrap", // "nowrap"|"wrap"|"reverse", default: "nowrap"
 	direction = "row", //"row"|"column"|"rowReverse"|"columnReverse", default: "row"
 	marginTop = "zero", // config.size, default: "zero"
@@ -58,6 +61,7 @@ const Row = ({
 		getResponsiveClasses('flexGrow', grow),
 		getResponsiveClasses('align', align),
 		getResponsiveClasses('justify', justify),
+		(centered === "true" && getResponsiveClasses('centered')),
 		getResponsiveClasses('marginTop', marginTop),
 		getResponsiveClasses('marginBottom', marginBottom),
 		getResponsiveClasses('paddingTop', paddingTop),
@@ -81,17 +85,25 @@ const Col = ({
 	paddingTop = "zero", // config.size, default: "zero"
 	paddingBottom = "zero", // config.size, default: "zero"
 	display = "block", // "block"|"none", default: block
+	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
+	justify = "start", // "start"|"end"|"center"|"between", default: "start"
+	centered = "false",
+	direction = "row", //"row"|"column"|"rowReverse"|"columnReverse", default: "row"
 	className = "",
 	children
 }) => {
 
 	const classes = [
-		getResponsiveClasses('display', display),
 		getResponsiveClasses('flexWidth', width),
 		getResponsiveClasses('marginTop', marginTop),
 		getResponsiveClasses('marginBottom', marginBottom),
 		getResponsiveClasses('paddingTop', paddingTop),
 		getResponsiveClasses('paddingBottom', paddingBottom),
+		getResponsiveClasses('display', display),
+		getResponsiveClasses('align', align),
+		getResponsiveClasses('justify', justify),
+		(centered === "true" && getResponsiveClasses('centered')),
+		getResponsiveClasses('flexDirection', direction),
 		className,
 	].join(' ');
 	
