@@ -15,6 +15,7 @@ const Button = ({
   circle = 'false',
   to = null,
   target = '_self',
+  tabindex= "",
 	onClick = () => {},
   children
 }) => {
@@ -33,11 +34,11 @@ const Button = ({
   if (disabled == "true") onClick = null;
 
   if (type == "link") {
-    return <div className={style.buttonContainer}><Link to={to} onClick={onClick} className={classes}>{children}</Link></div>
+    return <Link to={to} onClick={onClick} className={classes} tabIndex={tabindex}>{children}</Link>
   } else if (type == "href") {
-    return <div className={style.buttonContainer}><a href={to} onClick={onClick} className={classes} target={target}>{children}</a></div>
+    return <a href={to} onClick={onClick} className={classes} target={target} tabIndex={tabindex}>{children}</a>
   } else {
-    return <div className={style.buttonContainer}><button onClick={onClick} className={classes} type={type}>{children}</button></div>
+    return <button onClick={onClick} className={classes} type={type} tabIndex={tabindex}>{children}</button>
   }
 }
 
