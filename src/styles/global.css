@@ -2491,3 +2491,7 @@
 .flexGrow0BpXsm         { @media (--breakpoint-xsm) { flex-grow: 0; }}
 .flexGrow1BpXsm         { @media (--breakpoint-xsm) { flex-grow: 1; }}
 .flexGrowEvenBpXsm      { @media (--breakpoint-xsm) { flex-grow: 1; flex-basis: 0; }}
+
+/* Border */
+
+.border1solidgrey200   { border-bottom: 1px solid var(--color-grey200); } 

@@ -11,10 +11,6 @@
   align-self: flex-start;
 }
 
-.buttonContainer {
-  display: flex;
-}
-
 /* Size */
 .size_xsm { height: var(--elheight-xsm); padding-left: var(--size-sm); padding-right: var(--size-sm); font-size: var(--fontsize-text5); }
 .size_sm  { height: var(--elheight-sm); padding-left: var(--size-md); padding-right: var(--size-md); font-size: var(--fontsize-text4); }
@@ -45,7 +41,8 @@
 /* Border */
 .fill_false.border_false { border: 0; background: none; }
 
-.fill_true:hover               { filter: brightness(112%); }
+.fill_true:hover               { filter: brightness(115%); }
+.fill_true:focus               { filter: brightness(112%); }
 .fill_true:active              { filter: brightness(92%); }
 .fill_true.disabled_true:hover { filter: brightness(100%); }
 .fill_false:hover              { background-color: var(--color-grey100); }
