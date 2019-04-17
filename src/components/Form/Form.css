@@ -28,6 +28,9 @@
 		z-index: 1;
 		border: 0;
 		width: 100%;
+		&::placeholder {
+			color: var(--color-grey500)
+		}
 	}
 }
 
@@ -39,9 +42,9 @@
 }
 
 .helper {
-	position: absolute;
+	/* position: absolute;
 	height: 15px;
-	bottom: -19px;
+	bottom: -19px; */
 	font-size: var(--fontsize-text5);
 }
 
