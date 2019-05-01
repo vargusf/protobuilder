@@ -42,16 +42,30 @@
 }
 
 .helper {
-	/* position: absolute;
-	height: 15px;
-	bottom: -19px; */
+	color: var(--color-grey700);
 	font-size: var(--fontsize-text5);
 }
 
+.prepend {
+	background: var(--color-grey100);
+	border-right: 1px solid var(--color-grey300);
+}
+
+.append {
+	background: var(--color-grey100);
+	border-left: 1px solid var(--color-grey300);
+}
+
 /* Size */
-.size_xsm .field  { height: var(--elheight-xsm); padding-left: var(--size-sm); padding-right: var(--size-sm); font-size: var(--fontsize-text5); }
+
+.size_xsm .field { height: var(--elheight-xsm); padding-left: var(--size-sm); padding-right: var(--size-sm); font-size: var(--fontsize-text5); }
 .size_sm .field   { height: var(--elheight-sm); padding-left: var(--size-md); padding-right: var(--size-md); font-size: var(--fontsize-text4); }
-.size_md .field   { height: var(--elheight-md); padding-left: var(--size-md); padding-right: var(--size-md); font-size: var(--fontsize-text3); }
+
+.size_md .field { height: var(--elheight-md); font-size: var(--fontsize-text3); }
+.size_md input { padding-left: var(--size-md); padding-right: var(--size-md); }
+.size_md .prepend,
+.size_md .append { height: 100%; padding-left: var(--size-md); padding-right: var(--size-md); display: flex; align-items: center; justify-content: center; }
+
 .size_lg .field   { height: var(--elheight-lg); padding-left: calc(var(--size-lg)/1.5); padding-right: calc(var(--size-lg)/1.5); font-size: var(--fontsize-text2); }
 
 /* Colors */

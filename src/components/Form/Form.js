@@ -10,12 +10,11 @@ const Input = ({
 	type = "text", // "text"|"email"|"password"
 	helper = "",
 	tabindex = "",
-	labelInline = "", // should be mobile
-	labelWidth = "", // should be mobile
 	prepend = "",
 	append = "",
 	onChange = () => { },
-	value
+	value, 
+	name,
 }) => {
 
 	const classes = [
@@ -28,9 +27,9 @@ const Input = ({
 		<div className={classes}>
 			<label className={style.label}>{label}</label>
 			<div className={style.field}>
-			<div className={prepend}></div>
-				<input type={type} value={value} placeholder={placeholder} onChange={onChange} tabIndex={tabindex} />
-				<div className={append}></div>
+				{prepend && <div className={style.prepend}>{prepend}</div>}
+				<input name={name} type={type} value={value} placeholder={placeholder} onChange={onChange} tabIndex={tabindex} />
+				{append && <div className={style.append}>{append}</div>}
 			</div>
 			<span className={style.helper}>{helper}</span>
 		</div>
