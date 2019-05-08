@@ -8,7 +8,7 @@ import Spinner from './components/Spinner/Spinner';
 import Nag from './components/Nag/Nag';
 import { Modal, ModalHeader, ModalBody, ModalActions } from './components/Modal/Modal';
 import Progress from './components/Progress/Progress';
-import { Input, Textarea } from './components/Form/Form';
+import { Input, Textarea, Switch, SwitchGroup, Checkbox, CheckboxGroup } from './components/Form/Form';
 
 export {
 	protoStyle,
@@ -27,4 +27,8 @@ export {
 	ModalBody,
 	ModalActions,
 	Progress,
+	Switch,
+	SwitchGroup,
+	Checkbox,
+	CheckboxGroup,
 }
