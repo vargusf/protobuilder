@@ -1,0 +1,165 @@
+/*--------------------/
+	Sizes
+/--------------------*/
+
+/* :root { --size-zero:  0px; } */
+/* :root { --size-one:   1px; } */
+/* :root { --size-two:   2px; } */
+/* :root { --size-tiny:  3px; } */
+/* :root { --size-xxsm:  4px; } */
+/* :root { --size-xsm:   8px; } */
+/* :root { --size-sm:    12px; } */
+/* :root { --size-md:    16px; } */
+/* :root { --size-lg:    32px; } */
+/* :root { --size-xlg:   48px; } */
+/* :root { --size-xxlg:  64px; } */
+/* :root { --size-jumbo: 128px; } */
+
+/* :root { --elheight-xsm: 28px; } */
+/* :root { --elheight-sm:  36px; } */
+/* :root { --elheight-md:  44px; } */
+/* :root { --elheight-lg:  60px; } */
+
+/*--------------------/
+	Colors (HSL)
+/--------------------*/
+
+/* Brand */
+
+/* :root { --color-primary-hue:          225; } */
+/* :root { --color-primary-saturation:   70%; } */
+/* :root { --color-primary-lightness:    65%; } */
+/* :root { --color-primary-vals:         var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness); } */
+/* :root { --color-primary:              hsl(var(--color-primary-vals)); } */
+/* :root { --color-primaryLight:         hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) * 1.5), calc(var(--color-primary-lightness) + 10%)); } */
+/* :root { --color-primaryDark:          hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) / 1.5), calc(var(--color-primary-lightness) - 10%)); } */
+
+/* :root { --color-secondary-hue:        0; } */
+/* :root { --color-secondary-saturation: 70%; } */
+/* :root { --color-secondary-lightness:  60%; } */
+/* :root { --color-secondary-vals:       var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lightness); } */
+/* :root { --color-secondary:            hsl(var(--color-secondary-vals)); } */
+/* :root { --color-secondaryLight:       hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) * 1.5), calc(var(--color-secondary-lightness) + 10%)); } */
+/* :root { --color-secondaryDark:        hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) / 1.5), calc(var(--color-secondary-lightness) - 10%)); } */
+
+/* :root { --color-tertiary-hue:         48; } */
+/* :root { --color-tertiary-saturation:  75%; } */
+/* :root { --color-tertiary-lightness:   52%; } */
+/* :root { --color-tertiary-vals:        var(--color-tertiary-hue), var(--color-tertiary-saturation), var(--color-tertiary-lightness); } */
+/* :root { --color-tertiary:             hsl(var(--color-tertiary-vals)); } */
+/* :root { --color-tertiaryLight:        hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) * 1.5), calc(var(--color-tertiary-lightness) + 10%)); } */
+/* :root { --color-tertiaryDark:         hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) / 1.5), calc(var(--color-tertiary-lightness) - 10%)); } */
+
+/* Black & White */
+
+/* :root { --color-white:           hsl(0, 0%, 100%); } */
+/* :root { --color-black:           hsl(0, 0%, 0%); } */
+
+/* Greys (with a tinge of primary hue) */
+
+/* :root { --color-grey100:         hsl(var(--color-primary-hue), 10%, 95%); } */
+/* :root { --color-grey200:         hsl(var(--color-primary-hue), 10%, 90%); } */
+/* :root { --color-grey300:         hsl(var(--color-primary-hue), 10%, 85%); } */
+/* :root { --color-grey400:         hsl(var(--color-primary-hue), 10%, 80%); } */
+/* :root { --color-grey500:         hsl(var(--color-primary-hue), 10%, 70%); } */
+/* :root { --color-grey600:         hsl(var(--color-primary-hue), 10%, 60%); } */
+/* :root { --color-grey700:         hsl(var(--color-primary-hue), 10%, 45%); } */
+/* :root { --color-grey800:         hsl(var(--color-primary-hue), 10%, 30%); } */
+/* :root { --color-grey900:         hsl(var(--color-primary-hue), 10%, 15%); } */
+
+/* Others */
+
+/* :root { --color-red:             #ff0000; } */
+/* :root { --color-green:           #00ff00; } */
+/* :root { --color-blue:            #0000ff; } */
+/* :root { --color-yellow:          #ffff00; } */
+/* :root { --color-cyan:            #00ffff; } */
+/* :root { --color-magenta:         #ff00ff; } */
+/* :root { --color-orange:          #ff7f00; } */
+/* :root { --color-pink:            #ff0080; } */
+/* :root { --color-purple:          #7f00ff; } */
+/* :root { --color-azure:           #0080ff; } */
+/* :root { --color-teal:            #00ff7f; } */
+/* :root { --color-lime:            #80ff00; } */
+
+/* Interface */
+
+/* :root { --color-info-hue:           204; } */
+/* :root { --color-info-saturation:    100%; } */
+/* :root { --color-info-lightness:     40%; } */
+/* :root { --color-info-vals:          var(--color-info-hue), var(--color-info-saturation), var(--color-info-lightness); } */
+/* :root { --color-info:               hsl(var(--color-info-vals)); } */
+
+/* :root { --color-success-hue:        135; } */
+/* :root { --color-success-saturation: 44%; } */
+/* :root { --color-success-lightness:  44%; } */
+/* :root { --color-success-vals:       var(--color-success-hue), var(--color-success-saturation), var(--color-success-lightness); } */
+/* :root { --color-success:            hsl(var(--color-success-vals)); } */
+
+/* :root { --color-warning-hue:        29; } */
+/* :root { --color-warning-saturation: 100%; } */
+/* :root { --color-warning-lightness:  62%; } */
+/* :root { --color-warning-vals:       var(--color-warning-hue), var(--color-warning-saturation), var(--color-warning-lightness); } */
+/* :root { --color-warning:            hsl(var(--color-warning-vals)); } */
+
+/* :root { --color-error-hue:          351; } */
+/* :root { --color-error-saturation:   85%; } */
+/* :root { --color-error-lightness:    47%; } */
+/* :root { --color-error-vals:         var(--color-error-hue), var(--color-error-saturation), var(--color-error-lightness); } */
+/* :root { --color-error:              hsl(var(--color-error-vals)); } */
+
+/*--------------------/
+	Fonts
+/--------------------*/
+
+/* :root { --font-primary: 'roboto'; } */
+/* :root { --font-secondary: 'arial'; } */
+
+/*--------------------/
+	Font Colors
+/--------------------*/
+
+/* :root { --fontcolor-text:     var(--color-grey900); } */
+/* :root { --fontcolor-headings: var(--color-grey700); } */
+
+/*--------------------/
+	Font Sizes
+/--------------------*/
+
+/* :root { --fontsize-text1: 2.0rem; } */
+/* :root { --fontsize-text2: 1.8rem; } */
+/* :root { --fontsize-text3: 1.6rem; } */
+/* :root { --fontsize-text4: 1.4rem; } */
+/* :root { --fontsize-text5: 1.2rem; } */
+/* :root { --fontsize-text6: 1.1rem; } */
+/* :root { --fontsize-heading1: 8.0rem; } */
+/* :root { --fontsize-heading2: 6.0rem; } */
+/* :root { --fontsize-heading3: 4.0rem; } */
+/* :root { --fontsize-heading4: 3.2rem; } */
+/* :root { --fontsize-heading5: 2.6rem; } */
+/* :root { --fontsize-heading6: 2.2rem; } */
+
+/*--------------------/
+	Breakpoints 
+	-CSS Variable can't be used in media queries yet, so using custom-media
+/--------------------*/
+
+/* :root       { --breakpoint-xsm:                 480px;} */
+/* @custom-media --breakpoint-xsm-min (min-width:  481px); */
+/* @custom-media --breakpoint-xsm     (max-width:  480px); */
+/* :root {       --breakpoint-sm:                  768px;} */
+/* @custom-media --breakpoint-sm-min (min-width:   769px); */
+/* @custom-media --breakpoint-sm     (max-width:   768px); */
+/* :root {       --breakpoint-md:                  1024px;} */
+/* @custom-media --breakpoint-md-min (min-width:   1025px); */
+/* @custom-media --breakpoint-md     (max-width:   1024px); */
+/* :root {       --breakpoint-lg:                  1200px;} */
+/* @custom-media --breakpoint-lg-min (min-width:   1201px); */
+/* @custom-media --breakpoint-lg     (max-width:   1200px); */
+
+/*--------------------/
+	Fixed Width
+/--------------------*/
+
+/* :root { --fixedwidth-maxWidth: 1180px; } */
+/* :root { --fixedwidth-sidePadding: 15px; } */

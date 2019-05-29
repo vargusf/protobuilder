@@ -24,34 +24,39 @@
 	Colors (HSL)
 /--------------------*/
 
-/* Branding colors (Hue, Saturation, Lightness) */
-:root { --color-primary-hue: 225; }
-:root { --color-primary-saturation: 70%; }
-:root { --color-primary-lightness: 65%; }
-:root { --color-secondary-hue: 0; }
-:root { --color-secondary-saturation: 70%; }
-:root { --color-secondary-lightness: 60%; }
-:root { --color-tertiary-hue: 48; }
-:root { --color-tertiary-saturation: 75%; }
-:root { --color-tertiary-lightness: 52%; }
-
 /* Brand */
-:root { --color-primary:         hsl(var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness)); }
-:root { --color-primaryAsHsl:    var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness) }
-:root { --color-primaryLight:    hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) * 1.5), calc(var(--color-primary-lightness) + 10%)); }
-:root { --color-primaryDark:     hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) / 1.5), calc(var(--color-primary-lightness) - 10%)); }
-:root { --color-secondary:       hsl(var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lightness)); }
-:root { --color-secondaryLight:  hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) * 1.5), calc(var(--color-secondary-lightness) + 10%)); }
-:root { --color-secondaryDark:   hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) / 1.5), calc(var(--color-secondary-lightness) - 10%)); }
-:root { --color-tertiary:        hsl(var(--color-tertiary-hue), var(--color-tertiary-saturation), var(--color-tertiary-lightness)); }
-:root { --color-tertiaryLight:   hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) * 1.5), calc(var(--color-tertiary-lightness) + 10%)); }
-:root { --color-tertiaryDark:    hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) / 1.5), calc(var(--color-tertiary-lightness) - 10%)); }
+
+:root { --color-primary-hue:          225; }
+:root { --color-primary-saturation:   70%; }
+:root { --color-primary-lightness:    65%; }
+:root { --color-primary-vals:         var(--color-primary-hue), var(--color-primary-saturation), var(--color-primary-lightness); }
+:root { --color-primary:              hsl(var(--color-primary-vals)); }
+:root { --color-primaryLight:         hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) * 1.5), calc(var(--color-primary-lightness) + 10%)); }
+:root { --color-primaryDark:          hsl(var(--color-primary-hue), calc(var(--color-primary-saturation) / 1.5), calc(var(--color-primary-lightness) - 10%)); }
+
+:root { --color-secondary-hue:        0; }
+:root { --color-secondary-saturation: 70%; }
+:root { --color-secondary-lightness:  60%; }
+:root { --color-secondary-vals:       var(--color-secondary-hue), var(--color-secondary-saturation), var(--color-secondary-lightness); }
+:root { --color-secondary:            hsl(var(--color-secondary-vals)); }
+:root { --color-secondaryLight:       hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) * 1.5), calc(var(--color-secondary-lightness) + 10%)); }
+:root { --color-secondaryDark:        hsl(var(--color-secondary-hue), calc(var(--color-secondary-saturation) / 1.5), calc(var(--color-secondary-lightness) - 10%)); }
+
+:root { --color-tertiary-hue:         48; }
+:root { --color-tertiary-saturation:  75%; }
+:root { --color-tertiary-lightness:   52%; }
+:root { --color-tertiary-vals:        var(--color-tertiary-hue), var(--color-tertiary-saturation), var(--color-tertiary-lightness); }
+:root { --color-tertiary:             hsl(var(--color-tertiary-vals)); }
+:root { --color-tertiaryLight:        hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) * 1.5), calc(var(--color-tertiary-lightness) + 10%)); }
+:root { --color-tertiaryDark:         hsl(var(--color-tertiary-hue), calc(var(--color-tertiary-saturation) / 1.5), calc(var(--color-tertiary-lightness) - 10%)); }
 
 /* Black & White */
+
 :root { --color-white:           hsl(0, 0%, 100%); }
 :root { --color-black:           hsl(0, 0%, 0%); }
 
 /* Greys (with a tinge of primary hue) */
+
 :root { --color-grey100:         hsl(var(--color-primary-hue), 10%, 95%); }
 :root { --color-grey200:         hsl(var(--color-primary-hue), 10%, 90%); }
 :root { --color-grey300:         hsl(var(--color-primary-hue), 10%, 85%); }
@@ -63,6 +68,7 @@
 :root { --color-grey900:         hsl(var(--color-primary-hue), 10%, 15%); }
 
 /* Others */
+
 :root { --color-red:             #ff0000; }
 :root { --color-green:           #00ff00; }
 :root { --color-blue:            #0000ff; }
@@ -76,11 +82,31 @@
 :root { --color-teal:            #00ff7f; }
 :root { --color-lime:            #80ff00; }
 
-/* UI */
-:root { --color-info:            #007ACA; }
-:root { --color-success:         #3EA157; }
-:root { --color-warning:         #FF9A3D; }
-:root { --color-error:           #DC1232; }
+/* Interface */
+
+:root { --color-info-hue:           204; }
+:root { --color-info-saturation:    100%; }
+:root { --color-info-lightness:     40%; }
+:root { --color-info-vals:          var(--color-info-hue), var(--color-info-saturation), var(--color-info-lightness); }
+:root { --color-info:               hsl(var(--color-info-vals)); }
+
+:root { --color-success-hue:        135; }
+:root { --color-success-saturation: 44%; }
+:root { --color-success-lightness:  44%; }
+:root { --color-success-vals:       var(--color-success-hue), var(--color-success-saturation), var(--color-success-lightness); }
+:root { --color-success:            hsl(var(--color-success-vals)); }
+
+:root { --color-warning-hue:        29; }
+:root { --color-warning-saturation: 100%; }
+:root { --color-warning-lightness:  62%; }
+:root { --color-warning-vals:       var(--color-warning-hue), var(--color-warning-saturation), var(--color-warning-lightness); }
+:root { --color-warning:            hsl(var(--color-warning-vals)); }
+
+:root { --color-error-hue:          351; }
+:root { --color-error-saturation:   85%; }
+:root { --color-error-lightness:    47%; }
+:root { --color-error-vals:         var(--color-error-hue), var(--color-error-saturation), var(--color-error-lightness); }
+:root { --color-error:              hsl(var(--color-error-vals)); }
 
 /*--------------------/
 	Fonts
@@ -115,7 +141,7 @@
 
 /*--------------------/
 	Breakpoints 
-	-CSS Variable can't be used in media queries yet, so using custom-media
+	-CSS Variable can't be used in media queries yet, so using postcss's custom-media
 /--------------------*/
 
 :root       { --breakpoint-xsm:                 480px;}

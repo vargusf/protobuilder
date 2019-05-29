@@ -6,5 +6,6 @@ module.exports = {
 		require('postcss-nested'),
 		require('postcss-preset-env'),
 		require('postcss-custom-media'),
+		require('postcss-hexrgba'),
 	]
 }

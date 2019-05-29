@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Button } from '../../index';
+import { Button, Container, Col, Row } from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
@@ -14,17 +14,17 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>Colors</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
-					<div><Button>Primary</Button></div>
-					<div><Button color="secondary">Secondary</Button></div>
-					<div><Button color="tertiary">Tertiary</Button></div>
-					<div><Button color="grey">Grey</Button></div>
-					<div><Button color="white">White</Button></div>
-					<div><Button color="info">Info</Button></div>
-					<div><Button color="success">Success</Button></div>
-					<div><Button color="warning">Warning</Button></div>
-					<div><Button color="error">Error</Button></div>
-				</div>
+				<Row align="center" gutter="xsm">
+					<Col><Button>Primary</Button></Col>
+					<Col><Button color="secondary">Secondary</Button></Col>
+					<Col><Button color="tertiary">Tertiary</Button></Col>
+					<Col><Button color="grey">Grey</Button></Col>
+					<Col><Container backgroundColor="primary" paddingEnds="sm" paddingSides="sm"><Row><Col><Button color="white">White</Button></Col></Row></Container></Col>
+					<Col><Button color="info">Info</Button></Col>
+					<Col><Button color="success">Success</Button></Col>
+					<Col><Button color="warning">Warning</Button></Col>
+					<Col><Button color="error">Error</Button></Col>
+				</Row>
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Button>Primary</Button>`}</div>
@@ -42,22 +42,24 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>No Fill</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
-					<div><Button fill="false">Primary</Button></div>
-					<div><Button fill="false" color="secondary">Secondary</Button></div>
-					<div><Button fill="false" color="tertiary">Tertiary</Button></div>
-					<div><Button fill="false" color="grey">Grey</Button></div>
-					<div><Button fill="false" color="info">Info</Button></div>
-					<div><Button fill="false" color="success">Success</Button></div>
-					<div><Button fill="false" color="warning">Warning</Button></div>
-					<div><Button fill="false" color="error">Error</Button></div>
-				</div>
+				<Row align="center" gutter="xsm">
+					<Col><Button fill="false">Primary</Button></Col>
+					<Col><Button fill="false" color="secondary">Secondary</Button></Col>
+					<Col><Button fill="false" color="tertiary">Tertiary</Button></Col>
+					<Col><Button fill="false" color="grey">Grey</Button></Col>
+					<Col><Container backgroundColor="primary" paddingEnds="sm" paddingSides="sm"><Row><Col><Button fill="false" color="white">White</Button></Col></Row></Container></Col>
+					<Col><Button fill="false" color="info">Info</Button></Col>
+					<Col><Button fill="false" color="success">Success</Button></Col>
+					<Col><Button fill="false" color="warning">Warning</Button></Col>
+					<Col><Button fill="false" color="error">Error</Button></Col>
+				</Row>
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Button fill="false">Primary</Button>`}</div>
 				<div>{`<Button fill="false" color="secondary">Secondary</Button>`}</div>
 				<div>{`<Button fill="false" color="tertiary">Tertiary</Button>`}</div>
 				<div>{`<Button fill="false" color="grey">Grey</Button>`}</div>
+				<div>{`<Button fill="false" color="white">White</Button>`}</div>
 				<div>{`<Button fill="false" color="info">Info</Button>`}</div>
 				<div>{`<Button fill="false" color="success">Success</Button>`}</div>
 				<div>{`<Button fill="false" color="warning">Warning</Button>`}</div>
@@ -68,22 +70,24 @@ const PageButton = () => (
 		<h2 className={style.docHeading2}>No Border</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<div className={` ${protoStyle.displayFlex} ${protoStyle.gutterXsm} `}>
-					<div><Button fill="false" border="false">Primary</Button></div>
-					<div><Button fill="false" border="false" color="secondary">Secondary</Button></div>
-					<div><Button fill="false" border="false" color="tertiary">Tertiary</Button></div>
-					<div><Button fill="false" border="false" color="grey">Grey</Button></div>
-					<div><Button fill="false" border="false" color="info">Info</Button></div>
-					<div><Button fill="false" border="false" color="success">Success</Button></div>
-					<div><Button fill="false" border="false" color="warning">Warning</Button></div>
-					<div><Button fill="false" border="false" color="error">Error</Button></div>
-				</div>
+				<Row align="center" gutter="xsm">
+					<Col><Button fill="false" border="false">Primary</Button></Col>
+					<Col><Button fill="false" border="false" color="secondary">Secondary</Button></Col>
+					<Col><Button fill="false" border="false" color="tertiary">Tertiary</Button></Col>
+					<Col><Button fill="false" border="false" color="grey">Grey</Button></Col>
+					<Col><Container backgroundColor="primary" paddingEnds="sm" paddingSides="sm"><Row><Col><Button fill="false" border="false" color="white">White</Button></Col></Row></Container></Col>
+					<Col><Button fill="false" border="false" color="info">Info</Button></Col>
+					<Col><Button fill="false" border="false" color="success">Success</Button></Col>
+					<Col><Button fill="false" border="false" color="warning">Warning</Button></Col>
+					<Col><Button fill="false" border="false" color="error">Error</Button></Col>
+				</Row>
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Button fill="false" border="false">Primary</Button>`}</div>
 				<div>{`<Button fill="false" border="false" color="secondary">Secondary</Button>`}</div>
 				<div>{`<Button fill="false" border="false" color="tertiary">Tertiary</Button>`}</div>
 				<div>{`<Button fill="false" border="false" color="grey">Grey</Button>`}</div>
+				<div>{`<Button fill="false" border="false" color="white">White</Button>`}</div>
 				<div>{`<Button fill="false" border="false" color="info">Info</Button>`}</div>
 				<div>{`<Button fill="false" border="false" color="success">Success</Button>`}</div>
 				<div>{`<Button fill="false" border="false" color="warning">Warning</Button>`}</div>

@@ -3,18 +3,25 @@ import { getResponsiveClasses } from '../../utils/utils';
 import globalStyle from '../../styles/global.css';
 
 const Container = ({
-	height = "auto", // "[number(per|px)]"|"auto"|"heightMin100vh", default: "auto"
+	height = "auto", // "[number(per|px)]"|"auto"|"min100vh", default: "auto"
 	fixedWidth = "false", // "false"|"true", default: false
 	align = "stretch", // "stretch"|"start"|"end"|"center", default: "stretch"
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
 	centered = "false",
 	grow = "0", //  "0"|"1", default: "0"
 	backgroundColor = "none", // "none"|config.color, default: "none",
+	paddingTop = "zero", // config.size, default: "zero"
+	paddingBottom = "zero", // config.size, default: "zero"
+	paddingLeft = "zero", // config.size, default: "zero"
+	paddingRight = "zero", // config.size, default: "zero"
+	paddingEnds, // config.size, default: "zero"
+	paddingSides, // config.size, default: "zero"
 	className = "",
 	children
 }) => {
 
 	const classes = [
+		className,
 		globalStyle.displayFlex,
 		globalStyle.flexDirectionColumn,
 		globalStyle.width100per,
@@ -25,8 +32,13 @@ const Container = ({
 		getResponsiveClasses('flexGrow', grow),
 		getResponsiveClasses('align', align),
 		getResponsiveClasses('justify', justify),
+		getResponsiveClasses('paddingTop', paddingTop),
+		getResponsiveClasses('paddingBottom', paddingBottom),
+		getResponsiveClasses('paddingLeft', paddingLeft),
+		getResponsiveClasses('paddingRight', paddingRight),
+		getResponsiveClasses('paddingEnds', paddingEnds),
+		getResponsiveClasses('paddingSides', paddingSides),
 		(centered === "true" && getResponsiveClasses('centered')),
-		className,
 	].join(' ');
 
 	return (
@@ -54,6 +66,7 @@ const Row = ({
 }) => {
 
 	const classes = [
+		className,
 		globalStyle.width100per,
 		globalStyle.gutter,
 		getResponsiveClasses('display', display),
@@ -68,7 +81,6 @@ const Row = ({
 		getResponsiveClasses('paddingBottom', paddingBottom),
 		getResponsiveClasses('colDirection', direction),
 		getResponsiveClasses('gutter', gutter),
-		className,
 	].join(' ');
 
 	return (
@@ -94,6 +106,7 @@ const Col = ({
 }) => {
 
 	const classes = [
+		className,
 		getResponsiveClasses('flexWidth', width),
 		getResponsiveClasses('marginTop', marginTop),
 		getResponsiveClasses('marginBottom', marginBottom),
@@ -104,7 +117,6 @@ const Col = ({
 		getResponsiveClasses('justify', justify),
 		(centered === "true" && getResponsiveClasses('centered')),
 		getResponsiveClasses('flexDirection', direction),
-		className,
 	].join(' ');
 	
 	return (
