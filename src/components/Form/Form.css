@@ -1,6 +1,7 @@
 .input,
 .textarea {
 	position: relative;
+	font-family: arial, helvetica, sans-serif;
 	input,
 	textarea {
 		width: 100%;

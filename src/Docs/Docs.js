@@ -7,6 +7,7 @@ import PageText from './pages/Text';
 import PageLayout from './pages/Layout';
 import PageAlert from './pages/Alert';
 import PageButton from './pages/Button';
+import PageButtonAjax from './pages/ButtonAjax';
 import PageSpinner from './pages/Spinner';
 import PageModal from './pages/Modal';
 import PageIcon from './pages/Icon';
@@ -46,6 +47,7 @@ class Docs extends Component {
 								<ul className={protoStyle.marginBottomLg}>
 									<li><NavLink to="/proto/alert" className={style.link} activeClassName={style.linkActive}>Alert</NavLink></li>
 									<li><NavLink to="/proto/button" className={style.link} activeClassName={style.linkActive}>Button</NavLink></li>
+									<li><NavLink to="/proto/buttonajax" className={style.link} activeClassName={style.linkActive}>Button Ajax</NavLink></li>
 									<li><NavLink to="/proto/spinner" className={style.link} activeClassName={style.linkActive}>Spinner</NavLink></li>
 									<li><NavLink to="/proto/modal" className={style.link} activeClassName={style.linkActive}>Modal</NavLink></li>
 									<li><NavLink to="/proto/icon" className={style.link} activeClassName={style.linkActive}>Icon</NavLink></li>
@@ -63,6 +65,7 @@ class Docs extends Component {
 										<Route exact path='/proto/text' component={PageText} />
 										<Route exact path='/proto/layout' component={PageLayout} />
 										<Route exact path='/proto/button' component={PageButton} />
+										<Route exact path='/proto/buttonajax' component={PageButtonAjax} />
 										<Route exact path='/proto/alert' component={PageAlert} />
 										<Route exact path='/proto/spinner' component={PageSpinner} />
 										<Route exact path='/proto/modal' component={PageModal} />

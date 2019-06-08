@@ -213,7 +213,7 @@ const PageButton = () => (
 			<div className={style.docboxCode}>
 				<div>{`<Button onClick={}>Button</Button>`}</div>
 				<div>{`<Button type="link" to="">Link</Button>`}</div>
-				<div>{`<Button type="href" to="" target="_self">Href</Button>`}</div>
+				<div>{`<Button type="href" to="" target="_blank">Href</Button>`}</div>
 				<div>{`<Button type="submit">Submit</Button>`}</div>
 				<div>{`<Button type="reset">Reset</Button>`}</div>
 			</div>
