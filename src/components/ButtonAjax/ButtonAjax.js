@@ -38,7 +38,7 @@ class ButtonAjax extends Component {
 					<div className={style.checkmark}></div>
 				</div>
 			)
-		} else if (this.props.state == "fail") {
+		} else if (this.props.state == "error") {
 			return (
 				<div className={global.positionRelative} style={{ width: `${this.state.width}px` }}>
 					<div className={style.times}></div>

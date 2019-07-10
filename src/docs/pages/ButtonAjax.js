@@ -20,7 +20,7 @@ class PageButtonAjax extends Component {
 		this.setState({btnState: "processing"});
 		setTimeout(()=>{
 			console.log('complete');
-			this.setState({ btnState: "success" });
+			this.setState({ btnState: "error" });
 		},1000)
 	}
 
