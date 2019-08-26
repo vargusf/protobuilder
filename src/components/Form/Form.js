@@ -183,7 +183,7 @@ const Radio = ({
 const Select = ({
 	display = "block", // "block"|"inlineBlock"
 	size = "md",
-	state = null, // null|"success"|"error"|"warning"
+	state = null,
 	label,
 	helper,
 	onChange,
