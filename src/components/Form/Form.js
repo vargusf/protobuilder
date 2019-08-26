@@ -33,14 +33,14 @@ const TextInput = ({
 				<input maxLength={maxlength} name={name} type={type} value={value} placeholder={placeholder} onChange={onChange} tabIndex={tabindex} />
 				{append && <div className={style.append}>{append}</div>}
 			</div>
-			{helper && <span className={style.helper}>{helper}</span>}
+			{helper && <div className={style.helper}>{helper}</div>}
 		</div>
 	)
 }
 
 const Textarea = ({
 	state = null, // null|"success"|"error"|"warning"
-	rows = "3",
+	rows = 3,
 	label,
 	helper,
 	onChange,
@@ -62,7 +62,7 @@ const Textarea = ({
 			<div className={style.field}>
 				<textarea maxLength={maxlength} name={name} placeholder={placeholder} onChange={onChange} tabIndex={tabindex}>{value}</textarea>
 		 	</div>
-			{helper && <span className={style.helper}>{helper}</span>}
+			{helper && <div className={style.helper}>{helper}</div>}
 		</div>
 	)
 }
@@ -70,17 +70,18 @@ const Textarea = ({
 const Checkbox = ({
 	size = "md",
 	state = null, // null|"success"|"error"|"warning"
+	border = true,
 	label,
-	helper,
 	onChange,
 	tabindex,
-	checked,
+	checked = false,
 	value,
 	name,
 }) => {
 
 	const classes = [
 		style.checkbox,
+		style['border_' + border],
 		style['size_' + size],
 		style['state_' + state],
 	].join(" ");
@@ -88,7 +89,7 @@ const Checkbox = ({
 	return (
 		<div className={classes}>
 			<label className={style.field}>
-				<input type="checkbox" className={style.inputHidden} name={name} onChange={onChange} value={value} tabIndex={tabindex} />
+				<input type="checkbox" className={style.inputHidden} name={name} defaultChecked={checked} onChange={onChange} value={value} tabIndex={tabindex} />
 				<div className={style.custom}>
 					<div className={style.unchecked}>
 						<FontAwesomeIcon icon={['far', 'square']} fixedWidth />
@@ -103,11 +104,50 @@ const Checkbox = ({
 	)
 }
 
+const Switch = ({
+	size = "md",
+	state = null, // null|"success"|"error"|"warning"
+	border = false,
+	label,
+	helper,
+	onChange,
+	tabindex,
+	checked = false,
+	value,
+	name,
+}) => {
+
+	const classes = [
+		style.switch,
+		style['border_' + border],
+		style['size_' + size],
+		style['state_' + state],
+	].join(" ");
+
+	return (
+		<div className={classes}>
+			<label className={style.field}>
+				<input type="checkbox" className={style.inputHidden} name={name} defaultChecked={checked} onChange={onChange} value={value} tabIndex={tabindex} />
+				<div className={style.custom}>
+					<div className={style.unchecked}>
+						<FontAwesomeIcon icon={["fas", "toggle-on"]} rotation={180} />
+					</div>
+					<div className={style.checked}>
+						<FontAwesomeIcon icon={["fas", "toggle-on"]} />
+					</div>
+				</div>
+				<span className={style.label}>{label}</span>
+			</label>
+			{helper && <div className={style.helper}>{helper}</div>}
+		</div>
+	)
+}
+
 const Radio = ({
 	size = "md",
 	state = null, // null|"success"|"error"|"warning"
+	border = true,
 	label,
-	helper,
 	onChange,
 	tabindex,
 	checked,
@@ -117,6 +157,7 @@ const Radio = ({
 
 	const classes = [
 		style.radio,
+		style['border_' + border],
 		style['size_' + size],
 		style['state_' + state],
 	].join(" ");
@@ -124,7 +165,7 @@ const Radio = ({
 	return (
 		<div className={classes}>
 			<label className={style.field}>
-				<input type="radio" className={style.inputHidden} name={name} onChange={onChange} value={value} tabIndex={tabindex} />
+				<input type="radio" className={style.inputHidden} name={name} defaultChecked={checked} onChange={onChange} value={value} tabIndex={tabindex} />
 				<div className={style.custom}>
 					<div className={style.unchecked}>
 						<FontAwesomeIcon icon={['far', 'circle']} fixedWidth />
@@ -168,7 +209,7 @@ const Select = ({
 				</select>
 				<FontAwesomeIcon className={style.icon} icon={['fas', 'chevron-down']} fixedWidth />
 			</div>
-			<span className={style.helper}>{helper}</span>
+			{helper && <div className={style.helper}>{helper}</div>}
 		</div>
 	)
 }
@@ -204,7 +245,7 @@ const FormItemGroup = ({
 			<div>
 				{children}
 			</div>
-			<span className={style.helper}>{helper}</span>
+			{helper && <div className={style.helper}>{helper}</div>}
 		</div>
 	)
 }
@@ -213,6 +254,7 @@ export {
 	TextInput,
 	Textarea,
 	Checkbox,
+	Switch,
 	Radio,
 	Select,
 	Option,

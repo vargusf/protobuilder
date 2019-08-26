@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Col, TextInput, Textarea, Checkbox, Radio, Select, Option, FormItemGroup } from '../../index';
+import { Row, Col, TextInput, Textarea, Checkbox, Switch, Radio, Select, Option, FormItemGroup } from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
@@ -14,7 +14,6 @@ const PageForm = () => (
 			<div className={style.docboxContent}>
 				<h3 className={style.docHeading3}>Basic</h3>
 				<TextInput label="Label" placeholder="Please input something" helper="Optional helper text"/>
-				<TextInput state="success" label="Label" placeholder="Please input something" helper="Optional helper text"/>
 				<h3 className={`${style.docHeading3} ${protoStyle.marginEndsLg}`}>Append / Prepend</h3>
 				<Row marginBottom="lg">
 					<Col width="50per"><TextInput append="%" label="Append" /></Col>
@@ -47,7 +46,17 @@ const PageForm = () => (
 		<h2 className={style.docHeading2}>Checkbox</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<Checkbox label="just some label" helper="this is some helper text" />
+				<Checkbox label="just some label" />
+			</div>
+			<div className={style.docboxCode}>
+				<div>{`<Checkbox>`}</div>
+			</div>
+		</div>
+
+		<h2 className={style.docHeading2}>Switch</h2>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
+				<Switch label="just some label" helper="this is some helper text this is some helper text this is some helper text" />
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Checkbox>`}</div>
@@ -70,6 +79,7 @@ const PageForm = () => (
 						<Radio
 							label="just some label"
 							name="demo"
+							checked={true}
 						/>
 					</Col>
 				</Row>
@@ -97,6 +107,16 @@ const PageForm = () => (
 						</Select>
 					</Col>
 				</Row>
+				<Row>
+					<Col>
+						<Select
+							value="3"
+							onChange={()=>{console.log("select changed!")}}
+						>
+							<Option value="1">thisisatest</Option>
+						</Select>
+					</Col>
+				</Row>
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Checkbox>`}</div>
@@ -113,7 +133,7 @@ const PageForm = () => (
 							helper="this is some helper text"
 						>
 							<Checkbox inline="false" label="just some label" />
-							<Checkbox inline="false" label="just some label1" />
+							<Checkbox inline="false" label="just some label1" checked={true} />
 							<Checkbox inline="false" label="just some label2" />
 						</FormItemGroup>
 					</Col>
