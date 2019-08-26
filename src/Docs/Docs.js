@@ -13,6 +13,7 @@ import PageModal from './pages/Modal';
 import PageIcon from './pages/Icon';
 import PageProgress from './pages/Progress';
 import PageForm from './pages/Form';
+import PageTable from './pages/Table';
 
 import { Container, Col, Row } from '../index';
 
@@ -28,7 +29,7 @@ class Docs extends Component {
 					<div className={style.logo}></div>
 				</div>
 				<Container grow="1">
-					<Row grow="1">
+					<Row grow="1" direction={{d: "row", sm: "column"}}>
 						<Col width="300px">
 							<div className={style.sidebar_container}>
 
@@ -53,6 +54,7 @@ class Docs extends Component {
 									<li><NavLink to="/proto/icon" className={style.link} activeClassName={style.linkActive}>Icon</NavLink></li>
 									<li><NavLink to="/proto/progress" className={style.link} activeClassName={style.linkActive}>Progress</NavLink></li>
 									<li><NavLink to="/proto/form" className={style.link} activeClassName={style.linkActive}>Form</NavLink></li>
+									<li><NavLink to="/proto/table" className={style.link} activeClassName={style.linkActive}>Table</NavLink></li>
 								</ul>
 							</div>
 						</Col>
@@ -72,6 +74,7 @@ class Docs extends Component {
 										<Route exact path='/proto/icon' component={PageIcon} />
 										<Route exact path='/proto/progress' component={PageProgress} />
 										<Route exact path='/proto/form' component={PageForm} />
+										<Route exact path='/proto/table' component={PageTable} />
 									</Col>
 								</Row>
 							</Container>

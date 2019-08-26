@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { Button, Container, Col, Row } from '../../index';
+import { Button, ButtonGroup, Container, Col, Row } from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
@@ -19,7 +19,7 @@ const PageButton = () => (
 					<Col><Button color="secondary">Secondary</Button></Col>
 					<Col><Button color="tertiary">Tertiary</Button></Col>
 					<Col><Button color="grey">Grey</Button></Col>
-					<Col><Container backgroundColor="primary" paddingEnds="sm" paddingSides="sm"><Row><Col><Button color="white">White</Button></Col></Row></Container></Col>
+					<Col><Button color="white">White</Button></Col>
 					<Col><Button color="info">Info</Button></Col>
 					<Col><Button color="success">Success</Button></Col>
 					<Col><Button color="warning">Warning</Button></Col>
@@ -47,7 +47,7 @@ const PageButton = () => (
 					<Col><Button fill="false" color="secondary">Secondary</Button></Col>
 					<Col><Button fill="false" color="tertiary">Tertiary</Button></Col>
 					<Col><Button fill="false" color="grey">Grey</Button></Col>
-					<Col><Container backgroundColor="primary" paddingEnds="sm" paddingSides="sm"><Row><Col><Button fill="false" color="white">White</Button></Col></Row></Container></Col>
+					<Col><Button fill="false" color="white">White</Button></Col>
 					<Col><Button fill="false" color="info">Info</Button></Col>
 					<Col><Button fill="false" color="success">Success</Button></Col>
 					<Col><Button fill="false" color="warning">Warning</Button></Col>
@@ -75,7 +75,7 @@ const PageButton = () => (
 					<Col><Button fill="false" border="false" color="secondary">Secondary</Button></Col>
 					<Col><Button fill="false" border="false" color="tertiary">Tertiary</Button></Col>
 					<Col><Button fill="false" border="false" color="grey">Grey</Button></Col>
-					<Col><Container backgroundColor="primary" paddingEnds="sm" paddingSides="sm"><Row><Col><Button fill="false" border="false" color="white">White</Button></Col></Row></Container></Col>
+					<Col><Button fill="false" border="false" color="white">White</Button></Col>
 					<Col><Button fill="false" border="false" color="info">Info</Button></Col>
 					<Col><Button fill="false" border="false" color="success">Success</Button></Col>
 					<Col><Button fill="false" border="false" color="warning">Warning</Button></Col>
@@ -216,6 +216,24 @@ const PageButton = () => (
 				<div>{`<Button type="href" to="" target="_blank">Href</Button>`}</div>
 				<div>{`<Button type="submit">Submit</Button>`}</div>
 				<div>{`<Button type="reset">Reset</Button>`}</div>
+			</div>
+		</div>
+
+		<h2 className={style.docHeading2}>Button Bar</h2>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
+				<ButtonGroup>
+					<Button>Button</Button>
+					<Button>Button</Button>
+					<Button>Button</Button>
+					<Button type="link" to="">Link</Button>
+					<Button type="href">Href</Button>
+					<Button type="submit">Submit</Button>
+					<Button type="reset">Reset</Button>
+				</ButtonGroup>
+
+			</div>
+			<div className={style.docboxCode}>
 			</div>
 		</div>
 

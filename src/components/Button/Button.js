@@ -19,6 +19,7 @@ const Button = ({
 	circle = 'false',
 	transform = 'false',
 	weight = 'false',
+	isActive = 'false',
 	to = null,
 	target = '_self',
 	tabindex= '',
@@ -43,6 +44,7 @@ const Button = ({
 		circle != "false" ? style['circle_' + circle] : '',
 		transform != "false" ? style['transform_' + transform] : '',
 		weight != "false" ? style['weight_' + weight] : '',
+		isActive != "false" ? style['isActive_' + isActive] : '',
 	].join(' ');
 
 	if (disabled == "true") onClick = null;
@@ -56,4 +58,17 @@ const Button = ({
 	}
 }
 
-export default Button;
+const ButtonGroup = ({
+	children
+}) => {
+	return (
+		<div className={style.buttonGroup}>
+			{children}
+		</div>
+	)
+}
+
+export {
+	Button,
+	ButtonGroup
+};

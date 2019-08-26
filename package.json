@@ -5,9 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --open --config ./dev/config/webpack.config.js",
-    "watch": "npm run transpile && onchange 'src/**/*.js' 'src/**/*.css' -- npm run transpile",
-    "transpile": "babel src -d dist --copy-files",
-    "dist": "npm run transpile && git add . && git commit -m 'update' && git push && npm version patch && npm publish"
+    "dev": "npm run transpile && onchange 'src/**/*.js' 'src/**/*.css' -- npm run transpile",
+    "dist": "npm run transpile && git add . && git commit -m 'update' && git push && npm version patch && npm publish",
+    "transpile": "babel src -d dist --copy-files"
   },
   "repository": {
     "type": "git",
@@ -64,6 +64,6 @@
   "devDependencies": {
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.7.2"
   }
 }

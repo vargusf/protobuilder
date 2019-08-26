@@ -12,10 +12,7 @@ const Container = ({
 	backgroundColor = "none", // "none"|config.color, default: "none",
 	paddingTop = "zero", // config.size, default: "zero"
 	paddingBottom = "zero", // config.size, default: "zero"
-	paddingLeft = "zero", // config.size, default: "zero"
-	paddingRight = "zero", // config.size, default: "zero"
 	paddingEnds, // config.size, default: "zero"
-	paddingSides, // config.size, default: "zero"
 	className = "",
 	children
 }) => {
@@ -34,10 +31,7 @@ const Container = ({
 		getResponsiveClasses('justify', justify),
 		getResponsiveClasses('paddingTop', paddingTop),
 		getResponsiveClasses('paddingBottom', paddingBottom),
-		getResponsiveClasses('paddingLeft', paddingLeft),
-		getResponsiveClasses('paddingRight', paddingRight),
 		getResponsiveClasses('paddingEnds', paddingEnds),
-		getResponsiveClasses('paddingSides', paddingSides),
 		(centered === "true" && getResponsiveClasses('centered')),
 	].join(' ');
 

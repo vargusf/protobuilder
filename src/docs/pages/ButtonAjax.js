@@ -20,7 +20,7 @@ class PageButtonAjax extends Component {
 		this.setState({btnState: "processing"});
 		setTimeout(()=>{
 			console.log('complete');
-			this.setState({ btnState: "error" });
+			this.setState({ btnState: "success" });
 		},1000)
 	}
 
@@ -33,7 +33,7 @@ class PageButtonAjax extends Component {
 				<div className={style.docbox}>
 					<div className={style.docboxContent}>
 						<Button onClick={() => { this.doAjax() }}>
-							<ButtonAjax state={this.state.btnState}>Button Text</ButtonAjax>
+							<ButtonAjax state={this.state.btnState}>Button Texta a asdf asdf</ButtonAjax>
 						</Button>
 					</div>
 					<div className={style.docboxCode}>

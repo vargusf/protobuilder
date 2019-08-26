@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Col, Input, Textarea, Checkbox, CheckboxGroup, Switch, SwitchGroup } from '../../index';
+import { Row, Col, TextInput, Textarea, Checkbox, Radio, Select, Option, FormItemGroup } from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
@@ -9,55 +9,16 @@ const PageForm = () => (
 	<div>
 		<h1 className={style.docHeading1}>Form</h1>
 
-		<h2 className={style.docHeading2}>Input</h2>
+		<h2 className={style.docHeading2}>TextInput</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<Input label="Label" placeholder="Please input something" helper="Optional helper text"/>
-				<h3 className={`${style.docHeading3} ${protoStyle.marginEndsLg}`}>Error</h3>
-				<Input label="Label" placeholder="Please input something" state="error" helper="This is wrong" />
-				<h3 className={`${style.docHeading3} ${protoStyle.marginEndsLg}`}>Success</h3>
-				<Input label="Label" placeholder="Please input something" state="success" helper="Looks good!"/>
-				<h3 className={`${style.docHeading3} ${protoStyle.marginEndsLg}`}>Warning</h3>
-				<Input label="Label" placeholder="Please input something" state="warning" />
-			</div>
-			<div className={style.docboxCode}>
-				<div>{`<Form>`}</div>
-			</div>
-		</div>
-
-		<h2 className={style.docHeading2}>Sizes</h2>
-		<div className={style.docbox}>
-			<div className={style.docboxContent}>
-				<Row direction="column">
-					<Col><Input label="Extra Small" size="xsm" /></Col>
-					<Col marginTop="md"><Input label="Small" size="sm" /></Col>
-					<Col marginTop="md"><Input label="Medium" size="md" /></Col>
-					<Col marginTop="md"><Input label="Large" size="lg" /></Col>
-				</Row>
-			</div>
-			<div className={style.docboxCode}>
-				<div>{`<Form>`}</div>
-			</div>
-		</div>
-
-		<h2 className={style.docHeading2}>Append / Prepend</h2>
-		<div className={style.docbox}>
-			<div className={style.docboxContent}>
+				<h3 className={style.docHeading3}>Basic</h3>
+				<TextInput label="Label" placeholder="Please input something" helper="Optional helper text"/>
+				<TextInput state="success" label="Label" placeholder="Please input something" helper="Optional helper text"/>
+				<h3 className={`${style.docHeading3} ${protoStyle.marginEndsLg}`}>Append / Prepend</h3>
 				<Row marginBottom="lg">
-					<Col width="50per"><Input append="%" label="Append" size="xsm" /></Col>
-					<Col width="50per"><Input prepend="$" label="Prepend" size="xsm" /></Col>
-				</Row>
-				<Row marginBottom="lg">
-					<Col width="50per"><Input append="%" label="Append" size="sm" /></Col>
-					<Col width="50per"><Input prepend="$" label="Prepend" size="sm" /></Col>
-				</Row>
-				<Row marginBottom="lg">
-					<Col width="50per"><Input append="%" label="Append" size="md" /></Col>
-					<Col width="50per"><Input prepend="$" label="Prepend" size="md" /></Col>
-				</Row>
-				<Row>
-					<Col width="50per"><Input append="%" label="Append" size="lg" /></Col>
-					<Col width="50per"><Input prepend="$" label="Prepend" size="lg" /></Col>
+					<Col width="50per"><TextInput append="%" label="Append" /></Col>
+					<Col width="50per"><TextInput prepend="$" label="Prepend" /></Col>
 				</Row>
 			</div>
 			<div className={style.docboxCode}>
@@ -77,36 +38,6 @@ const PageForm = () => (
 						/>
 					</Col>
 				</Row>
-				<Row marginBottom="lg">
-					<Col width="grow">
-						<Textarea
-							state="error"
-							label = "This is a label"
-							helper = "This is some helper text"
-							placeholder = "This is the placeholder"
-						/>
-					</Col>
-				</Row>
-				<Row marginBottom="lg">
-					<Col width="grow">
-						<Textarea
-							state="warning"
-							label = "This is a label"
-							helper = "This is some helper text"
-							placeholder = "This is the placeholder"
-						/>
-					</Col>
-				</Row>
-				<Row>
-					<Col width="grow">
-						<Textarea
-							state="success"
-							label = "This is a label"
-							helper = "This is some helper text"
-							placeholder = "This is the placeholder"
-						/>
-					</Col>
-				</Row>
 			</div>
 			<div className={style.docboxCode}>
 				<div>{`<Form>`}</div>
@@ -116,46 +47,29 @@ const PageForm = () => (
 		<h2 className={style.docHeading2}>Checkbox</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
+				<Checkbox label="just some label" helper="this is some helper text" />
+			</div>
+			<div className={style.docboxCode}>
+				<div>{`<Checkbox>`}</div>
+			</div>
+		</div>
+
+		<h2 className={style.docHeading2}>Radio</h2>
+		<div className={style.docbox}>
+			<div className={style.docboxContent}>
 				<Row marginBottom="lg">
 					<Col width="grow">
-						<Checkbox
+						<Radio
 							label="just some label"
-							helper="this is some helper text"
+							name="demo"
 						/>
-					</Col>
-				</Row>
-				<Row marginBottom="lg">
-					<Col width="grow">
-						<Checkbox
+						<Radio
 							label="just some label"
-							size="xsm"
-							state="error"
+							name="demo"
 						/>
-					</Col>
-				</Row>
-				<Row marginBottom="lg">
-					<Col width="grow">
-						<Checkbox
+						<Radio
 							label="just some label"
-							size="sm"
-							state="success"
-						/>
-					</Col>
-				</Row>
-				<Row marginBottom="lg">
-					<Col width="grow">
-						<Checkbox
-							label="just some label"
-							size="md"
-							state="warning"
-						/>
-					</Col>
-				</Row>
-				<Row>
-					<Col width="grow">
-						<Checkbox
-							label="just some label"
-							size="lg"
+							name="demo"
 						/>
 					</Col>
 				</Row>
@@ -165,45 +79,48 @@ const PageForm = () => (
 			</div>
 		</div>
 
-		<h2 className={style.docHeading2}>CheckboxGroup</h2>
+		<h2 className={style.docHeading2}>Select</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<Row>
+				<Row marginBottom="lg">
 					<Col width="grow">
-						<CheckboxGroup />
+						<Select
+							label="just some label"
+							helper="this is some helper text"
+							value="3"
+							onChange={()=>{console.log("select changed!")}}
+						>
+							<Option value="1">option1</Option>
+							<Option value="2">option2</Option>
+							<Option value="3">option3</Option>
+							<Option value="4">option4</Option>
+						</Select>
 					</Col>
 				</Row>
 			</div>
 			<div className={style.docboxCode}>
-				<div>{`<CheckboxGroup>`}</div>
+				<div>{`<Checkbox>`}</div>
 			</div>
 		</div>
 
-		<h2 className={style.docHeading2}>Switch</h2>
+		<h2 className={style.docHeading2}>Form Item Group</h2>
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
-				<Row>
+				<Row marginBottom="lg">
 					<Col width="grow">
-						<Switch />
+						<FormItemGroup
+							label="this is some group label"
+							helper="this is some helper text"
+						>
+							<Checkbox inline="false" label="just some label" />
+							<Checkbox inline="false" label="just some label1" />
+							<Checkbox inline="false" label="just some label2" />
+						</FormItemGroup>
 					</Col>
 				</Row>
 			</div>
 			<div className={style.docboxCode}>
-				<div>{`<Switch>`}</div>
-			</div>
-		</div>
-
-		<h2 className={style.docHeading2}>Switch Group</h2>
-		<div className={style.docbox}>
-			<div className={style.docboxContent}>
-				<Row>
-					<Col width="grow">
-						<SwitchGroup />
-					</Col>
-				</Row>
-			</div>
-			<div className={style.docboxCode}>
-				<div>{`<SwitchGroup>`}</div>
+				<div>{`<Checkbox>`}</div>
 			</div>
 		</div>
 
