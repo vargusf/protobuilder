@@ -13,7 +13,7 @@ const PageForm = () => (
 		<div className={style.docbox}>
 			<div className={style.docboxContent}>
 				<h3 className={style.docHeading3}>Basic</h3>
-				<TextInput label="Label" placeholder="Please input something" helper="Optional helper text"/>
+				<TextInput label="Label" placeholder="Please input something" helper="Optional helper text" state="error" />
 				<h3 className={`${style.docHeading3} ${protoStyle.marginEndsLg}`}>Append / Prepend</h3>
 				<Row marginBottom="lg">
 					<Col width="50per"><TextInput append="%" label="Append" /></Col>
@@ -100,8 +100,8 @@ const PageForm = () => (
 							value="3"
 							onChange={()=>{console.log("select changed!")}}
 						>
-							<Option value="1">option1</Option>
-							<Option value="2">option2</Option>
+							<Option value="1" >option1</Option>
+							<Option value="2" disabled={true}>option2</Option>
 							<Option value="3">option3</Option>
 							<Option value="4">option4</Option>
 						</Select>

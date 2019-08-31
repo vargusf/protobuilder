@@ -1,36 +1,52 @@
-/* .Nag {
-  position: relative;
-  height: 30px;
-  @include flex-centered();
-  @include font-size-in-rem(1.2);
-  &--color-primary {
-    @include background-color(primary);
-    @include color(white);
-  }
-  &--color-primaryLight {
-    @include background-color(primaryLight);
-    @include color(white);
-  }
-  &--color-primaryDark {
-    @include background-color(primaryDark);
-    @include color(white);
-  }
-  &--isActive-false {
-    display: none;
-  }
+.Nag {
+	position: relative;
+	/* height: 30px; */
+	padding: var(--size-xsm);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--fontsize-text5);
+	color: #fff;
 }
 
-.Nag__closeBtn {
-  display: block;
-  position: absolute;
-  right: 15px;
-  top: 0;
-  bottom: 0;
-  @include flex-centered();
-  height: 30px;
-  width: 30px;
-  @include color(white);
-  i {
-    @include font-size-in-rem(1.6);
-  }
-} */
+.color_primary {
+	background-color: var(--color-primary);
+}
+
+.color_primaryLight {
+	background-color: var(--color-primaryLight);
+}
+
+.color_primaryDark {
+	background-color: var(--color-primaryDark);
+}
+
+.color_secondary {
+	background-color: var(--color-secondary);
+}
+
+.color_secondaryLight {
+	background-color: var(--color-secondaryLight);
+}
+
+.color_secondaryDark {
+	background-color: var(--color-secondaryDark);
+}
+
+.isActive_false {
+	display: none;
+}
+
+.closeBtn {
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	width: 30px;
+	color: #fff;
+}

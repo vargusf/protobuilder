@@ -17,6 +17,7 @@ const TextInput = ({
 	value, 
 	name,
 	maxlength,
+	autocomplete,
 }) => {
 
 	const classes = [
@@ -30,7 +31,15 @@ const TextInput = ({
 			{label && <label className={style.label}>{label}</label>}
 			<div className={style.field}>
 				{prepend && <div className={style.prepend}>{prepend}</div>}
-				<input maxLength={maxlength} name={name} type={type} value={value} placeholder={placeholder} onChange={onChange} tabIndex={tabindex} />
+				<input 
+					maxLength={maxlength}
+					name={name} type={type}
+					value={value}
+					placeholder={placeholder}
+					onChange={onChange}
+					tabIndex={tabindex}
+					autoComplete={autocomplete}
+				/>
 				{append && <div className={style.append}>{append}</div>}
 			</div>
 			{helper && <div className={style.helper}>{helper}</div>}
@@ -49,6 +58,7 @@ const Textarea = ({
 	value,
 	name,
 	maxlength,
+	autocomplete,
 }) => {
 
 	const classes = [
@@ -60,7 +70,16 @@ const Textarea = ({
 		<div className={classes}>
 			{label && <label className={style.label}>{label}</label>}
 			<div className={style.field}>
-				<textarea maxLength={maxlength} name={name} placeholder={placeholder} onChange={onChange} tabIndex={tabindex}>{value}</textarea>
+				<textarea
+					maxLength={maxlength}
+					name={name} 
+					placeholder={placeholder}
+					onChange={onChange}
+					tabIndex={tabindex}
+					autoComplete={autocomplete}
+				>
+					{value}
+				</textarea>
 		 	</div>
 			{helper && <div className={style.helper}>{helper}</div>}
 		</div>
@@ -190,7 +209,8 @@ const Select = ({
 	tabindex,
 	value,
 	name,
-	children
+	children,
+	autocomplete,
 }) => {
 
 	const classes = [
@@ -202,9 +222,15 @@ const Select = ({
 
 	return (
 		<div className={classes}>
-			<span className={style.label}>{label}</span>
+			{label && <label className={style.label}>{label}</label>}
 			<div className={style.field}>
-				<select name={name} onChange={onChange} tabIndex={tabindex} value={value}>
+				<select 
+					name={name}
+					onChange={onChange}
+					tabIndex={tabindex}
+					value={value}
+					autoComplete={autocomplete}
+				>
 					{children}
 				</select>
 				<FontAwesomeIcon className={style.icon} icon={['fas', 'chevron-down']} fixedWidth />
@@ -215,13 +241,13 @@ const Select = ({
 }
 
 const Option = ({
-	selected = "false",
+	disabled = false,
 	value = "",
 	children
 }) => {
 
 	return (
-		<option value={value}>
+		<option value={value} disabled={disabled}>
 			{children}
 		</option>
 	)
@@ -241,7 +267,7 @@ const FormItemGroup = ({
 
 	return (
 		<div className={classes}>
-			<span className={style.label}>{label}</span>
+			{label && <span className={style.label}>{label}</span>}
 			<div>
 				{children}
 			</div>

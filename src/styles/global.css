@@ -68,7 +68,7 @@
 .marginSidesTwo          { margin-left: var(--size-two); margin-right: var(--size-two); }
 .marginSidesTiny         { margin-left: var(--size-tiny); margin-right: var(--size-tiny); }
 .marginSidesXxsm         { margin-left: var(--size-xxsm); margin-right: var(--size-xxsm); }
-.marginSidesXsm          { margin-left: var(--size-xsm); margin-right: var(--size-xsm); }
+.marginSidesXsm          { margin-left: var(--size-x	sm); margin-right: var(--size-xsm); }
 .marginSidesSm           { margin-left: var(--size-sm); margin-right: var(--size-sm); }
 .marginSidesMd           { margin-left: var(--size-md); margin-right: var(--size-md); }
 .marginSidesLg           { margin-left: var(--size-lg); margin-right: var(--size-lg); }
@@ -1501,9 +1501,13 @@
 .linkUnderlineNoColor       { cursor: pointer; }
 .linkUnderlineNoColor:hover { text-decoration: underline; }
 .linkDarken          { cursor: pointer; color: var(--color-primary); }
-.linkDarken:hover    { color: darken(var(--color-primary), 20%) }
+.linkDarken:hover    { color: darken(var(--color-primary), 20%); }
 .linkLighten         { cursor: pointer; color: var(--color-primary); }
-.linkLighten:hover   { color: lighten(var(--color-primary), 20%) }
+.linkLighten:hover   { color: lighten(var(--color-primary), 20%); }
+
+
+/* Line Height */
+.lineHeight100per   { line-height: 100%; }
 
 /* Opacity */
 .opacity0   { opacity: 0; }
