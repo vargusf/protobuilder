@@ -95,6 +95,7 @@ const Col = ({
 	justify = "start", // "start"|"end"|"center"|"between", default: "start"
 	centered = "false",
 	direction = "row", //"row"|"column"|"rowReverse"|"columnReverse", default: "row"
+	textAlign = "left",
 	className = "",
 	children
 }) => {
@@ -111,6 +112,7 @@ const Col = ({
 		getResponsiveClasses('justify', justify),
 		(centered === "true" && getResponsiveClasses('centered')),
 		getResponsiveClasses('flexDirection', direction),
+		getResponsiveClasses('textAlign', textAlign),
 	].join(' ');
 	
 	return (
