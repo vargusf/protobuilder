@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Table, TableHeadingRow, TableHeadingData, TableRow, TableData, } from '../../index';
+import { Table, TableHeadingRow, TableHeadingData, TableRow, TableData, TableDataEmpty} from '../../index';
 
 import protoStyle from '../../styles/global.css';
 import style from '../Docs.css';
@@ -86,6 +86,26 @@ class PageTable extends Component {
 									<TableData width="33per">table data row 1 col 1</TableData>
 									<TableData width="33per">table data row 1 col 2</TableData>
 									<TableData width="33per">table data row 1 col 3</TableData>
+								</TableRow>
+							</Table>
+						</div>
+					</div>
+					<div className={style.docboxCode}>
+					</div>
+				</div>
+
+				<h2 className={style.docHeading2}>Empty</h2>
+				<div className={style.docbox}>
+					<div className={style.docboxContent}>
+						<div className={` ${protoStyle.displayFlex} ${protoStyle.colsGutterXsm} `}>
+							<Table>
+								<TableHeadingRow>
+									<TableHeadingData width="33per">heading 1</TableHeadingData>
+									<TableHeadingData width="33per">heading 2</TableHeadingData>
+									<TableHeadingData width="33per">heading 3</TableHeadingData>
+								</TableHeadingRow>
+								<TableRow>
+									<TableDataEmpty>There are no rows</TableDataEmpty>
 								</TableRow>
 							</Table>
 						</div>

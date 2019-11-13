@@ -10,7 +10,7 @@ import Nag from './components/Nag/Nag';
 import { Modal, ModalHeader, ModalBody, ModalActions } from './components/Modal/Modal';
 import Progress from './components/Progress/Progress';
 import { TextInput, Textarea, Checkbox, Switch, Radio, Select, Option, FormItemGroup } from './components/Form/Form';
-import { Table, TableHeadingRow, TableHeadingData, TableRow, TableData, TableMobileHeading } from './components/Table/Table';
+import { Table, TableHeadingRow, TableHeadingData, TableRow, TableData, TableMobileHeading, TableDataEmpty } from './components/Table/Table';
 
 export {
 	protoStyle,
@@ -43,4 +43,5 @@ export {
 	TableRow,
 	TableData,
 	TableMobileHeading,
+	TableDataEmpty,
 }

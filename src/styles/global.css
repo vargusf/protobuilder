@@ -2507,3 +2507,15 @@
 .overflowHidden  { overflow: hidden; }
 .overflowVisible { overflow: visible; }
 .overflowScroll  { overflow: scroll; }
+
+/* Empty */
+
+.empty {
+	width: 100%;
+	min-width: 100%;
+	color: var(--color-grey500);
+	text-align: center;
+	font-style: italic;
+	font-size: var(--fontsize-text4);
+	padding-top: var(--size-lg); padding-bottom: var(--size-lg);
+}

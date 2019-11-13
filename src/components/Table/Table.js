@@ -11,6 +11,7 @@ const Table = ({
 
 	const classes = [
 		globalStyle.width100per,
+		globalStyle.paddingBottomSm,
 	].join(' ');
 
 	return (
@@ -121,6 +122,21 @@ const TableMobileHeading = ({
 	);
 }
 
+const TableDataEmpty = ({
+	children
+}) => {
+
+	const classes = [
+		globalStyle.empty,
+	].join(' ');
+
+	return (
+		<div className={classes}>
+			{children}
+		</div>
+	);
+}
+
 export {
 	Table,
 	TableHeadingRow,
@@ -128,4 +144,5 @@ export {
 	TableRow,
 	TableData,
 	TableMobileHeading,
+	TableDataEmpty,
 };
