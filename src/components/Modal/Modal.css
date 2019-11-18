@@ -44,6 +44,15 @@
 	box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.3);
 }
 
+.type_defaultwide {
+	background-color: var(--color-white);
+	border-radius: var(--size-tiny);
+	padding: var(--size-lg) var(--size-md) var(--size-md);
+	border: 1px solid var(--color-grey200);
+	width: 750px;
+	box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.3);
+}
+
 .actions {
 	margin-top: var(--size-md);
 	display: flex;
