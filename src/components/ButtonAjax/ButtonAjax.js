@@ -12,8 +12,6 @@ class ButtonAjax extends Component {
 		this.state = {
 			width: null
 		};
-
-		console.log(props);
 	}
 
 	componentDidMount() {
